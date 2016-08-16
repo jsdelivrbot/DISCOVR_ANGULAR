@@ -1,0 +1,112 @@
+input[type="submit"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="button"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+.selectOrdenar{
+
+    -webkit-border-radius: 0;
+}
+
+input[type="search"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="text"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="submit"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="email"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="password"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="tel"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="radio"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="checkbox"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="number"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="date"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="month"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="week"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="time"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input[type="datetime"],
+button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+textarea{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+html[data-useragent*='iPad'] .selectOrdenar { /*  propiedad para iPad*/
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    width: 40%;
+}
+
