@@ -11,13 +11,51 @@
 
 	
 
-	 <link rel="stylesheet" href="../../css/index.css">
+	<link rel="stylesheet" href="../../css/index.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/no_webkit.css">
+	<link rel="stylesheet" href="../../css/main/menuPrincipal.css">
+
+</head>
+<body>
+	
+	<!-- INICIO DEL MENU-->
+
+<div class="ContenedorMenu">
+  <ul>
+    <li><i class="material-icons">map</i> Discovr</li>
+    
+    <li id="LineSeparador"></li>
+    <li><i class="material-icons">home</i> Inicio</li>
+    <li><i class="material-icons">keyboard_arrow_right</i> Dónde Ir?</li>
+
+
+    <li class="FloatRightMenu"><i class="material-icons">more_vert</i></li>
+    <li class="FloatRightMenu"> <picture id="PictureUser"> <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture></li>
+    <li class="FloatRightMenu"><i class="material-icons">notifications</i></li>
+    <li class="FloatRightMenu"><i class="material-icons">search</i> Buscar</li>
+    
+    
+  </ul>
+
+
+</div>
+
+<!-- FIN DEL MENU-->
+
+	<div ng-view>
+			
+		</div>
+
+<!-- _____________________________________________________________________________ -->
 
 	<script src="../../js/angular.min.js"></script>
 	<script src="../../js/angular-route.min.js"></script>
     <script src="../../controllers/controller_pages.js"></script>
+
+
+
+
 
 
 
@@ -27,14 +65,21 @@ d0cum3n7e13m3n7.setAttribute('data-useragent', navigator.userAgent);
 d0cum3n7e13m3n7.setAttribute('data-platform', navigator.platform); 
 d0cum3n7e13m3n7.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':''); 
 </script>
-</head>
-<body>
-	
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nobis eum provident consequuntur debitis. Dolorum ratione placeat autem molestias quidem ipsam beatae modi tempore possimus veritatis. Tempora sequi animi nulla!
 
-	<div ng-view>
-			
-		</div>
+
+
+
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+<script src="../../js/main/slider.js"></script>
+
+
+
+<script src="../../js/main/efectosTileIcono.js"></script>
+
+
+<!-- _____________________________________________________________________________ -->
+
 
 </body>
 </html>

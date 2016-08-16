@@ -1,0 +1,131 @@
+.ContainerTileSites{
+	width: 100%;
+	margin-top: 10px;
+	text-align: center;
+	overflow: hidden;
+
+}
+
+.TileSite1, .TileSite2, .TileSite3, .TileSite4, .TileSite5, .TileSite6{
+	width: 23.8%;
+	float: left;
+	height: 180px;
+
+	color: #fff;
+	margin-left: 0.8%;
+	margin-bottom: 10px;
+		background-color: #37474f;
+
+
+}
+
+.TileSite2{
+	width: 49.3%;
+}
+
+.TileSite4{
+	width: 32%;
+	background-color: #fff;
+}
+
+.TileSite5{
+	width: 45%;
+}
+
+.TileSite6{
+	width: 20%;
+}
+
+.TileSitesContenido{
+	width: 100%;
+	height: 180px;
+	overflow: hidden;
+}
+
+/* ESTA PROPIEDAD SE APLICA PARA MODIFICAR LOS TAMAÑOS EN LOS TILES SITES DEL SLIDER */
+
+.TileSitesContenido #slider-container{
+	height: 180px;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+.SpanTitle{
+	float: right;
+	margin-right: 12px;
+	position: relative;
+	margin-top: -44px;
+	z-index: 2;
+
+}
+
+.MiniTilesSite{
+	width: 49.35%;
+	float: left;
+	background-color: #fff;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	height: 88px;
+
+}
+
+.MiniTilesSite:nth-last-child(1){
+	margin-left: 1%;
+	margin-top:1%;
+}
+
+.MiniTilesSite:nth-last-child(2){
+
+	margin-top:1%;
+}
+
+.MiniTilesSite:nth-last-child(3){
+	margin-left: 1%;
+}
+
+.TileSitesContenidoMini{
+	height: 88px;
+}
+
+.SpanTitleMini{
+	float: right;
+	margin-right: 12px;
+	position: relative;
+	margin-top: -28px;
+	z-index: 2;
+	
+}
+
+.NotificacionTileSite{
+	position: relative;
+	margin-top: -180px;
+	float: right;
+	background-color: #ef5350;
+	width: 40px;
+	padding: 2px;
+	text-align: center;
+}
+
+/* AQUI SE GENERA LA BARRA DIFUMINADA QUE ESTA EN LA PARTE INFERIOR DE LOS TILES */
+.BarraDifuminadaTileSite{
+	position: relative;
+	margin-top: -50px;
+	height: 50px;
+	width: 100%;
+	z-index: 1;
+
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 1%, rgba(0,0,0,0.65) 83%, rgba(0,0,0,0.65) 84%, rgba(0,0,0,0.65) 85%, rgba(0,0,0,0.65) 87%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 1%,rgba(0,0,0,0.65) 83%,rgba(0,0,0,0.65) 84%,rgba(0,0,0,0.65) 85%,rgba(0,0,0,0.65) 87%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 1%,rgba(0,0,0,0.65) 83%,rgba(0,0,0,0.65) 84%,rgba(0,0,0,0.65) 85%,rgba(0,0,0,0.65) 87%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+}
+
+/* AQUI SE ADAPTAN LAS IMAGENES CONTENIDAD EN LOS TILES */
+
+.TileSitesContenido .material-icons{
+	font-size: 73px;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 54px;
+}
+
