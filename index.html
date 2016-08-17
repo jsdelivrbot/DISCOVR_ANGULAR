@@ -14,22 +14,28 @@
 	<link rel="stylesheet" href="css/index.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css/no_webkit.css">
-	<script src="js/angular.min.js"></script>
-	<script src="js/angular-route.min.js"></script>
-    <script src="controllers/controller_index.js"></script>
-
-    <script> <!--  este script es para identificar a cada navegador y asi aplicar css especifico en cada uno-->
-var d0cum3n7e13m3n7 = document.documentElement; 
-d0cum3n7e13m3n7.setAttribute('data-useragent', navigator.userAgent); 
-d0cum3n7e13m3n7.setAttribute('data-platform', navigator.platform); 
-d0cum3n7e13m3n7.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':''); 
-</script>
+	
 
 </head>
-<body>
 
-	<div ng-view></div>
-	
-	
-</body>
+	<body class="FondoBodyIndex">
+
+		<div ng-view>
+			
+		</div>
+
+		
+
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+	    <script src="controllers/controller_index.js"></script>
+
+	    <script> <!--  este script es para identificar a cada navegador y asi aplicar css especifico en cada uno-->
+			var d0cum3n7e13m3n7 = document.documentElement; 
+			d0cum3n7e13m3n7.setAttribute('data-useragent', navigator.userAgent); 
+			d0cum3n7e13m3n7.setAttribute('data-platform', navigator.platform); 
+			d0cum3n7e13m3n7.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':''); 
+		</script>
+
+	</body>
 </html>

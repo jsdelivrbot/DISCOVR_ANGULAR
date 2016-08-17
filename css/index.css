@@ -10,6 +10,9 @@
 	font-weight: normal;
 	font-family: Segoe_UI;
 
+	
+
+
 }
 
 ::-webkit-scrollbar {
@@ -26,11 +29,13 @@
     background-color: #BCBDAC; 
 }
 
+.FondoBody{
+	background-color: #fafafa;
+}
 
-
-body{
-/* background-image: url("../img/fondo.png");  */
-background-attachment: fixed; 
+.FondoBodyIndex{
+	background-image: url("../img/main/granada.jpg"); 	
+	background-attachment: fixed; 
 width: 100%;
 height: 100%;
 color: #fff;
@@ -41,5 +46,8 @@ color: #fff;
 			background-size: cover;
 			background-position: center center;
 			background-repeat: no-repeat;
+}
 
+body{
+	overflow-x: hidden;
 }

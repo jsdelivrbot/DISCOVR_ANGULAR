@@ -45,19 +45,39 @@ padding: 0;
 
 /* --------------------------------------------------------------------------------------- */
 #slider-box {
--moz-animation: autoSlider 15s infinite linear;
--o-animation: autoSlider 15s infinite linear;
--webkit-animation: autoSlider 15s infinite linear;
 animation: autoSlider 15s infinite linear;
--webkit-transition: all 0.75s ease;
--moz-transition: all 0.75s ease;
--ms-transition: all 0.75s ease;
--o-transition: all 0.75s ease;
 transition: all 0.75s ease;
 height: 100%;
 width: 300%;
 }
 
+#slider-box2 {
+animation: autoSlider 20s infinite linear;
+transition: all 0.01s ease;
+height: 100%;
+width: 300%;
+}
+
+#slider-box3 {
+animation: autoSlider 23s infinite linear;
+transition: all 0.01s ease;
+height: 100%;
+width: 300%;
+}
+
+#slider-box4 {
+animation: autoSlider 17s infinite linear;
+transition: all 0.01s ease;
+height: 100%;
+width: 300%;
+}
+
+#slider-box5 {
+animation: autoSlider 22s infinite linear;
+transition: all 0.01s ease;
+height: 100%;
+width: 300%;
+}
 #slider-container {
 height: 88px;
 max-height: 800px;
