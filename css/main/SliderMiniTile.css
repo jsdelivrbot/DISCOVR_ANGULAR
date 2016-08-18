@@ -1,23 +1,7 @@
 input[name="slider-select-element"] {
 display: none;
 }
-#slider-arrows {
-margin: -10% auto 0 auto;
-width: 100%;
-height: 50px;
-padding: 0;
 
-}
-
-
-
-.slider-element img {
-	width: 100%;
-	height: 88px;
-    object-fit: cover;
-    -ms-object-fit: cover;
-    -edge-object-fit: cover;
-}
 
 /* ESTA PROPIEDAD SE APLICA PARA MODIFICAR LOS TAMAÑOS EN LOS TILES FLOTANTES DEL SLIDER */
 
@@ -42,157 +26,46 @@ padding: 0;
 	height: 88px;
 }
 
-
-/* --------------------------------------------------------------------------------------- */
-#slider-box {
-animation: autoSlider 15s infinite linear;
-transition: all 0.75s ease;
-height: 100%;
-width: 300%;
-}
-
-#slider-box2 {
-animation: autoSlider 20s infinite linear;
-transition: all 0.01s ease;
-height: 100%;
-width: 300%;
-}
-
-#slider-box3 {
-animation: autoSlider 23s infinite linear;
-transition: all 0.01s ease;
-height: 100%;
-width: 300%;
-}
-
-#slider-box4 {
-animation: autoSlider 17s infinite linear;
-transition: all 0.01s ease;
-height: 100%;
-width: 300%;
-}
-
-#slider-box5 {
-animation: autoSlider 22s infinite linear;
-transition: all 0.01s ease;
-height: 100%;
-width: 300%;
-}
-#slider-container {
-height: 88px;
-max-height: 800px;
-overflow: hidden;
-text-align: left;
-width: 100%; 
-
-}
-
-/* ESTA PROPIEDAD SE APLICA PARA MODIFICAR LOS TAMAÑOS EN LOS TILES FLOTANTES DEL SLIDER */
-
-.ContainerFloatTiles #slider-container{
-	height: 116px;
-}
-
 /* ------------------------------------------------------------------------------------------ */
 
-
-.element-blue,
-.element-green,
-.element-red {
-	height: 180px;
-	max-height: 180px;
-	width: 100%;
-	text-align: justify;
+.MiniTilesSite{
+	width: 49.35%;
 	float: left;
-	/* display: table; */
+	background-color: #263238;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	height: 88px;
+	overflow: hidden;
 }
 
-.element-blue h3,
-.element-green h3,
-.element-red h3 {
-	padding-bottom: 8px;
-	font-size: 22px;
+.MiniTilesSite:nth-last-child(1){
+	margin-left: 1%;
+	margin-top:1%;
+}
+
+.MiniTilesSite:nth-last-child(2){
+
+	margin-top:1%;
+}
+
+.MiniTilesSite:nth-last-child(3){
+	margin-left: 1%;
+}
+
+.TileSitesContenidoMini{
+	height: 88px;
+}
+.MiniTilesSite .SpanTitle{
+
+	margin-top: -28px;
+
+
+}
+
+/* -----------------------------------EFECTO DE LOADING ICONO---------------------------------------- */
+.MiniTilesSite .material-icons{
+	font-size: 53px;
 	text-align: center;
-	font-weight: bold;
-}
+	padding-top: 20px;
 
-
-.element-blue, .element-green, .element-red {
-
-text-align: center;
-
-}
- 
-.slider-element {
-float: left;
-width: 33.333%;
-}
-@-moz-keyframes autoSlider {
-0% {
-margin-left: 0;
-}
-30% {
-margin-left: 0;
-}
-35% {
-margin-left: -100%;
-}
-65% {
-margin-left: -100%;
-}
-70% {
-margin-left: -200%;
-}
-95% {
-margin-left: -200%;
-}
-100% {
-margin-left: 0;
-}
-}
-@-webkit-keyframes autoSlider {
-0% {
-margin-left: 0;
-}
-30% {
-margin-left: 0;
-}
-35% {
-margin-left: -100%;
-}
-65% {
-margin-left: -100%;
-}
-70% {
-margin-left: -200%;
-}
-95% {
-margin-left: -200%;
-}
-100% {
-margin-left: 0;
-}
-}
-@keyframes autoSlider {
-0% {
-margin-left: 0;
-}
-30% {
-margin-left: 0;
-}
-35% {
-margin-left: -100%;
-}
-65% {
-margin-left: -100%;
-}
-70% {
-margin-left: -200%;
-}
-95% {
-margin-left: -200%;
-}
-100% {
-margin-left: 0;
-}
 }

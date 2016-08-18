@@ -42,10 +42,14 @@
 	overflow: hidden;
 }
 
-/* ESTA PROPIEDAD SE APLICA PARA MODIFICAR LOS TAMAÑOS EN LOS TILES SITES DEL SLIDER */
-
-.TileSitesContenido #slider-container{
-	height: 180px;
+.NotificacionTileSite{
+	position: relative;
+	margin-top: -180px;
+	float: right;
+	background-color: #ef5350;
+	width: 40px;
+	padding: 2px;
+	text-align: center;
 }
 
 /* ------------------------------------------------------------------------------------------ */
@@ -59,52 +63,7 @@
 
 }
 
-.MiniTilesSite{
-	width: 49.35%;
-	float: left;
-	background-color: #fff;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	height: 88px;
 
-}
-
-.MiniTilesSite:nth-last-child(1){
-	margin-left: 1%;
-	margin-top:1%;
-}
-
-.MiniTilesSite:nth-last-child(2){
-
-	margin-top:1%;
-}
-
-.MiniTilesSite:nth-last-child(3){
-	margin-left: 1%;
-}
-
-.TileSitesContenidoMini{
-	height: 88px;
-}
-
-.SpanTitleMini{
-	float: right;
-	margin-right: 12px;
-	position: relative;
-	margin-top: -28px;
-	z-index: 2;
-	
-}
-
-.NotificacionTileSite{
-	position: relative;
-	margin-top: -180px;
-	float: right;
-	background-color: #ef5350;
-	width: 40px;
-	padding: 2px;
-	text-align: center;
-}
 
 /* AQUI SE GENERA LA BARRA DIFUMINADA QUE ESTA EN LA PARTE INFERIOR DE LOS TILES */
 .BarraDifuminadaTileSite{

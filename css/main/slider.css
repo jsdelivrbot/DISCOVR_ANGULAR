@@ -67,6 +67,41 @@ list-style: none;
   animation: cambio 16s infinite alternate linear;
 }
 
+.TileSite3 .slider img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.TileSite3 .slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  
+  animation: cambio 22s infinite alternate linear;
+}
+
+.TileSitesContenidoMini .slider img {
+  width: 100%;
+  height: 88px;
+  object-fit: cover;
+  float: left;
+}
+
+.TileSitesContenidoMini .slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  height: 88px;
+  overflow: hidden;
+  position: relative;
+  
+  animation: cambio 22s infinite alternate linear;
+}
+
  /* _________________________________________________________________________________________________ */
 
 @keyframes cambio {

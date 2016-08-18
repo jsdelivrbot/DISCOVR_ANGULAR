@@ -5,7 +5,7 @@ IndexApp.config(function($routeProvider) {
 
     $routeProvider
         .when('/', {
-            templateUrl : '../../templates/pages/Plantilla_Inicio.html',
+            templateUrl : '../../templates/pages/Main/Main.html',
         })
 
         
