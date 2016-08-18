@@ -18,7 +18,7 @@
  $(document).ready(function() {
     setTimeout(function() {
         $(".materialOut").fadeOut(1200);
-    },8000);
+    },7000);
 	
 	setTimeout(function() {
         $(".SliderIn").fadeIn(1200);

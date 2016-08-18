@@ -99,7 +99,41 @@ list-style: none;
   overflow: hidden;
   position: relative;
   
-  animation: cambio 22s infinite alternate linear;
+  animation: cambio 19s infinite alternate linear;
+}
+
+.TileSite5 .slider img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.TileSite5 .slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  
+  animation: cambio 23s infinite alternate linear;
+}
+
+.TileSite6 .slider img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.TileSite6 .slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  
+  animation: cambio 15s infinite alternate linear;
 }
 
  /* _________________________________________________________________________________________________ */
