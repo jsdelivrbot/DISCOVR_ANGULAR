@@ -15,10 +15,10 @@
   overflow: hidden;
   position: relative;
   
-  animation: cambio 20s infinite alternate linear;
+  animation: cambio 15s infinite alternate linear;
 }
 
-.PrincipalSlider .slider li {
+.slider li {
   width: 100%;
 list-style: none;
 }
@@ -28,6 +28,46 @@ list-style: none;
   height: 410px;
   object-fit: cover;
 }
+
+ /* _________________________________________________________________________________________________ */
+
+/*  Aqui estan las tranciciones para los tile sites, estos son los tiles que estan abajo el slider */
+
+.TileSite1 .slider img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.TileSite1 .slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  
+  animation: cambio 20s infinite alternate linear;
+}
+
+.TileSite2 .slider img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.TileSite2 .slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  
+  animation: cambio 16s infinite alternate linear;
+}
+
+ /* _________________________________________________________________________________________________ */
 
 @keyframes cambio {
   0% {margin-left: 0;}

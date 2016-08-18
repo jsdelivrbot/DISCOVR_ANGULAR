@@ -129,17 +129,3 @@
 	padding-bottom: 54px;
 }
 
-.TileSite1 .slider{
-	height: 180px;
-}
-
-.TileSite1 .slider ul {
-	height: 180px;
-	max-height: 180px;
-	overflow-y: hidden;
-	}
-
-.TileSite1 .slider li{
-	height: 180px;
-	max-height: 180px;
-	}
