@@ -5,7 +5,6 @@
 	width: 50%;
 	height: 350px;
 	float: right;
-	/* background-color: orange; */
 	margin-right: -6px;
 
 }
@@ -61,6 +60,7 @@
 	width: 40px;
 	padding: 2px;
 	text-align: center;
+	z-index: 2;
 }
 
 .NotificacionTileFloat2{
@@ -79,3 +79,17 @@
 	padding-top: 10px;
 	padding-bottom: 34px;
 }
+
+
+.LiContainer .material-icons{
+	font-size: 73px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 34px;
+}
+
+.lessFont .LiContainer .material-icons{
+	font-size: 73px;
+	text-align: center;
+	padding-top: 26px;
+	padding-bottom: 18px;

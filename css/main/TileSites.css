@@ -60,8 +60,9 @@
 	position: relative;
 	margin-top: -44px;
 	z-index: 2;
-
 }
+
+
 
 /* AQUI SE GENERA LA BARRA DIFUMINADA QUE ESTA EN LA PARTE INFERIOR DE LOS TILES */
 .BarraDifuminadaTileSite{
@@ -77,6 +78,10 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
 }
 
+
+.LiContainer .BarraDifuminadaTileSite{
+	z-index: 3;
+	}
 /* AQUI SE ADAPTAN LAS IMAGENES CONTENIDAD EN LOS TILES */
 
 .TileSitesContenido .material-icons{
