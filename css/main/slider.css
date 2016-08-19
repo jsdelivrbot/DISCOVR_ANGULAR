@@ -154,6 +154,17 @@
   
   animation: cambio 18s infinite alternate linear;
 }
+#DobleTile .LiContainer .slider ul {
+  display: flex;
+  padding: 0;
+  margin: 0px;
+  width: 400%;
+  height: 116px;
+  overflow: hidden;
+  position: relative;
+  
+  animation: cambio 20s infinite alternate linear;
+}
 
 .LiContainer .slider li {
     padding: 0;
