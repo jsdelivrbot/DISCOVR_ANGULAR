@@ -163,7 +163,7 @@
   overflow: hidden;
   position: relative;
   
-  animation: cambio 20s infinite alternate linear;
+  animation: cambio 25s infinite alternate linear;
 }
 
 .LiContainer .slider li {
