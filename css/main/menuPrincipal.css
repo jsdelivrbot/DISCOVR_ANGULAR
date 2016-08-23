@@ -25,14 +25,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', end
 	margin: 0;
 	}
 
+
+
 	#searchMenu{
 		border-style: none;
 		padding: 9px;
 		margin-bottom: 15px;
-		margin-top: -7px;
+		margin-top: -8px;
 		color: rgba(33,33,33,1);
 		width: 250px;
-		background-color: rgba(250,250,250,0.2);
+		background-color: rgba(250,250,250,0.4);
 		font-size: 16px;
 
 	}
@@ -66,10 +68,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', end
 	height: 50px;
 }
 
-.FloatRightMenu .material-icons{
-	padding-bottom: 6px;
-}
-
 #LineSeparador{
 	border-right: 2px solid #fff;
 	width: 0px;
@@ -99,13 +97,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', end
 	background-color: rgba(224,224,224,0.8);
 	color: rgba(38,50,56,0.9);
 	width: 240px;
-    margin-top: 8px;
+    margin-top: 14px;
     margin-left: -191px;
 }
 
 .FloatRightMenu .SubMenuUsuario{
 	   margin-left: -127px;
 	   margin-bottom: -25px;
+	   margin-top: 8px;
 }
 
 .FloatRightMenu .SubMenuNotificasion{
@@ -154,3 +153,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', end
 	display: block;
 }
 
+.FloatRightMenu #ContainerAllSearch{
+	background-color: transparent;
+	margin-left: -269px;
+	margin-top: -35px;
+
+}
+
+.FloatRightMenu #containerSearch:hover{
+	background-color: transparent;
+}
+
+
+.FloatRightMenu #containerSearch:active{
+	background-color: transparent;
+}
+
+::-webkit-input-placeholder { color: #37474f; } /* WebKit */
+:-moz-placeholder { color: #37474f; } /* Firefox 18- */
+::-moz-placeholder { color: #37474f; } /* Firefox 19+ */
+:-ms-input-placeholder { color: #37474f; } /* IE 10+ */
+
+.TextPNotif{
+	
+}
