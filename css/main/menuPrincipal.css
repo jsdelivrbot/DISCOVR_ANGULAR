@@ -25,6 +25,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', end
 	margin: 0;
 	}
 
+	#searchMenu{
+		border-style: none;
+		padding: 9px;
+		margin-bottom: 15px;
+		margin-top: -5px;
+		color: rgba(33,33,33,1);
+		width: 250px;
+		background-color: rgba(250,250,250,0.2);
+
+	}
+
 .ContenedorMenu li{
 	list-style: none;
 	display: inline-block;
