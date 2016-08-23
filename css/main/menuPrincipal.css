@@ -115,6 +115,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', end
 	padding-bottom: 0px;
 	max-height: 400px;
 	overflow: auto;
+	overflow-x: hidden;
 }
 
 .FloatRightMenu .SubMenuNotificasion li{
@@ -174,6 +175,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', end
 ::-moz-placeholder { color: #37474f; } /* Firefox 19+ */
 :-ms-input-placeholder { color: #37474f; } /* IE 10+ */
 
-.TextPNotif{
-	
+
+.ContainerDataNotificacion{
+	width: 100%;
+}
+
+.ContainerDataNotificacion #PictureUser{
+	text-align: left;
+}
+
+.ContainerDataNotificacion .TextPNotif{
+	text-align: justify;
+	margin-top: -20px;
+	padding-top: 0px;
 }
