@@ -51,6 +51,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', end
 .FloatRightMenu{
 	float: right;
 	margin-right: 15px;
+	height: 50px;
+}
+
+.FloatRightMenu .material-icons{
+	padding-bottom: 6px;
 }
 
 #LineSeparador{
@@ -73,3 +78,67 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', end
 	background: linear-gradient(to bottom, rgba(36,36,36,0.84) 0%, rgba(31,31,31,0.7) 0%, rgba(26,26,26,0.52) 0%, rgba(26,26,26,0) 0%);
 	background-color: #fff;
 }
+
+/* ---------------------- Estilos para el sub Menu-------------------------- */
+
+.FloatRightMenu ul{
+	display: none;
+	position: absolute;
+	background-color: rgba(224,224,224,0.8);
+	color: rgba(38,50,56,0.9);
+	width: 240px;
+    margin-top: 8px;
+    margin-left: -191px;
+}
+
+.FloatRightMenu .SubMenuUsuario{
+	   margin-left: -127px;
+	   margin-bottom: -25px;
+}
+
+.FloatRightMenu .SubMenuNotificasion{
+	margin-left: -144px;
+	width: 320px;
+	background-color: #eeeeee;
+	padding: 10px;
+	padding-bottom: 0px;
+	max-height: 400px;
+	overflow: auto;
+}
+
+.FloatRightMenu .SubMenuNotificasion li{
+	width: 299px;
+	box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+	margin-bottom: 10px;
+	
+}
+
+.FloatRightMenu .SubMenuNotificasion li:hover{
+	background-color: #fafafa;
+}
+
+.FloatRightMenu .SubMenuNotificasion li:active{
+	background-color: #f5f5f5;
+}
+
+.FloatRightMenu ul li{
+	width: 240px;
+	min-width: 240px;
+	display: block;
+}
+
+.FloatRightMenu ul li:hover{
+	background-color: rgba(238,238,238,0.8);
+}
+
+
+.FloatRightMenu ul li:active{
+	background-color: rgba(250,250,250,0.8);
+}
+
+.FloatRightMenu:hover > ul{ /* Hace que el Toltip Aparezca */
+	transition: all 0.9s;
+	display: block;
+}
+
