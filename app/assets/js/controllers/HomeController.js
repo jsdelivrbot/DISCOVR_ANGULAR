@@ -21,7 +21,6 @@ var discovrApp = angular.module('DiscovrMain', ['ngCookies','ngRoute','pascalpre
      .controller('MainController', function($scope, $translate){
        $scope.listLan = ['es/es', 'en/en', 'fr/fr'];
        $scope.changeLang = function changeLangFn() {
-           console.log($scope.listLan)
            $translate.use($scope.listLan);
         };
     });
