@@ -19,15 +19,8 @@ var discovrApp = angular.module('DiscovrMain', ['ngCookies','ngRoute','pascalpre
              });
      })
      .controller('MainController', function($scope, $translate){
-<<<<<<< HEAD
        $scope.listLan = ['es/es', 'en/en','fr/fr'];
        $scope.changeLang = function changeLangFn() {
            $translate.use($scope.listLan);
        };
-=======
-       $scope.listLan = ['es/es', 'en/en', 'fr/fr'];
-       $scope.changeLang = function changeLangFn() {
-           $translate.use($scope.listLan);
-        };
->>>>>>> refs/remotes/origin/logic
     });

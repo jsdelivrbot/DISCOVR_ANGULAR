@@ -5,7 +5,7 @@ var discovrApp = angular.module('DiscovrIndex', ['ngCookies','pascalprecht.trans
             prefix: 'assets/js/languages/',
             suffix: '.json'
         });
-        //$translateProvider.useLocalStorage();
+        $translateProvider.useLocalStorage();
         $translateProvider.preferredLanguage('es/es');
         // here the html tag works
         $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
