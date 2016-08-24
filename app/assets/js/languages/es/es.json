@@ -11,7 +11,6 @@
     "SearchTitle": "Buscar",
     "SearchPlaceHolder": "Escriba aquí...",
 
-<<<<<<< HEAD
      "LenguajeTitle": "Lenguaje",
 
     "WalletTitle": "Billetera",
@@ -22,10 +21,6 @@
     "TransportTitle": "Transporte",
     "ClubsTitle": "Clubs & Amigos",
     "AdventureTitle": "Aventuras"
-}
-
-=======
-    "WalletTitle": "Billetera"
 
 }
->>>>>>> refs/remotes/origin/logic
+

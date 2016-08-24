@@ -4,7 +4,6 @@
     "passInputPlaceHolder": "Insert you password",
     "btnLogin": "Enter",
 
-
     "HomeTitle": "Home",
     "WhereToGoTitle": "Where to go?",
     "SettingsTitle": "Settings",
@@ -12,10 +11,8 @@
     "SearchTitle": "Search",
     "SearchPlaceHolder": "Write here...",
 
-<<<<<<< HEAD
     "LenguajeTitle": "Language",
    
-
     "WalletTitle": "Wallet",
     "EmergenciesTitle": "Emergencies",
     "PreferencesTitle": "Preferences",
@@ -23,11 +20,7 @@
     "CountriesTitle": "Countries",
     "TransportTitle": "Transport",
     "ClubsTitle": "Clubs & Friends",
-    "AdventureTitle": "Adventure"    
+    "AdventureTitle": "Adventure"  
 }
 
-=======
-    "WalletTitle": "Wallet"
-        
-}
->>>>>>> refs/remotes/origin/logic
+
