@@ -208,3 +208,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', end
 	float:right;
 	margin-top: 25px;
 }
+
+#SelectLan{
+	font-size: 16px;
+	width: 90px;
+	border-style: none;
+	padding: 3px;
+}

@@ -12,7 +12,16 @@
     "SearchTitle": "Search",
     "SearchPlaceHolder": "Write here...",
 
-    "WalletTitle": "Wallet"
-        
+    "LenguajeTitle": "Language",
+   
+
+    "WalletTitle": "Wallet",
+    "EmergenciesTitle": "Emergencies",
+    "PreferencesTitle": "Preferences",
+    "InstitutionsTitle": "Institutions",
+    "CountriesTitle": "Countries",
+    "TransportTitle": "Transport",
+    "ClubsTitle": "Clubs & Friends",
+    "AdventureTitle": "Adventure"    
 }
 
