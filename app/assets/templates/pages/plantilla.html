@@ -33,11 +33,10 @@
                 <select ng-model="listLan" ng-change="changeLang()" id="SelectLan">
                     <option ng-repeat="lan in listLan">{{lan}}</option>                  
                 </select>
-            
-        </li>
-
+            </li>
 			<li> <i class="material-icons">bug_report</i> <span translate>BugsTitle</span></li>
-		</ul>    
+		</ul> 
+    </li>  
     <li class="FloatRightMenu"> 
     	<picture id="PictureUser"> <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
 		<ul class="SubMenuUsuario">
@@ -49,60 +48,41 @@
     <li class="FloatRightMenu">
     	<i class="material-icons">notifications</i>
 		<ul class="SubMenuNotificasion">
-
     			<li class="CardNotificasion">
                      <div class="ContainerDataNotificacion">
-                           <picture id="PictureUser"> 
+                        <picture id="PictureUser"> 
                         <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
-
-                    <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</espan> 
-
+                        <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</span> 
                         <p class="FechaNotf">14-08-2016</p>
                      </div>
-
                 </li>
-
-    		
                 <li class="CardNotificasion">
                      <div class="ContainerDataNotificacion">
-                           <picture id="PictureUser"> 
+                        <picture id="PictureUser"> 
                         <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
-
-                    <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</espan> 
-
+                        <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</span> 
                         <p class="FechaNotf">14-08-2016</p>
                      </div>
-
-                </li>
-
-                
+                </li>    
                 <li class="CardNotificasion">
                      <div class="ContainerDataNotificacion">
-                           <picture id="PictureUser"> 
+                        <picture id="PictureUser"> 
                         <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
-
-                    <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</espan> 
-
+                        <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</span> 
                         <p class="FechaNotf">14-08-2016</p>
                      </div>
-
-                </li>
-
-    			
+                </li>    		
     		</ul>
-
- 
     </li>
     <li class="FloatRightMenu">
         <i class="material-icons">search</i> <span id="TextBuscarM"><span translate>SearchTitle</span></span>
 		<ul id="ContainerAllSearch">
 			<li id="containerSearch">
 				<input type="search" id="searchMenu" placeholder="{{ 'SearchPlaceHolder' | translate }}">
-			</li> 
-            
+			</li>  
 		</ul>
-    </li>     
-  </ul>
+    </li> 
+ </ul>    
 </div>
 <!-- FIN DEL MENU-->
 
@@ -112,8 +92,10 @@
 
 	<script src="../../../bower_components/angular/angular.min.js"></script>
 	<script src="../../../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="../../../bower_components/angular-cookies/angular-cookies.min.js"></script>
 	<script src="../../../bower_components/angular-translate/angular-translate.min.js"></script>
 	<script src="../../../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="../../../bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
 	<script src="../../../bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
 	
     <script src="../../../assets/js/controllers/HomeController.js"></script>
@@ -132,12 +114,4 @@
 <!-- ------------------------------------------------------------ -->
 </body>
 </html>
-
-
-
-
-
-
-		
-
 		
