@@ -4,17 +4,18 @@
     "passInputPlaceHolder": "Insert you password",
     "btnLogin": "Enter",
 
-
     "HomeTitle": "Home",
     "WhereToGoTitle": "Where to go?",
-    "SettingsTitle": "Settings",
-    "BugsTitle": "Bugs & suggestions",
     "SearchTitle": "Search",
     "SearchPlaceHolder": "Write here...",
 
+    "SettingsTitle": "Settings",
+    "BugsTitle": "Bugs & suggestions",
     "LenguajeTitle": "Language",
-   
-
+    "ProfileTitle": "Profile",
+    "ConditionsTitle": "Conditions",
+    "ExitTitle": "Exit",
+    
     "WalletTitle": "Wallet",
     "EmergenciesTitle": "Emergencies",
     "PreferencesTitle": "Preferences",
@@ -22,6 +23,9 @@
     "CountriesTitle": "Countries",
     "TransportTitle": "Transport",
     "ClubsTitle": "Clubs & Friends",
-    "AdventureTitle": "Adventure"    
+    "AdventureTitle": "Adventure",
+
+    "EventsTitle": "Events"
+        
 }
 

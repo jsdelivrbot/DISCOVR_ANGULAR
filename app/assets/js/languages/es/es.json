@@ -6,12 +6,15 @@
 
     "HomeTitle": "Inicio",
     "WhereToGoTitle": "Dónde Ir?",
-    "SettingsTitle": "Ajustes",
-    "BugsTitle": "Errores & Sugerencias",
     "SearchTitle": "Buscar",
     "SearchPlaceHolder": "Escriba aquí...",
 
-     "LenguajeTitle": "Lenguaje",
+    "SettingsTitle": "Ajustes",
+    "BugsTitle": "Errores & Sugerencias",
+    "LenguajeTitle": "Lenguaje",
+    "ProfileTitle": "Perfil",
+    "ConditionsTitle": "Padecimientos",
+    "ExitTitle": "Salir",
 
     "WalletTitle": "Billetera",
     "EmergenciesTitle": "Emergencias",
@@ -20,6 +23,8 @@
     "CountriesTitle": "Países",
     "TransportTitle": "Transporte",
     "ClubsTitle": "Clubs & Amigos",
-    "AdventureTitle": "Aventuras"
+    "AdventureTitle": "Aventuras",
+
+    "EventsTitle": "Eventos"
 }
 
