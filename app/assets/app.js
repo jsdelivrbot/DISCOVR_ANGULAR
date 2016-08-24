@@ -5,7 +5,7 @@ var discovrApp = angular.module('DiscovrIndex', ['ngRoute','pascalprecht.transla
             prefix: 'assets/js/languages/',
             suffix: '.json'
         });
-        $translateProvider.useLocalStorage();
+        //$translateProvider.useLocalStorage();
         $translateProvider.preferredLanguage('es/es');
         // Configuración de las rutas
         $routeProvider
