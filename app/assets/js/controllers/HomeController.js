@@ -17,7 +17,7 @@ var discovrApp = angular.module('DiscovrMain', ['ngRoute','pascalprecht.translat
              });
      })
      .controller('MainController', function($scope, $translate){
-       $scope.listLan = ['es/es', 'en/en'];
+       $scope.listLan = ['es/es', 'en/en','fr/fr'];
        $scope.changeLang = function changeLangFn() {
            $translate.use($scope.listLan);
        };
