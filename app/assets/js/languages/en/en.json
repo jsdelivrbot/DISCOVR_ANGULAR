@@ -4,13 +4,15 @@
     "passInputPlaceHolder": "Insert you password",
     "btnLogin": "Enter",
 
+
     "HomeTitle": "Home",
     "WhereToGoTitle": "Where to go?",
     "SettingsTitle": "Settings",
     "BugsTitle": "Bugs & suggestions",
     "SearchTitle": "Search",
-    "SearchPlaceHolder": "Write here..."
-    
-    
+    "SearchPlaceHolder": "Write here...",
+
+    "WalletTitle": "Wallet"
+        
 }
 
