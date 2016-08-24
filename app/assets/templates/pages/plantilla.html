@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta name="description" content="DISCOVR - Sistema web de turismo">
     <meta name="author" content="Néstor Alberto Molina Morán y Alex José Flores Rivas">
-    <link rel="icon" href="files/img/favicon.ico">
+    <link rel="icon" href="../../../files/img/favicon.ico">
 
 	<title>Discovr</title>	
 
@@ -14,22 +14,29 @@
 	<link rel="stylesheet" href="../../../assets/css/no_webkit.css">
 	<link rel="stylesheet" href="../../../assets/css/main/menuPrincipal.css">
 </head>
-<body class="FondoBody">
+<body class="FondoBody" ng-controller="MainController">
 	
 <!-- INICIO DEL MENU-->
 <div class="ContenedorMenu">
   <ul>
     <li><i class="material-icons">map</i> Discovr</li>
     <li id="LineSeparador"></li>
-    <li><i class="material-icons">home</i> Inicio</li>
-    <li><i class="material-icons">keyboard_arrow_right</i> Dónde Ir?</li>
+    <li><i class="material-icons">home</i> <span translate>HomeTitle</span></li>
+    <li><i class="material-icons">keyboard_arrow_right</i> <span translate>WhereToGoTitle</span></li>
 
     <li class="FloatRightMenu">
     	<i class="material-icons">more_vert</i>
 		<ul>
-			<li> <i class="material-icons">settings</i> Ajustes</li>
-			<li> <i class="material-icons">language</i> Idioma</li>
-			<li> <i class="material-icons">bug_report</i> Errores & Sugerencias</li>
+			<li> <i class="material-icons">settings</i> <span translate>SettingsTitle</span></li>
+
+			<li> <i class="material-icons">language</i> 
+
+      <button ng-click="changeLang('en/en')">English</button>
+      <button ng-click="changeLang('es/es')">Español</button>
+
+    </li>
+
+			<li> <i class="material-icons">bug_report</i> <span translate>BugsTitle</span></li>
 		</ul>
     </li>
     <li class="FloatRightMenu"> 
@@ -88,10 +95,10 @@
  
     </li>
     <li class="FloatRightMenu">
-        <i class="material-icons">search</i> <span id="TextBuscarM">Buscar</span>
+        <i class="material-icons">search</i> <span id="TextBuscarM"><span translate>SearchTitle</span></span>
 		<ul id="ContainerAllSearch">
 			<li id="containerSearch">
-				<input type="search" id="searchMenu" placeholder="Escriba aquí...">
+				<input type="search" id="searchMenu" placeholder="{{ 'SearchPlaceHolder' | translate }}">
 			</li> 
 		</ul>
     </li>     
