@@ -28,13 +28,15 @@
     	<i class="material-icons">more_vert</i>
 		<ul>
 			<li> <i class="material-icons">settings</i> <span translate>SettingsTitle</span></li>
-
-			<li> <i class="material-icons">language</i> 
-
+			<li> <i class="material-icons">language</i></li>
+            <li>
+                <select ng-model="listLan" ng-change="changeLang()">
+                    <option ng-repeat="lan in listLan">{{lan}}</option>                  
+                </select>
+            </li>
 
 			<li> <i class="material-icons">bug_report</i> <span translate>BugsTitle</span></li>
-		</ul>
-    </li>
+		</ul>    
     <li class="FloatRightMenu"> 
     	<picture id="PictureUser"> <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
 		<ul class="SubMenuUsuario">
@@ -96,6 +98,7 @@
 			<li id="containerSearch">
 				<input type="search" id="searchMenu" placeholder="{{ 'SearchPlaceHolder' | translate }}">
 			</li> 
+            
 		</ul>
     </li>     
   </ul>
