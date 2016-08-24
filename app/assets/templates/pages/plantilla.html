@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="../../../assets/css/no_webkit.css">
 	<link rel="stylesheet" href="../../../assets/css/main/menuPrincipal.css">
 </head>
-<body class="FondoBody">
+<body class="FondoBody" ng-controller="MainController">
 	
 <!-- INICIO DEL MENU-->
 <div class="ContenedorMenu">
@@ -28,7 +28,11 @@
     	<i class="material-icons">more_vert</i>
 		<ul>
 			<li> <i class="material-icons">settings</i> Ajustes</li>
-			<li> <i class="material-icons">language</i> Idioma</li>
+			<li> <i class="material-icons">language</i>
+                <select ng-model="listLan" ng-change="changeLang()">
+                    <option ng-repeat="lan in listLan">{{ lan }}</option>                  
+                </select>
+            </li>
 			<li> <i class="material-icons">bug_report</i> Errores & Sugerencias</li>
 		</ul>
     </li>

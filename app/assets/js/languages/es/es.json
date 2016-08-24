@@ -2,5 +2,15 @@
     "loginTitle": "Inicio de Sesion",
     "userInputPlaceHolder": "Ingrese su usuario",
     "passInputPlaceHolder": "Ingrese su contraseña",
-    "btnLogin": "Ingresar"
+    "btnLogin": "Ingresar",
+
+    "HomeTitle": "Inicio",
+    "WhereToGoTitle": "Dónde Ir?",
+    "SettingsTitle": "Ajustes",
+    "BugsTitle": "Errores & Sugerencias",
+    "SearchTitle": "Buscar",
+    "SearchPlaceHolder": "Escriba aquí...",
+
+    "WalletTitle": "Billetera"
+
 }
