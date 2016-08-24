@@ -1,4 +1,4 @@
-var discovrApp = angular.module('DiscovrIndex', ['ngRoute','pascalprecht.translate'])
+var discovrApp = angular.module('DiscovrIndex', ['ngCookies','pascalprecht.translate','ngRoute'])
     .config(function($translateProvider, $routeProvider) {
         // Configuración de los idiomas
         $translateProvider.useStaticFilesLoader({
@@ -7,6 +7,8 @@ var discovrApp = angular.module('DiscovrIndex', ['ngRoute','pascalprecht.transla
         });
         //$translateProvider.useLocalStorage();
         $translateProvider.preferredLanguage('es/es');
+        // here the html tag works
+        $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
         // Configuración de las rutas
         $routeProvider
             .when('/', {

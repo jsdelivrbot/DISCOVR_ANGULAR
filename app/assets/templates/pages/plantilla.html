@@ -29,11 +29,20 @@
 		<ul>
 			<li> <i class="material-icons">settings</i> <span translate>SettingsTitle</span></li>
 			<li> <i class="material-icons">language</i>
+<<<<<<< HEAD
                 <span Translate>LenguajeTitle</span>
                 <select ng-model="listLan" ng-change="changeLang()" id="SelectLan">
                     <option ng-repeat="lan in listLan">{{lan}}</option>                  
                 </select>
             
+=======
+            
+                <select ng-model="listLan" ng-change="changeLang()">
+                    <option ng-repeat="lan in listLan">{{lan}}</option>                  
+                </select>
+            
+
+>>>>>>> refs/remotes/origin/logic
         </li>
 
 			<li> <i class="material-icons">bug_report</i> <span translate>BugsTitle</span></li>
@@ -112,8 +121,10 @@
 
 	<script src="../../../bower_components/angular/angular.min.js"></script>
 	<script src="../../../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="../../../bower_components/angular-cookies/angular-cookies.min.js"></script>
 	<script src="../../../bower_components/angular-translate/angular-translate.min.js"></script>
 	<script src="../../../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="../../../bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
 	<script src="../../../bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
 	
     <script src="../../../assets/js/controllers/HomeController.js"></script>
