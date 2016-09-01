@@ -1,14 +1,80 @@
-	<link rel="stylesheet" href="../../../../assets/css/main/slider.css">
-	<link rel="stylesheet" href="../../../../assets/css/main/FloatTilesSlider.css">
-	<link rel="stylesheet" href="../../../../assets/css/main/TileSites.css">
-	<link rel="stylesheet" href="../../../../assets/css/main/SliderMiniTile.css">
+	<link rel="stylesheet" href="../../assets/css/main/menuPrincipal.css">
+  <link rel="stylesheet" href="../../assets/css/main/slider.css">
+	<link rel="stylesheet" href="../../assets/css/main/FloatTilesSlider.css">
+	<link rel="stylesheet" href="../../assets/css/main/TileSites.css">
+	<link rel="stylesheet" href="../..//assets/css/main/SliderMiniTile.css">
 
-	
-	
+<!-- INICIO DEL MENU-->
+<div class="ContenedorMenu">
+  <ul>
+    <li><i class="material-icons">map</i> Discovr</li>
+    <li id="LineSeparador"></li>
+    <li><i class="material-icons">home</i> <span translate>HomeTitle</span></li>
+    <li><i class="material-icons">keyboard_arrow_right</i> <span translate>WhereToGoTitle</span></li>
 
+    <li class="FloatRightMenu">
+    	<i class="material-icons">more_vert</i>
+		<ul>
+			<li> <i class="material-icons">settings</i> <span translate>SettingsTitle</span></li>
+			<li> <i class="material-icons">language</i>
+                <span Translate> LenguageTitle </span>
+                <select ng-model="listLan" ng-change="changeLang()" id="SelectLan">
+                    <option ng-repeat="lan in listLan">{{lan}}</option>                  
+                </select>
+            </li>
+			<li> <i class="material-icons">bug_report</i> <span translate>BugsTitle</span></li>
+		</ul> 
+    </li>  
+    <li class="FloatRightMenu"> 
+    	<picture id="PictureUser"> <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
+		<ul class="SubMenuUsuario">
+			<li> <i class="material-icons">account_circle</i> <span Translate>ProfileTitle</span></li>
+			<li> <i class="material-icons">accessible</i> <span Translate>ConditionsTitle</span></li>
+			<li> <i class="material-icons">exit_to_app</i> <span Translate>ExitTitle</span></li>
+		</ul>
+    </li>
+    <li class="FloatRightMenu">
+    	<i class="material-icons">notifications</i>
+		<ul class="SubMenuNotificasion">
+    			<li class="CardNotificasion">
+                     <div class="ContainerDataNotificacion">
+                        <picture id="PictureUser"> 
+                        <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
+                        <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</span> 
+                        <p class="FechaNotf">14-08-2016</p>
+                     </div>
+                </li>
+                <li class="CardNotificasion">
+                     <div class="ContainerDataNotificacion">
+                        <picture id="PictureUser"> 
+                        <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
+                        <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</span> 
+                        <p class="FechaNotf">14-08-2016</p>
+                     </div>
+                </li>    
+                <li class="CardNotificasion">
+                     <div class="ContainerDataNotificacion">
+                        <picture id="PictureUser"> 
+                        <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
+                        <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</span> 
+                        <p class="FechaNotf">14-08-2016</p>
+                     </div>
+                </li>    		
+    		</ul>
+    </li>
+    <li class="FloatRightMenu">
+        <i class="material-icons">search</i> <span id="TextBuscarM"><span translate>SearchTitle</span></span>
+		<ul id="ContainerAllSearch">
+			<li id="containerSearch">
+				<input type="search" id="searchMenu" placeholder="{{ 'SearchPlaceHolder' | translate }}">
+			</li>  
+		</ul>
+    </li> 
+ </ul>    
+</div>
+<!-- FIN DEL MENU-->
 
 <!-- Apartir de acá se inicia el slider principal-->
-
 <div class="PrincipalSlider">
   <div class="slider">
       <ul>
@@ -27,21 +93,14 @@
       </ul>
     </div>
 </div>
-
 <!-- Aqui finaliza el slider principal slider principal-->
+
 <div class="slide_buttons"></div>
-<!-- ____________________________________________________________________________ -->
+<!-- ------------------------------------------------------------------------------ -->
 
   <!-- LA FUNCION NG INCLUDE PERITE IMORTAR OTROS ELEMENTOS EN EL HTML -->
+<div class="ContainerFloatTiles" ng-include="'float.tiles.view.html'"> </div>
+<div class="ContainerTileSites" ng-include="'main.tiles.view.html'"> </div>
 
-<div class="ContainerFloatTiles" ng-include="'main/FloatTiles.html'"> </div>
+<!-- ------------------------------------------------------------------------------ -->
 
-<div class="ContainerTileSites" ng-include="'main/TileSites.html'"> </div>
-
-<!-- ____________________________________________________________________________ -->
-
-
-<!-- <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script> -->
-
-
-<!-- ____________________________________________________________________________ -->

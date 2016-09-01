@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="DiscovrMain">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="DISCOVR - Sistema web de turismo">
+    <meta name="author" content="Néstor Alberto Molina Morán y Alex José Flores Rivas">
+    <link rel="icon" href="../../assets/files/img/favicon.ico">
+
+	<title>Discovr</title>	
+
+	<link rel="stylesheet" href="../../assets/css/index.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/css/no_webkit.css">
+</head>
+
+<body class="FondoBody" ng-controller="">
+	
+
+
+<div ng-view></div>
+
+<!-- ------------------------------------------------------------ -->
+    <!-- angular scripts -->
+	<script src="../../bower_components/angular/angular.min.js"></script>
+	<script src="../../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../../bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="../../bower_components/ngStorage/ngStorage.min.js"></script>
+
+    <script src="../../bower_components/angular-cookies/angular-cookies.min.js"></script>
+	<script src="../../bower_components/angular-translate/angular-translate.min.js"></script>
+	<script src=".././bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="../../bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+	<script src="../../bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+	
+    <!-- application scripts -->
+    <script src="../app.js"></script>
+
+    <script> <!--  este script es para identificar a cada navegador y asi aplicar css especifico en cada uno-->
+		var d0cum3n7e13m3n7 = document.documentElement; 
+		d0cum3n7e13m3n7.setAttribute('data-useragent', navigator.userAgent); 
+		d0cum3n7e13m3n7.setAttribute('data-platform', navigator.platform); 
+		d0cum3n7e13m3n7.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
+	</script>
+
+	<!--<script src="../../js/gulp.js"></script>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>-->
+	<script src="../assets/js/main/efectosTileIcono.js"></script>
+
+<!-- ------------------------------------------------------------ -->
+</body>
+</html>
+		

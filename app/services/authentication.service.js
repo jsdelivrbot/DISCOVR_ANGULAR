@@ -1,6 +1,6 @@
-discovrApp.factory('AuthenticationService', function ($http, $localStorage){
+discovrApp.factory('AuthenticationService', function ($http, $localStorage,apiURL){
   var service = {};
-  var apiURL= 'https://discovr-gekkou95.c9users.io/api/';
+  //var apiURL= 'https://discovr-gekkou95.c9users.io/api/';
 
   service.Login = Login;
   service.Logout = Logout;
