@@ -29,8 +29,7 @@ var discovrApp = angular.module('DiscovrIndex', ['ui.router','ngMessages','ngSto
              .state('prueba', {
                 url: '/prueba',
                 templateUrl: 'modules/prueba.html',
-                controller: 'Home.IndexController',
-                controllerAs: 'vm'
+            
             })
 
             .state('login', {
