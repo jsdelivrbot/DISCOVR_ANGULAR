@@ -3,7 +3,7 @@ var discovrApp = angular.module('DiscovrIndex', ['ui.router','ngMessages','ngSto
     .config(config)
     .run(run);
 
-    function config($translateProvider, $stateProvider, $urlRouterProvider) {
+    function config($stateProvider, $urlRouterProvider) {
         // default route
         $urlRouterProvider.otherwise("/");
          /*
