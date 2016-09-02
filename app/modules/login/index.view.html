@@ -1,18 +1,28 @@
+<!-- ----------------     IMPORT FILES     ------------------------- -->
 <link rel="stylesheet" href="../../assets/css/loguin.css">
+<!-- ----------------     END IMPORT FILES     ------------------------- -->
 
-<a href="../home/header.view.html">Load Main Page</a>
+<!-- ----------------     LANGUAGE SWITCH     ------------------------- -->
+<span translate>LenguajeTitle</span>
+<select ng-model="listLan" ng-change="changeLang()" id="SelectLan">
+	<option ng-repeat="lan in listLan"> {{ lan }} </option>                  
+</select>
+<!-- ----------------     END LANGUAGE SWITCH     ------------------------- -->
 
+<!-- ----------------     LOGIN FORM     ------------------------- -->
 <div id="ContenedorFormularioSesion">
-<form name="form" ng-submit="form.$valid && vm.login()" novalidate>
-	<h2 translate> loginTitle </h2>
-	<input type="text" placeholder="{{ 'userInputPlaceHolder' | translate }}" class="inputTex" ng-model="vm.username" required>
-	<input type="password" placeholder="{{ 'passInputPlaceHolder' | translate }}" class="inputTex" ng-model="vm.password" required>
-	
-	<button ng-disabled="vm.loading" class="btn btn-primary">{{ 'btnLogin' | translate }}</button>
-	<!--<input type="submit" value="{{ 'btnLogin' | translate }}" class="inputSubmit"> -->
+	<form name="form" ng-submit="form.$valid && vm.login()" novalidate>
+		<h2 translate> loginTitle </h2>
+		<input type="text" placeholder="{{ 'userInputPlaceHolder' | translate }}" class="inputTex" ng-model="vm.username" required>
+		<input type="password" placeholder="{{ 'passInputPlaceHolder' | translate }}" class="inputTex" ng-model="vm.password" required>
+		
+		<button ng-disabled="vm.loading" class="btn btn-primary">{{ 'btnLogin' | translate }}</button>
+		<!--<input type="submit" value="{{ 'btnLogin' | translate }}" class="inputSubmit"> -->
 
-	 <div ng-if="vm.error" >{{vm.error}}</div>
-</form>
+		<div ng-if="vm.error" >{{vm.error}}</div>
+	</form>
 </div>
+<!-- ----------------     END LOGIN FORM     ------------------------- -->
+
 
 
