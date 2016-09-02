@@ -4,25 +4,7 @@
     "passInputPlaceHolder": "Ingrese su contraseña",
     "btnLogin": "Ingresar",
 
-    "HomeTitle": "Inicio",
-    "WhereToGoTitle": "Dónde Ir?",
-    "SearchTitle": "Buscar",
-    "SearchPlaceHolder": "Escriba aquí...",
+    "LenguajeTitle": "Lenguaje"
 
-    "SettingsTitle": "Ajustes",
-    "BugsTitle": "Errores & Sugerencias",
-    "LenguajeTitle": "Lenguaje",
-    "ProfileTitle": "Perfil",
-    "ConditionsTitle": "Padecimientos",
-
-    "WalletTitle": "Billetera",
-    "EmergenciesTitle": "Emergencias",
-    "PreferencesTitle": "Preferencias",
-    "InstitutionsTitle": "Instituciones",
-    "CountriesTitle": "Países",
-    "TransportTitle": "Transporte",
-    "ClubsTitle": "Clubs & Amigos",
-    "AdventureTitle": "Aventuras",
-    "EventsTitle": "Eventos"
 }
 
