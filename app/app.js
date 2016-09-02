@@ -3,19 +3,18 @@ var discovrApp = angular.module('DiscovrIndex', ['ui.router','ngMessages','ngSto
     .config(config)
     .run(run);
 
-    function config($stateProvider, $urlRouterProvider) {
+    function config($stateProvider, $urlRouterProvider,$translateProvider) {
         // default route
         $urlRouterProvider.otherwise("/");
-         /*
         // Configuración de los idiomas
         $translateProvider.useStaticFilesLoader({
-            prefix: 'assets/js/languages/',
+            prefix: 'modules/',
             suffix: '.json'
         });
         $translateProvider.useLocalStorage();
-        $translateProvider.preferredLanguage('es/es');
+        $translateProvider.preferredLanguage('login/languages/es-es');
         // here the html tag works
-        $translateProvider.useSanitizeValueStrategy('sanitizeParameters');*/
+        $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
         // Configuración de las rutas
         // app routes
          $stateProvider
