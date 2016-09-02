@@ -9,7 +9,7 @@ discovrApp.config(function($translateProvider){
     // here the html tag works
     $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
 });
-discovrApp.controller('Login.IndexController', function($location,AuthenticationService,$scope, $translate){    
+discovrApp.controller('Login.IndexController', function($location,AuthenticationService,$scope,$translate){    
     var vm = this;
 
     vm.login = login;
@@ -31,8 +31,13 @@ discovrApp.controller('Login.IndexController', function($location,Authentication
             }
         });
     };
-    $scope.listLan = ['es', 'en'];
+    $scope.listLan = [
+        {'key':'es','value':'Español'},
+        {'key':'en','value':'English'}
+    ];
+    $scope.selected = 'es';    
     $scope.changeLang = function changeLangFn() {
-        $translate.use($scope.listLan);
+        var opt = $scope.selected;
+        $translate.use(opt); 
     };
 });    

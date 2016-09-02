@@ -4,9 +4,10 @@
 
 <!-- ----------------     LANGUAGE SWITCH     ------------------------- -->
 <span translate>LenguajeTitle</span>
-<select ng-model="listLan" ng-change="changeLang()" id="SelectLan">
-	<option ng-repeat="lan in listLan"> {{ lan }} </option>                  
+<select ng-model="selected" ng-change="changeLang()">
+	<option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
 </select>
+
 <!-- ----------------     END LANGUAGE SWITCH     ------------------------- -->
 
 <!-- ----------------     LOGIN FORM     ------------------------- -->
