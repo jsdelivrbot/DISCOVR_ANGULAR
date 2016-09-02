@@ -1,15 +1,16 @@
   /* ESTE ES EL CODIGO JQUERY PARA EVENTO SCROLL DEL MENU*/
-  $(document).ready(function(){
-  var altura = $('.ContenedorMenu').offset().top;
-  
-  $(window).on('scroll', function(){
-    if ( $(window).scrollTop() > altura ){
-      $('.ContenedorMenu').addClass('menu-fixed');
-    } else {
-      $('.ContenedorMenu').removeClass('menu-fixed');
-    }
-  });
- 
+
+
+  $(function(){
+   
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 90) {
+            $('.ContenedorMenu').addClass('menu-fixed');
+        }
+        else {
+            $('.ContenedorMenu').removeClass('menu-fixed');
+        }
+    });
 });
 
   /*-------------------------------------------------------------------------------------------------------------*/
