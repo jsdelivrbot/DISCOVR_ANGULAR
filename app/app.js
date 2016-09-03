@@ -53,5 +53,22 @@ var discovrApp = angular.module('DiscovrIndex', ['ui.router','ngMessages','ngSto
             }
         });
     }
+    //Auto-logout if any unauthorised web api request is made
+    discovrApp.config(['$provide', '$httpProvider', function ($provide, $httpProvider) {
+
+    $provide.factory('unauthorisedInterceptor', ['$q', function ($q) {
+        return {
+            'responseError': function (rejection) {
+                if (rejection.status === 401) {
+                    window.location.href = '/#/login';
+                }
+
+                return $q.reject(rejection);
+            }
+        };
+    }]);
+
+    $httpProvider.interceptors.push('unauthorisedInterceptor');
+}]);
     
    

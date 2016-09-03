@@ -4,6 +4,7 @@ discovrApp.controller('Home.IndexController', function($localStorage,$location,A
     initController();
 
     function initController() {
+        vm.username = $localStorage.currentUser.username;
         var stLan = localStorage.getItem('NG_TRANSLATE_LANG_KEY');
         var szLanLan = stLan.length;
         var lang = stLan.substr((szLanLan-5),szLanLan);
