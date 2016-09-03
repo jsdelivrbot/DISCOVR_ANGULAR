@@ -1,4 +1,4 @@
-    <link rel="stylesheet" href="../../assets/css/menuPrincipal.css">
+<link rel="stylesheet" href="../../assets/css/menuPrincipal.css">
 
 
 <!-- INICIO DEL MENU-->
@@ -14,9 +14,9 @@
 		<ul>
 			<li> <i class="material-icons">settings</i> <span translate>SettingsTitle</span></li>
 			<li> <i class="material-icons">language</i>
-                <span Translate> LenguageTitle </span>
-                <select ng-model="listLan" ng-change="changeLang()" id="SelectLan">
-                    <option ng-repeat="lan in listLan">{{lan}}</option>                  
+                <span translate> LenguageTitle </span>
+                <select ng-model="listLan.key" ng-change="changeLang()">
+                    <option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
                 </select>
             </li>
 			<li> <i class="material-icons">bug_report</i> <span translate>BugsTitle</span></li>
@@ -25,9 +25,9 @@
     <li class="FloatRightMenu"> 
     	<picture id="PictureUser"> <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
 		<ul class="SubMenuUsuario">
-			<li> <i class="material-icons">account_circle</i> <span Translate>ProfileTitle</span></li>
-			<li> <i class="material-icons">accessible</i> <span Translate>ConditionsTitle</span></li>
-			<li> <i class="material-icons">exit_to_app</i> <span Translate>ExitTitle</span></li>
+			<li> <i class="material-icons">account_circle</i> <span translate>ProfileTitle</span> {{vm.username}} </li>
+			<li> <i class="material-icons">accessible</i> <span translate>ConditionsTitle</span></li>
+			<li> <a href="#/login"><i class="material-icons">exit_to_app</i><span translate>ExitTitle</span></a></li>
 		</ul>
     </li>
     <li class="FloatRightMenu">

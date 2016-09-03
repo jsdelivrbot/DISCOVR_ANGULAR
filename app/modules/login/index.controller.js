@@ -1,14 +1,3 @@
-discovrApp.config(function($translateProvider){
-    // Configuración de los idiomas
-    $translateProvider.useStaticFilesLoader({
-        prefix: 'modules/login/languages/',
-        suffix: '.json'
-    });
-    $translateProvider.useLocalStorage();
-    $translateProvider.preferredLanguage('es');
-    // here the html tag works
-    $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
-});
 discovrApp.controller('Login.IndexController', function($location,AuthenticationService,$scope,$translate){    
     var vm = this;
 
@@ -26,18 +15,19 @@ discovrApp.controller('Login.IndexController', function($location,Authentication
             if(result === true){
                 $location.path('/');                    
             }else{
-                vm.error = 'username or password is incorrect';
+                vm.error = 'Username or password is incorrect';
                 vm.loading = false;
             }
         });
     };
     $scope.listLan = [
-        {'key':'es','value':'Español'},
-        {'key':'en','value':'English'}
+        {'key':'es-es','value':'Español'},
+        {'key':'us-en','value':'English'}
     ];
-    $scope.selected = 'es';    
+    $scope.selected = 'es-es';    
     $scope.changeLang = function changeLangFn() {
         var opt = $scope.selected;
-        $translate.use(opt); 
+         console.log(opt);
+        $translate.use('login/languages/' + opt); 
     };
 });    
