@@ -15,7 +15,7 @@ discovrApp.controller('Login.IndexController', function($location,Authentication
             if(result === true){
                 $location.path('/');                    
             }else{
-                vm.error = 'username or password is incorrect';
+                vm.error = 'Username or password is incorrect';
                 vm.loading = false;
             }
         });
