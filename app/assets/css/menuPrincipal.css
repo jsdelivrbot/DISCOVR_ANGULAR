@@ -129,7 +129,7 @@ a:active{
 .FloatRightMenu ul{
 	display: none;
 	position: absolute;
-	background-color: rgba(224,224,224,0.8);
+	background-color: rgba(224,224,224,1);
 	color: rgba(38,50,56,0.9);
 	width: 240px;
     margin-top: 14px;
@@ -186,20 +186,20 @@ a:active{
 }
 
 
-.FloatRight- ul li:active{
+.FloatRightMenu ul li:active{
 	background-color: rgba(250,250,250,0.8);
 }
 
 /* Hace que el sub menu Aparezca */
 
-.FloatRightMenu:hover > ul{ 
+/* .FloatRightMenu:hover > ul{ 
 	transition: all 0.9s;
 	display: block;
-}
+} */
 
 /* Estilos aplicados para quitar fondo y efectos al contenedor del buscador */
 
-.FloatRightMenu #ContainerAllSearch{
+/* .FloatRightMenu #ContainerAllSearch{
 	background-color: transparent;
 	margin-left: -269px;
 	margin-top: -35px;
@@ -213,7 +213,7 @@ a:active{
 
 .FloatRightMenu #containerSearch:active{
 	background-color: transparent;
-}
+} */
 
 /* Estilos aplicados al placeholder para cambiar el color por defecto */
 
@@ -251,3 +251,105 @@ a:active{
 	padding: 3px;
 }
 
+#color{
+	color: rgba(38, 50, 56, 0.9);
+}
+
+/* EVENTOS DE CLICK PARA LOS CHECK USANDO LABEL */
+#SubCheckNotif:checked ~ .SubMenuNotificasion{
+	display: block;
+}
+
+
+#CheckSubMenuUsuario:checked ~ .SubMenuUsuario{
+	display: block;
+}
+
+#SubCheckSettings:checked ~ #ColorActive{
+	display: block;
+}
+
+/* ESTILO DE LA BARRA DE BUSQUEDA */
+
+.FloatRightMenu input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-size: 100%;
+}
+.FloatRightMenu input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+.FloatRightMenu input[type=search] {
+	background: url(../../assets/files/img/search/white.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	border-style: none;
+	margin-top: -8px;
+
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+
+.menu-fixed .FloatRightMenu input[type=search] {
+	background: url(../../assets/files/img/search/black.png) no-repeat 9px center;
+}
+
+/* Demo 2 */
+#demo-2 input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+	outline:0px;
+}
+#demo-2 input[type=search]:hover {
+	/* background-color: #fff; */
+}
+#demo-2 input[type=search]:focus {
+	width: 200px;
+	padding-left: 32px;
+	color: #000;
+	background-color:rgba(224,224,224,0.6);
+	cursor: auto;
+}
+#demo-2 input:-moz-placeholder {
+	color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+/* Cursor en mano de mano sobre elementos del menu */
+.FloatRightMenu label{
+	cursor: pointer;
+}
+
+
+/* TRIANGULO SOBRE LOS MENU*/
+
+.ConectorMenu{
+	width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid rgba(224,224,224,1);
+    position: relative;
+    margin-top: -14px;
+    margin-left: 193px;
+}
+
+.SubMenuUsuario .ConectorMenu{
+	width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid rgba(224,224,224,1);
+    position: relative;
+    margin-top: -14px;
+    margin-left: 130px;
+}
