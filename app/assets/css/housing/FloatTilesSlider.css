@@ -100,3 +100,22 @@
 	font-size: 36px;
 	
 }
+
+/*  Animaciones de hover y active*/
+
+.scale:hover{
+	-webkit-transform: scale(1.02);
+}
+
+.scale:active{
+	-webkit-transform: scale(1);
+}
+
+
+#DobleTile li:hover{
+	-webkit-transform: scale(1.05);
+}
+
+#DobleTile li:active{
+	-webkit-transform: scale(1);
+}

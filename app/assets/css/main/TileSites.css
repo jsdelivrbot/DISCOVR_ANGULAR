@@ -91,3 +91,20 @@
 	padding-bottom: 54px;
 }
 
+/*  Animaciones de hover y active*/
+
+.TileSite1:hover, .TileSite3:hover, .TileSite6:hover{
+	-webkit-transform: scale(1.05);
+}
+
+.TileSite1:active, .TileSite3:active, .TileSite6:active{
+	-webkit-transform: scale(1);
+}
+
+.TileSite2:hover, .TileSite5:hover, .MiniTilesSite:hover{
+	-webkit-transform: scale(1.02);
+}
+
+.TileSite2:active, .TileSite5:active, .MiniTilesSite:active{
+	-webkit-transform: scale(1);
+}
