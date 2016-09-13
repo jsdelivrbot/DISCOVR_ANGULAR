@@ -85,18 +85,18 @@
   animation: cambio 22s infinite alternate linear;
 }
 
-.TileSitesContenidoMini .slider img {
+.TileSite4 .slider img {
   width: 100%;
-  height: 88px;
+  height: 180px;
   object-fit: cover;
-  float: left;
 }
 
-.TileSitesContenidoMini .slider ul {
+
+.TileSite4 .slider ul {
   display: flex;
   padding: 0;
   width: 400%;
-  height: 88px;
+  height: 180px;
   overflow: hidden;
   position: relative;
   

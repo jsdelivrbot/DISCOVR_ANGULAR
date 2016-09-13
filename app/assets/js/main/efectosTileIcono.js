@@ -4,7 +4,7 @@
   $(function(){
    
     $(window).scroll(function() {
-        if ($(this).scrollTop() >= 90) {
+        if ($(this).scrollTop() >= 40) {
             $('.ContenedorMenu').addClass('menu-fixed');
         }
         else {
