@@ -94,3 +94,18 @@
 	text-align: center;
 	padding-top: 26px;
 	padding-bottom: 18px;
+}
+
+/*  Animaciones de hover y active*/
+
+.scale:hover{
+	-webkit-transform: scale(1.02);
+}
+
+.scale2:hover{
+	-webkit-transform: scale(1.01);
+}
+
+.scale2:active, .scale:active{
+	-webkit-transform: scale(1);
+}
