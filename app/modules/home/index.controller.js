@@ -20,4 +20,29 @@ discovrApp.controller('Home.IndexController', function($localStorage,$location,A
         console.log(opt);
         $translate.use('home/languages/' + opt); 
     };
+
+    $scope.dataArray = [
+      {
+        src: 'http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg'
+      },
+      {
+        src: 'http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg'
+      },
+      {
+        src: 'http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg'
+      },
+      {
+        src: 'http://img.ev.mu/images/villes/40755/1605x642/40755.jpg'
+      },
+      {
+        src: 'http://endimages.s3.amazonaws.com/legacy/1355009715_RUTA%20CA%C3%91ON%20DE%20SOMOTO%20091212.jpg'
+      },
+      {
+        src: 'http://trunkweed.com/uploads/posts/images/590341-blue-panoramic-nature-background.jpg'
+      },
+      {
+        src: 'http://trunkweed.com/uploads/posts/images/590341-blue-panoramic-nature-background.jpg'
+      }
+    ];
+
 });
