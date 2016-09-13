@@ -1,0 +1,15 @@
+.ContainerDual{
+	width: 100%;
+	color: #000;
+	margin-top: 10px;
+}
+
+.ContanerDual1{
+	float: left;
+	width: 66.4%
+}
+
+.ContanerDual2{
+	float: right;
+	width: 33.6%
+}

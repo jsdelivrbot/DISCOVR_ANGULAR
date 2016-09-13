@@ -1,56 +1,32 @@
 .ContainerTileSites{
 	width: 100%;
 	margin-top: 10px;
-	text-align: center;
 	overflow: hidden;
 
 }
 
-.TileSite1, .TileSite2, .TileSite3, .TileSite4, .TileSite5, .TileSite6{
-	width: 23.8%;
+.TileSite1, .TileSite2, .TileSite3, .TileSite4, .TileSite5, .TileSite6, .TileSite7{
+	width: 47.8%;
 	float: left;
-	height: 180px;
-
+	height: 130px;
 	color: #fff;
 	margin-left: 0.8%;
 	margin-bottom: 10px;
-		background-color: #37474f;
+	background-color: #37474f;
+	margin-right: 1.4%;
 
 
 }
 
-.TileSite2{
-	width: 49.3%;
-}
 
-.TileSite4{
-	width: 32%;
-	background-color: #fff;
-}
-
-.TileSite5{
-	width: 45%;
-}
-
-.TileSite6{
-	width: 20%;
-}
 
 .TileSitesContenido{
 	width: 100%;
-	height: 180px;
+	height: 130px;
 	overflow: hidden;
-}
-
-.NotificacionTileSite{
-	position: relative;
-	margin-top: -180px;
-	float: right;
-	background-color: #ef5350;
-	width: 40px;
-	padding: 2px;
 	text-align: center;
 }
+
 
 /* ------------------------------------------------------------------------------------------ */
 
@@ -58,7 +34,7 @@
 	float: right;
 	margin-right: 12px;
 	position: relative;
-	margin-top: -44px;
+	margin-top: -84px;
 	z-index: 2;
 }
 
@@ -67,7 +43,7 @@
 /* AQUI SE GENERA LA BARRA DIFUMINADA QUE ESTA EN LA PARTE INFERIOR DE LOS TILES */
 .BarraDifuminadaTileSite{
 	position: relative;
-	margin-top: -50px;
+	margin-top: -100px;
 	height: 50px;
 	width: 100%;
 	z-index: 1;
@@ -86,25 +62,17 @@
 
 .TileSitesContenido .material-icons{
 	font-size: 73px;
+	padding-top: 30px;
+	padding-bottom: 28px;
 	text-align: center;
-	padding-top: 60px;
-	padding-bottom: 54px;
 }
 
 /*  Animaciones de hover y active*/
 
-.TileSite1:hover, .TileSite3:hover, .TileSite6:hover{
+.TileSite1:hover, .TileSite2:hover, .TileSite3:hover, .TileSite4:hover, .TileSite5:hover, .TileSite6:hover{
 	-webkit-transform: scale(1.05);
 }
 
-.TileSite1:active, .TileSite3:active, .TileSite6:active{
-	-webkit-transform: scale(1);
-}
-
-.TileSite2:hover, .TileSite5:hover, .MiniTilesSite:hover{
-	-webkit-transform: scale(1.02);
-}
-
-.TileSite2:active, .TileSite5:active, .MiniTilesSite:active{
+.TileSite1:active, .TileSite2:active, .TileSite3:active, .TileSite4:active, .TileSite5:active, .TileSite6:active{
 	-webkit-transform: scale(1);
 }
