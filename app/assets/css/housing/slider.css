@@ -235,3 +235,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   color: #424242;
 }
 
+
+
+
+md-radio-button.md-default-theme .md-on, md-radio-button .md-on{
+  background: #fff;
+  color: #fff;
+}
