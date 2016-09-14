@@ -1,29 +1,17 @@
-  <link rel="stylesheet" href="../../assets/css/housing/slider.css">
-
+  <link rel="stylesheet" href="../../assets/css/main/slider.css">
 
 <!-- Apartir de acá se inicia el slider principal-->
 <div class="PrincipalSlider">
   <div class="slider">
-      <ul>
-        <li>
-          <img src="https://exp.cdn-hotels.com/hotels/7000000/6980000/6975400/6975392/6975392_10_z.jpg" alt="">
-          <p>Habitaciones</p>
-        </li>
-        <li>
-          <img src="http://www.hotelhex.com/Esteli/img/Fondo/06.jpg" alt="">
-          <p>Centro de eventos</p>
-        </li>
-        <li>
-          <img src="http://www.hotelhex.com/Esteli/img/Fondo/01.jpg" alt="">
-          <p>Hotel Hex</p>
-        </li>
-        <li>
-          <img src="http://q-ec.bstatic.com/images/hotel/840x460/254/25489577.jpg" alt="">
-          <p></p>
-        </li>
-      </ul>
-    </div>
+      <jk-carousel
+        data="dataArray"
+        item-template-url="'modules/home/item-template.html'"
+        auto-slide="true" auto-slide-time="9000"
+        max-width="" 
+        max-height="410"
+        style = "width: 100%;" >
+    </jk-carousel>
+  </div>
 </div>
-<!-- Aqui finaliza el slider principal slider principal-->
 
-<div class="slide_buttons"></div>
+<!-- <div class="slide_buttons"></div> -->
