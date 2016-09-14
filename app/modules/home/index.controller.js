@@ -20,6 +20,7 @@ discovrApp.controller('Home.IndexController', function($localStorage,$location,A
         console.log(opt);
         $translate.use('home/languages/' + opt); 
     };
+<<<<<<< HEAD
 
     $scope.dataArray = [
       {
@@ -36,6 +37,23 @@ discovrApp.controller('Home.IndexController', function($localStorage,$location,A
       },
       {
         src: 'http://endimages.s3.amazonaws.com/legacy/1355009715_RUTA%20CA%C3%91ON%20DE%20SOMOTO%20091212.jpg'
+=======
+     $scope.dataArray = [
+      {
+        src: 'http://trunkweed.com/uploads/posts/images/599694-panoramic-nature-wallpaper-1.jpg'
+      },
+      {
+        src: 'http://trunkweed.com/uploads/posts/images/590341-blue-panoramic-nature-background.jpg'
+      },
+      {
+        src: 'http://cdn.wallpapersafari.com/34/30/oDlPQr.jpg'
+      },
+      {
+        src: 'http://trunkweed.com/uploads/posts/images/599708-panoramic-nature-wallpaper.jpg'
+      },
+      {
+        src: 'http://trunkweed.com/uploads/posts/images/590341-blue-panoramic-nature-background.jpg'
+>>>>>>> refs/remotes/origin/master
       },
       {
         src: 'http://trunkweed.com/uploads/posts/images/590341-blue-panoramic-nature-background.jpg'
@@ -44,5 +62,9 @@ discovrApp.controller('Home.IndexController', function($localStorage,$location,A
         src: 'http://trunkweed.com/uploads/posts/images/590341-blue-panoramic-nature-background.jpg'
       }
     ];
+<<<<<<< HEAD
 
 });
+=======
+});
+>>>>>>> refs/remotes/origin/master
