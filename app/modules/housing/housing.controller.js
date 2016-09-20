@@ -21,7 +21,7 @@ discovrApp.controller('Housing.IndexController', function($localStorage,$locatio
         $translate.use('housing/languages/' + opt); 
     };
 
-    $scope.dataArray = [
+    /*$scope.dataArray = [
       {
         src: 'https://exp.cdn-hotels.com/hotels/7000000/6980000/6975400/6975392/6975392_10_z.jpg'
       },
@@ -43,5 +43,16 @@ discovrApp.controller('Housing.IndexController', function($localStorage,$locatio
       {
         src: 'http://trunkweed.com/uploads/posts/images/590341-blue-panoramic-nature-background.jpg'
       }
+    ];*/
+
+        $scope.myInterval = 5000;
+    $scope.noWrapSlides = false;
+    $scope.active = 0;
+    var slides = $scope.slides = [
+        {image: 'https://exp.cdn-hotels.com/hotels/7000000/6980000/6975400/6975392/6975392_10_z.jpg',
+      id: 0},
+        {image: 'http://www.hotelhex.com/Esteli/img/Fondo/06.jpg',
+      id: 1}
     ];
+    var currIndex = 0;
 });

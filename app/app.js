@@ -1,4 +1,4 @@
-var discovrApp = angular.module('DiscovrIndex', ['ngMaterial','jkAngularCarousel','ui.router','ngMessages','ngStorage','ngCookies','pascalprecht.translate'])
+var discovrApp = angular.module('DiscovrIndex', ['ui.bootstrap','ngAnimate','ui.router','ngMessages','ngStorage','ngCookies','pascalprecht.translate'])
     .constant('apiURL', 'https://discovr-gekkou95.c9users.io/api/')
     .config(config)
     .run(run);
