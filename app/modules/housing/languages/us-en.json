@@ -14,7 +14,15 @@
     "BookTitle": "Book",
     "GalleryTitle": "Gallery",
     "HowToGoingTitle": "How to going?",
-    "VirtualTourTitle": "Virtual tour"
+    "VirtualTourTitle": "Virtual tour",
+
+     "AboutTitle": "ABOUT",
+     "ContactTitle": "CONTACT",
+     "ActivitiesTitle": "ACTIVITIES",
+     "ConditionsTitle": "CONDITIONS",
+     "ReviewTitle": "REVIEW",
+     "ExperienceTitle": "EXPERIENCE",
+     "ServicesTitle": "SERVICES"
         
 }
 

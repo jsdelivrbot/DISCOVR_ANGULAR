@@ -1,17 +1,19 @@
-  <link rel="stylesheet" href="../../assets/css/main/slider.css">
+<link rel="stylesheet" href="../../assets/css/main/slider.css">
 
 <!-- Apartir de acá se inicia el slider principal-->
 <div class="PrincipalSlider">
   <div class="slider">
-      <jk-carousel
-        data="dataArray"
-        item-template-url="'modules/home/item-template.html'"
-        auto-slide="true" auto-slide-time="9000"
-        max-width="" 
-        max-height="410"
-        style = "width: 100%;" >
-    </jk-carousel>
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>{{slide.id}}</h4>
+          
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- <div class="slide_buttons"></div> -->
+
