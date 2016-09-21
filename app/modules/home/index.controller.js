@@ -20,24 +20,32 @@ discovrApp.controller('Home.IndexController', function($localStorage,$location,A
         console.log(opt);
         $translate.use('home/languages/' + opt); 
     };
-    $scope.dataArray = [
-      {
-        src: 'http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg'
-      },
-      {
-        src: 'http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg'
-      },
-      {
-        src: 'http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg'
-      },
-      {
-        src: 'http://img.ev.mu/images/villes/40755/1605x642/40755.jpg'
-      },
-      {
-        src: 'http://trunkweed.com/uploads/posts/images/590341-blue-panoramic-nature-background.jpg'
-      },
-      {
-        src: 'http://trunkweed.com/uploads/posts/images/590341-blue-panoramic-nature-background.jpg'
-      }
+
+    $scope.myInterval = 5000;
+    $scope.noWrapSlides = false;
+    $scope.active = 0;
+    var slides = $scope.slides = [
+        {image: 'http://www.pixolo.it/wp-content/uploads/2012/07/wallpaper-1867190.jpg',
+      id: 0},
+
+      {image: 'http://www.que-come.com/wp-content/uploads/2015/08/que-comen-las-ranas.jpg',
+      id: 1},
+
+        {image: 'http://www.pixolo.it/wp-content/uploads/2012/07/wallpaper-1667348.jpg',
+      id: 2}
     ];
+    var currIndex = 0;
+
+    $scope.myInterval1 = 4000;
+    $scope.noWrapSlides1 = false;
+    $scope.active1 = 0;
+    var slides1 = $scope.slides1 = [
+        {image: 'http://www.pixolo.it/wp-content/uploads/2012/07/wallpaper-1867190.jpg',
+      id: 0},
+        {image: 'http://www.pixolo.it/wp-content/uploads/2012/07/wallpaper-1667348.jpg',
+      id: 1}
+    ];
+    var currIndex = 0;
+
+   
 });

@@ -4,23 +4,17 @@
     <div class="TileSitesContenido">
       <i class="material-icons  materialOut">insert_invitation</i>
       <div class="slider">
-        <ul>
-          <li>
-            <img src="http://cdn.gq.com.mx/uploads/images/thumbs/201545/inauguracion_del_palacio_de_hierro__229685667_1418x1000.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://www.stylebybru.com/wp-content/uploads/2016/06/Summer-Music-Festivals_0.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://static.animalpolitico.com/wp-content/uploads/2016/08/000_DT36F-960x500.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://cde.peru.com/ima/0/1/4/4/5/1445304/611x458/eurocopa.jpg" alt="">
-          </li>
-        </ul>
-        <span class="SpanTitle" Translate>EventsTitle</span>
-        <div class="NotificacionTileSite">1</div>
-        <div class="BarraDifuminadaTileSite"></div>      
+    
+    <div uib-carousel active="active1" interval="myInterval1" no-wrap="noWrapSlides1">
+      <div uib-slide ng-repeat="slide1 in slides1 track by slide1.id" index="slide1.id">
+        <img ng-src="{{slide1.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide1 {{slide1.id}}</h4>
+          <p>{{slide1.text}}</p>
+        </div>
+      </div>
+    </div>   
+
       </div>     
     </div>
   </div>
