@@ -1,5 +1,5 @@
 var discovrApp = angular.module('DiscovrIndex', ['ngMaterial','jkAngularCarousel','ui.router','ngMessages','ngStorage','ngCookies','pascalprecht.translate'])
-    .constant('apiURL', 'https://discovr-gekkou95.c9users.io/api/')
+    .constant('apiURL', 'https://discovr-gekkou95.c9users.io/')
     .config(config)
     .run(run);
 
