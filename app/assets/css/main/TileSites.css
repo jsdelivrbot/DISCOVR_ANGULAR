@@ -58,7 +58,7 @@
 	float: right;
 	margin-right: 12px;
 	position: relative;
-	margin-top: -44px;
+	margin-top: -38px;
 	z-index: 2;
 }
 
@@ -93,11 +93,11 @@
 
 /*  Animaciones de hover y active*/
 
-.TileSite1:hover, .TileSite3:hover, .TileSite6:hover{
+/* .TileSite1:hover, .TileSite3:hover, .TileSite6:hover{
 	-webkit-transform: scale(1.05);
-}
+} */
 
-.TileSite1:active, .TileSite3:active, .TileSite6:active{
+/* .TileSite1:active, .TileSite3:active, .TileSite6:active{
 	-webkit-transform: scale(1);
 }
 
@@ -107,4 +107,22 @@
 
 .TileSite2:active, .TileSite5:active, .MiniTilesSite:active{
 	-webkit-transform: scale(1);
+} */
+
+.PrincipalSlider .carousel-indicators{
+  margin-bottom: -5px;
+}
+
+.TileSite1 .carousel-indicators, .TileSite2 .carousel-indicators, .TileSite3 .carousel-indicators, .TileSite4 .carousel-indicators, .TileSite5 .carousel-indicators, .TileSite6 .carousel-indicators{
+	margin-bottom: -5px;
+}
+
+.TileSitesContenidoMini .carousel-indicators{
+	margin-bottom: -8px;
+}
+
+/* inicio del modelo responsitive */
+@media only screen and (max-width: 767px) {
+	.TileSite1, .TileSite2, .TileSite3, .TileSite4, .TileSite5, .TileSite6{
+	width: 49%;
 }

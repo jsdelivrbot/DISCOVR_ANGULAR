@@ -119,3 +119,14 @@
 #DobleTile li:active{
 	-webkit-transform: scale(1);
 }
+
+.scale, #DobleTile{
+	cursor: pointer;
+}
+
+/* ESTILOS PARA EL MODELO RESPONSITIVE */
+@media only screen and (max-width: 767px) {
+	.ContainerFloatTiles{
+		display: none;
+	}
+}

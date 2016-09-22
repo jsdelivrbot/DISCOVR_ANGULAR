@@ -8,7 +8,7 @@
 .TileSite1, .TileSite2, .TileSite3, .TileSite4, .TileSite5, .TileSite6, .TileSite7{
 	width: 47.8%;
 	float: left;
-	height: 130px;
+	height: 128px;
 	color: #fff;
 	margin-left: 0.8%;
 	margin-bottom: 10px;
@@ -34,7 +34,7 @@
 	float: right;
 	margin-right: 12px;
 	position: relative;
-	margin-top: -84px;
+	margin-top: -34px;
 	z-index: 2;
 }
 
@@ -43,7 +43,7 @@
 /* AQUI SE GENERA LA BARRA DIFUMINADA QUE ESTA EN LA PARTE INFERIOR DE LOS TILES */
 .BarraDifuminadaTileSite{
 	position: relative;
-	margin-top: -100px;
+	margin-top: -50px;
 	height: 50px;
 	width: 100%;
 	z-index: 1;
@@ -68,11 +68,21 @@
 }
 
 /*  Animaciones de hover y active*/
-
+/* 
 .TileSite1:hover, .TileSite2:hover, .TileSite3:hover, .TileSite4:hover, .TileSite5:hover, .TileSite6:hover{
 	-webkit-transform: scale(1.05);
 }
 
 .TileSite1:active, .TileSite2:active, .TileSite3:active, .TileSite4:active, .TileSite5:active, .TileSite6:active{
 	-webkit-transform: scale(1);
+} */
+
+.TileSite1 .carousel-indicators{
+  padding-left: 20px;
+  margin-bottom: -12px;
+}
+
+.PrincipalSlider .carousel-indicators{
+  padding-left: 20px;
+  margin-bottom: -5px;
 }

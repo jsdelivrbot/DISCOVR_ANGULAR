@@ -7,16 +7,6 @@
 
 }
 
-.PrincipalSlider .slider ul {
-  display: flex;
-  padding: 0;
-  width: 400%;
-  height: 410px;
-  overflow: hidden;
-  position: relative;
-  
-  animation: cambio 15s infinite alternate linear;
-}
 
 .slider li {
   width: 100%;
@@ -48,7 +38,6 @@
   overflow: hidden;
   position: relative;
   
-  animation: cambio 20s infinite alternate linear;
 }
 
 .TileSite2 .slider img {
@@ -64,8 +53,6 @@
   height: 180px;
   overflow: hidden;
   position: relative;
-  
-  animation: cambio 16s infinite alternate linear;
 }
 
 .TileSite3 .slider img {
@@ -81,8 +68,7 @@
   height: 180px;
   overflow: hidden;
   position: relative;
-  
-  animation: cambio 22s infinite alternate linear;
+
 }
 
 .TileSitesContenidoMini .slider img {
@@ -100,7 +86,6 @@
   overflow: hidden;
   position: relative;
   
-  animation: cambio 19s infinite alternate linear;
 }
 
 .TileSite5 .slider img {
@@ -117,7 +102,6 @@
   overflow: hidden;
   position: relative;
   
-  animation: cambio 23s infinite alternate linear;
 }
 
 .TileSite6 .slider img {
@@ -134,7 +118,6 @@
   overflow: hidden;
   position: relative;
   
-  animation: cambio 15s infinite alternate linear;
 }
 
 .LiContainer .slider img {
@@ -151,8 +134,6 @@
   height: 116px;
   overflow: hidden;
   position: relative;
-  
-  animation: cambio 18s infinite alternate linear;
 }
 #DobleTile .LiContainer .slider ul {
   display: flex;
@@ -162,29 +143,11 @@
   height: 116px;
   overflow: hidden;
   position: relative;
-  
-  animation: cambio 25s infinite alternate linear;
 }
 
 .LiContainer .slider li {
     padding: 0;
     margin: 0;
-}
-
- /* _________________________________________________________________________________________________ */
-
-@keyframes cambio {
-  0% {margin-left: 0;}
-  20% {margin-left: 0;}
-  
-  25% {margin-left: -100%;}
-  45% {margin-left: -100%;}
-  
-  50% {margin-left: -200%;}
-  70% {margin-left: -200%;}
-  
-  75% {margin-left: -300%;}
-  100% {margin-left: -300%;}
 }
 
  /* _________________________________________________________________________________________________ */

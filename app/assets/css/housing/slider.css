@@ -36,7 +36,7 @@
 
 .TileSite1 .slider img {
   width: 100%;
-  height: 180px;
+  height: 128px;
   object-fit: cover;
 }
 
@@ -44,102 +44,14 @@
   display: flex;
   padding: 0;
   width: 400%;
-  height: 180px;
+  height: 128px;
   overflow: hidden;
   position: relative;
-  
-  animation: cambio 20s infinite alternate linear;
-}
-
-.TileSite2 .slider img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.TileSite2 .slider ul {
-  display: flex;
-  padding: 0;
-  width: 400%;
-  height: 180px;
-  overflow: hidden;
-  position: relative;
-  
-  animation: cambio 16s infinite alternate linear;
-}
-
-.TileSite3 .slider img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.TileSite3 .slider ul {
-  display: flex;
-  padding: 0;
-  width: 400%;
-  height: 180px;
-  overflow: hidden;
-  position: relative;
-  
-  animation: cambio 22s infinite alternate linear;
-}
-
-.TileSite4 .slider img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-
-.TileSite4 .slider ul {
-  display: flex;
-  padding: 0;
-  width: 400%;
-  height: 180px;
-  overflow: hidden;
-  position: relative;
-  
-  animation: cambio 19s infinite alternate linear;
-}
-
-.TileSite5 .slider img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.TileSite5 .slider ul {
-  display: flex;
-  padding: 0;
-  width: 400%;
-  height: 180px;
-  overflow: hidden;
-  position: relative;
-  
-  animation: cambio 23s infinite alternate linear;
-}
-
-.TileSite6 .slider img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.TileSite6 .slider ul {
-  display: flex;
-  padding: 0;
-  width: 400%;
-  height: 180px;
-  overflow: hidden;
-  position: relative;
-  
-  animation: cambio 15s infinite alternate linear;
 }
 
 .LiContainer .slider img {
   width: 100%;
-  height: 116px;
+  height: 128px;
   object-fit: cover;
 }
 
@@ -148,43 +60,24 @@
   padding: 0;
   margin: 0px;
   width: 400%;
-  height: 116px;
+  height: 128px;
   overflow: hidden;
   position: relative;
   
-  animation: cambio 18s infinite alternate linear;
 }
 #DobleTile .LiContainer .slider ul {
   display: flex;
   padding: 0;
   margin: 0px;
   width: 400%;
-  height: 116px;
+  height: 128px;
   overflow: hidden;
   position: relative;
-  
-  animation: cambio 25s infinite alternate linear;
 }
 
 .LiContainer .slider li {
     padding: 0;
     margin: 0;
-}
-
- /* _________________________________________________________________________________________________ */
-
-@keyframes cambio {
-  0% {margin-left: 0;}
-  20% {margin-left: 0;}
-  
-  25% {margin-left: -100%;}
-  45% {margin-left: -100%;}
-  
-  50% {margin-left: -200%;}
-  70% {margin-left: -200%;}
-  
-  75% {margin-left: -300%;}
-  100% {margin-left: -300%;}
 }
 
  /* _________________________________________________________________________________________________ */
@@ -235,10 +128,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   color: #424242;
 }
 
-
-
-
-md-radio-button.md-default-theme .md-on, md-radio-button .md-on{
-  background: #fff;
-  color: #fff;
-}

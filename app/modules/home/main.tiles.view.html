@@ -15,6 +15,9 @@
       </div>
     </div>   
 
+        <span class="SpanTitle">Eventos</span>
+        <div class="BarraDifuminadaTileSite"></div>
+
       </div>     
     </div>
   </div>
@@ -23,20 +26,17 @@
     <div class="TileSitesContenido">
       <i class="material-icons materialOut">place</i>
       <div class="slider">
-        <ul>
-          <li>
-            <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-          </li>
-        </ul>
+
+ <div uib-carousel active="active2" interval="myInterval2" no-wrap="noWrapSlides2">
+      <div uib-slide ng-repeat="slide2 in slides2 track by slide2.id" index="slide2.id">
+        <img ng-src="{{slide2.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide2 {{slide2.id}}</h4>
+          <p>{{slide2.text}}</p>
+        </div>
+      </div>
+    </div>   
+
         <span class="SpanTitle">Dónde Ir?</span>
         <div class="NotificacionTileSite">1</div>
         <div class="BarraDifuminadaTileSite"></div>      
@@ -48,20 +48,17 @@
     <div class="TileSitesContenido">
       <i class="material-icons materialOut">collections</i>              
       <div class="slider">
-        <ul>
-          <li>
-            <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-          </li>
-        </ul>
+
+    <div uib-carousel active="active3" interval="myInterval3" no-wrap="noWrapSlides3">
+      <div uib-slide ng-repeat="slide3 in slides3 track by slide3.id" index="slide3.id">
+        <img ng-src="{{slide3.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide3 {{slide3.id}}</h4>
+          <p>{{slide3.text}}</p>
+        </div>
+      </div>
+    </div> 
+
         <span class="SpanTitle">Galería</span>
         <div class="BarraDifuminadaTileSite"></div> 
       </div>
@@ -74,20 +71,17 @@
         <div class="TileSitesContenidoMini">
           <i class="material-icons materialOut">local_hotel</i>
           <div class="slider">
-            <ul>
-              <li>
-                <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-              </li>
-            <li>
-              <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-            </li>
-            <li>
-              <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-            </li>
-            <li>
-              <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-            </li>
-          </ul>
+
+    <div uib-carousel active="active4" interval="myInterval4" no-wrap="noWrapSlides4">
+      <div uib-slide ng-repeat="slide4 in slides4 track by slide4.id" index="slide4.id">
+        <img ng-src="{{slide4.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide4 {{slide4.id}}</h4>
+          <p>{{slide4.text}}</p>
+        </div>
+      </div>
+    </div> 
+
           <span class="SpanTitle">Alojamiento</span>
           <div class="BarraDifuminadaTileSite"></div> 
         </div>
@@ -98,20 +92,17 @@
       <div class="TileSitesContenidoMini">
         <i class="material-icons materialOut">store</i>
         <div class="slider">
-          <ul>
-            <li>
-              <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-            </li>
-            <li>
-              <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-            </li>
-            <li>
-              <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-            </li>
-            <li>
-              <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-            </li>
-          </ul>
+
+    <div uib-carousel active="active1" interval="myInterval1" no-wrap="noWrapSlides1">
+      <div uib-slide ng-repeat="slide1 in slides1 track by slide1.id" index="slide1.id">
+        <img ng-src="{{slide1.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide1 {{slide1.id}}</h4>
+          <p>{{slide1.text}}</p>
+        </div>
+      </div>
+    </div> 
+
           <span class="SpanTitle">Tiendas</span>
           <div class="BarraDifuminadaTileSite"></div> 
         </div>
@@ -121,20 +112,17 @@
     <div class="MiniTilesSite">
       <div class="TileSitesContenidoMini">             
         <div class="slider">
-          <ul>
-            <li>
-              <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-            </li>
-            <li>
-              <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-            </li>
-            <li>
-              <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-            </li>
-            <li>
-              <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-            </li>
-          </ul>
+
+    <div uib-carousel active="active1" interval="myInterval1" no-wrap="noWrapSlides1">
+      <div uib-slide ng-repeat="slide1 in slides1 track by slide1.id" index="slide1.id">
+        <img ng-src="{{slide1.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide1 {{slide1.id}}</h4>
+          <p>{{slide1.text}}</p>
+        </div>
+      </div>
+    </div> 
+
           <span class="SpanTitle">Entretenimiento</span>
           <div class="BarraDifuminadaTileSite"></div> 
         </div>
@@ -144,20 +132,17 @@
     <div class="MiniTilesSite">
       <div class="TileSitesContenidoMini">              
         <div class="slider">
-          <ul>
-            <li>
-              <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-            </li>
-            <li>
-              <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-            </li>
-            <li>
-              <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-            </li>
-            <li>
-              <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-            </li>
-          </ul>
+
+    <div uib-carousel active="active1" interval="myInterval1" no-wrap="noWrapSlides1">
+      <div uib-slide ng-repeat="slide1 in slides1 track by slide1.id" index="slide1.id">
+        <img ng-src="{{slide1.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide1 {{slide1.id}}</h4>
+          <p>{{slide1.text}}</p>
+        </div>
+      </div>
+    </div> 
+
           <span class="SpanTitle">Comidas & Bebidas</span>
           <div class="BarraDifuminadaTileSite"></div> 
         </div>
@@ -172,20 +157,17 @@
     <div class="TileSitesContenido">
       <i class="material-icons  materialOut">card_giftcard</i>
       <div class="slider">
-        <ul>
-          <li>
-            <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-          </li>
-        </ul>
+
+    <div uib-carousel active="active1" interval="myInterval1" no-wrap="noWrapSlides1">
+      <div uib-slide ng-repeat="slide1 in slides1 track by slide1.id" index="slide1.id">
+        <img ng-src="{{slide1.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide1 {{slide1.id}}</h4>
+          <p>{{slide1.text}}</p>
+        </div>
+      </div>
+    </div> 
+
         <span class="SpanTitle">Promociones & Descuentos</span>
         <div class="NotificacionTileSite">1</div>
         <div class="BarraDifuminadaTileSite"></div>      
@@ -197,20 +179,17 @@
     <div class="TileSitesContenido">
       <i class="material-icons materialOut">explore</i>
       <div class="slider">
-        <ul>
-          <li>
-            <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-          </li>
-        </ul>
+
+    <div uib-carousel active="active1" interval="myInterval1" no-wrap="noWrapSlides1">
+      <div uib-slide ng-repeat="slide1 in slides1 track by slide1.id" index="slide1.id">
+        <img ng-src="{{slide1.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide1 {{slide1.id}}</h4>
+          <p>{{slide1.text}}</p>
+        </div>
+      </div>
+    </div> 
+
         <span class="SpanTitle">Lugares</span>
         <div class="BarraDifuminadaTileSite"></div>      
       </div>
@@ -221,20 +200,17 @@
     <div class="TileSitesContenido">
       <i class="material-icons materialOut">explore</i>
       <div class="slider">
-        <ul>
-          <li>
-            <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-          </li>
-        </ul>
+
+    <div uib-carousel active="active1" interval="myInterval1" no-wrap="noWrapSlides1">
+      <div uib-slide ng-repeat="slide1 in slides1 track by slide1.id" index="slide1.id">
+        <img ng-src="{{slide1.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide1 {{slide1.id}}</h4>
+          <p>{{slide1.text}}</p>
+        </div>
+      </div>
+    </div> 
+
         <span class="SpanTitle">Lugares</span>
         <div class="BarraDifuminadaTileSite"></div>      
       </div>
@@ -245,20 +221,17 @@
     <div class="TileSitesContenido">
       <i class="material-icons materialOut">explore</i>
       <div class="slider">
-        <ul>
-          <li>
-            <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-          </li>
-        </ul>
+
+    <div uib-carousel active="active1" interval="myInterval1" no-wrap="noWrapSlides1">
+      <div uib-slide ng-repeat="slide1 in slides1 track by slide1.id" index="slide1.id">
+        <img ng-src="{{slide1.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide1 {{slide1.id}}</h4>
+          <p>{{slide1.text}}</p>
+        </div>
+      </div>
+    </div> 
+
         <span class="SpanTitle">Lugares</span>
         <div class="BarraDifuminadaTileSite"></div>      
       </div>
@@ -269,20 +242,17 @@
     <div class="TileSitesContenido">
       <i class="material-icons materialOut">explore</i>
       <div class="slider">
-        <ul>
-          <li>
-            <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-          </li>
-        </ul>
+
+    <div uib-carousel active="active1" interval="myInterval1" no-wrap="noWrapSlides1">
+      <div uib-slide ng-repeat="slide1 in slides1 track by slide1.id" index="slide1.id">
+        <img ng-src="{{slide1.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide1 {{slide1.id}}</h4>
+          <p>{{slide1.text}}</p>
+        </div>
+      </div>
+    </div> 
+
         <span class="SpanTitle">Lugares</span>
         <div class="BarraDifuminadaTileSite"></div>      
       </div>
@@ -293,20 +263,17 @@
     <div class="TileSitesContenido">
       <i class="material-icons materialOut">explore</i>
       <div class="slider">
-        <ul>
-          <li>
-            <img src="http://conlospiesporlatierra.com/wp-content/uploads/2013/07/img_9394.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://cdn.laprensa.com.ni/wp-content/uploads/2016/02/13230654/volcanes-de-Nicaragua-1.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://i1227.photobucket.com/albums/ee423/tryescas/78848352_zps11af6256.jpg" alt="">
-          </li>
-          <li>
-            <img src="http://img.ev.mu/images/villes/40755/1605x642/40755.jpg" alt="">
-          </li>
-        </ul>
+
+    <div uib-carousel active="active1" interval="myInterval1" no-wrap="noWrapSlides1">
+      <div uib-slide ng-repeat="slide1 in slides1 track by slide1.id" index="slide1.id">
+        <img ng-src="{{slide1.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide1 {{slide1.id}}</h4>
+          <p>{{slide1.text}}</p>
+        </div>
+      </div>
+    </div> 
+    
         <span class="SpanTitle">Lugares</span>
         <div class="BarraDifuminadaTileSite"></div>      
       </div>
