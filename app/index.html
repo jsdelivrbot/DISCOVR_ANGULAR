@@ -1,81 +1,85 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="DiscovrIndex">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="description" content="DISCOVR - Sistema web para turismo">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="DISCOVR - Sistema web para turismo">
     <meta name="author" content="Néstor Alberto Molina Morán y Alex José Flores Rivas">
     <link rel="icon" href="assets/files/img/favicon.ico">
 
-	<title>Discovr</title>
-	
-	<link rel="stylesheet" href="assets/css/index.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/no_webkit.css">
-	
-</head>
-<body>
-	<ui-view></ui-view>
+    <title>Discovr</title>
 
-	<!-- angular scripts -->
-	<script src="bower_components/angular/angular.min.js"></script>
-	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/no_webkit.css">
+
+</head>
+
+<body>
+    <ui-view></ui-view>
+
+    <!-- angular scripts -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-messages/angular-messages.min.js"></script>
     <script src="bower_components/ngStorage/ngStorage.min.js"></script>
 
     <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
-	<script src="bower_components/angular-translate/angular-translate.min.js"></script>
-	<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
     <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
-	<script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
-	
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>	
-	<script src="assets/js/main/efectosTileIcono.js"></script>
+    <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/main/efectosTileIcono.js"></script>
 
 
-	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
-	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 
-	
-	<!-- application scripts -->
-	<script src="app.js"></script>
-	<script src="services/authentication.service.js"></script>
+    <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+
+    <link rel="stylesheet" href="bower_components/ui-navbar/release/css/ui-navbar.css">
+    <script src="bower_components/ui-navbar/release/js/ui-navbar.min.js"></script>
+
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="services/authentication.service.js"></script>
     <script src="modules/home/index.controller.js"></script>
     <script src="modules/housing/housing.controller.js"></script>
     <script src="modules/login/index.controller.js"></script>
 
 
+    <script>
+        <!--  este script es para identificar a cada navegador y asi aplicar css especifico en cada uno-->
+        var d0cum3n7e13m3n7 = document.documentElement;
+        d0cum3n7e13m3n7.setAttribute('data-useragent', navigator.userAgent);
+        d0cum3n7e13m3n7.setAttribute('data-platform', navigator.platform);
+        d0cum3n7e13m3n7.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window)) ? ' touch' : '');
+    </script>
 
-	
-     
-
-	<script> <!--  este script es para identificar a cada navegador y asi aplicar css especifico en cada uno-->
-		var d0cum3n7e13m3n7 = document.documentElement; 
-		d0cum3n7e13m3n7.setAttribute('data-useragent', navigator.userAgent); 
-		d0cum3n7e13m3n7.setAttribute('data-platform', navigator.platform); 
-		d0cum3n7e13m3n7.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':''); 
-	</script>
-
-	<!-- application scripts 
+    <!-- application scripts 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="assets/js/main/efectosTileIcono.js"></script> -->
 
 
-   <style>
-*{
-	font-size: 1.01em;
-}
-
-a{
-	color: #fff;
-}
-
-a:hover{
-	text-decoration: none;
-		color: #f5f5f5;
-}
+    <style>
+        * {
+            font-size: 1.01em;
+        }
+        
+        a {
+            color: #fff;
+        }
+        
+        a:hover {
+            text-decoration: none;
+            color: #f5f5f5;
+        }
     </style>
 </body>
+
 </html>

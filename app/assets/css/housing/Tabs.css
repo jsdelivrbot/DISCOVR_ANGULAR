@@ -151,3 +151,36 @@ input[type="radio"] {
   padding: 10px;
   margin: 20px;
 }
+
+
+
+/* INICIO MODELO RESPONSITIVE */
+@media only screen and (max-width: 767px) {
+
+  .ContainerDual{
+  
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  }
+
+  .ContanerDual1{
+  order: 2; /*  ESTA PROPIEDAD PERMITE CAMBIAR EL ORDEN DE LOS DIVS, USANDO FLEX */
+  width: 99.6%;
+  clear: both;
+}
+
+.ContanerDual2{
+  order: 1;
+  width: 99.6%;
+  clear: both;
+}
+
+}
