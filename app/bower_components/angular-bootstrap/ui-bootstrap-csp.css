@@ -3392,7 +3392,7 @@ fieldset[disabled] .btn-link:focus {
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
-  top: 47px;
+
 }
 .btn-block {
   display: block;
@@ -4388,9 +4388,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav > li > .dropdown-menu {
-  margin-top: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  top: 47px;
 }
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   margin-bottom: 0;
