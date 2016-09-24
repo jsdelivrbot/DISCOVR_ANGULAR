@@ -174,10 +174,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 
 @media only screen and (max-width: 767px) {
+.PrincipalSlider{
+  margin-top: 50px;
+}
+
 .slider {
   height: 210px;
   max-height: 210px;
-
 }
 
 .slider img {
