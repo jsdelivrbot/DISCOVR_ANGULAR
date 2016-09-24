@@ -17,6 +17,7 @@
     position: fixed;
     width: 100%;
     color: #fff;
+    max-height: 60px;
     background: rgba(36, 36, 36, 0.84);
     background: -moz-linear-gradient(top, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 15%, rgba(26, 26, 26, 0.52) 34%, rgba(26, 26, 26, 0) 88%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(36, 36, 36, 0.84)), color-stop(15%, rgba(31, 31, 31, 0.7)), color-stop(34%, rgba(26, 26, 26, 0.52)), color-stop(88%, rgba(26, 26, 26, 0)));
