@@ -1,6 +1,17 @@
-discovrApp.factory('AuthenticationService', function ($http, $localStorage,apiURL){
+discovrApp.factory('AuthenticationService', function (
+  $http,
+  $rootScope,
+  $localStorage,
+  jwtHelper,
+  apiURL){
   var service = {};
   //var apiURL= 'https://discovr-gekkou95.c9users.io/api/';
+
+  var config = {headers:  {
+          Authorization: '',
+          'Content-Type': 'application/json'
+      }
+  };
 
   service.Login = Login;
   service.Logout = Logout;
@@ -9,9 +20,9 @@ discovrApp.factory('AuthenticationService', function ($http, $localStorage,apiUR
   service.Profile = Profile;
   service.ChangePassword = ChangePassword;
   service.ResetPassword = ResetPassword;
-  service.SignUp = SignUp;
-  service.SignUp = SignUp;
-  service.SignUp = SignUp;
+  service.GetProfile = GetProfile;
+  //service.SignUp = SignUp;
+  //service.SignUp = SignUp;
 
 
   return service;
@@ -21,11 +32,16 @@ discovrApp.factory('AuthenticationService', function ($http, $localStorage,apiUR
       .success(function(response){
         //login successful if there's a token in the respose
         if(response.token){
-          console.log(response.token);
+          //decode token, to get the user id insert on payload
+          var token = jwtHelper.decodeToken(response.token);
+          var userProfile = 0;
+          userProfile = GetProfile(token.user_id);
+          console.log(userProfile);
           //store username and token in local storage to keep user logged in between paga refreshes
-          $localStorage.currentUser = { username: username, token: response.token };
+          $localStorage.currentUser = {id: token.user_id, username: username, token: response.token };
+          //config.headers.Authorization = 'JWT ' + response.token;
           //add jwt token to auth header for all requests made by the $http services
-          $http.defaults.headers.common.Authorization = 'Baerer ' + response.token;
+          $http.defaults.headers.common.Authorization = 'JWT ' + response.token;
           //execuete callback with true to indicate successful login
           callback(true);
         }else{
@@ -40,6 +56,8 @@ discovrApp.factory('AuthenticationService', function ($http, $localStorage,apiUR
       .success(function(response){
         //remove user from local storage and clear http auth header
         delete $localStorage.currentUser;
+        localStorage.removeItem('user');
+        config.headers.Authorization = '';
         $http.defaults.headers.common.Authorization = '';
       });
     
@@ -54,7 +72,7 @@ discovrApp.factory('AuthenticationService', function ($http, $localStorage,apiUR
           //store username and token in local storage to keep user logged in between paga refreshes
           $localStorage.currentUser = { username: username, token: response.token };
           //add jwt token to auth header for all requests made by the $http services
-          $http.defaults.headers.common.Authorization = 'Baerer ' + response.token;
+          $http.defaults.headers.common.Authorization = 'JWT ' + response.token;
           //execuete callback with true to indicate successful login
           callback(true);
         }else{
@@ -65,9 +83,23 @@ discovrApp.factory('AuthenticationService', function ($http, $localStorage,apiUR
   }
 
   function Profile(){
+    $http.get(apiURL + 'api/user/' + $localStorage.currentUser.id + '/').
+      then(function successCallback(response) {
+          localStorage.setItem('user', JSON.stringify(response.data));
+          console.log(response.data)
+      }, function errorCallback(response) {
+          console.log(response);
+      });
+  }
 
-    //{ headers: { Authorization: 'Bearer '+ authenticationService.getToken() }  
-
+  function GetProfile(id){
+    $http.get(apiURL + 'api/user/' + id + '/').
+    then(function successCallback(response){
+      $rootScope.userProfile = response.data.Kind;
+      localStorage.setItem('profile', $rootScope.userProfile);
+      //console.log(($rootScope.userProfile = response.data.Kind)); 
+    });     
+    return $rootScope.userProfile;
   }
 
   function ChangePassword(){

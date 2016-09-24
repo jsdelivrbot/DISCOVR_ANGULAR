@@ -6,6 +6,7 @@ var discovrApp = angular.module('DiscovrIndex', [
     'ngMessages',
     'ngStorage',
     'ngCookies',
+    'angular-jwt',
     'pascalprecht.translate'])
     .constant('apiURL', 'https://discovr-gekkou95.c9users.io/')
     .config(config)
@@ -52,7 +53,7 @@ var discovrApp = angular.module('DiscovrIndex', [
     function run($rootScope, $http, $location, $localStorage){
        // keep user logged in after page refresh
         if ($localStorage.currentUser) {
-            $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.currentUser.token;
+            $http.defaults.headers.common.Authorization = 'JWT ' + $localStorage.currentUser.token;
         }
         // redirect to login page if not logged in and trying to access a restricted page
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
@@ -72,7 +73,6 @@ var discovrApp = angular.module('DiscovrIndex', [
                 if (rejection.status === 401) {
                     window.location.href = '/#/login';
                 }
-
                 return $q.reject(rejection);
             }
         };

@@ -1,6 +1,15 @@
-discovrApp.controller('Home.IndexController', function($localStorage,$location,AuthenticationService,$scope,$translate) {
+discovrApp.controller('Home.IndexController', function(
+    $localStorage,
+    $location,
+    AuthenticationService,
+    $scope,
+    $rootScope,
+    $translate) {
+
     var vm = this;
- 
+    vm.profile = profile;
+    vm.getProfile = getProfile;
+    
     initController();
 
     function initController() {
@@ -10,6 +19,15 @@ discovrApp.controller('Home.IndexController', function($localStorage,$location,A
         var lang = stLan.substr((szLanLan-5),szLanLan);
         localStorage.setItem('NG_TRANSLATE_LANG_KEY','home/languages/' + lang);
     };
+
+    function getProfile(){
+        var again = AuthenticationService.GetProfile(1);
+        console.log(again);
+    }
+
+    function profile(){
+        AuthenticationService.Profile();
+    }
     $scope.listLan = [
         {'key':'es-es','value':'Español'},
         {'key':'us-en','value':'English'}
