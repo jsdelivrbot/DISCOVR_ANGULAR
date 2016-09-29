@@ -21,30 +21,6 @@ discovrApp.controller('Housing.IndexController', function($localStorage, $locati
         $translate.use('housing/languages/' + opt);
     };
 
-    /*$scope.dataArray = [
-      {
-        src: 'https://exp.cdn-hotels.com/hotels/7000000/6980000/6975400/6975392/6975392_10_z.jpg'
-      },
-      {
-        src: 'http://www.hotelhex.com/Esteli/img/Fondo/06.jpg'
-      },
-      {
-        src: 'http://www.hotelhex.com/Esteli/img/Fondo/01.jpg'
-      },
-      {
-        src: 'http://q-ec.bstatic.com/images/hotel/840x460/254/25489577.jpg'
-      },
-      {
-        src: 'http://endimages.s3.amazonaws.com/legacy/1355009715_RUTA%20CA%C3%91ON%20DE%20SOMOTO%20091212.jpg'
-      },
-      {
-        src: 'http://trunkweed.com/uploads/posts/images/590341-blue-panoramic-nature-background.jpg'
-      },
-      {
-        src: 'http://trunkweed.com/uploads/posts/images/590341-blue-panoramic-nature-background.jpg'
-      }
-    ];*/
-
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;
     $scope.active = 0;

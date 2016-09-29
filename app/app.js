@@ -34,9 +34,17 @@ function config($stateProvider, $urlRouterProvider, $translateProvider) {
             controllerAs: 'vm'
         })
 
+    .state('Specifichousing', {
+        url: '/Specifichousing',
+        templateUrl: 'modules/housing/SpecificHousing/SpecificHousing.view.html',
+        controller: 'SpecificHousing.IndexController',
+        controllerAs: 'vm'
+
+    })
+
     .state('housing', {
         url: '/housing',
-        templateUrl: 'modules/housing/SpecificHousing/housing.view.html',
+        templateUrl: 'modules/housing/principal/housing.view.html',
         controller: 'Housing.IndexController',
         controllerAs: 'vm'
 

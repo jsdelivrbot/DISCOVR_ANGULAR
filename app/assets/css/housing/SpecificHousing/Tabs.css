@@ -102,7 +102,7 @@ input[type="radio"] {
     overflow: hidden;
     width: 100%;
     position: absolute;
-    top: 53px;
+    top: 52px;
     left: 0;
     padding: 20px;
     background: #fff;
@@ -114,14 +114,17 @@ input[type="radio"] {
     border-bottom: 2px solid orange;
     padding-bottom: 9px;
     background-color: #fff;
+    transition: all 0.5s;
 }
 
 .tab-wrap [id^="tab"]:checked+label:before {
     background: #fff;
+    transition: all 0.5s;
 }
 
 .tab-wrap [id^="tab"]:checked~.tab-content {
     display: block;
+    transition: all 0.8s;
 }
 
 
