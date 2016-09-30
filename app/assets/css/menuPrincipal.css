@@ -248,8 +248,38 @@ input::-webkit-search-cancel-button {
 .menu-fixed .navbar-default .navbar-nav>li>a:active {
     color: #bdbdbd;
 }
+/*------------------------------------------------------------------------------------*/
+/* .btn-danger{
+    margin-top: 13px;
+}
 
+.menu-fixed .btn-danger{
+    color: #424242;
+}
 
+.btn-danger{
+     padding-right: 22px;
+}
+.menu-fixed .btn-danger{
+    color: #424242;
+} */
+
+.SelectLang{
+    color: #fff;
+    border-style: none;
+    background-color: transparent;
+    outline: none;
+    width: 20px;
+
+}
+
+.SelectLang:hover{
+    color: #000;
+}
+
+.menu-fixed .SelectLang{
+    color: #000;
+}
 /*------------------------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 765px) {

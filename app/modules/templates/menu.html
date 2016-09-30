@@ -25,13 +25,14 @@
             <ul class="nav navbar-nav">
             </ul>
             <ul class="nav navbar-nav navbar-right">
-
+                
                 <li class="FloatRightMenu">
                     <form id="demo-2">
                         <input type="search" placeholder="Search">
                     </form>
                 </li>
-                <!----------------------------------------------------------------------->
+                <!--------------------------------------------------------------------- !-->
+          
                 <li>
                     <div class="btn-group" uib-dropdown is-open="status.isopen">
                         <button type="button" class="notifButt" uib-dropdown-toggle ng-disabled="disabled">
@@ -61,7 +62,7 @@
                     </div>
                 </li>
 
-                <!----------------------------------------------------------------------->
+                <!--------------------------------------------------------------------- !-->
 
                 <li uib-dropdown>
                     <a href="#" uib-dropdown-toggle>
@@ -70,7 +71,7 @@
                     </a>
                     <tree tree='tree2'></tree>
                 </li>
-                <!--------------------------------------------------------------------->
+                <!-------------------------------------------------------------------!-->
                 <li uib-dropdown>
                     <a href="#" uib-dropdown-toggle>
                         <i class="material-icons">more_vert</i>
@@ -78,6 +79,15 @@
                     </a>
                     <tree tree='tree'></tree>
                 </li>
+
+                      <li class="navbar-brand FloatRightMenu">
+                        <i class="material-icons">language</i>
+                    <select ng-model="listLan.key" ng-change="changeLang()" class="SelectLang">
+                    <option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
+                </select>
+                </li>
+
+ <!--------------------------------------------------------------------- !-->
             </ul>
         </div>
         <!-- /.navbar-collapse -->
