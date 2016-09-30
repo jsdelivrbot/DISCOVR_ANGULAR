@@ -1,0 +1,72 @@
+<div id="form-container">
+
+
+	<!-- use ng-submit to catch the form submission and use our Angular function -->
+	<form id="signup-form" ng-submit="processForm()">
+		<!-- Name & surname inputs row -->
+		<div class="form-group">
+			<div>
+				<label for="name">Name</label>
+				<input type="text" class="form-control" name="name" ng-model="profileData.name">
+			</div>
+			<div>
+				<label for="surname">Surname</label>
+				<input type="text" class="form-control" name="surname" ng-model="profileData.surname">
+			</div>
+		</div>
+		<!-- email input row -->
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="email" class="form-control" name="email" ng-model="profileData.email">
+		</div>
+		<!-- phone input row -->
+		<div class="form-group">
+			<label for="phone">Phone</label>
+			<input type="text" class="form-control" name="phone" ng-model="profileData.phone">
+		</div>
+		<!-- birthday & genre inputs row -->
+		<div class="form-group">
+			<div>
+				<label for="name">Birthday</label>
+				<input type="date" class="form-control" name="birthday" ng-model="profileData.birthday">
+			</div>
+			<div>
+				<label for="genre">Genre</label>
+				<select class="form-control" name="genre" ng-model="profileData.genre">
+					<option value="0">Man</option>
+					<option value="1">Women</option>
+					<option value="2">Other?</option>
+				</select>
+			</div>
+		</div>
+		<!-- password inputs row -->
+		<div class="form-group">
+			<label for="password1">Password</label>
+			<input type="password" class="form-control" name="password1" ng-model="profileData.password1">
+		</div>
+		<!-- confirm password inputs row -->
+		<div class="form-group">
+			<label for="password2">Confirm Password</label>
+			<input type="password" class="form-control" name="password2" ng-model="profileData.password2">
+		</div>
+		<!-- Here put a divider -->
+		<!-- terms & condition of the services -->
+		<p>
+			By clicking Sign Up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data Policy</a>.
+		</p>
+		<!-- submit row -->
+		<div class="form-group row">
+			<div class="col-xs-6 col-xs-offset-3">
+				<a ui-sref="form.interests" class="btn btn-block btn-info">
+				Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+				</a> <p>you have an account? <a href="">Login</a></p>
+			</div>
+		</div>
+	</form>
+
+</div>
+
+<!-- show our profileData as it is being typed -->
+<pre>
+{{ profileData }}
+</pre>

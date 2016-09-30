@@ -13,8 +13,6 @@ var discovrApp = angular.module('DiscovrIndex', [
     .run(run);
 
     function config($stateProvider, $urlRouterProvider,$translateProvider) {
-        // default route
-        $urlRouterProvider.otherwise("/");
         // Configuración de los idiomas
         $translateProvider.useStaticFilesLoader({
             prefix: 'modules/',
@@ -33,13 +31,27 @@ var discovrApp = angular.module('DiscovrIndex', [
                 controller: 'Home.IndexController',
                 controllerAs: 'vm'
             })
-
-             .state('housing', {
-                url: '/housing',
-                templateUrl: 'modules/housing/housing.view.html',
-                controller: 'Housing.IndexController',
+             
+            .state('signup', {
+                url: '/signup',
+                templateUrl: 'modules/signup/index.view.html',
+                controller: 'Signup.IndexController',
                 controllerAs: 'vm'
-            
+            })
+
+            .state('signup.profile', {
+                url: '/profile',
+                templateUrl: 'modules/signup/profile.view.html'
+            })
+
+            .state('signup.preference', {
+                url: '/preference',
+                templateUrl: 'modules/signup/preference.view.html'
+            })
+
+            .state('signup.payment', {
+                url: '/payment',
+                templateUrl: 'modules/signup/payment.view.html'
             })
 
             .state('login', {
@@ -47,7 +59,18 @@ var discovrApp = angular.module('DiscovrIndex', [
                 templateUrl: 'modules/login/index.view.html',
                 controller: 'Login.IndexController',
                 controllerAs: 'vm'
-            });        
+            })
+  
+            .state('housing', {
+                url: '/housing',
+                templateUrl: 'modules/housing/housing.view.html',
+                controller: 'Housing.IndexController',
+                controllerAs: 'vm'
+            
+            });
+
+         // default route
+        $urlRouterProvider.otherwise("/");       
     }
     
     function run($rootScope, $http, $location, $localStorage){

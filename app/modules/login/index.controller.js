@@ -6,7 +6,8 @@ discovrApp.controller('Login.IndexController', function(
     $translate){    
     var vm = this;
 
-    vm.login = login;    
+    vm.login = login;
+    vm.redirect = redirect;     
 
     initController();
 
@@ -18,21 +19,30 @@ discovrApp.controller('Login.IndexController', function(
         vm.loading = true;
         AuthenticationService.Login(vm.username, vm.password, function(result){
             if(result === true){
-                var test = AuthenticationService.GetProfile(2);
-
-                console.log(test);
-                console.log("dfalskdfklasjd");
+                AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
+                    console.log(dt);
+                    if(dt === 1){
+                        $location.path('/');
+                    }else if(dt === 2){
+                        console.log("Nestor es un genio!");
+                        $location.path('/');
+                    }
+                });  
                 //GetProfile = JSON.parse(localStorage.getItem('user'));
                
-                $location.path('/');                    
+                                    
             }else{
                 vm.error = 'Username or password is incorrect';
                 vm.loading = false;
             }
         });
-          
-          
-    };    
+                    
+    };  
+    function redirect(){
+        console.log("Good luck!");
+        $location.path('/signup');
+    };
+
     $scope.listLan = [
         {'key':'es-es','value':'Español'},
         {'key':'us-en','value':'English'}

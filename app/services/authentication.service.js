@@ -1,17 +1,11 @@
 discovrApp.factory('AuthenticationService', function (
   $http,
-  $rootScope,
   $localStorage,
   jwtHelper,
+  $q,
   apiURL){
   var service = {};
-  //var apiURL= 'https://discovr-gekkou95.c9users.io/api/';
 
-  var config = {headers:  {
-          Authorization: '',
-          'Content-Type': 'application/json'
-      }
-  };
 
   service.Login = Login;
   service.Logout = Logout;
@@ -24,7 +18,6 @@ discovrApp.factory('AuthenticationService', function (
   //service.SignUp = SignUp;
   //service.SignUp = SignUp;
 
-
   return service;
 
   function Login(username,password,callback) {
@@ -34,9 +27,6 @@ discovrApp.factory('AuthenticationService', function (
         if(response.token){
           //decode token, to get the user id insert on payload
           var token = jwtHelper.decodeToken(response.token);
-          var userProfile = 0;
-          userProfile = GetProfile(token.user_id);
-          console.log(userProfile);
           //store username and token in local storage to keep user logged in between paga refreshes
           $localStorage.currentUser = {id: token.user_id, username: username, token: response.token };
           //config.headers.Authorization = 'JWT ' + response.token;
@@ -57,7 +47,6 @@ discovrApp.factory('AuthenticationService', function (
         //remove user from local storage and clear http auth header
         delete $localStorage.currentUser;
         localStorage.removeItem('user');
-        config.headers.Authorization = '';
         $http.defaults.headers.common.Authorization = '';
       });
     
@@ -93,13 +82,31 @@ discovrApp.factory('AuthenticationService', function (
   }
 
   function GetProfile(id){
+    var deferred = $q.defer();
     $http.get(apiURL + 'api/user/' + id + '/').
     then(function successCallback(response){
-      $rootScope.userProfile = response.data.Kind;
-      localStorage.setItem('profile', $rootScope.userProfile);
-      //console.log(($rootScope.userProfile = response.data.Kind)); 
+      deferred.resolve(response.data.Kind);
+      localStorage.setItem('user', deferred.promise);
     });     
-    return $rootScope.userProfile;
+    return deferred.promise;
+  }
+
+  function GetData(table){
+    var deferred = $q.defer();
+    $http.get(apiURL + 'api/' + table + '/').
+    then(function successCallback(response){
+      deferred.resolve(response.data);
+    });     
+    return deferred.promise;
+  }
+
+  function GetDataId(table,id){
+    var deferred = $q.defer();
+    $http.get(apiURL + 'api/' + table + '/').
+    then(function successCallback(response){
+      deferred.resolve(response.data);
+    });     
+    return deferred.promise;
   }
 
   function ChangePassword(){
@@ -117,5 +124,7 @@ discovrApp.factory('AuthenticationService', function (
   function ConfirmReset(){
 
   }
+
+  return service;
 
 });

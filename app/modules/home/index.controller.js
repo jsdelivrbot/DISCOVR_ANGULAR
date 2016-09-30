@@ -3,7 +3,6 @@ discovrApp.controller('Home.IndexController', function(
     $location,
     AuthenticationService,
     $scope,
-    $rootScope,
     $translate) {
 
     var vm = this;
@@ -21,8 +20,9 @@ discovrApp.controller('Home.IndexController', function(
     };
 
     function getProfile(){
-        var again = AuthenticationService.GetProfile(1);
-        console.log(again);
+        AuthenticationService.GetProfile(1).then(function(dt){
+            console.log(dt);
+        });        
     }
 
     function profile(){
