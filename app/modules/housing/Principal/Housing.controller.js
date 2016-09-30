@@ -1,6 +1,8 @@
 discovrApp.controller('Housing.IndexController', function($localStorage, $location, AuthenticationService, $scope, $translate) {
     var vm = this;
 
+    vm.move = move;
+
     initController();
 
     function initController() {
@@ -10,6 +12,28 @@ discovrApp.controller('Housing.IndexController', function($localStorage, $locati
         var lang = stLan.substr((szLanLan - 5), szLanLan);
         localStorage.setItem('NG_TRANSLATE_LANG_KEY', 'housing/SpecificHousing/languages/' + lang);
     };
+    var position = 0;
+    var moduleCount = document.querySelector(".module").length;
+    function move(number){
+        if (number) {
+        position += number;
+            if (number == 0 || number > moduleCount) {
+                position = 0;            
+            }
+        console.log(moduleCount);
+        } else {        
+            if (position <= 4) {
+                position++;
+            } else {
+                position = 0;
+            }        
+        }
+        moduleOffset =  document.querySelector(".module").offsetWidth;
+        filler = document.querySelector("#filler");
+        filler.style.left = -( position* moduleOffset) + "px";
+
+    }
+
     $scope.listLan = [
         { 'key': 'es-es', 'value': 'Español' },
         { 'key': 'us-en', 'value': 'English' }

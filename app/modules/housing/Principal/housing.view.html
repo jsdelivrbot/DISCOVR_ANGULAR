@@ -3,6 +3,19 @@
 <div>
     <div ng-include src="'modules/templates/menu.html'"> </div>
     <div ng-include src="'modules/housing/Principal/sliderPrincipal.html'"> </div>
+
+    <button onmouseover="left=1" ng-click="vm.move(-3)"> < </button>
+    <div class="container">
+        <div id="filler" style="left:0px">
+            <div class="module" style="background:coral;">testing</div>
+            <div class="module" style="background:lightblue;">testing</div>
+            <div class="module" style="background:lightgreen;">testing</div>
+            <div class="module" style="background:salmon;">testing</div>
+            <div class="module" style="background:lightyellow;">testing</div>
+        </div>
+    </div>
+    <button onmouseover="right=1" ng-click="vm.move(3)"> > </button>
+
     <div ng-include src="'modules/housing/Principal/MenuNamePlaces.html'"> </div>    
     <div ng-include src="'modules/housing/Principal/TilesPlaces.html'"> </div>
 </div>
