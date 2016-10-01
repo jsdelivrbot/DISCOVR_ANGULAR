@@ -3699,7 +3699,10 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary {
     color: #fff;
     background-color: #337ab7;
-    border-color: #2e6da4;
+    border-style: none;
+    height: 45px;
+    margin-top: -23px;
+    padding-right: 22px;
 }
 
 .btn-primary:focus,
