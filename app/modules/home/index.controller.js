@@ -220,47 +220,67 @@ discovrApp.controller('Home.IndexController', function($localStorage, $location,
     ];
     var currIndex = 0;
 
-    $scope.tree = [{
-            name: "Idioma",
-            link: "#",
-            subtree: [{
-                name: "Ingles",
-                link: "state1"
-            }, {
-                name: "Español",
-                link: "state2",
-            }]
-        }, {
-            name: "divider",
-            link: "#"
+    /*-------------------------------------------------------------------------------------------------*/
 
+    $scope.tree = [{
+        name: "Idioma",
+        link: "#",
+        subtree: [{
+            name: "Ingles",
+            link: "state1"
         }, {
-            name: "Bugs",
-            link: "#"
-        }, {
-            name: "divider",
-            link: "#"
-        }, {
-            name: "Exit",
-            link: "login"
-        }];
-/*---------------------------------------------------------------------------------------*/
-         $scope.tree3 = [{
+            name: "Español",
+            link: "state2",
+        }]
+    }, {
+        name: "divider",
+        link: "#"
+
+    }, {
+        name: "Bugs",
+        link: "#"
+    }, {
+        name: "divider",
+        link: "#"
+    }, {
+        name: "Exit",
+        link: "login"
+    }];
+    /*---------------------------------------------------------------------------------------*/
+    $scope.tree2 = [{
             name: "Perfil",
             link: "#",
-        
+
         }, {
             name: "divider",
             link: "#"
 
-        }, {
-            name: "Bugs",
-            link: "#"
-        }, {
-            name: "divider",
-            link: "#"
-        }, {
+        },
+        {
             name: "login",
             link: "login"
-        }];
+        }
+    ];
+
+    $scope.items = [
+        'The first choice!',
+        'And another choice for you.',
+        'but wait! A third!'
+    ];
+
+    $scope.status = {
+        isopen: false
+    };
+
+    $scope.toggled = function(open) {
+        $log.log('Dropdown is now: ', open);
+    };
+
+    $scope.toggleDropdown = function($event) {
+        $event.preventDefault();
+        $event.stopPropagation();
+        $scope.status.isopen = !$scope.status.isopen;
+    };
+
+    $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
 });

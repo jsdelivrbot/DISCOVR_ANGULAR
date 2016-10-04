@@ -1,0 +1,29 @@
+{
+    "HomeTitle": "Home",
+    "WhereToGoTitle": "Where to go?",
+    "SearchTitle": "Search",
+    "SearchPlaceHolder": "Write here...",
+
+    "SettingsTitle": "Settings",
+    "BugsTitle": "Bugs & suggestions",
+    "LenguageTitle": "Language",
+    "ProfileTitle": "Profile of ",
+    "ConditionsTitle": "Conditions",
+    "ExitTitle": "Exit",
+
+    "BookTitle": "Book",
+    "GalleryTitle": "Gallery",
+    "HowToGoingTitle": "How to going?",
+    "VirtualTourTitle": "Virtual tour",
+
+     "AboutTitle": "ABOUT",
+     "ContactTitle": "CONTACT",
+     "ActivitiesTitle": "ACTIVITIES",
+     "ConditionsTitle": "CONDITIONS",
+     "ReviewTitle": "REVIEW",
+     "ExperienceTitle": "EXPERIENCE",
+     "ServicesTitle": "SERVICES"
+        
+}
+
+

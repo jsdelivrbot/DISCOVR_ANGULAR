@@ -88,17 +88,17 @@
             </div>
         </div>
         <!-- ------------------------------------------------------------------------------------------------------------ -->
+
         <div class="MiniTilesSite">
             <div class="TileSitesContenidoMini">
                 <i class="material-icons materialOut">store</i>
+
                 <div class="slider">
 
                     <div uib-carousel active="active5" interval="myInterval5" no-wrap="noWrapSlides5">
                         <div uib-slide ng-repeat="slide5 in slides5 track by slide5.id" index="slide5.id">
-                            <img ng-src="{{slide5.image}}" style="margin:auto;">
+                            <a ui-sref="Specifichousing"><img ng-src="{{slide5.image}}" style="margin:auto;"> </a>
                             <div class="carousel-caption">
-                                <h4>Slide5 {{slide5.id}}</h4>
-                                <p>{{slide5.text}}</p>
                             </div>
                         </div>
                     </div>
@@ -106,6 +106,7 @@
                     <span class="SpanTitle">Tiendas</span>
                     <div class="BarraDifuminadaTileSite"></div>
                 </div>
+
             </div>
         </div>
         <!-- ------------------------------------------------------------------------------------------------------------ -->

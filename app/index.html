@@ -17,7 +17,9 @@
 </head>
 
 <body>
-    <ui-view></ui-view>
+    <div class="view-animate-container">
+        <ui-view class="view-animate"></ui-view>
+    </div>
 
     <!-- angular scripts -->
     <script src="bower_components/angular/angular.min.js"></script>
@@ -49,7 +51,8 @@
     <script src="app.js"></script>
     <script src="services/authentication.service.js"></script>
     <script src="modules/home/index.controller.js"></script>
-    <script src="modules/housing/housing.controller.js"></script>
+    <script src="modules/housing/SpecificHousing/SpecificHousing.controller.js"></script>
+    <script src="modules/housing/principal/housing.controller.js"></script>
     <script src="modules/login/index.controller.js"></script>
 
 
