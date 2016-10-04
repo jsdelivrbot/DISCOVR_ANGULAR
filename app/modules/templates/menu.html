@@ -1,85 +1,96 @@
 <link rel="stylesheet" href="../../assets/css/menuPrincipal.css">
-
+<style>
+    .navbar {
+        display: inline-block;
+        width: 100%;
+        border-radius: 0px;
+    }
+</style>
 <!-- INICIO DEL MENU-->
 <div class="ContenedorMenu">
-  <ul>
-    <li><a ui-sref="home"><i class="material-icons">map</i> Discovr</a></li>
-    <li id="LineSeparador"></li>
-    <li><i class="material-icons">home</i> <span translate>HomeTitle</span></li>
-    <li><i class="material-icons">keyboard_arrow_right</i> <span translate>WhereToGoTitle</span></li>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home">Discovr</a>
+        </div>
 
-    <li class="FloatRightMenu">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
 
-         <label for="SubCheckSettings"><i class="material-icons">more_vert</i></label> 
-        
-        <input type="checkbox" id="SubCheckSettings" name="ossm"> 
-		<ul id="ColorActive">
-            <div class="ConectorMenu"></div>
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="FloatRightMenu">
+                    <form id="demo-2">
+                        <input type="search" placeholder="Search">
+                    </form>
+                </li>
+                <!--------------------------------------------------------------------- !-->
+          
+                <li>
+                    <div class="btn-group" uib-dropdown is-open="status.isopen">
+                        <button type="button" class="notifButt" uib-dropdown-toggle ng-disabled="disabled">
+                        <i class="material-icons">notifications</i> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu SubMenuNotificasion ContainerDataNotificacion" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                            <li class="NotifConten">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt sint eaque assumenda fuga est fugit harum nam perferendis nihil. Quas eaque accusamus delectus quaerat eligendi aperiam. Ullam non quod deserunt.
+                            </li>
 
-			<li> <i class="material-icons">settings</i> <span translate>SettingsTitle</span></li>
-			<li> <i class="material-icons">language</i>
-                <span translate> LenguageTitle </span>
-                <select ng-model="listLan.key" ng-change="changeLang()">
+                            <li class="NotifConten">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt sint eaque assumenda fuga est fugit harum nam perferendis nihil. Quas eaque accusamus delectus quaerat eligendi aperiam. Ullam non quod deserunt.
+                            </li>
+
+                            <li class="NotifConten">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt sint eaque assumenda fuga est fugit harum nam perferendis nihil. Quas eaque accusamus delectus quaerat eligendi aperiam. Ullam non quod deserunt.
+                            </li>
+
+                            <li class="NotifConten">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt sint eaque assumenda fuga est fugit harum nam perferendis nihil. Quas eaque accusamus delectus quaerat eligendi aperiam. Ullam non quod deserunt.
+                            </li>
+
+                            <li class="NotifConten">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt sint eaque assumenda fuga est fugit harum nam perferendis nihil. Quas eaque accusamus delectus quaerat eligendi aperiam. Ullam non quod deserunt.
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!--------------------------------------------------------------------- !-->
+
+                <li uib-dropdown>
+                    <a href="#" uib-dropdown-toggle>
+                        <i class="material-icons">account_circle</i> {{vm.username}}
+                        <b class='caret'></b>
+                    </a>
+                    <tree tree='tree2'></tree>
+                </li>
+                <!-------------------------------------------------------------------!-->
+                <li uib-dropdown>
+                    <a href="#" uib-dropdown-toggle>
+                        <i class="material-icons">more_vert</i>
+                        <span class='caret'></span>
+                    </a>
+                    <tree tree='tree'></tree>
+                </li>
+
+                      <li class="navbar-brand FloatRightMenu">
+                        <i class="material-icons">language</i>
+                    <select ng-model="listLan.key" ng-change="changeLang()" class="SelectLang">
                     <option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
                 </select>
-            </li>
-			<li> <i class="material-icons">bug_report</i> <span translate>BugsTitle</span></li>
-		</ul> 
-    </li>  
-    <li class="FloatRightMenu"> 
-
-        <label for="CheckSubMenuUsuario">
-            <picture id="PictureUser"> <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
-        </label> 
-
-        <input type="checkbox" id="CheckSubMenuUsuario"name="ossm"> 
-
-		<ul class="SubMenuUsuario">
-            
-            <div class="ConectorMenu"></div>
-
-			<li> <i class="material-icons">account_circle</i> <span translate>ProfileTitle</span> {{vm.username}} </li>
-			<li> <i class="material-icons">accessible</i> <span translate>ConditionsTitle</span></li>
-			<li> <a href="#/login" id="color"><i class="material-icons">exit_to_app</i><span translate>ExitTitle</span></a></li>
-		</ul>
-    </li>
-    <li class="FloatRightMenu">
-        <label for="SubCheckNotif"><i class="material-icons">notifications</i></label> 
-    	
-        <input type="checkbox" id="SubCheckNotif" name="ossm"> 
-		<ul class="SubMenuNotificasion">
-
-    			<li class="CardNotificasion">
-                     <div class="ContainerDataNotificacion">
-                        <picture id="PictureUser"> 
-                        <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
-                        <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</span> 
-                        <p class="FechaNotf">14-08-2016</p>
-                     </div>
                 </li>
-                <li class="CardNotificasion">
-                     <div class="ContainerDataNotificacion">
-                        <picture id="PictureUser"> 
-                        <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
-                        <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</span> 
-                        <p class="FechaNotf">14-08-2016</p>
-                     </div>
-                </li>    
-                <li class="CardNotificasion">
-                     <div class="ContainerDataNotificacion">
-                        <picture id="PictureUser"> 
-                        <img src="http://www.callegranvia.com/info/img/los-secretos-de-un-buen-estudiante.jpg" alt=""> </picture>
-                        <span >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eos non ratione recusandae quam maxime ad ducimus ium.</span> 
-                        <p class="FechaNotf">14-08-2016</p>
-                     </div>
-                </li>    		
-    		</ul>
-    </li>
-    <li class="FloatRightMenu">
-       <form id="demo-2">
-            <input type="search" placeholder="Search">
-       </form>
-    </li> 
- </ul>    
+
+ <!--------------------------------------------------------------------- !-->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
 </div>
 <!-- FIN DEL MENU-->

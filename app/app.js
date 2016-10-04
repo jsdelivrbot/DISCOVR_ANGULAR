@@ -1,4 +1,3 @@
-
 var discovrApp = angular.module('DiscovrIndex', [
     'ui.bootstrap',
     'ngAnimate',
@@ -7,11 +6,11 @@ var discovrApp = angular.module('DiscovrIndex', [
     'ngStorage',
     'ngCookies',
     'angular-jwt',
+    'ui.navbar',
     'pascalprecht.translate'])
     .constant('apiURL', 'https://discovr-gekkou95.c9users.io/')
     .config(config)
     .run(run);
-
     function config($stateProvider, $urlRouterProvider,$translateProvider) {
         // Configuración de los idiomas
         $translateProvider.useStaticFilesLoader({
@@ -67,6 +66,14 @@ var discovrApp = angular.module('DiscovrIndex', [
                 controller: 'Housing.IndexController',
                 controllerAs: 'vm'
             
+            })
+            
+            .state('Specifichousing', {
+                url: '/Specifichousing',
+                templateUrl: 'modules/housing/SpecificHousing/SpecificHousing.view.html',
+                controller: 'SpecificHousing.IndexController',
+                controllerAs: 'vm'
+
             });
 
          // default route
@@ -78,21 +85,21 @@ var discovrApp = angular.module('DiscovrIndex', [
         if ($localStorage.currentUser) {
             $http.defaults.headers.common.Authorization = 'JWT ' + $localStorage.currentUser.token;
         }
-        // redirect to login page if not logged in and trying to access a restricted page
-        $rootScope.$on('$locationChangeStart', function (event, next, current) {
-            var publicPages = ['/login'];
-            var restrictedPage = publicPages.indexOf($location.path()) === -1;
-            if (restrictedPage && !$localStorage.currentUser) {
-                $location.path('/login');
-            }
-        });
-    }
-    //Auto-logout if any unauthorised web api request is made
-    discovrApp.config(['$provide', '$httpProvider', function ($provide, $httpProvider) {
+    // redirect to login page if not logged in and trying to access a restricted page
+    $rootScope.$on('$locationChangeStart', function(event, next, current) {
+        var publicPages = ['/login'];
+        var restrictedPage = publicPages.indexOf($location.path()) === -1;
+        if (restrictedPage && !$localStorage.currentUser) {
+            $location.path('/login');
+        }
+    });
+}
+//Auto-logout if any unauthorised web api request is made
+discovrApp.config(['$provide', '$httpProvider', function($provide, $httpProvider) {
 
-    $provide.factory('unauthorisedInterceptor', ['$q', function ($q) {
+    $provide.factory('unauthorisedInterceptor', ['$q', function($q) {
         return {
-            'responseError': function (rejection) {
+            'responseError': function(rejection) {
                 if (rejection.status === 401) {
                     window.location.href = '/#/login';
                 }
@@ -103,5 +110,3 @@ var discovrApp = angular.module('DiscovrIndex', [
 
     $httpProvider.interceptors.push('unauthorisedInterceptor');
 }]);
-    
-   

@@ -6,7 +6,7 @@
 
 <!-- ----------------     LANGUAGE SWITCH     ------------------------- -->
 <span translate>LenguajeTitle</span>
-<select ng-model="selected" ng-change="changeLang()">
+<select ng-model="selected" ng-change="changeLang()" class="ChangeLang">
 	<option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
 </select>
 
@@ -20,13 +20,16 @@
 		<input type="password" placeholder="{{ 'passInputPlaceHolder' | translate }}" class="inputTex" ng-model="vm.password" required>
 		<p>No tienes cuenta todavia? <a ui-sref="signup">Registrate Ya!</a></p>
 		<button ng-disabled="vm.loading" class="btn btn-primary">{{ 'btnLogin' | translate }}</button>
+
+
+		<input type="submit" ng-disabled="vm.loading" class="btn btn-primary1" value="{{ 'btnLogin' | translate }}">
+
+		<!-- <button ng-disabled="vm.loading" class="btn btn-primary1">{{ 'btnLogin' | translate }}</button> -->
 		<!--<input type="submit" value="{{ 'btnLogin' | translate }}" class="inputSubmit"> -->
 
 		<div ng-if="vm.error" >{{vm.error}}</div>
 	</form>
 </div>
 <!-- ----------------     END LOGIN FORM     ------------------------- -->
-
-
 
 </div>
