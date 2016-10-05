@@ -100,14 +100,17 @@
 
 .scale:hover{
 	-webkit-transform: scale(1.02);
+	transition: all 0.3s;
 }
 
 .scale2:hover{
 	-webkit-transform: scale(1.01);
+	transition: all 0.3s;
 }
 
 .scale2:active, .scale:active{
 	-webkit-transform: scale(1);
+	transition: all 0.3s;
 }
 
 /* INICIO MODELO RESPONSITIVE */

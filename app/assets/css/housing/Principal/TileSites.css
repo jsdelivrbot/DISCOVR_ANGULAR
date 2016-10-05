@@ -36,23 +36,24 @@
     float: left;
     margin-left: 12px;
     position: relative;
-    margin-top: -34px;
+    margin-top: -32px;
     z-index: 2;
 }
 
 .SpanStar {
     position: relative;
-    margin-top: -37px;
+    margin-top: -33px;
     float: right;
-    width: 40px;
+    width: 70px;
     text-align: center;
     z-index: 2;
     margin-right: 12px;
 }
 
 
-/* AQUI SE GENERA LA BARRA DIFUMINADA QUE ESTA EN LA PARTE INFERIOR DE LOS TILES */
 
+
+/* AQUI SE GENERA LA BARRA DIFUMINADA QUE ESTA EN LA PARTE INFERIOR DE LOS TILES */
 .BarraDifuminadaTileSite {
     position: relative;
     margin-top: -50px;
@@ -67,6 +68,15 @@
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
 }
+
+.TileSite1 .BarraDifuminadaTileSite {
+    position: relative;
+    margin-top: -40px;
+    height: 40px;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(33,33,33,0.5);
+    }
 
 .LiContainer .BarraDifuminadaTileSite {
     z-index: 3;
@@ -83,12 +93,24 @@
 }
 
 .SpanStar .material-icons {
-    font-size: 28px;
+    font-size: 25px;
     padding-top: 0px;
     padding-bottom: 0px;
     text-align: center;
     color: #ffeb3b;
     vertical-align: bottom;
+}
+.SpanFollow .material-icons:active {
+   -webkit-transform: scale(1.2);
+    transition: all 0.3s;
+}
+ 
+.SpanFollow .material-icons {
+   color: #fff;
+}
+
+.FollowLink:visited .material-icons {
+   color: #f44336;
 }
 
 .TileSite1 .carousel-indicators {
