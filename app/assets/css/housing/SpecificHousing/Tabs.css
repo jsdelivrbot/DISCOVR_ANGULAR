@@ -49,6 +49,7 @@ input[type="radio"] {
     color: #fff;
     font-weight: 100;
     cursor: pointer;
+    line-height: 1;
 }
 
 .label-1 {
@@ -104,8 +105,10 @@ input[type="radio"] {
     position: absolute;
     top: 52px;
     left: 0;
-    padding: 20px;
+    padding: 10px;
     background: #fff;
+    max-height: 350px;
+    overflow-y:auto;
 }
 
 .tab-wrap [id^="tab"]:checked+label {
@@ -114,12 +117,13 @@ input[type="radio"] {
     border-bottom: 2px solid orange;
     padding-bottom: 9px;
     background-color: #fff;
-    transition: all 0.5s;
+    transition: all 0.3s;
+    height: 52px;
 }
 
 .tab-wrap [id^="tab"]:checked+label:before {
     background: #fff;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .tab-wrap [id^="tab"]:checked~.tab-content {
@@ -137,13 +141,86 @@ input[type="radio"] {
     margin: 0 auto;
 }
 
-.CardTab {
+.CardTab  {
     background-color: #f5f5f5;
     padding: 10px;
     margin: 20px;
+    display: table;
 }
 
 
+/* --------------------------------------------------- */
+.Usertab{
+    float: left;
+    padding-right: 10px;
+    display: table;
+}
+.Usertab img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+
+}
+
+.NameUserTab{
+    font-weight: bold;
+}
+
+.DatePubl{
+    font-size: 10px;
+    font-style: italic;
+}
+
+/* ----------------------------FORMULARIO DE CONTACTO------------------------- */
+#FormContact{
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+}
+
+.InputContact{
+    border-style: none;
+    padding: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    outline: none;
+    border-bottom: 2px solid #1e88e5;
+    margin-bottom: 20px;
+}
+
+.InputContact:focus{
+    border-bottom: 2px solid #48c9b0;
+    transition: all 0.4s;
+}
+
+.AreaContact{
+    border-style: none;
+    padding: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    outline: none;
+    border-bottom: 2px solid #1e88e5;
+    margin-bottom: 20px;
+    height: 130px;
+}
+
+.AreaContact:focus{
+    border-bottom: 2px solid #48c9b0;
+    transition: all 0.4s;
+}
+
+#BtnSendForm{
+    border-style: none;
+    background-color: #48c9b0;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #fff;
+}
 /* INICIO MODELO RESPONSITIVE */
 
 @media only screen and (max-width: 767px) {
@@ -169,4 +246,9 @@ input[type="radio"] {
         width: 100%;
         clear: both;
     }
+
+    ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
 }

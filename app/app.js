@@ -42,6 +42,13 @@ function config($stateProvider, $urlRouterProvider, $translateProvider) {
 
     })
 
+     .state('working', {
+        url: '/working',
+        templateUrl: 'modules/templates/working.html',
+        
+
+    })
+
     .state('housing', {
         url: '/housing',
         templateUrl: 'modules/housing/principal/housing.view.html',

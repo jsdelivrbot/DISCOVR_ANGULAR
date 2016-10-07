@@ -103,34 +103,68 @@
 
 /*  Animaciones de hover y active*/
 
-.scale:hover{
+.scale:hover .material-icons{
 	-webkit-transform: scale(1.02);
 	transition: all 0.3s;
 }
 
-.scale:active{
+.scale:active .material-icons{
 	-webkit-transform: scale(1);
 	transition: all 0.3s;
 }
 
 
-#DobleTile li:hover{
+#DobleTile li:hover .material-icons{
 	-webkit-transform: scale(1.05);
 	transition: all 0.3s;
 }
 
-#DobleTile li:active{
+#DobleTile li:active .material-icons{
 	-webkit-transform: scale(1);
 	transition: all 0.3s;
 }
 
-.scale, #DobleTile{
+.scale, #DobleTile .material-icons{
 	cursor: pointer;
 }
 
 .FollowLink:visited .material-icons {
    color: #f44336;
 }
+
+#HaveThis li .TopltipInd{
+				display:none;
+				position:absolute;
+				text-align: center;
+				height: 40px;
+			}
+			
+			#HaveThis li:hover > ul {
+				display:block;
+				max-height: 40px;
+				
+			}
+
+
+			
+			#HaveThis li ul li {
+				position:relative;
+				max-height: 39px;
+				margin-top: 1px;
+				margin-left: 1px;
+				width: auto;
+				padding-left: 8px;
+				padding-right: 8px;
+				background-color: rgba(33,33,33,1);
+				/* top: -44px; */
+
+				
+			}
+			
+			#HaveThisli ul li ul {
+				top:0px;
+				right: -140px;
+			}
 
 /* ESTILOS PARA EL MODELO RESPONSITIVE */
 @media only screen and (max-width: 767px) {
