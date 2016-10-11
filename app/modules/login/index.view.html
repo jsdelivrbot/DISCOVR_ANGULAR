@@ -6,8 +6,7 @@
 
 <!-- ----------------     LANGUAGE SWITCH     ------------------------- -->
 <span translate>LenguajeTitle</span>
-<select ng-model="selected" ng-change="changeLang()" class="ChangeLang">
-	<option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
+<select style="color: black" ng-model="vm.selected" ng-change="vm.changeLang()" class="ChangeLang" ng-options="lan.key as lan.value for lan in vm.listLan">
 </select>
 
 <!-- ----------------     END LANGUAGE SWITCH     ------------------------- -->
@@ -22,7 +21,6 @@
 		<button ng-disabled="vm.loading" class="btn btn-primary">{{ 'btnLogin' | translate }}</button>
 
 
-		<input type="submit" ng-disabled="vm.loading" class="btn btn-primary1" value="{{ 'btnLogin' | translate }}">
 
 		<!-- <button ng-disabled="vm.loading" class="btn btn-primary1">{{ 'btnLogin' | translate }}</button> -->
 		<!--<input type="submit" value="{{ 'btnLogin' | translate }}" class="inputSubmit"> -->

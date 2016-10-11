@@ -13,12 +13,22 @@ var discovrApp = angular.module('DiscovrIndex', [
     .run(run);
     function config($stateProvider, $urlRouterProvider,$translateProvider) {
         // Configuración de los idiomas
+        var browserLan = navigator.language; //Obtiene el idioma del Navegador
+        console.log(browserLan);
+        if (browserLan === 'es' || browserLan === 'es-es' || browserLan === 'es-NI'){
+            browserLan = 'es-es';
+        }else if(browserLan === 'en' || browserLan === 'en-us' || browserLan === 'en-US') {
+            browserLan = 'en-us';
+        }else{
+            browserLan = 'es-es';
+        }
+
         $translateProvider.useStaticFilesLoader({
             prefix: 'modules/',
             suffix: '.json'
         });
         $translateProvider.useLocalStorage();
-        $translateProvider.preferredLanguage('login/languages/es-es');
+        $translateProvider.preferredLanguage('login/languages/' + browserLan);
         // here the html tag works
         $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
         // Configuración de las rutas

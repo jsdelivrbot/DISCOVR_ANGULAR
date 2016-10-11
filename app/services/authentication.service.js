@@ -1,5 +1,6 @@
 discovrApp.factory('AuthenticationService', function (
   $http,
+  $filter,
   $localStorage,
   jwtHelper,
   $q,
@@ -15,7 +16,7 @@ discovrApp.factory('AuthenticationService', function (
   service.ChangePassword = ChangePassword;
   service.ResetPassword = ResetPassword;
   service.GetProfile = GetProfile;
-  //service.SignUp = SignUp;
+  service.GetData = GetData;
   //service.SignUp = SignUp;
 
   return service;
@@ -41,25 +42,18 @@ discovrApp.factory('AuthenticationService', function (
       });
   }
 
-  function Logout() {
-    $http.post(apiURL + 'api/rest/auth/logout/')
-      .success(function(response){
-        //remove user from local storage and clear http auth header
-        delete $localStorage.currentUser;
-        localStorage.removeItem('user');
-        $http.defaults.headers.common.Authorization = '';
-      });
-    
-  }
-
-  function SignUp(callback,username,password1,password2,email,more){
-    $http.post(apiURL + 'api/rest/auth/registration/', { username: username, password1: password1, password2: password2, email: email})
+  function SignUp(username,password1,password2,email,name,surname,phone,birthday,genre,city,callback){
+    $http.post(apiURL + 'api/rest/auth/registration/', { username: username, email: email, password1: password1, password2: password2})
       .success(function(response){
         //login successful if there's a token in the respose
         if(response.token){
-          console.log(response.token);
+          //decode token, to get the user id insert on payload
+          var token = jwtHelper.decodeToken(response.token);
           //store username and token in local storage to keep user logged in between paga refreshes
-          $localStorage.currentUser = { username: username, token: response.token };
+          $localStorage.currentUser = {id: token.user_id, username: username, token: response.token };
+          var client = CreateClient(name,surname,birthday,genre,city);
+          console.log(client);
+          CreateTourist(token.user_id, client.id);                 
           //add jwt token to auth header for all requests made by the $http services
           $http.defaults.headers.common.Authorization = 'JWT ' + response.token;
           //execuete callback with true to indicate successful login
@@ -69,6 +63,17 @@ discovrApp.factory('AuthenticationService', function (
           callback(false);
         }
       });
+  }
+
+  function Logout() {
+    $http.post(apiURL + 'api/rest/auth/logout/')
+      .success(function(response){
+        //remove user from local storage and clear http auth header
+        delete $localStorage.currentUser;
+        localStorage.removeItem('user');
+        $http.defaults.headers.common.Authorization = '';
+      });
+    
   }
 
   function Profile(){
@@ -96,7 +101,8 @@ discovrApp.factory('AuthenticationService', function (
     $http.get(apiURL + 'api/' + table + '/').
     then(function successCallback(response){
       deferred.resolve(response.data);
-    });     
+    }); 
+    //onsole.log(deferred.promise);    
     return deferred.promise;
   }
 
@@ -106,6 +112,29 @@ discovrApp.factory('AuthenticationService', function (
     then(function successCallback(response){
       deferred.resolve(response.data);
     });     
+    return deferred.promise;
+  }
+
+  function CreateTourist(user_id, client_id){
+    var deferred = $q.defer();
+    $http.post(apiURL + 'api/tourist/create/', {Owner: user_id, IdClient: client_id} ).
+    then(function successCallback(response){
+      deferred.resolve(response.data);
+    });     
+    console.log(deferred.promise);     
+    return deferred.promise;
+  }
+
+  function CreateClient(name, surname,birthday,genre,city){
+    var deferred = $q.defer();
+    var filteredData = '';
+    $http.post(apiURL + 'api/client/create/', { Genre: genre, Name: name, Surname: surname, BirthDate:birthday, IdCity: city } ).
+    then(function successCallback(response){
+      deferred.resolve(response.data);
+      //var client = GetData('client');      
+      //filteredData = $filter('filter')(client, {data: {Genre: genre, Name: name, Surname: surname, BirthDate:birthday, IdCity: city}});
+    });
+    console.log(deferred.promise);     
     return deferred.promise;
   }
 
@@ -124,7 +153,5 @@ discovrApp.factory('AuthenticationService', function (
   function ConfirmReset(){
 
   }
-
-  return service;
 
 });
