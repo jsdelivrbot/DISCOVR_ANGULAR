@@ -53,6 +53,7 @@ discovrApp.factory('AuthenticationService', function (
           $localStorage.currentUser = {id: token.user_id, username: username, token: response.token };
           var client = CreateClient(name,surname,birthday,genre,city);
           console.log(client);
+          console.log('id:'+client.id);
           CreateTourist(token.user_id, client.id);
           //add jwt token to auth header for all requests made by the $http services
           $http.defaults.headers.common.Authorization = 'JWT ' + response.token;
