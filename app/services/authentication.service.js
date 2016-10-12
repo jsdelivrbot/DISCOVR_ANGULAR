@@ -50,7 +50,7 @@ discovrApp.factory('AuthenticationService', function (
           //decode token, to get the user id insert on payload
           var token = jwtHelper.decodeToken(response.token);
           var client;
-          CreateClient(name,surname,birthday,genre,city)then(function(dt){
+          CreateClient(name,surname,birthday,genre,city).then(function(dt){
             client = dt;
             console.log(client);
             console.log('id:' + client.IdClient);
