@@ -59,12 +59,11 @@ discovrApp.factory('AuthenticationService', function (
             CreateTourist(token.user_id, client.IdClient).then(function(dt){
               tourist =  dt;
               console.log(tourist);
+              $localStorage.currentUser = {id: token.user_id, username: username, tourist: tourist, token: response.token };
             });
           });
 
-
           //store username and token in local storage to keep user logged in between paga refreshes
-          $localStorage.currentUser = {id: token.user_id, username: username, tourist: tourist, token: response.token };
           //add jwt token to auth header for all requests made by the $http services
           $http.defaults.headers.common.Authorization = 'JWT ' + response.token;
           //execuete callback with true to indicate successful login
