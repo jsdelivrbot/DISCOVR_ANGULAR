@@ -51,9 +51,11 @@ discovrApp.factory('AuthenticationService', function (
           var token = jwtHelper.decodeToken(response.token);
           //store username and token in local storage to keep user logged in between paga refreshes
           $localStorage.currentUser = {id: token.user_id, username: username, token: response.token };
-          var client = CreateClient(name,surname,birthday,genre,city);
+          CreateClient(name,surname,birthday,genre,city).then(function(client){
+            
+          };
           console.log(client);
-          CreateTourist(token.user_id, client.id);                 
+          CreateTourist(token.user_id, client.id);
           //add jwt token to auth header for all requests made by the $http services
           $http.defaults.headers.common.Authorization = 'JWT ' + response.token;
           //execuete callback with true to indicate successful login
@@ -73,7 +75,7 @@ discovrApp.factory('AuthenticationService', function (
         localStorage.removeItem('user');
         $http.defaults.headers.common.Authorization = '';
       });
-    
+
   }
 
   function Profile(){
@@ -92,7 +94,7 @@ discovrApp.factory('AuthenticationService', function (
     then(function successCallback(response){
       deferred.resolve(response.data.Kind);
       localStorage.setItem('user', deferred.promise);
-    });     
+    });
     return deferred.promise;
   }
 
@@ -101,8 +103,8 @@ discovrApp.factory('AuthenticationService', function (
     $http.get(apiURL + 'api/' + table + '/').
     then(function successCallback(response){
       deferred.resolve(response.data);
-    }); 
-    //onsole.log(deferred.promise);    
+    });
+    //onsole.log(deferred.promise);
     return deferred.promise;
   }
 
@@ -111,7 +113,7 @@ discovrApp.factory('AuthenticationService', function (
     $http.get(apiURL + 'api/' + table + '/').
     then(function successCallback(response){
       deferred.resolve(response.data);
-    });     
+    });
     return deferred.promise;
   }
 
@@ -120,8 +122,8 @@ discovrApp.factory('AuthenticationService', function (
     $http.post(apiURL + 'api/tourist/create/', {Owner: user_id, IdClient: client_id} ).
     then(function successCallback(response){
       deferred.resolve(response.data);
-    });     
-    console.log(deferred.promise);     
+    });
+    console.log(deferred.promise);
     return deferred.promise;
   }
 
@@ -131,10 +133,10 @@ discovrApp.factory('AuthenticationService', function (
     $http.post(apiURL + 'api/client/create/', { Genre: genre, Name: name, Surname: surname, BirthDate:birthday, IdCity: city } ).
     then(function successCallback(response){
       deferred.resolve(response.data);
-      //var client = GetData('client');      
+      //var client = GetData('client');
       //filteredData = $filter('filter')(client, {data: {Genre: genre, Name: name, Surname: surname, BirthDate:birthday, IdCity: city}});
     });
-    console.log(deferred.promise);     
+    console.log(deferred.promise);
     return deferred.promise;
   }
 
