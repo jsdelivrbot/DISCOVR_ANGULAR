@@ -52,7 +52,7 @@ discovrApp.factory('AuthenticationService', function (
           //store username and token in local storage to keep user logged in between paga refreshes
           $localStorage.currentUser = {id: token.user_id, username: username, token: response.token };
           CreateClient(name,surname,birthday,genre,city).then(function(client){
-            
+            console.log();
           };
           console.log(client);
           CreateTourist(token.user_id, client.id);
