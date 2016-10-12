@@ -52,6 +52,7 @@ discovrApp.factory('AuthenticationService', function (
           var client;
           CreateClient(name,surname,birthday,genre,city)then(function(dt){
             client = dt;
+            console.log('client:' + client);
             console.log('id:' + client.IdClient);
           });
           var tourist;
