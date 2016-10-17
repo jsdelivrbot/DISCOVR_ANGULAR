@@ -10,8 +10,6 @@ discovrApp.controller('Home.IndexController', function(
     vm.profile = profile;
     vm.getProfile = getProfile;
 
-    initController();
-
     //Start Function
     function initController() {
         vm.username = $localStorage.currentUser.username;
@@ -315,4 +313,6 @@ discovrApp.controller('Home.IndexController', function(
     };
 
     $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
+
+    initController();
 });
