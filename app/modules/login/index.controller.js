@@ -3,6 +3,7 @@ discovrApp.controller('Login.IndexController', function(
     $localStorage,
     AuthenticationService,
     $scope,
+    filter,
     $translate){
 
     var vm = this;
@@ -18,6 +19,9 @@ discovrApp.controller('Login.IndexController', function(
         //vm.loading = true;
         AuthenticationService.Login(vm.username, vm.password, function(result){
             if(result === true){
+                AuthenticationService.GetData('tourist').then(function(dt){
+
+                });
                 AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
                   localStorage.setItem('profile', dt);
                   if(dt === 1){
@@ -28,8 +32,6 @@ discovrApp.controller('Login.IndexController', function(
                   }
                 });
                 //GetProfile = JSON.parse(localStorage.getItem('user'));
-
-
             }else{
                 vm.error = 'Username or password is incorrect';
                 vm.loading = false;
