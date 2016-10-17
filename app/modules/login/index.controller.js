@@ -4,7 +4,7 @@ discovrApp.controller('Login.IndexController', function(
     AuthenticationService,
     $scope,
     $translate){
-      
+
     var vm = this;
 
     vm.login = login;
@@ -21,6 +21,8 @@ discovrApp.controller('Login.IndexController', function(
                 AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
                     console.log(dt);
                     if(dt === 1){
+                      var profile = localStorage.getItem('profile');
+                      console.log(profile);
                         $location.path('/');
                     }else if(dt === 2){
                         console.log("Nestor es un genio!");
