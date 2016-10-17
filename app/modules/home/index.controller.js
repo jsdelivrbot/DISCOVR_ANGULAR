@@ -6,11 +6,12 @@ discovrApp.controller('Home.IndexController', function(
     $translate) {
 
     var vm = this;
+    //local variables
     vm.profile = profile;
     vm.getProfile = getProfile;
-    
-    initController();
 
+    initController();
+    //Start Function
     function initController() {
         vm.username = $localStorage.currentUser.username;
         var stLan = localStorage.getItem('NG_TRANSLATE_LANG_KEY');
@@ -22,7 +23,7 @@ discovrApp.controller('Home.IndexController', function(
     function getProfile(){
         AuthenticationService.GetProfile(1).then(function(dt){
             console.log(dt);
-        });        
+        });
     }
 
     function profile(){
