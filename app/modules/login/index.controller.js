@@ -4,6 +4,7 @@ discovrApp.controller('Login.IndexController', function(
     AuthenticationService,
     $scope,
     $translate){
+      
     var vm = this;
 
     vm.login = login;
