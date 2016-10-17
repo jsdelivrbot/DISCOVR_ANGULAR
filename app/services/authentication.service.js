@@ -30,6 +30,7 @@ discovrApp.factory('AuthenticationService', function (
           //decode token, to get the user id insert on payload
           var token = jwtHelper.decodeToken(response.token);
           getProfile(token.user_id).then(function(dt){
+            console.log(dt);
             //store username and token in local storage to keep user logged in between paga refreshes
             $localStorage.currentUser = {id: token.user_id, profile: dt, username: username, token: response.token };
           });
