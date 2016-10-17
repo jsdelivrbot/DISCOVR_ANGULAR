@@ -24,7 +24,7 @@ discovrApp.controller('Login.IndexController', function(
                 AuthenticationService.GetData('tourist').then(function(dt){
                   console.log(dt);
                   tourist = $filter('filter')(dt, { Owner: $localStorage.currentUser.id }, true);
-                  console.log(tourist['IdClient']);
+                  console.log(tourist.IdClient);
                   AuthenticationService.GetDataId('client',tourist.IdClient).then(function(dt){
                     console.log(dt);
                   });
