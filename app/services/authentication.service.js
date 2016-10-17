@@ -107,7 +107,7 @@ discovrApp.factory('AuthenticationService', function (
     });
     return deferred.promise;
   }
-
+  //Get Data from API URLs
   function GetData(table){
     var deferred = $q.defer();
     $http.get(apiURL + 'api/' + table + '/').
