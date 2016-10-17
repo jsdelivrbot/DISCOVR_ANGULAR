@@ -103,7 +103,7 @@ discovrApp.factory('AuthenticationService', function (
     $http.get(apiURL + 'api/user/' + id + '/').
     then(function successCallback(response){
       deferred.resolve(response.data.Kind);
-      localStorage.setItem('user', deferred.promise);
+      localStorage.setItem('profile', deferred.promise);
     });
     return deferred.promise;
   }
