@@ -4,16 +4,16 @@ discovrApp.controller('Signup.IndexController', function(
     AuthenticationService,
     $scope,
     $filter,
-    $translate){    
+    $translate){
 
     var vm = this;
-
-    vm.signup = signup;    
+    //Variables
+    vm.signup = signup;
     vm.profileData = {};
     vm.filterLocation = filterLocation;
-
+    //Use SignUp Data
     var data = { Country:{},CountryDetail:{},Department:{},DepartmentDetail:{},City:{},CityDetail:{} };
-
+    //Country, Department & City Variables and variables Filters
     vm.country;
     vm.department;
     vm.city;
@@ -28,38 +28,44 @@ discovrApp.controller('Signup.IndexController', function(
     function initController(){
         //reset login status
         AuthenticationService.Logout();
+        //Load Country Data
         AuthenticationService.GetData('country').then(function(dt){
-            data.Country = dt;            
+            data.Country = dt;
         });
+        //Load Country Detail Data
         AuthenticationService.GetData('countrydetail').then(function(dt){
             data.CountryDetail = dt;
         });
+        //Load Depatment Data
         AuthenticationService.GetData('department').then(function(dt){
-            data.Department = dt;                       
+            data.Department = dt;
         });
+        //Load Department Detail Data
         AuthenticationService.GetData('departmentdetail').then(function(dt){
-            data.DepartmentDetail = dt;  
+            data.DepartmentDetail = dt;
         });
+        //Load City Data
         AuthenticationService.GetData('city').then(function(dt){
             data.City = dt;
             vm.country = alasql('SELECT Country.IdCountry, CountryDetail.IdLanguage, CountryDetail.Name \
-            FROM ? AS Country JOIN ? AS CountryDetail ON Country.IdCountry = CountryDetail.IdCountry',[data.Country,data.CountryDetail]);   
+            FROM ? AS Country JOIN ? AS CountryDetail ON Country.IdCountry = CountryDetail.IdCountry',[data.Country,data.CountryDetail]);
             vm.department = alasql('SELECT Department.IdDepartment, Department.IdCountry, DepartmentDetail.IdLanguage, DepartmentDetail.Name \
-            FROM ? AS Department JOIN ? AS DepartmentDetail ON Department.IdDepartment = DepartmentDetail.IdDepartment',[data.Department,data.DepartmentDetail]);                      
+            FROM ? AS Department JOIN ? AS DepartmentDetail ON Department.IdDepartment = DepartmentDetail.IdDepartment',[data.Department,data.DepartmentDetail]);
             vm.city = alasql('SELECT City.IdCity, City.IdDepartment, CityDetail.IdLanguage, CityDetail.Name \
-            FROM ? AS City JOIN ? AS CityDetail ON City.IdCity = CityDetail.IdCity',[data.City,data.CityDetail]);                          
+            FROM ? AS City JOIN ? AS CityDetail ON City.IdCity = CityDetail.IdCity',[data.City,data.CityDetail]);
         });
+        //Load City Detail
         AuthenticationService.GetData('citydetail').then(function(dt){
-            data.CityDetail = dt;                        
+            data.CityDetail = dt;
         });
-                
+
     };
 
     function signup() {
 
         var date = vm.profileData.birthday.toISOString().substring(0, 10);
         console.log(date);
-    
+
         AuthenticationService.SignUp(
             vm.profileData.username,
             vm.profileData.password1,
@@ -68,7 +74,7 @@ discovrApp.controller('Signup.IndexController', function(
             vm.profileData.name,
             vm.profileData.surname,
             vm.profileData.phone,
-            date, 
+            date,
             vm.profileData.genre,
             vm.selectedCity,function(result){
             if(result === true){
@@ -78,7 +84,7 @@ discovrApp.controller('Signup.IndexController', function(
             }
         });
     };
-  
+
   function filterLocation(kind, lan){
       console.log(kind);
       if (kind === 1){
@@ -93,11 +99,11 @@ discovrApp.controller('Signup.IndexController', function(
         {'key':'us-en','value':'English'}
     ];
 
-    $scope.selected = 'es-es';    
+    $scope.selected = 'es-es';
     $scope.changeLang = function changeLangFn() {
         var opt = $scope.selected;
          console.log(opt);
-        $translate.use('login/languages/' + opt); 
+        $translate.use('login/languages/' + opt);
     };
-    
-});    
+
+});
