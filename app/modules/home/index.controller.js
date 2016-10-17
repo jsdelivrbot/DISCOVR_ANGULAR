@@ -46,6 +46,7 @@ discovrApp.controller('Home.IndexController', function(
     }
     //Get the selected user language and set at the begining the browser default language
     vm.selected = browserLan;
+    //Change the language
     vm.changeLang = function changeLangFn() {
         var opt = vm.selected;
          console.log(opt);
