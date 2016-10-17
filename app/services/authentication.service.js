@@ -87,7 +87,7 @@ discovrApp.factory('AuthenticationService', function (
       });
 
   }
-
+  //Profile Data
   function Profile(){
     $http.get(apiURL + 'api/user/' + $localStorage.currentUser.id + '/').
       then(function successCallback(response) {
@@ -97,7 +97,7 @@ discovrApp.factory('AuthenticationService', function (
           console.log(response);
       });
   }
-
+  //Get user Profile
   function GetProfile(id){
     var deferred = $q.defer();
     $http.get(apiURL + 'api/user/' + id + '/').
