@@ -18,9 +18,11 @@ discovrApp.controller('Login.IndexController', function(
     function login(){
         //vm.loading = true;
         AuthenticationService.Login(vm.username, vm.password, function(result){
+          var tourist;
+          var client;
             if(result === true){
                 AuthenticationService.GetData('tourist').then(function(dt){
-
+                  tourist = $filter('filter')(vm.department, { IdCountry: vm.selectedCountry, IdLanguage: lan }, true);
                 });
                 AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
                   localStorage.setItem('profile', dt);
