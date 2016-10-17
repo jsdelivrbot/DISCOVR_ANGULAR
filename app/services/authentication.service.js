@@ -57,7 +57,7 @@ discovrApp.factory('AuthenticationService', function (
             client = dt;
             CreateTourist(token.user_id, client.IdClient).then(function(dt){
               tourist =  dt;
-              //Storage client and tourist data 
+              //Storage client and tourist data
               localStorage.setItem('client', client);
               localStorage.setItem('tourist', tourist);
             });
@@ -74,13 +74,15 @@ discovrApp.factory('AuthenticationService', function (
         }
       });
   }
-
+  //Logout User
   function Logout() {
     $http.post(apiURL + 'api/rest/auth/logout/')
       .success(function(response){
         //remove user from local storage and clear http auth header
         delete $localStorage.currentUser;
         localStorage.removeItem('user');
+        localStorage.removeItem('tourist');
+        localStorage.removeItem('client');
         $http.defaults.headers.common.Authorization = '';
       });
 
