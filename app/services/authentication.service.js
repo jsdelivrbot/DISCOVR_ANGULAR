@@ -57,6 +57,7 @@ discovrApp.factory('AuthenticationService', function (
             client = dt;
             CreateTourist(token.user_id, client.IdClient).then(function(dt){
               tourist =  dt;
+              //Storage client and tourist data 
               localStorage.setItem('client', client);
               localStorage.setItem('tourist', tourist);
             });
