@@ -20,12 +20,12 @@ discovrApp.controller('Login.IndexController', function(
             if(result === true){
                 AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
                   localStorage.setItem('profile', dt);
-                    if(dt === 1){
-                        $location.path('/');
-                    }else if(dt === 2){
-                        console.log("Nestor es un genio!");
-                        $location.path('/');
-                    }
+                  if(dt === 1){
+                      $location.path('/');
+                  }else if(dt === 2){
+                      console.log("Nestor es un genio!");
+                      $location.path('/');
+                  }
                 });
                 //GetProfile = JSON.parse(localStorage.getItem('user'));
 
