@@ -126,17 +126,16 @@ discovrApp.factory('AuthenticationService', function (
     });
     return deferred.promise;
   }
-
+  //Create tourist
   function CreateTourist(user_id, client_id){
     var deferred = $q.defer();
     $http.post(apiURL + 'api/tourist/create/', {Owner: user_id, IdClient: client_id} ).
     then(function successCallback(response){
       deferred.resolve(response.data);
     });
-    console.log(deferred.promise);
     return deferred.promise;
   }
-
+  //Create Client
   function CreateClient(name, surname,birthday,genre,city){
     var deferred = $q.defer();
     var filteredData = '';
@@ -146,7 +145,6 @@ discovrApp.factory('AuthenticationService', function (
       //var client = GetData('client');
       //filteredData = $filter('filter')(client, {data: {Genre: genre, Name: name, Surname: surname, BirthDate:birthday, IdCity: city}});
     });
-    console.log(deferred.promise);
     return deferred.promise;
   }
 
