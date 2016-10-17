@@ -20,7 +20,7 @@ discovrApp.controller('Home.IndexController', function(
     };
 
     function getProfile(){
-        AuthenticationService.GetProfile(1).then(function(dt){
+        AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
             console.log(dt);
         });
     }
