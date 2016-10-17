@@ -60,9 +60,9 @@ discovrApp.controller('Signup.IndexController', function(
         });
 
     };
-
+    //Sign Upp Function
     function signup() {
-
+        //Convert Date object to String
         var date = vm.profileData.birthday.toISOString().substring(0, 10);
         console.log(date);
 
