@@ -7,7 +7,7 @@ discovrApp.factory('AuthenticationService', function (
   apiURL){
   var service = {};
 
-
+  //Services Functions
   service.Login = Login;
   service.Logout = Logout;
   service.SignUp = SignUp;
@@ -21,6 +21,7 @@ discovrApp.factory('AuthenticationService', function (
 
   return service;
 
+  //Login function
   function Login(username,password,callback) {
     $http.post(apiURL + 'api/rest/auth/login/', { username: username, password: password })
       .success(function(response){
@@ -41,7 +42,7 @@ discovrApp.factory('AuthenticationService', function (
         }
       });
   }
-
+  //SignUp Function
   function SignUp(username,password1,password2,email,name,surname,phone,birthday,genre,city,callback){
     $http.post(apiURL + 'api/rest/auth/registration/', { username: username, email: email, password1: password1, password2: password2})
       .success(function(response){
@@ -49,13 +50,14 @@ discovrApp.factory('AuthenticationService', function (
         if(response.token){
           //decode token, to get the user id insert on payload
           var token = jwtHelper.decodeToken(response.token);
-          var client;
-          var tourist;
-
+          var client; //get client info
+          var tourist; //get tourist info
+          //Call CreateClient function and return de Create Client Data
           CreateClient(name,surname,birthday,genre,city).then(function(dt){
             client = dt;
             CreateTourist(token.user_id, client.IdClient).then(function(dt){
               tourist =  dt;
+              localStorage.setItem('tourist', tourist);
             });
           });
           //store username and token in local storage to keep user logged in between paga refreshes
