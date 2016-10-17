@@ -17,6 +17,7 @@ discovrApp.factory('AuthenticationService', function (
   service.ResetPassword = ResetPassword;
   service.GetProfile = GetProfile;
   service.GetData = GetData;
+  service.GetDataId = GetDataId;
   //service.SignUp = SignUp;
 
   return service;
@@ -30,9 +31,6 @@ discovrApp.factory('AuthenticationService', function (
           //decode token, to get the user id insert on payload
           var token = jwtHelper.decodeToken(response.token);
           var profile;
-          GetProfile(token.user_id).then(function(dt){
-            localStorage.setItem('profile', dt);
-          });
           //store username and token in local storage to keep user logged in between paga refreshes
           $localStorage.currentUser = {id: token.user_id, username: username, token: response.token };
           //config.headers.Authorization = 'JWT ' + response.token;
