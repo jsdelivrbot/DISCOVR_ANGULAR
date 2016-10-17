@@ -31,9 +31,9 @@ discovrApp.factory('AuthenticationService', function (
           var token = jwtHelper.decodeToken(response.token);
           GetProfile(token.user_id).then(function(dt){
             console.log(dt);
-            //store username and token in local storage to keep user logged in between paga refreshes
-            $localStorage.currentUser = {id: token.user_id, profile: dt, username: username, token: response.token };
           });
+          //store username and token in local storage to keep user logged in between paga refreshes
+          $localStorage.currentUser = {id: token.user_id, profile: dt, username: username, token: response.token };
           //config.headers.Authorization = 'JWT ' + response.token;
           //add jwt token to auth header for all requests made by the $http services
           $http.defaults.headers.common.Authorization = 'JWT ' + response.token;
