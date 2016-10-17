@@ -19,7 +19,6 @@ discovrApp.controller('Login.IndexController', function(
         AuthenticationService.Login(vm.username, vm.password, function(result){
             if(result === true){
                 AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
-                    console.log(dt);
                     if(dt === 1){
                       var profile = localStorage.getItem('profile');
                       console.log(profile);
