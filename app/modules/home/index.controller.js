@@ -11,6 +11,7 @@ discovrApp.controller('Home.IndexController', function(
     vm.getProfile = getProfile;
 
     initController();
+
     //Start Function
     function initController() {
         vm.username = $localStorage.currentUser.username;
@@ -29,15 +30,26 @@ discovrApp.controller('Home.IndexController', function(
     function profile(){
         AuthenticationService.Profile();
     }
-    $scope.listLan = [
-        { 'key': 'es-es', 'value': 'Español' },
-        { 'key': 'us-en', 'value': 'English' }
+    //languages options
+    vm.listLan = [
+        {'key':'es-es','value':'Español'},
+        {'key':'en-us','value':'English'}
     ];
-    $scope.selected = 'es-es';
-    $scope.changeLang = function changeLangFn() {
-        var opt = $scope.listLan.key;
-        console.log(opt);
-        $translate.use('home/languages/' + opt);
+
+    var browserLan = navigator.language; //Get browser language
+    if (browserLan === 'es' || browserLan === 'es-es' || browserLan === 'es-NI'){
+        browserLan = 'es-es';
+    }else if(browserLan === 'en' || browserLan === 'en-us' || browserLan === 'en-US') {
+        browserLan = 'en-us';
+    }else{
+        browserLan = 'es-es';
+    }
+    //Get the selected user language and set at the begining the browser default language
+    vm.selected = browserLan;
+    vm.changeLang = function changeLangFn() {
+        var opt = vm.selected;
+         console.log(opt);
+        $translate.use('login/languages/' + opt);
     };
 
     $scope.myInterval = 6000;
