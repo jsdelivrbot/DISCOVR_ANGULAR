@@ -31,11 +31,10 @@ discovrApp.factory('AuthenticationService', function (
           var token = jwtHelper.decodeToken(response.token);
           var profile;
           GetProfile(token.user_id).then(function(dt){
-            console.log(dt);
-            profile = dt;
+            localStorage.setItem('profile', dt);
           });
           //store username and token in local storage to keep user logged in between paga refreshes
-          $localStorage.currentUser = {id: token.user_id, profile: profile, username: username, token: response.token };
+          $localStorage.currentUser = {id: token.user_id, username: username, token: response.token };
           //config.headers.Authorization = 'JWT ' + response.token;
           //add jwt token to auth header for all requests made by the $http services
           $http.defaults.headers.common.Authorization = 'JWT ' + response.token;
@@ -97,9 +96,9 @@ discovrApp.factory('AuthenticationService', function (
     $http.get(apiURL + 'api/user/' + $localStorage.currentUser.id + '/').
       then(function successCallback(response) {
           localStorage.setItem('user', JSON.stringify(response.data));
-          console.log(response.data)
+          //console.log(response.data)
       }, function errorCallback(response) {
-          console.log(response);
+          //console.log(response);
       });
   }
   //Get user Profile
