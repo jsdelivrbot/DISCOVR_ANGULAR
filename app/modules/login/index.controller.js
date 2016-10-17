@@ -22,11 +22,10 @@ discovrApp.controller('Login.IndexController', function(
           var client;
             if(result === true){
                 AuthenticationService.GetData('tourist').then(function(dt){
-                  console.log(dt);
                   tourist = $filter('filter')(dt, { Owner: $localStorage.currentUser.id }, true);
-                  console.log(tourist[0].IdClient);
                   AuthenticationService.GetDataId('client',tourist[0].IdClient).then(function(dt){
-                    console.log(dt);
+                    localStorage.setItem('tourist', tourist);
+                    localStorage.setItem('client', dt);
                   });
                 });
                 AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
