@@ -64,8 +64,7 @@ discovrApp.controller('Signup.IndexController', function(
     function signup() {
         //Convert Date object to String
         var date = vm.profileData.birthday.toISOString().substring(0, 10);
-        console.log(date);
-
+        //Call SignUp function from AuthenticationService
         AuthenticationService.SignUp(
             vm.profileData.username,
             vm.profileData.password1,
@@ -78,9 +77,11 @@ discovrApp.controller('Signup.IndexController', function(
             vm.profileData.genre,
             vm.selectedCity,function(result){
             if(result === true){
-                $location.path('/');
+              //redirect user to home
+              $location.path('/');
             }else{
-                vm.error = 'Something happens';
+              //print error
+              vm.error = 'Something happens';
             }
         });
     };
