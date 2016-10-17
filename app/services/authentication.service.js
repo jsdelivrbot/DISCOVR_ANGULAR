@@ -87,6 +87,7 @@ discovrApp.factory('AuthenticationService', function (
         localStorage.removeItem('user');
         localStorage.removeItem('tourist');
         localStorage.removeItem('client');
+        localStorage.removeItem('profile');
         $http.defaults.headers.common.Authorization = '';
       });
 
