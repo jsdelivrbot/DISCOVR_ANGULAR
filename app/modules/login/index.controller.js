@@ -23,6 +23,7 @@ discovrApp.controller('Login.IndexController', function(
             if(result === true){
                 AuthenticationService.GetData('tourist').then(function(dt){
                   tourist = $filter('filter')(dt, { Owner: $localStorage.currentUser.id }, true);
+                  console.log(tourist);
                 });
                 AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
                   localStorage.setItem('profile', dt);
