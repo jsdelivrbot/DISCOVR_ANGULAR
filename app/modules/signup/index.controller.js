@@ -85,9 +85,8 @@ discovrApp.controller('Signup.IndexController', function(
             }
         });
     };
-
+  //Filter location
   function filterLocation(kind, lan){
-      console.log(kind);
       if (kind === 1){
           vm.filterDepartment = $filter('filter')(vm.department, { IdCountry: vm.selectedCountry, IdLanguage: lan }, true);
       }else if(kind === 2){
