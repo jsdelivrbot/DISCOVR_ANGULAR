@@ -3,7 +3,7 @@ discovrApp.controller('Login.IndexController', function(
     $localStorage,
     AuthenticationService,
     $scope,
-    filter,
+    $filter,
     $translate){
 
     var vm = this;
