@@ -122,7 +122,7 @@ discovrApp.factory('AuthenticationService', function (
   //Get ID form API URLs
   function GetDataId(table,id){
     var deferred = $q.defer();
-    $http.get(apiURL + 'api/' + table + '/').
+    $http.get(apiURL + 'api/' + table + '/' + id).
     then(function successCallback(response){
       deferred.resolve(response.data);
     });
