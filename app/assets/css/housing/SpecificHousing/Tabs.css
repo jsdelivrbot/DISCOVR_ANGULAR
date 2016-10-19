@@ -92,7 +92,7 @@ input[type="radio"] {
     bottom: 10px;
     left: 0;
     z-index: -1;
-    background-color: #4285F4;
+    background-color: #3D5AFE;
     cursor: pointer;
     /* border-right: 1px solid #fefefe; */
 }
@@ -136,16 +136,17 @@ input[type="radio"] {
 
 #BackColor {
     width: 95%;
-    background-color: #4285F4;
+    background-color: #3D5AFE;
     display: table;
     margin: 0 auto;
 }
 
 .CardTab  {
-    background-color: #f5f5f5;
-    padding: 10px;
+    width: calc(100% - 40px);
     margin: 20px;
     display: table;
+    padding: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 
@@ -164,6 +165,11 @@ input[type="radio"] {
 
 }
 
+.Usertab .material-icons{
+    font-size: 17px;
+    vertical-align: bottom;
+}
+
 .NameUserTab{
     font-weight: bold;
 }
@@ -171,6 +177,20 @@ input[type="radio"] {
 .DatePubl{
     font-size: 10px;
     font-style: italic;
+}
+
+.DatePubl2{
+    font-size: 14px;
+    
+}
+
+.Usertab .activ{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+
 }
 
 /* ----------------------------Informacion del local------------------------- */
@@ -200,6 +220,7 @@ input[type="radio"] {
     font-size: 22px;
 }
 
+
 #starsHo .material-icons{
     color: #fdd835;
 }
@@ -213,13 +234,21 @@ input[type="radio"] {
 }
 
 #BtnFollowPerf{
-    background-color: #48c9b0;
+    background-color: #3D5AFE;
     padding: 10px;
     padding-left: 30px;
     padding-right: 30px;
     color: #fff;
     margin-bottom: 10px;
     clear: both;
+}
+
+#BtnFollowPerf:hover{
+    background-color: #536DFE;
+}
+
+#BtnFollowPerf:active{ 
+    background-color: #304FFE;
 }
 
 #CenterCont{
@@ -276,11 +305,24 @@ input[type="radio"] {
 
 #BtnSendForm{
     border-style: none;
-    background-color: #48c9b0;
+    background-color: #3D5AFE;
     padding: 10px;
     padding-left: 40px;
     padding-right: 40px;
     color: #fff;
+}
+
+/* ---------servicios */
+
+.CardTab ul li .material-icons{
+    vertical-align: bottom;
+    color: #212121;
+}
+
+.CardTab li{
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
 }
 /* INICIO MODELO RESPONSITIVE */
 
