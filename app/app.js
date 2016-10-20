@@ -40,7 +40,7 @@ var discovrApp = angular.module('DiscovrIndex', [
                 controller: 'Home.IndexController',
                 controllerAs: 'vm'
             })
-             
+
             .state('signup', {
                 url: '/signup',
                 templateUrl: 'modules/signup/index.view.html',
@@ -69,15 +69,15 @@ var discovrApp = angular.module('DiscovrIndex', [
                 controller: 'Login.IndexController',
                 controllerAs: 'vm'
             })
-  
+
             .state('housing', {
                 url: '/housing',
                 templateUrl: 'modules/housing/housing.view.html',
                 controller: 'Housing.IndexController',
                 controllerAs: 'vm'
-            
+
             })
-            
+
             .state('Specifichousing', {
                 url: '/Specifichousing',
                 templateUrl: 'modules/housing/SpecificHousing/SpecificHousing.view.html',
@@ -87,9 +87,9 @@ var discovrApp = angular.module('DiscovrIndex', [
             });
 
          // default route
-        $urlRouterProvider.otherwise("/");       
+        $urlRouterProvider.otherwise("/");
     }
-    
+
     function run($rootScope, $http, $location, $localStorage){
        // keep user logged in after page refresh
         if ($localStorage.currentUser) {
