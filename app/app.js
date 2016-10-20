@@ -57,6 +57,14 @@ function config($stateProvider, $urlRouterProvider, $translateProvider) {
 
     })
 
+    .state('VirtualTour', {
+        url: '/VirtualTour',
+        templateUrl: 'modules/housing/SpecificHousing/VirtualTour/VirtualTour.view.html',
+        controller: 'VirtualTour.IndexController',
+        controllerAs: 'vm'
+
+    })
+
     .state('login', {
         url: '/login',
         templateUrl: 'modules/login/index.view.html',
