@@ -42,6 +42,14 @@ function config($stateProvider, $urlRouterProvider, $translateProvider) {
 
     })
 
+    .state('places', {
+        url: '/places',
+        templateUrl: 'modules/places/Places.view.html',
+        controller: 'Places.IndexController',
+        controllerAs: 'vm'
+
+    })
+
      .state('working', {
         url: '/working',
         templateUrl: 'modules/templates/working.html',
