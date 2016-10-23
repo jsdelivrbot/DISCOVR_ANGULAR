@@ -58,6 +58,22 @@ function config($stateProvider, $urlRouterProvider, $translateProvider) {
 
     })
 
+    .state('PrincipalInstitution', {
+        url: '/PrincipalInstitution',
+        templateUrl: 'modules/institutions/Principal/Instutions.view.html',
+        controller: 'PrincipalInstitutions.IndexController',
+        controllerAs: 'vm'
+
+    })
+
+       .state('SpesificInstitution', {
+        url: '/SpesificInstitution',
+        templateUrl: 'modules/institutions/Spesific/Institutions.view.html',
+        controller: 'SpesificInstitutions.IndexController',
+        controllerAs: 'vm'
+
+    })
+
      .state('working', {
         url: '/working',
         templateUrl: 'modules/templates/working.html',

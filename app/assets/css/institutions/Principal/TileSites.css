@@ -1,0 +1,168 @@
+.ContainerTilesPlace {
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 148px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+.TileSite1,
+.TileSite2,
+.TileSite3,
+.TileSite4,
+.TileSite5,
+.TileSite6,
+.TileSite7 {
+    width: 22%;
+    height: 128px;
+    color: #fff;
+    margin-bottom: 10px;
+    background-color: #37474f;
+    display: inline-block
+}
+
+.TileSite1 img:hover,
+.TileSite2 img:hover,
+.TileSite3 img:hover,
+.TileSite4 img:hover,
+.TileSite5 img:hover,
+.TileSite6 img:hover {
+    -webkit-transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.TileSite1 img:active,
+.TileSite2 img:active,
+.TileSite3 img:active,
+.TileSite4 img:active,
+.TileSite5 img:active,
+.TileSite6 img:active {
+    -webkit-transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+.TileSitesContenido {
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+.SpanTitleBis {
+    float: left;
+    margin-left: 12px;
+    position: relative;
+    margin-top: -32px;
+    z-index: 2;
+}
+
+.SpanStar {
+    position: relative;
+    margin-top: -33px;
+    float: right;
+    width: 70px;
+    text-align: center;
+    z-index: 2;
+    margin-right: 12px;
+}
+
+
+
+
+/* AQUI SE GENERA LA BARRA DIFUMINADA QUE ESTA EN LA PARTE INFERIOR DE LOS TILES */
+.BarraDifuminadaTileSite {
+    position: relative;
+    margin-top: -50px;
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.65) 83%, rgba(0, 0, 0, 0.65) 84%, rgba(0, 0, 0, 0.65) 85%, rgba(0, 0, 0, 0.65) 87%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.65) 83%, rgba(0, 0, 0, 0.65) 84%, rgba(0, 0, 0, 0.65) 85%, rgba(0, 0, 0, 0.65) 87%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.65) 83%, rgba(0, 0, 0, 0.65) 84%, rgba(0, 0, 0, 0.65) 85%, rgba(0, 0, 0, 0.65) 87%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+}
+
+.TileSite1 .BarraDifuminadaTileSite {
+    position: relative;
+    margin-top: -40px;
+    height: 40px;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(33,33,33,0.5);
+    }
+
+.LiContainer .BarraDifuminadaTileSite {
+    z-index: 3;
+}
+
+
+/* AQUI SE ADAPTAN LAS IMAGENES CONTENIDAD EN LOS TILES */
+
+.TileSitesContenido .material-icons {
+    font-size: 73px;
+    padding-top: 30px;
+    padding-bottom: 28px;
+    text-align: center;
+}
+
+.SpanStar .material-icons {
+    font-size: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+    color: #ffeb3b;
+    vertical-align: bottom;
+}
+.SpanFollow .material-icons:active {
+   -webkit-transform: scale(1.2);
+    transition: all 0.3s;
+}
+ 
+.SpanFollow .material-icons {
+   color: #fff;
+}
+
+.FollowLink:visited .material-icons {
+   color: #f44336;
+}
+
+.TileSite1 .carousel-indicators {
+    padding-left: 20px;
+    margin-bottom: -12px;
+}
+
+.PrincipalSlider .carousel-indicators {
+    padding-left: 20px;
+    margin-bottom: -5px;
+}
+
+.TitleCont1 {
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+
+/*DISE;O RESPONSITIVE----------------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+    .TileSite1 {
+        width: 49%;
+        margin: 0px;
+        margin-right: 1%;
+        margin-bottom: 10px;
+    }
+    .ContainerTilesPlace {
+        padding-left: 0px;
+    }
+     ::-webkit-scrollbar {
+        height: 0px;
+    }
+}
