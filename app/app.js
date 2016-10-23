@@ -42,10 +42,18 @@ function config($stateProvider, $urlRouterProvider, $translateProvider) {
 
     })
 
-    .state('places', {
-        url: '/places',
-        templateUrl: 'modules/places/Places.view.html',
-        controller: 'Places.IndexController',
+    .state('SpesificPlaces', {
+        url: '/Spesificplaces',
+        templateUrl: 'modules/places/Spesific/Places.view.html',
+        controller: 'SpesificPlaces.IndexController',
+        controllerAs: 'vm'
+
+    })
+
+        .state('PrincipalPlaces', {
+        url: '/Principalplaces',
+        templateUrl: 'modules/places/Principal/Places.view.html',
+        controller: 'PrincipalPlaces.IndexController',
         controllerAs: 'vm'
 
     })

@@ -1,4 +1,4 @@
-discovrApp.controller('Places.IndexController', function($localStorage, $location, AuthenticationService, $scope, $translate) {
+discovrApp.controller('SpesificPlaces.IndexController', function($localStorage, $location, AuthenticationService, $scope, $translate) {
     var vm = this;
 
     initController();
