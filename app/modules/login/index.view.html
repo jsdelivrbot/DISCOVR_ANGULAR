@@ -2,23 +2,31 @@
 
 <!-- ----------------     IMPORT FILES     ------------------------- -->
 <link rel="stylesheet" href="../../assets/css/loguin.css">
+<link rel="stylesheet" href="../../assets/css/slider.css">
+
 <!-- ----------------     END IMPORT FILES     ------------------------- -->
 
 <!-- ----------------     LANGUAGE SWITCH     ------------------------- -->
-<span translate>LenguajeTitle</span>
-<select ng-model="selected" ng-change="changeLang()" class="ChangeLang">
-	<option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
-</select>
 
-<!-- ----------------     END LANGUAGE SWITCH     ------------------------- -->
+<nav class="MenuLoguin">
+	<ul>
+		<li>DISCOVR, your travel platform</li>
 
-<!-- ----------------     LOGIN FORM     ------------------------- -->
+				<li>
+                    <div class="btn-group" uib-dropdown is-open="status.isopen">
+                        <button type="button" class="notifButt" uib-dropdown-toggle ng-disabled="disabled">Loguin<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu SubMenuNotificasion ContainerDataNotificacion" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                            <li class="NotifConten">
+
+                            	<!-- ----------------     LOGIN FORM     ------------------------- -->
 <div id="ContenedorFormularioSesion">
 	<form name="form" ng-submit="form.$valid && vm.login()" novalidate>
-		<h2 translate> loginTitle </h2>
+		<div class="Reister1">User name</div>
 		<input type="text" placeholder="{{ 'userInputPlaceHolder' | translate }}" class="inputTex" ng-model="vm.username" required>
+		<div class="Reister1">User name</div>
 		<input type="password" placeholder="{{ 'passInputPlaceHolder' | translate }}" class="inputTex" ng-model="vm.password" required>
-
+		<p class="Reister">No acount yet? <span><a href="" class="SingUp"> Sing Up Now</a></span></p>
 		<input type="submit" ng-disabled="vm.loading" class="btn btn-primary1" value="{{ 'btnLogin' | translate }}">
 
 		<!-- <button ng-disabled="vm.loading" class="btn btn-primary1">{{ 'btnLogin' | translate }}</button> -->
@@ -28,5 +36,51 @@
 	</form>
 </div>
 <!-- ----------------     END LOGIN FORM     ------------------------- -->
+                            </li>
+                        	
+                        </ul>
+                    </div>
+                </li>
+
+			<li>
+				<span translate>LenguajeTitle</span>
+				<select ng-model="selected" ng-change="changeLang()" class="ChangeLang">
+					<option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
+				</select>
+		</li>
+		<li>About US</li>
+		<li>Support</li>
+		<li>Join Events</li>
+		<li>Post your aventures</li>
+		<li>Budget travels</li>
+		<li>Where to go?</li>
+
+	</ul>
+</nav>
+
+<div ng-include src="'modules/login/sliderPrincipal.html'"> </div>
+
+<!-- ----------------     END LANGUAGE SWITCH     ------------------------- -->
+
+
+
+<div class="ContainerText">
+	<div class="Txt1">
+		<h1>Welcome to Discovr, your travel platform...</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p><br>
+	
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
+	</div>
+	
+
+		<div class="Txt2">
+		<h2>Where to go? We show you...</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p><br>
+	
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
+	</div>
+</div>
 
 </div>
