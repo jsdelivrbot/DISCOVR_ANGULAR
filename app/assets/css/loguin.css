@@ -83,6 +83,7 @@
 .SingUp{
 	font-weight: bold;
 	color: #4dd0e1;
+	text-decoration: none;
 }
 
 .SingUp:hover{
