@@ -60,4 +60,18 @@ discovrApp.controller('Login.IndexController', function($location,Authentication
             id: 5
         }
     ];
+
+    /*-------------------------------------------------------------------------------------------------*/
+
+    $scope.tree = [{
+        name: "Idioma",
+        link: "#",
+        subtree: [{
+            name: "Ingles",
+            link: "state1"
+        }, {
+            name: "Español",
+            link: "state2",
+        }]
+    }];
 });    

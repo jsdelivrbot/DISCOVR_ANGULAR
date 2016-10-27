@@ -9,23 +9,59 @@
 <!-- ----------------     LANGUAGE SWITCH     ------------------------- -->
 
 <nav class="MenuLoguin">
-	<ul>
+	<!-- <ul>
 		<li>DISCOVR, your travel platform</li>
+	
+			
+	
+	</ul> -->
 
-			<li>
-				<span translate>LenguajeTitle</span>
-				<select ng-model="selected" ng-change="changeLang()" class="ChangeLang">
-					<option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
-				</select>
-		</li>
-		<li>About US</li>
+	<nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                
+            </button>
+            <a class="navbar-brand" ui-sref="">Discovr, your travel platform</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <!-------------------------------------------------------------------!-->
+                <li uib-dropdown>
+                    <a href="#" uib-dropdown-toggle>
+                        <i class="material-icons">language</i>
+                        <span class='caret'></span>
+                    </a>
+                    <tree tree='tree'></tree>
+                </li>
+
+                		<li>About US</li>
 		<li>Support</li>
 		<li>Join Events</li>
 		<li>Post your aventures</li>
 		<li>Budget travels</li>
 		<li>Where to go?</li>
+<li>
+				<span translate>LenguajeTitle</span>
+				<select ng-model="selected" ng-change="changeLang()" class="ChangeLang">
+					<option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
+				</select>
+		</li>
 
-	</ul>
+ <!--------------------------------------------------------------------- !-->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
 </nav>
 
 <div ng-include src="'modules/login/sliderPrincipal.html'"> </div>
@@ -51,7 +87,6 @@
 </div>
 <!-- ----------------     END LOGIN FORM     ------------------------- -->
 
-
 <div class="ContainerText">
 	<div class="Txt1">
 		<h1>Welcome to Discovr, your travel platform...</h1>
@@ -69,6 +104,16 @@
 
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
 	</div>
+</div>
+
+<div class="ImgLg">
+	<picture class="ImgTitleLG">
+			<img src="http://www.auroranicaraguarealestate.com/images/ubicaciones/Granada/Granada%20Foto.JPG">
+		</picture>
+		<picture class="ImgTitleLG">
+			<img src="http://www.auroranicaraguarealestate.com/images/ubicaciones/Granada/Granada%20Foto.JPG">
+		</picture>
+
 </div>
 
 </div>
