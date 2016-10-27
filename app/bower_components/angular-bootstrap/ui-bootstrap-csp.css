@@ -170,7 +170,7 @@ th {
     }
     a,
     a:visited {
-        text-decoration: underline;
+        color: #000;
     }
     a[href]:after {
         content: " (" attr(href) ")";
@@ -1321,22 +1321,6 @@ textarea {
     line-height: inherit;
 }
 
-a {
-    color: #337ab7;
-    text-decoration: none;
-}
-
-a:hover,
-a:focus {
-    color: #23527c;
-    text-decoration: underline;
-}
-
-a:focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-}
 
 figure {
     margin: 0;
@@ -3597,22 +3581,6 @@ select[multiple].input-lg {
 border-radius: 4px; */
 }
 
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-    color: #757575;
-}
-
-.btn:hover,
-.btn:focus,
-.btn.focus {
-    color: #757575;
-    text-decoration: none;
-}
-
 .btn:active,
 .btn.active {
     background-image: none;
@@ -4050,7 +4018,6 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus {
     color: #23527c;
-    text-decoration: underline;
     background-color: transparent;
 }
 
@@ -4144,7 +4111,7 @@ tbody.collapse.in {
 }
 
 .caret {
-    display: inline-block;
+    display: none;
     width: 0;
     height: 0;
     margin-left: 2px;
@@ -4702,7 +4669,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 .nav>li>a {
     position: relative;
     display: block;
-    padding: 10px 15px;
+    padding: 10px 22px;
 }
 
 .nav>li>a:hover,
@@ -4711,13 +4678,11 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     background-color: #eee;
 }
 
-.nav>li.disabled>a {
-    color: #777;
-}
+
 
 .nav>li.disabled>a:hover,
 .nav>li.disabled>a:focus {
-    color: #777;
+
     text-decoration: none;
     cursor: not-allowed;
     background-color: transparent;
@@ -4764,7 +4729,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus {
-    color: #555;
+    
     cursor: default;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -5316,14 +5281,15 @@ margin-bottom: 15px; */
 
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
-    color: #eeeeee;
+
+    
     background-color: transparent;
 }
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-    color: #bdbdbd;
+  
     background-color: transparent;
 }
 
