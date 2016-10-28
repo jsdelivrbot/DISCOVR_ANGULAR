@@ -94,6 +94,16 @@
     margin-bottom: -5px;
 }
 
+.TileSite1 img:hover {
+    -webkit-transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.TileSite1 img:active {
+    -webkit-transform: scale(1.2);
+    transition: all 0.3s;
+}
+
 
 /*DISE;O RESPONSITIVE----------------------------------------------*/
 

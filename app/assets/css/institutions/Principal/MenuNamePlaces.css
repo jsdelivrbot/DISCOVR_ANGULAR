@@ -1,0 +1,83 @@
+.container1 {
+    height:45px;
+    width:calc(100% - 200px);
+    overflow:hidden;
+    float: left;
+}
+#filler {
+    height:45px;
+    width:3000px;
+    position:relative;
+    border-radius:10px; 
+    -webkit-transition: left 0.3s ease;
+}
+.module {
+    margin-right: 10px;
+    height:45px;
+    float:left;
+    line-height:43px;
+    text-align:center;
+    background-color: #fff;
+    border: 2px solid #426FC5;
+    color: #426FC5;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 30px;
+}
+
+.module:hover{
+    border-color: #0084ff;
+    background-color: #fafafa;
+}
+
+.module:active{
+    background-color: #f5f5f5;
+    border-color: #410093;
+}
+
+.ContenedorMenuPlaces{
+    width: 100%;  
+    margin-top: 10px;
+    padding-bottom: 10px;
+    height: 55px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.ContainerAllSelect{
+    float: left;
+    width: 139px;
+    margin-left: 10px;
+}
+
+.ContainerBtnRight{
+    float: right;
+    height: 45px;
+     
+}
+
+.BtnLeft, .BtnRight{
+    outline: none;
+    background-color: transparent;
+    color: #000;
+    border-style: none;
+    font-size: 24px;
+}
+
+.BtnLeft .material-icons{
+    font-size: 45px;
+    vertical-align: bottom;
+}
+
+.BtnRight .material-icons{
+    font-size: 45px;
+    vertical-align: bottom;
+}
+
+.BtnLeft .material-icons:hover{
+   color: #426FC5;
+}
+
+.BtnRight .material-icons:hover{
+   color: #426FC5;
+}

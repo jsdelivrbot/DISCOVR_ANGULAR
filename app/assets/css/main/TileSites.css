@@ -29,6 +29,7 @@
 .TileSite5 img:hover,
 .TileSite6 img:hover {
     -webkit-transform: scale(1.1);
+    transition: all 0.3s;
 }
 
 .TileSite1 img:active,
@@ -38,6 +39,7 @@
 .TileSite5 img:active,
 .TileSite6 img:active {
     -webkit-transform: scale(1.2);
+    transition: all 0.3s;
 }
 
 .TileSite2 {

@@ -1,0 +1,358 @@
+.ContainerDual {
+    width: 100%;
+    color: #000;
+    margin-top: 10px;
+}
+
+.ContanerDual1 {
+    float: left;
+    width: 50%
+}
+
+.ContanerDual2 {
+    float: right;
+    width: 50%;
+    padding-left: 9px;
+}
+
+.page-wrap {
+    width: 100%;
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+input[type="radio"] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.tab-wrap {
+    width: 100%;
+    float: none;
+    list-style: none;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
+
+.tab-wrap li {
+    float: left;
+    display: block;
+}
+
+.tab-wrap label {
+    position: relative;
+    display: inline-block;
+    padding: 1.3em;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 100;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.label-1 {
+    z-index: 100;
+}
+
+.label-2 {
+    z-index: 90;
+}
+
+.label-3 {
+    z-index: 80;
+}
+
+.label-4 {
+    z-index: 70;
+}
+
+.label-5 {
+    z-index: 70;
+}
+
+.label-6 {
+    z-index: 70;
+}
+
+.label-7 {
+    z-index: 70;
+}
+
+.label-8 {
+    z-index: 70;
+}
+
+.tab-wrap label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: -1;
+    background-color: #3D5AFE;
+    cursor: pointer;
+    /* border-right: 1px solid #fefefe; */
+}
+
+.tab-wrap .tab-content {
+    z-index: 200;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    padding: 10px;
+    background: #fff;
+    max-height: 423px;
+    overflow-y:auto;
+}
+
+.tab-wrap [id^="tab"]:checked+label {
+    z-index: 200;
+    color: #000;
+    border-bottom: 2px solid orange;
+    padding-bottom: 9px;
+    background-color: #fff;
+    transition: all 0.3s;
+    height: 52px;
+}
+
+.tab-wrap [id^="tab"]:checked+label:before {
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.tab-wrap [id^="tab"]:checked~.tab-content {
+    display: block;
+    transition: all 0.8s;
+}
+
+
+/* rellena con color el espacio que sobra en los tabs al lado derecho */
+
+#BackColor {
+    width: 95%;
+    background-color: #3D5AFE;
+    display: table;
+    margin: 0 auto;
+}
+
+.CardTab  {
+    width: calc(100% - 40px);
+    margin: 20px;
+    display: table;
+    padding: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+/* --------------------------------------------------- */
+.Usertab{
+    float: left;
+    padding-right: 10px;
+    display: table;
+}
+.Usertab img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+
+}
+
+.Usertab .material-icons{
+    font-size: 17px;
+    vertical-align: bottom;
+}
+
+.NameUserTab{
+    font-weight: bold;
+}
+
+.DatePubl{
+    font-size: 10px;
+    font-style: italic;
+}
+
+.DatePubl2{
+    font-size: 14px;
+    
+}
+
+.Usertab .activ{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+
+}
+
+/* ----------------------------Informacion del local------------------------- */
+#CardTab{
+    width: calc(100% - 40px);
+    margin: 20px;
+    display: table;
+    padding: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+#Usertab{
+    float: left;
+    padding-right: 10px;
+    display: table;
+}
+#Usertab img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+
+}
+
+#NameUserTab{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+#starsHo .material-icons{
+    color: #fdd835;
+}
+
+#ContainerButt{
+    float: left;
+    clear: both;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#BtnFollowPerf{
+    background-color: #3D5AFE;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+    clear: both;
+}
+
+#BtnFollowPerf:hover{
+    background-color: #536DFE;
+}
+
+#BtnFollowPerf:active{ 
+    background-color: #304FFE;
+}
+
+#CenterCont{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.TitleBold{
+    font-weight: bold;
+}
+
+#placeCity{
+    color: #9e9e9e;
+}
+/* ----------------------------FORMULARIO DE CONTACTO------------------------- */
+#FormContact{
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+}
+
+.InputContact{
+    border-style: none;
+    padding: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    outline: none;
+    border-bottom: 2px solid #1e88e5;
+    margin-bottom: 20px;
+}
+
+.InputContact:focus{
+    border-bottom: 2px solid #48c9b0;
+    transition: all 0.4s;
+}
+
+.AreaContact{
+    border-style: none;
+    padding: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    outline: none;
+    border-bottom: 2px solid #1e88e5;
+    margin-bottom: 20px;
+    height: 130px;
+}
+
+.AreaContact:focus{
+    border-bottom: 2px solid #48c9b0;
+    transition: all 0.4s;
+}
+
+#BtnSendForm{
+    border-style: none;
+    background-color: #3D5AFE;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #fff;
+}
+
+/* ---------servicios */
+
+.CardTab ul li .material-icons{
+    vertical-align: bottom;
+    color: #212121;
+}
+
+.CardTab li{
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
+}
+/* INICIO MODELO RESPONSITIVE */
+
+@media only screen and (max-width: 767px) {
+    .ContainerDual {
+        -ms-box-orient: horizontal;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+    .ContanerDual1 {
+        order: 2;
+        /*  ESTA PROPIEDAD PERMITE CAMBIAR EL ORDEN DE LOS DIVS, USANDO FLEX */
+        width: 99.6%;
+        clear: both;
+    }
+    .ContanerDual2 {
+        order: 1;
+        width: 100%;
+        clear: both;
+    }
+
+    ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+}

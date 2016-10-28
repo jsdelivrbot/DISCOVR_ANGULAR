@@ -5,6 +5,20 @@
    
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 40) {
+            $('.MenuLoguin').addClass('menu-fixed');
+        }
+        else {
+            $('.MenuLoguin').removeClass('menu-fixed');
+        }
+    });
+});
+
+
+
+  $(function(){
+   
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 30) {
             $('.ContenedorMenu').addClass('menu-fixed');
         }
         else {

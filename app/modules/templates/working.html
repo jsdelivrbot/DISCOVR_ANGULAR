@@ -1,0 +1,74 @@
+<style>
+
+#monster{
+	background:#222;
+}
+	div{
+	width:300px;
+	margin:230px;
+	margin:230px auto;
+}
+section{
+	display:block;
+	width:100%;
+	float:left;
+	margin:100px 0;
+}
+span{
+	display:block;
+	float:left;
+	width:100px;
+	height:100px;
+	background:#FFF;
+	border-radius:100px 100000px;
+	transform:rotate(45deg);
+	margin-left:-40px;
+}
+div:before,div:after{
+	content:"";
+	display:block;
+	width:90px;
+	height:90px;
+	background:radial-gradient( #222 40%,#FFF 28%);
+	margin-left:10px;
+	margin-top:-150px;
+	border-radius:400px 20000px;
+	transform:rotate(-30deg);
+	position:absolute;
+	
+}
+div:after{
+		transform:rotate(120deg);
+		margin-left:160px;
+}
+span:after{
+	content:"";
+	display:block;
+	width:60px;
+	height:100px;
+	background:#222;
+	margin-left:60px;
+	margin-top:40px;
+	transform:rotate(-45deg);
+}
+span:nth-child(2n+1):after{background:#222;margin:-30px -10px;}
+
+#regresar{
+	color: #000;
+}
+
+</style>
+
+<!--The monster  -->
+<div>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+</div>
+<!-- / The monster  -->
+<section>
+<h1>ESTAMOS TRABAJANDO</h1>
+	<a ui-sref="home" id="regresar">Regresar</a>
+</section>

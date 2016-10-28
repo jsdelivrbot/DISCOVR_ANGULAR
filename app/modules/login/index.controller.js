@@ -73,5 +73,52 @@ discovrApp.controller('Login.IndexController', function(
         $translate.use('login/languages/' + opt);
     };
 
+<<<<<<< HEAD
     initController();
 });
+=======
+
+     $scope.myInterval = 6000;
+    $scope.noWrapSlides = false;
+    $scope.active = 0;
+    var slides = $scope.slides = [{
+            image: '../../assets/files/img/main/prinsipalSlider/1.jpg',
+            id: 0
+        },
+        {
+            image: '../../assets/files/img/main/prinsipalSlider/2.jpg',
+            id: 1
+        },
+        {
+            image: '../../assets/files/img/main/prinsipalSlider/3.jpg',
+            id: 2
+        },
+        {
+            image: '../../assets/files/img/main/prinsipalSlider/4.jpg',
+            id: 3
+        },
+        {
+            image: '../../assets/files/img/main/prinsipalSlider/5.jpg',
+            id: 4
+        },
+        {
+            image: '../../assets/files/img/main/prinsipalSlider/6.jpg',
+            id: 5
+        }
+    ];
+
+    /*-------------------------------------------------------------------------------------------------*/
+
+    $scope.tree = [{
+        name: "Idioma",
+        link: "#",
+        subtree: [{
+            name: "Ingles",
+            link: "state1"
+        }, {
+            name: "Español",
+            link: "state2",
+        }]
+    }];
+});    
+>>>>>>> refs/remotes/origin/master
