@@ -40,115 +40,63 @@ var discovrApp = angular.module('DiscovrIndex', [
                 controller: 'Home.IndexController',
                 controllerAs: 'vm'
             })
-
-            .state('signup', {
-                url: '/signup',
-                templateUrl: 'modules/signup/index.view.html',
-                controller: 'Signup.IndexController',
-                controllerAs: 'vm'
-            })
-
-            .state('signup.profile', {
-                url: '/profile',
-                templateUrl: 'modules/signup/profile.view.html'
-            })
-
-<<<<<<< HEAD
-            .state('signup.preference', {
-                url: '/preference',
-                templateUrl: 'modules/signup/preference.view.html'
-            })
-=======
-    .state('SpesificPlaces', {
-        url: '/Spesificplaces',
-        templateUrl: 'modules/places/Spesific/Places.view.html',
-        controller: 'SpesificPlaces.IndexController',
-        controllerAs: 'vm'
-
-    })
-
-        .state('PrincipalPlaces', {
-        url: '/Principalplaces',
-        templateUrl: 'modules/places/Principal/Places.view.html',
-        controller: 'PrincipalPlaces.IndexController',
-        controllerAs: 'vm'
-
-    })
-
-    .state('PrincipalInstitution', {
-        url: '/PrincipalInstitution',
-        templateUrl: 'modules/institutions/Principal/Instutions.view.html',
-        controller: 'PrincipalInstitutions.IndexController',
-        controllerAs: 'vm'
-
-    })
-
-       .state('SpesificInstitution', {
-        url: '/SpesificInstitution',
-        templateUrl: 'modules/institutions/Spesific/Institutions.view.html',
-        controller: 'SpesificInstitutions.IndexController',
-        controllerAs: 'vm'
-
-    })
-
-     .state('working', {
-        url: '/working',
-        templateUrl: 'modules/templates/working.html',
-        
-
-    })
-
-    .state('housing', {
-        url: '/housing',
-        templateUrl: 'modules/housing/principal/housing.view.html',
-        controller: 'Housing.IndexController',
-        controllerAs: 'vm'
->>>>>>> refs/remotes/origin/master
-
-            .state('signup.payment', {
-                url: '/payment',
-                templateUrl: 'modules/signup/payment.view.html'
-            })
-
-<<<<<<< HEAD
             .state('login', {
                 url: '/login',
                 templateUrl: 'modules/login/index.view.html',
                 controller: 'Login.IndexController',
                 controllerAs: 'vm'
+            }) 
+            .state('signup', {
+                url: '/signup',
+                templateUrl: 'modules/signup/index.view.html',
+                controller: 'Signup.IndexController',
+                controllerAs: 'vm'
+            })            
+            .state('placeView', {
+                url: '/placeview',
+                templateUrl: 'modules/places/view/PlaceView.view.html',
+                controller: 'PlaceView.IndexController',
+                controllerAs: 'vm'
             })
-
+            .state('Place', {
+                url: '/place',
+                templateUrl: 'modules/places/Place.view.html',
+                controller: 'Place.IndexController',
+                controllerAs: 'vm'
+            })
+            .state('institution', {
+                url: '/institution',
+                templateUrl: 'modules/institutions/Institution.view.html',
+                controller: 'Institution.IndexController',
+                controllerAs: 'vm'
+            })
+            .state('institutionView', {
+                url: '/institutionview',
+                templateUrl: 'modules/institutions/view/InstitutionView.view.html',
+                controller: 'InstitutionView.IndexController',
+                controllerAs: 'vm'
+            })
+            .state('working', {
+                url: '/working',
+                templateUrl: 'modules/templates/working.html',       
+            })                                   
             .state('housing', {
                 url: '/housing',
-                templateUrl: 'modules/housing/housing.view.html',
+                templateUrl: 'modules/housing/Housing.view.html',
                 controller: 'Housing.IndexController',
                 controllerAs: 'vm'
-
             })
-=======
-    .state('VirtualTour', {
-        url: '/VirtualTour',
-        templateUrl: 'modules/housing/SpecificHousing/VirtualTour/VirtualTour.view.html',
-        controller: 'VirtualTour.IndexController',
-        controllerAs: 'vm'
-
-    })
-
-    .state('login', {
-        url: '/login',
-        templateUrl: 'modules/login/index.view.html',
-        controller: 'Login.IndexController',
-        controllerAs: 'vm'
-    });
-}
->>>>>>> refs/remotes/origin/master
-
-            .state('Specifichousing', {
-                url: '/Specifichousing',
-                templateUrl: 'modules/housing/SpecificHousing/SpecificHousing.view.html',
-                controller: 'SpecificHousing.IndexController',
+         .state('housingView', {
+                url: '/housingview',
+                templateUrl: 'modules/housing/view/HousingView.view.html',
+                controller: 'HousingView.IndexController',
                 controllerAs: 'vm'
-
+            })
+            .state('VirtualTour', {
+                url: '/VirtualTour',
+                templateUrl: 'modules/housing/view/tour/Tour.view.html',
+                controller: 'VirtualTour.IndexController',
+                controllerAs: 'vm'
             });
 
          // default route

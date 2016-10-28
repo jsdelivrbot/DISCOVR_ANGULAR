@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="../../../assets/css/housing/TileSites.css">
+<link rel="stylesheet" href="../../../assets/css/housing/MenuNamePlaces.css">
+<div>
+    <div ng-include src="'modules/templates/menu.html'"> </div>
+    <div ng-include src="'modules/places/sliderPrincipal.html'"> </div>
+    
+    <div class="ContenedorMenuPlaces">
+        <div class="ContainerAllSelect">
+            <div class="btn-group" uib-dropdown dropdown-append-to-body>
+                <button id="btn-append-to-body" type="button" class="btn btn-primary" uib-dropdown-toggle>
+                    ALL <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+                    <li role="menuitem"><a href="#">Action</a></li>
+                    <li role="menuitem"><a href="#">Another action</a></li>
+                    <li role="menuitem"><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li role="menuitem"><a href="#">Separated link</a></li>
+                </ul>
+             </div>
+             <button class="BtnLeft" onmouseover="left=1" ng-click="vm.move(-3)"> <i class="material-icons">keyboard_arrow_left</i> </button>
+        </div>
+    
+        <div class="container1">
+            <div id="filler" style="left:0px">
+                <a href=""><div class="module">ESTELI</div></a>
+                <a href=""><div class="module">MATAGALPA</div></a>
+                <a href=""><div class="module">JINOTEGA</div></a>
+                <a href=""><div class="module">LEON</div></a>
+                <a href=""><div class="module">CHINANDEGA</div></a>
+                <a href=""><div class="module">ESTELI</div></a>
+                <a href=""><div class="module">MATAGALPA</div></a>
+                <a href=""><div class="module">JINOTEGA</div></a>
+                <a href=""><div class="module">LEON</div></a>
+                <a href=""><div class="module">CHINANDEGA</div></a>
+                <a href=""><div class="module">ESTELI</div></a>
+                <a href=""><div class="module">MATAGALPA</div></a>
+                <a href=""><div class="module">JINOTEGA</div></a>
+                <a href=""><div class="module">LEON</div></a>
+                <a href=""><div class="module">CHINANDEGA</div></a>
+                <a href=""><div class="module">ESTELI</div></a>
+                <a href=""><div class="module">MATAGALPA</div></a>
+                <a href=""><div class="module">JINOTEGA</div></a>
+                <a href=""><div class="module">LEON</div></a>
+                <a href=""><div class="module">CHINANDEGA</div></a>
+            </div>
+        </div>
+        <div class="ContainerBtnRight">
+            <button class="BtnRight" onmouseover="right=1" ng-click="vm.move(3)"> <i class="material-icons">navigate_next</i> </button>
+        
+        </div>
+    </div>
+
+    <div ng-include src="'modules/places/TilesPlaces.html'"> </div>
+</div>

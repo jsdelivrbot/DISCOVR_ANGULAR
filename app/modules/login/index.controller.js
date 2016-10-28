@@ -71,14 +71,9 @@ discovrApp.controller('Login.IndexController', function(
         var opt = vm.selected;
          console.log(opt);
         $translate.use('login/languages/' + opt);
-    };
+    };    
 
-<<<<<<< HEAD
-    initController();
-});
-=======
-
-     $scope.myInterval = 6000;
+    $scope.myInterval = 6000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [{
@@ -120,5 +115,7 @@ discovrApp.controller('Login.IndexController', function(
             link: "state2",
         }]
     }];
+
+    initController();
 });    
->>>>>>> refs/remotes/origin/master
+
