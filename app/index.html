@@ -25,7 +25,8 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-messages/angular-messages.min.js"></script>
-    <script src="bower_components/ngStorage/ngStorage.min.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+    <script src="bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
 
     <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
     <script src="bower_components/angular-translate/angular-translate.min.js"></script>
@@ -36,29 +37,33 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="assets/js/main/efectosTileIcono.js"></script>
 
+    <!-- SQL scripts -->
+    <script src="bower_components/alasql/dist/alasql.min.js"></script>
+
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="services/authentication.service.js"></script>
+    <script src="modules/login/index.controller.js"></script>
+    <script src="modules/signup/index.controller.js"></script>
+    <script src="modules/home/index.controller.js"></script>
+    <script src="modules/housing/Housing.controller.js"></script>
+    <script src="modules/housing/view/HousingView.controller.js"></script>
+    <script src="modules/housing/view/Tour/tour.controller.js"></script>
+    <script src="modules/places/view/PlaceView.controller.js"></script>
+    <script src="modules/places/Place.controller.js"></script>    
+    <script src="modules/institutions/Institution.controller.js"></script>
+    <script src="modules/institutions/view/InstitutionView.controller.js"></script>
+    
 
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 
-    <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
 
+    <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
     <link rel="stylesheet" href="bower_components/ui-navbar/release/css/ui-navbar.css">
     <script src="bower_components/ui-navbar/release/js/ui-navbar.min.js"></script>
-
-    <!-- application scripts -->
-    <script src="app.js"></script>
-    <script src="services/authentication.service.js"></script>
-    <script src="modules/home/index.controller.js"></script>
-    <script src="modules/housing/SpecificHousing/SpecificHousing.controller.js"></script>
-    <script src="modules/housing/SpecificHousing/VirtualTour/VirtualTour.controller.js"></script>
-    <script src="modules/places/Spesific/SpesificPlaces.controller.js"></script>
-    <script src="modules/places/Principal/PrincipalPlaces.controller.js"></script>
-    <script src="modules/housing/principal/housing.controller.js"></script>
-    <script src="modules/institutions/Principal/PrincipalInstitutions.controller.js"></script>
-    <script src="modules/institutions/Spesific/SpesificInstitutions.controller.js"></script>
-    <script src="modules/login/index.controller.js"></script>
 
 
     <script>
@@ -69,7 +74,7 @@
         d0cum3n7e13m3n7.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window)) ? ' touch' : '');
     </script>
 
-    <!-- application scripts 
+    <!-- application scripts
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="assets/js/main/efectosTileIcono.js"></script> -->
 
@@ -78,11 +83,11 @@
         * {
             font-size: 1.01em;
         }
-        
+
         a {
             color: #fff;
         }
-        
+
         a:hover {
             text-decoration: none;
             color: #f5f5f5;

@@ -1,38 +1,79 @@
-discovrApp.controller('Login.IndexController', function($location,AuthenticationService,$scope,$translate){    
+discovrApp.controller('Login.IndexController', function(
+    $location,
+    $localStorage,
+    AuthenticationService,
+    $scope,
+    $filter,
+    $translate){
+
     var vm = this;
 
     vm.login = login;
-
-    initController();
+    vm.redirect = redirect;
 
     function initController(){
         //reset login status
         AuthenticationService.Logout();
     };
     function login(){
-        vm.loading = true;
+        //vm.loading = true;
         AuthenticationService.Login(vm.username, vm.password, function(result){
+          var tourist;
+          var client;
             if(result === true){
-                $location.path('/');                    
+                AuthenticationService.GetData('tourist').then(function(dt){
+                  tourist = $filter('filter')(dt, { Owner: $localStorage.currentUser.id }, true);
+                  AuthenticationService.GetDataId('client',tourist[0].IdClient).then(function(dt){
+                    localStorage.setItem('tourist', JSON.stringify(tourist[0]));
+                    localStorage.setItem('client', JSON.stringify(dt));
+                  });
+                });
+                AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
+                  localStorage.setItem('profile', dt);
+                  if(dt === 1){
+                      $location.path('/');
+                  }else if(dt === 2){
+                      console.log("Nestor es un genio!");
+                      $location.path('/');
+                  }
+                });
+                //GetProfile = JSON.parse(localStorage.getItem('user'));
             }else{
                 vm.error = 'Username or password is incorrect';
                 vm.loading = false;
             }
         });
+
     };
-    $scope.listLan = [
+    function redirect(){
+        console.log("Good luck!");
+        $location.path('/signup');
+    };
+
+    //languages options
+    vm.listLan = [
         {'key':'es-es','value':'Español'},
-        {'key':'us-en','value':'English'}
+        {'key':'en-us','value':'English'}
     ];
-    $scope.selected = 'es-es';    
-    $scope.changeLang = function changeLangFn() {
-        var opt = $scope.selected;
+
+    var browserLan = navigator.language; //Get browser language
+    if (browserLan === 'es' || browserLan === 'es-es' || browserLan === 'es-NI'){
+        browserLan = 'es-es';
+    }else if(browserLan === 'en' || browserLan === 'en-us' || browserLan === 'en-US') {
+        browserLan = 'en-us';
+    }else{
+        browserLan = 'es-es';
+    }
+    //Get the selected user language and set at the begining the browser default language
+    vm.selected = browserLan;
+    //Function that change the language
+    vm.changeLang = function changeLangFn() {
+        var opt = vm.selected;
          console.log(opt);
-        $translate.use('login/languages/' + opt); 
-    };
+        $translate.use('login/languages/' + opt);
+    };    
 
-
-     $scope.myInterval = 6000;
+    $scope.myInterval = 6000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [{
@@ -74,4 +115,7 @@ discovrApp.controller('Login.IndexController', function($location,Authentication
             link: "state2",
         }]
     }];
+
+    initController();
 });    
+

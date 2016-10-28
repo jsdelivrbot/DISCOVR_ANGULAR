@@ -7,15 +7,11 @@
 <!-- ----------------     END IMPORT FILES     ------------------------- -->
 
 <!-- ----------------     LANGUAGE SWITCH     ------------------------- -->
-
 <nav class="MenuLoguin">
 	<!-- <ul>
-		<li>DISCOVR, your travel platform</li>
-	
-			
+		<li>DISCOVR, your travel platform</li>			
 	
 	</ul> -->
-
 	<nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
@@ -25,39 +21,34 @@
                 <span class="icon-bar"></span>
                 
             </button>
-            <a class="navbar-brand" ui-sref="">Discovr, your travel platform</a>
+            <a class="navbar-brand" ui-sref="login">Discovr, your travel platform</a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
-
             <ul class="nav navbar-nav">
             </ul>
             <ul class="nav navbar-nav navbar-right">
-
-                <!-------------------------------------------------------------------!-->
+                <!-- ----------------------------------------------------------------- -->
                 <li uib-dropdown>
                     <a href="#" uib-dropdown-toggle>
                         <i class="material-icons">language</i>
-                        <span class='caret'></span>
+                        <span class="caret"></span>
                     </a>
-                    <tree tree='tree'></tree>
+                    <tree tree="tree"></tree>
                 </li>
-
-                		<li>About US</li>
-		<li>Support</li>
-		<li>Join Events</li>
-		<li>Post your aventures</li>
-		<li>Budget travels</li>
-		<li>Where to go?</li>
-<li>
-				<span translate>LenguajeTitle</span>
-				<select ng-model="selected" ng-change="changeLang()" class="ChangeLang">
-					<option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
-				</select>
-		</li>
-
- <!--------------------------------------------------------------------- !-->
+				<li>About US</li>
+				<li>Support</li>
+				<li>Join Events</li>
+				<li>Post your aventures</li>
+				<li>Budget travels</li>
+				<li>Where to go?</li>
+				<li>
+					<span translate>LenguajeTitle</span>
+					<select ng-model="selected" ng-change="changeLang()" class="ChangeLang">
+						<option ng-repeat="lan in listLan" value = "{{lan.key}}"  ng-selected ="{{listLan.key}}">{{lan.value}}</option>                  
+					</select>
+				</li>
+ <!--------------------------------------------------------------------- -->
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -72,13 +63,12 @@
 <!-- ----------------     LOGIN FORM     ------------------------- -->
 <div id="ContenedorFormularioSesion">
 	<form name="form" ng-submit="form.$valid && vm.login()" novalidate>
-		<div class="Reister1">User Name:</div>
+		<div class="Register1">User Name:</div>
 		<input type="text" placeholder="{{ 'userInputPlaceHolder' | translate }}" class="inputTex" ng-model="vm.username" required>
-		<div class="Reister1">Password:</div>
+		<div class="Register1">Password:</div>
 		<input type="password" placeholder="{{ 'passInputPlaceHolder' | translate }}" class="inputTex" ng-model="vm.password" required>
-		<p class="Reister">No acount yet? <span><a href="" class="SingUp"> Sing Up Now</a></span></p>
+		<p class="Register">No acount yet? <span><a ui-sref="signup" class="SingUp"> Sing Up Now</a></span></p>
 		<input type="submit" ng-disabled="vm.loading" class="btn btn-primary1" value="{{ 'btnLogin' | translate }}">
-
 		<!-- <button ng-disabled="vm.loading" class="btn btn-primary1">{{ 'btnLogin' | translate }}</button> -->
 		<!--<input type="submit" value="{{ 'btnLogin' | translate }}" class="inputSubmit"> -->
 

@@ -1,8 +1,16 @@
-discovrApp.controller('Home.IndexController', function($localStorage, $location, AuthenticationService, $scope, $translate) {
+discovrApp.controller('Home.IndexController', function(
+    $localStorage,
+    $location,
+    AuthenticationService,
+    $scope,
+    $translate) {
+
     var vm = this;
+    //local variables
+    vm.profile = profile;
+    vm.getProfile = getProfile;
 
-    initController();
-
+    //Start Function
     function initController() {
         vm.username = $localStorage.currentUser.username;
         var stLan = localStorage.getItem('NG_TRANSLATE_LANG_KEY');
@@ -10,15 +18,38 @@ discovrApp.controller('Home.IndexController', function($localStorage, $location,
         var lang = stLan.substr((szLanLan - 5), szLanLan);
         localStorage.setItem('NG_TRANSLATE_LANG_KEY', 'home/languages/' + lang);
     };
-    $scope.listLan = [
-        { 'key': 'es-es', 'value': 'Español' },
-        { 'key': 'us-en', 'value': 'English' }
+
+    function getProfile(){
+        AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
+            //console.log(dt);
+            localStorage.setItem('profile', dt);
+        });
+    }
+
+    function profile(){
+        AuthenticationService.Profile();
+    }
+    //languages options
+    vm.listLan = [
+        {'key':'es-es','value':'Español'},
+        {'key':'en-us','value':'English'}
     ];
-    $scope.selected = 'es-es';
-    $scope.changeLang = function changeLangFn() {
-        var opt = $scope.listLan.key;
-        console.log(opt);
-        $translate.use('home/languages/' + opt);
+
+    var browserLan = navigator.language; //Get browser language
+    if (browserLan === 'es' || browserLan === 'es-es' || browserLan === 'es-NI'){
+        browserLan = 'es-es';
+    }else if(browserLan === 'en' || browserLan === 'en-us' || browserLan === 'en-US') {
+        browserLan = 'en-us';
+    }else{
+        browserLan = 'es-es';
+    }
+    //Get the selected user language and set at the begining the browser default language
+    vm.selected = browserLan;
+    //Function that change the language
+    vm.changeLang = function changeLangFn() {
+        var opt = vm.selected;
+         console.log(opt);
+        $translate.use('login/languages/' + opt);
     };
 
     $scope.myInterval = 6000;
@@ -283,4 +314,6 @@ discovrApp.controller('Home.IndexController', function($localStorage, $location,
     };
 
     $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
+
+    initController();
 });
