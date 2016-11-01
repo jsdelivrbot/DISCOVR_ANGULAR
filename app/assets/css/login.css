@@ -1,4 +1,29 @@
-#ContenedorFormularioSesion{
+.input-group {
+  position: relative;
+  width: 100%;
+}
+.toggle {
+  background: none;
+  border: none;
+  color: #337ab7;
+  display: inline-block;
+  font-size: .9em;
+  font-weight: 600;
+  padding: .5em;
+  position: absolute;
+  right: 1.5em;
+  top: 3.4em;
+  z-index: 9;
+}
+hr.separator {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+#formcontent{
 	float: right;
 	width: 400px;
 	height: 270px;
@@ -7,7 +32,7 @@
 	color: #000;
 	text-align: center;
 	margin-left: 10px;
-	margin-top: -170px;
+	margin-top: -210px;
 	padding-top: 10px;
 	position: relative;
 	z-index: 2;
@@ -18,11 +43,23 @@
 	    -webkit-transform: translate(-50%, -50%);
 	 */
 }
+@media (min-width: 840px) {
+	#formcontent{
+		margin-right: 20px;
+	}
+}
+
+#formcontent h2{
+	color: #fff;
+	padding: 5px;
+	padding-bottom: 10px;
+	padding-top: 22px;
+}
 
 .inputTex{
 	width: calc(100% - 30px);
 	border-style: none;
-	padding: 23px;
+	padding-left: 10px;
 	height: 40px;
 	margin: 0 auto;
 	margin: 10px;
@@ -30,14 +67,6 @@
 	margin-right: 15px;
 	background-color: rgba(250,250,250,1.0)
 }
-
-#ContenedorFormularioSesion h2{
-	color: #fff;
-	padding: 5px;
-	padding-bottom: 10px;
-	padding-top: 22px;
-}
-
 .btn-primary1{
 	outline:0px;
 	padding: 15px;
@@ -50,7 +79,7 @@
 	color: #fff;
 	font-size: 17px;
 	cursor: pointer;
-	
+
 }
 
 .btn-primary1:hover{
@@ -95,63 +124,57 @@
 	color: rgba(0,188,212,0.7);
 }
 
-.MenuLoguin{
+/*-------- NavBar ---------- */
+.ContenedorMenu{
 	height: 60px;
 	width: 100%;
-	 z-index: 50002;
-    top: 0;
-    position: fixed;
-    background: rgba(36, 36, 36, 0.84);
-    background: -moz-linear-gradient(top, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 15%, rgba(26, 26, 26, 0.52) 34%, rgba(26, 26, 26, 0) 88%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(36, 36, 36, 0.84)), color-stop(15%, rgba(31, 31, 31, 0.7)), color-stop(34%, rgba(26, 26, 26, 0.52)), color-stop(88%, rgba(26, 26, 26, 0)));
-    background: -webkit-linear-gradient(top, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 15%, rgba(26, 26, 26, 0.52) 34%, rgba(26, 26, 26, 0) 88%);
-    background: -o-linear-gradient(top, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 15%, rgba(26, 26, 26, 0.52) 34%, rgba(26, 26, 26, 0) 88%);
-    background: -ms-linear-gradient(top, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 15%, rgba(26, 26, 26, 0.52) 34%, rgba(26, 26, 26, 0) 88%);
-    background: linear-gradient(to bottom, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 15%, rgba(26, 26, 26, 0.52) 34%, rgba(26, 26, 26, 0) 88%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#1a1a1a', GradientType=0);
+	z-index: 999;
+	border-bottom:0px;
+  top: 0;
+  position: fixed;
+  background: rgba(36, 36, 36, 0.84);
+  background: -moz-linear-gradient(top, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 15%, rgba(26, 26, 26, 0.52) 34%, rgba(26, 26, 26, 0) 88%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(36, 36, 36, 0.84)), color-stop(15%, rgba(31, 31, 31, 0.7)), color-stop(34%, rgba(26, 26, 26, 0.52)), color-stop(88%, rgba(26, 26, 26, 0)));
+  background: -webkit-linear-gradient(top, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 15%, rgba(26, 26, 26, 0.52) 34%, rgba(26, 26, 26, 0) 88%);
+  background: -o-linear-gradient(top, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 15%, rgba(26, 26, 26, 0.52) 34%, rgba(26, 26, 26, 0) 88%);
+  background: -ms-linear-gradient(top, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 15%, rgba(26, 26, 26, 0.52) 34%, rgba(26, 26, 26, 0) 88%);
+  background: linear-gradient(to bottom, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 15%, rgba(26, 26, 26, 0.52) 34%, rgba(26, 26, 26, 0) 88%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#1a1a1a', GradientType=0);
 }
+.ContenedorMenu nav div ul li a, .ContenedorMenu nav div a{
+		text-decoration: none;
+}
+/* --- Clase que agregaremos cuando el usuario haga scroll --- */
 
 .menu-fixed {
-    z-index: 50002;
+		text-decoration: none;
+    z-index: 999;
     top: 0;
     position: fixed;
     width: 100%;
+    color: #fff;
     background: linear-gradient(to bottom, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 0%, rgba(26, 26, 26, 0.52) 0%, rgba(26, 26, 26, 0) 0%);
-    background-color: #fff;
+    background-color: #546E7A;
     max-height: 50px;
 }
 
-.menu-fixed li {
-    color: #424242;
+.menu-fixed a {
+		text-decoration: none;
+    color: #fff;
 }
 
-.menu-fixed li:hover {
-    color: #757575;
+.menu-fixed a:hover {
+		text-decoration: none;
+    color: #0091EA;
 }
 
-.menu-fixed li:active {
-    color: #bdbdbd;
+.menu-fixed a:active {
+    color: #0091EA;
 }
 
-.menu-fixed .material-icons{
-	color: #424242;
-}
+/*-------- End NavBar ---------- */
 
-.MenuLoguin ul li{
-	display: inline-block;
-	padding: 15px;
-	padding-top: 15px;
-	float: right;
-	font-family: Segoe_UI;
-}
-
-.MenuLoguin ul li:nth-of-type(1){
-	margin-top: -19px;
-}
-
-.MenuLoguin .dropdown-menu {
-	margin-top: 22px;
-}
+/* Estilos aplicados para cuando se selecciona o se pasa el cursor sobre los li */
 
 /* textos bajo el slider*/
 
@@ -160,15 +183,14 @@
 	padding: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
-	width: calc(100% - 400px);
+	width: 100%;
 	float: left;
-	margin-top: -110px;
+	margin-top: -70px;
+	margin-right: : 5%;
+	margin-left: : 5%;
 }
 
-.ImgLg{
-	padding-top: 30px;
-	width: 400px;
-	float: right;
+.ContainerText .Txt{
 }
 
 .ContainerText h1{
@@ -202,9 +224,7 @@
 .ImgTitleLG{
 	width: 100%;
 	height: 200px;
-	float: right;
-	padding-bottom: 5px;
-	padding-top: 5px;
+
 }
 
 /* inicio delmodelo responsitive*/
@@ -215,27 +235,23 @@
     height: 0px;
 }
 
-.MenuLoguin ul li{
+.MenuLogin ul li{
 	display: block;
 	width: 100%;
-	
+
 }
 
-	#ContenedorFormularioSesion{
+#formcontent{
 	width: 100%;
 	margin-top: 0px;
 	position: inherit;
 	margin-bottom: 70px;
-	
-	
-   
 }
 
 .ContainerText{
 	width: 100%;
 	margin-top: -70px;
 }
-
 .ImgLg{
 	width: 100%;
 	margin: 0 auto;
@@ -259,19 +275,19 @@
 }
 
 .navbar{
-	background-color: #fafafa;
-	color: #000;
+	background-color: #424242;
+	color: white;
 }
 
 .navbar-brand{
-	color: #424242;
+	color: white;
 }
 
 .material-icons{
-	color: #424242;
+	color: white;
 }
 
-.MenuLoguin ul li:nth-of-type(1) {
+.MenuLogin ul li:nth-of-type(1) {
     padding: 0px;
     padding-top: 10px;
 }

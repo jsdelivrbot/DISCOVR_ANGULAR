@@ -1,10 +1,23 @@
 {
-    "loginTitle": "Inicio de Sesion",
-    "userInputPlaceHolder": "Ingrese su usuario",
-    "passInputPlaceHolder": "Ingrese su contraseña",
-    "btnLogin": "Ingresar",
-
-    "LenguajeTitle": "Lenguaje"
+    "PageTitle": "Discovr, Inicio de Sesion",
+    "UserInputLabel": "Nombre de Usuario:",
+    "UserInputPlaceHolder": "Ingrese su Usuario...",
+    "PassInputLabel": "Contraseña:",
+    "PassInputPlaceHolder": "Ingrese su Contraseña...",
+    "BtnLogin": "Acceder",
+    "BrandTitle": "Discovr, tu plataforma de viajes!",
+    "MenuOpt1": "Bienvenido",
+    "MenuOpt2": "A donde ir?",
+    "MenuOpt3": "Presupuestos",
+    "MenuOpt4": "Eventos",
+    "MenuOpt5": "Soporte",
+    "MenuOpt6": "Acerca de",
+    "FormText1": "No tienes cuenta? ",
+    "FormText2": " Registrate ya!.",
+    "BodyTitle1": "Bienvenido a Discovr, tu plataforma para viajes!.",
+    "BodyTitle2": "No sabes a Donde ir? Te lo mostramos!.",
+    "BodyTitle3": "No sabes hasta donde tu dinero te puede llevar? Te ayudamos a decidir.",
+    "BodyTitle4": "Descubre los eventos y tradiciones populares, Te ayudamos a virvirlo.",
+    "BodyTitle5": "Tienes algun problema?, háznolo saber!"
 
 }
-
