@@ -97,6 +97,18 @@ var discovrApp = angular.module('DiscovrIndex', [
                 templateUrl: 'modules/housing/view/tour/Tour.view.html',
                 controller: 'VirtualTour.IndexController',
                 controllerAs: 'vm'
+            })
+            .state('Store', {
+                url: '/store',
+                templateUrl: 'modules/store/Store.view.html',
+                controller: 'Store.IndexController',
+                controllerAs: 'vm'
+            })
+            .state('StoreView', {
+                url: '/store/view',
+                templateUrl: 'modules/store/view/View.view.html',
+                controller: 'Sview.IndexController',
+                controllerAs: 'vm'
             });
 
          // default route
