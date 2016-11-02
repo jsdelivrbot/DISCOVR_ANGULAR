@@ -1,11 +1,23 @@
 {
-    "loginTitle": "Login",
-    "userInputPlaceHolder": "Insert you username",
-    "passInputPlaceHolder": "Insert you password",
-    "btnLogin": "Enter",
+    "PageTitle": "Discovr, LogIn",
+    "UserInputLabel": "Username:",
+    "UserInputPlaceHolder": "Insert your Username...",
+    "PassInputLabel": "Password:",
+    "PassInputPlaceHolder": "Insert your Password...",
+    "BtnLogin": "LogIn",
+    "BrandTitle": "Discovr, your travel platform!",
+    "MenuOpt1": "Welcome",
+    "MenuOpt2": "Where to go?",
+    "MenuOpt3": "Budget",
+    "MenuOpt4": "Events",
+    "MenuOpt5": "Support",
+    "MenuOpt6": "About us",
+    "FormText1": "Doesn't have account yet? ",
+    "FormText2": " SignUp Now!.",
+    "BodyTitle1": "Welcome to Discovr, your travel platform!.",
+    "BodyTitle2": "Dont know where to go? We show you!.",
+    "BodyTitle3": "Don't you know how far can you go with your money?",
+    "BodyTitle4": "Discover populars events and traditions, We help you to live them.",
+    "BodyTitle5": "Do you have a problem?, Tell it us!"
 
-    "LenguajeTitle": "Language"
-    
 }
-
-

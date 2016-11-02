@@ -1,6 +1,7 @@
 discovrApp.controller('Login.IndexController', function(
     $location,
     $localStorage,
+    $anchorScroll,
     AuthenticationService,
     $scope,
     $filter,
@@ -67,11 +68,28 @@ discovrApp.controller('Login.IndexController', function(
     //Get the selected user language and set at the begining the browser default language
     vm.selected = browserLan;
     //Function that change the language
-    vm.changeLang = function changeLangFn() {
-        var opt = vm.selected;
+    vm.changeLang = function changeLangFn(opt) {
          console.log(opt);
         $translate.use('login/languages/' + opt);
-    };    
+    };
+    function togglePassword(e) {
+      e.preventDefault();
+      let passwordInput = document.getElementById('txtPassword'),
+          toggle = document.getElementById('btnToggle');
+
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggle.innerHTML = 'hide';
+      } else {
+        passwordInput.type = 'password';
+        toggle.innerHTML = 'show';
+      }
+    }
+
+    (function () {
+      let toggle = document.getElementById('btnToggle');
+      toggle.addEventListener('click', togglePassword, false);
+    })();
 
     $scope.myInterval = 6000;
     $scope.noWrapSlides = false;
@@ -103,19 +121,10 @@ discovrApp.controller('Login.IndexController', function(
     ];
 
     /*-------------------------------------------------------------------------------------------------*/
+    $scope.isNavCollapsed = true;
+    $scope.isCollapsed = false;
+    $scope.isCollapsedHorizontal = false;
 
-    $scope.tree = [{
-        name: "Idioma",
-        link: "#",
-        subtree: [{
-            name: "Ingles",
-            link: "state1"
-        }, {
-            name: "Español",
-            link: "state2",
-        }]
-    }];
 
     initController();
-});    
-
+});

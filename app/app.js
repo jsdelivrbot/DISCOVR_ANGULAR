@@ -45,13 +45,13 @@ var discovrApp = angular.module('DiscovrIndex', [
                 templateUrl: 'modules/login/index.view.html',
                 controller: 'Login.IndexController',
                 controllerAs: 'vm'
-            }) 
+            })
             .state('signup', {
                 url: '/signup',
                 templateUrl: 'modules/signup/index.view.html',
                 controller: 'Signup.IndexController',
                 controllerAs: 'vm'
-            })            
+            })
             .state('placeView', {
                 url: '/placeview',
                 templateUrl: 'modules/places/view/PlaceView.view.html',
@@ -78,8 +78,8 @@ var discovrApp = angular.module('DiscovrIndex', [
             })
             .state('working', {
                 url: '/working',
-                templateUrl: 'modules/templates/working.html',       
-            })                                   
+                templateUrl: 'modules/templates/working.html',
+            })
             .state('housing', {
                 url: '/housing',
                 templateUrl: 'modules/housing/Housing.view.html',
