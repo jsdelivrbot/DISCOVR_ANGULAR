@@ -2,11 +2,13 @@
     margin-top: 10px;
     white-space: nowrap;
     overflow-x: auto;
-    height: 148px;
+    height: 160px;
     padding-left: 5px;
     margin-bottom: 20px;
 }
-
+.ContainerTilesPlace1 {
+    height: 320px;
+    }
 .TileSite1,
 .TileSite2,
 .TileSite3,
@@ -27,20 +29,22 @@
 .TileSite3 img:hover,
 .TileSite4 img:hover,
 .TileSite5 img:hover,
+.TilePx img:hover,
 .TileSite6 img:hover {
     -webkit-transform: scale(1.1);
     transition: all 0.3s;
-}
+    }
 
 .TileSite1 img:active,
 .TileSite2 img:active,
 .TileSite3 img:active,
 .TileSite4 img:active,
 .TileSite5 img:active,
+.TilePx img:active,
 .TileSite6 img:active {
     -webkit-transform: scale(1.2);
     transition: all 0.3s;
-}
+    }
 
 .TileSitesContenido {
     width: 100%;
@@ -48,7 +52,52 @@
     overflow: hidden;
     text-align: center;
 }
+.TileSPx {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    text-align: center;
+    margin-top: -2px;
+}
+.TileSPx1 {
+    padding-top: 10%;
+    width: 10%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    Background-color:#FFD700
+}
+.TileSPx2 {
+    width: 45%;
+    overflow: hidden;
+    
+    margin-top:10%;
+}
+.TileSPx3 {
+    width: 45%;
+    overflow: hidden;
+    text-align: Top;
+    margin-top:-80px;
+}
+.sideText{
+    color:black;
+    height: 100%;
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 10%;
+    background-color: white;  
+    font-weight:normal;
+    margin-top: -160px;
+    
+}
 
+.SCell {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10%;
+    width: 45%;
+    text-align: left;
+}
 
 /* ------------------------------------------------------------------------------------------ */
 
@@ -58,7 +107,7 @@
     position: relative;
     margin-top: -32px;
     z-index: 2;
-}
+    }
 
 .SpanStar {
     position: relative;
@@ -68,9 +117,14 @@
     text-align: center;
     z-index: 2;
     margin-right: 12px;
+    }
+.buy {
+    text-align:left;
+    
 }
-
-
+.buydetail {
+    text-align:right;
+    }
 
 
 /* AQUI SE GENERA LA BARRA DIFUMINADA QUE ESTA EN LA PARTE INFERIOR DE LOS TILES */
@@ -103,7 +157,7 @@
 }
 
 
-/* AQUI SE ADAPTAN LAS IMAGENES CONTENIDAD EN LOS TILES */
+/* AQUI SE ADAPTAN LAS IMAGENES CONTENIDAS EN LOS TILES */
 
 .TileSitesContenido .material-icons {
     font-size: 73px;
@@ -111,7 +165,6 @@
     padding-bottom: 28px;
     text-align: center;
 }
-
 .SpanStar .material-icons {
     font-size: 25px;
     padding-top: 0px;
@@ -120,6 +173,16 @@
     color: #ffeb3b;
     vertical-align: bottom;
 }
+.buy .material-icons{
+    font-size: 30px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    text-align: Left;
+    color: #c0c0c0;
+    vertical-align: top;
+    position: relative;
+    }
+
 .SpanFollow .material-icons:active {
    -webkit-transform: scale(1.2);
     transition: all 0.3s;
