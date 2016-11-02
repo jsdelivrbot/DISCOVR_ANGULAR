@@ -67,15 +67,37 @@
     text-align: center;
     Background-color:#FFD700
 }
+.TileSPx2 {
+    width: 45%;
+    overflow: hidden;
+    
+    margin-top:10%;
+}
+.TileSPx3 {
+    width: 45%;
+    overflow: hidden;
+    text-align: Top;
+    margin-top:-80px;
+}
 .sideText{
     color:black;
     height: 100%;
     width: 90%;
     margin-left: 10%;
-    background-color: rgba(255,255,255,0.8);  
+    margin-top: 10%;
+    background-color: white;  
+    font-weight:normal;
     margin-top: -160px;
+    
 }
 
+.SCell {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10%;
+    width: 45%;
+    text-align: left;
+}
 
 /* ------------------------------------------------------------------------------------------ */
 
@@ -97,12 +119,11 @@
     margin-right: 12px;
     }
 .buy {
-    position: Top;
-    margin-top: -33px;
-    float: left;
-    width: 70px;
-    height: 100px;
-    z-index: 2;
+    text-align:left;
+    
+}
+.buydetail {
+    text-align:right;
     }
 
 
