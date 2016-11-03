@@ -1,5 +1,7 @@
 {
+
     "HomeTitle": "Inicio",
+    "BrandTitle": "Discovr",
     "WhereToGoTitle": "Dónde Ir?",
     "SearchTitle": "Buscar",
     "SearchPlaceHolder": "Escriba aquí...",
@@ -20,4 +22,3 @@
     "AdventureTitle": "Aventuras",
     "EventsTitle": "Eventos"
 }
-

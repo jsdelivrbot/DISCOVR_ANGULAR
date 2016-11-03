@@ -1,5 +1,5 @@
 .ContainerFloatTiles{
-	z-index: 50001;
+	z-index: 998;
 	position: relative;
 	margin-top: -360px;
 	width: 50%;
@@ -44,11 +44,11 @@
 .ContainerFloatTiles ul li .TitleDiv{
 	position: relative;
 	margin-top: -34px;
-	padding-bottom:12px; 
+	padding-bottom:12px;
 	padding-right: 34px;
 	z-index: 2;
 	width: 100%;
-	
+
 }
 
 

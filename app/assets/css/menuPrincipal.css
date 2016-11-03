@@ -70,26 +70,28 @@ a:active {
 /* --- Clase que agregaremos cuando el usuario haga scroll --- */
 
 .menu-fixed {
-    z-index: 50002;
+    z-index: 999;
     top: 0;
     position: fixed;
     width: 100%;
-    color: #424242;
+    color: #fff;
     background: linear-gradient(to bottom, rgba(36, 36, 36, 0.84) 0%, rgba(31, 31, 31, 0.7) 0%, rgba(26, 26, 26, 0.52) 0%, rgba(26, 26, 26, 0) 0%);
-    background-color: #fff;
+    background-color: #546E7A;
     max-height: 50px;
 }
 
 .menu-fixed a {
-    color: #424242;
+  text-decoration: none;
+  color: #fff;
 }
 
 .menu-fixed a:hover {
-    color: #757575;
+  text-decoration: none;
+  color: #0091EA;
 }
 
 .menu-fixed a:active {
-    color: #bdbdbd;
+    color: #0091EA;
 }
 
 
@@ -171,7 +173,7 @@ input::-webkit-search-cancel-button {
 }
 
 .menu-fixed .FloatRightMenu input[type=search] {
-    background: url(../../assets/files/img/search/black.png) no-repeat 9px center;
+    background: url(../../assets/files/img/search/white.png) no-repeat 9px center;
 }
 
 
@@ -193,8 +195,8 @@ input::-webkit-search-cancel-button {
 
 #demo-2 input[type=search]:focus {
     width: 200px;
-    padding-left: 32px;
-    color: #000;
+    padding-left: 42px;
+    color: #fff;
     background-color: rgba(224, 224, 224, 0.6);
     cursor: auto;
 }
@@ -211,15 +213,15 @@ input::-webkit-search-cancel-button {
 /* ---------------------------------------------------------------------- */
 
 .menu-fixed .navbar-default .navbar-brand {
-    color: #424242;
+    color: #fff;
 }
 
 .menu-fixed .navbar-default .navbar-text {
-    color: #424242;
+    color: #fff;
 }
 
 .menu-fixed .navbar-default .navbar-nav>li>a {
-    color: #424242;
+    color: #fff;
 }
 
 

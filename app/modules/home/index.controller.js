@@ -46,11 +46,14 @@ discovrApp.controller('Home.IndexController', function(
     //Get the selected user language and set at the begining the browser default language
     vm.selected = browserLan;
     //Function that change the language
-    vm.changeLang = function changeLangFn() {
-        var opt = vm.selected;
+    vm.changeLang = function changeLangFn(opt) {
          console.log(opt);
-        $translate.use('login/languages/' + opt);
+        $translate.use('home/languages/' + opt);
     };
+
+    $scope.isNavCollapsed = true;
+    $scope.isCollapsed = false;
+    $scope.isCollapsedHorizontal = false;
 
     $scope.myInterval = 6000;
     $scope.noWrapSlides = false;

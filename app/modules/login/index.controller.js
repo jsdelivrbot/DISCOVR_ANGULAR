@@ -72,6 +72,7 @@ discovrApp.controller('Login.IndexController', function(
          console.log(opt);
         $translate.use('login/languages/' + opt);
     };
+    
     function togglePassword(e) {
       e.preventDefault();
       let passwordInput = document.getElementById('txtPassword'),
