@@ -1,5 +1,9 @@
+.modal-body{
+	
+}
+
 .ContainerFloatTiles{
-	z-index: 50001;
+	z-index: 990;
 	position: relative;
 	margin-top: -360px;
 	width: 34%;
@@ -44,18 +48,18 @@
 .ContainerFloatTiles ul li .TitleDiv{
 	position: relative;
 	margin-top: -34px;
-	padding-bottom:12px; 
+	padding-bottom:12px;
 	padding-right: 34px;
-	z-index: 2;
+	z-index: 999;
 	width: 100%;
-	
+
 }
 
 .ContainerFloatTiles #DobleTile #HaveThis{
 	position: relative;
 	margin-top: -116px;
 	z-index: 2;
-	height:116px; 
+	height:116px;
 }
 
 
@@ -98,7 +102,7 @@
 
 #DobleTile ul li .material-icons{
 	font-size: 36px;
-	
+
 }
 
 /*  Animaciones de hover y active*/
@@ -137,16 +141,17 @@
 				position:absolute;
 				text-align: center;
 				height: 40px;
+				z-index: 999;
 			}
-			
+
 			#HaveThis li:hover > ul {
 				display:block;
 				max-height: 40px;
-				
+
 			}
 
 
-			
+
 			#HaveThis li ul li {
 				position:relative;
 				max-height: 39px;
@@ -158,9 +163,9 @@
 				background-color: rgba(33,33,33,1);
 				/* top: -44px; */
 
-				
+
 			}
-			
+
 			#HaveThisli ul li ul {
 				top:0px;
 				right: -140px;
@@ -169,7 +174,7 @@
 
 			/* ----------------CODIGO DE LA VENTANA MODAL */
 
-			  #modal {
+#modal {
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
   position: fixed;
@@ -178,7 +183,7 @@
   height: 100vh;
   width: 100vw;
   transition: all .5s;
-  z-index: 100000;
+  z-index: 999;
   position: absolute;
 }
 #modal p {
@@ -224,7 +229,7 @@
   position: absolute;
   top: 1em;
   right: 1em;
-  z-index: 1000000;
+  z-index: 999;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -249,4 +254,53 @@
 	.ContainerFloatTiles{
 		display: none;
 	}
+}
+
+/* --------- MODALS  ---------------------------------------------*/
+.modal-window {
+	position:fixed;
+  background-color: rgba(255,255,255,0.5);
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:999;
+	opacity:0;
+	pointer-events:none;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	transition:all 0.3s;
+}
+.modal-window:target {
+	opacity:1;
+	pointer-events:auto;
+}
+.modal-window>div {
+	width:400px;
+	position:relative;
+	margin:10% auto;
+  padding:2rem;
+	background:#fff;
+	color:#444;
+}
+.modal-window header {
+	font-weight:bold;
+}
+.modal-close {
+	color:#aaa;
+	line-height:50px;
+	font-size:80%;
+	position:absolute;
+	right:0;
+	text-align:center;
+	top:0;
+	width:70px;
+	text-decoration:none;
+}
+.modal-close:hover {
+	color:#000;
+}
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
 }

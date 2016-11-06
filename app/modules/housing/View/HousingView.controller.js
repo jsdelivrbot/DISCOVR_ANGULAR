@@ -3,10 +3,12 @@ discovrApp.controller('HousingView.IndexController', function(
   $location,
   AuthenticationService,
   $scope,
+  $uibModal,
+  $log,
+  $document,
   $translate) {
     var vm = this;
 
-    initController();
 
     function initController() {
         vm.username = $localStorage.currentUser.username;
@@ -25,6 +27,52 @@ discovrApp.controller('HousingView.IndexController', function(
         console.log(opt);
         $translate.use('housing/languages/' + opt);
     };
+
+    vm.animationsEnabled = true;
+
+    vm.open = function (size, parentSelector) {
+      var parentElem = parentSelector ?
+        angular.element($document[0].querySelector('.ModalOpt ' + parentSelector)) : undefined;
+      var modalInstance = $uibModal.open({
+        animation: vm.animationsEnabled,
+        ariaLabelledBy: 'modal-title',
+        ariaDescribedBy: 'modal-body',
+        templateUrl: 'MapsModal.html',
+        controller: 'ModalInstanceCtrl',
+        controllerAs: 'vm',
+        size: size,
+        appendTo: parentElem,
+        resolve: {
+          items: function () {
+            return vm.items;
+          }
+        }
+      });
+
+      modalInstance.result.then(function (selectedItem) {
+        vm.selected = selectedItem;
+      }, function () {
+        $log.info('Modal dismissed at: ' + new Date());
+      });
+    };
+
+  vm.openComponentModal = function () {
+    var modalInstance = $uibModal.open({
+      animation: vm.animationsEnabled,
+      component: 'modalComponent',
+      resolve: {
+        items: function () {
+          return vm.items;
+        }
+      }
+    });
+
+    modalInstance.result.then(function (selectedItem) {
+    vm.selected = selectedItem;
+    }, function () {
+      $log.info('modal-component dismissed at: ' + new Date());
+    });
+  };
 
     /*$scope.dataArray = [
       {
@@ -63,4 +111,45 @@ discovrApp.controller('HousingView.IndexController', function(
         }
     ];
     var currIndex = 0;
+
+    initController();
+});
+
+discovrApp.controller('ModalInstanceCtrl', function ($uibModalInstance, items) {
+  var vm = this;
+
+  vm.ok = function () {
+    $uibModalInstance.close(vm.selected.item);
+  };
+
+  vm.cancel = function () {
+    $uibModalInstance.dismiss('cancel');
+  };
+});
+
+discovrApp.component('modalComponent', {
+  templateUrl: 'MapsModal.html',
+  bindings: {
+    resolve: '<',
+    close: '&',
+    dismiss: '&'
+  },
+  controller: function () {
+    var vm = this;
+
+    vm.$onInit = function () {
+      vm.items = vm.resolve.items;
+      vm.selected = {
+        item: vm.items[0]
+      };
+    };
+
+    vm.ok = function () {
+      vm.close({$value: vm.selected.item});
+    };
+
+    vm.cancel = function () {
+      vm.dismiss({$value: 'cancel'});
+    };
+  }
 });

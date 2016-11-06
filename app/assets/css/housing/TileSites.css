@@ -2,14 +2,14 @@
     margin-top: 10px;
     white-space: nowrap;
     overflow-x: auto;
-    height: 270px;
+    /*height: 270px;*/
     padding-left: 5px;
     margin-bottom: 20px;
 }
 .ContainerTilesPlace1 {
     height: 270px;
     overflow: auto;
-    
+
     }
 .TileSite1,
 .TileSite2,
@@ -75,7 +75,7 @@
 .TileSPx2 {
     width: 45%;
     overflow: hidden;
-    
+
     margin-top:10%;
 }
 .TileSPx3 {
@@ -88,7 +88,7 @@
     color:black;
     margin-left: 10%;
     margin-top: 5%;
-    background-color: white;  
+    background-color: white;
     font-weight:normal;
     margin-top: -130px;
     font-size: 12px
@@ -184,7 +184,7 @@
    -webkit-transform: scale(1.2);
     transition: all 0.3s;
 }
- 
+
 .SpanFollow .material-icons {
    color: #fff;
 }

@@ -16,7 +16,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" ui-sref="home">Discovr</a>
+            <a class="navbar-brand" ui-sref="home">{{ 'BrandTitle' | translate }}</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
@@ -49,24 +49,11 @@
                   </ul>
                 </li>
                 <li>
-                    <a href="#"tooltip-placement="bottom" uib-tooltip="Bienvenido {{ vm.username }}">
+                    <a href="#"tooltip-placement="bottom" uib-tooltip="{{ 'WelcomeTitle' | translate }} {{ vm.username }}">
                         <i class="material-icons">account_circle</i>
                     </a>
                 </li>
                 <!-------------------------------------------------------------------!-->
-                <li uib-dropdown>
-                    <a id="more" href="#" uib-dropdown-toggle>
-                        <i class="material-icons">more_vert</i>
-                    </a>
-                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="more">
-							        <li role="menuitem"><a href="#" ng-click="">Registro de Actividad</a></li>
-                      <li role="menuitem"><a href="#" ng-click="">Configuracion</a></li>
-                      <li role="menuitem"><a ui-sref="login" ng-click="">Cerrar Sesion</a></li>
-                      <li class="divider"></li>
-                      <li role="menuitem"><a href="#" ng-click="">Ayuda</a></li>
-                      <li role="menuitem"><a href="#" ng-click="">Reportar un Error</a></li>
-						      	</ul>
-                </li>
                 <li uib-dropdown>
                     <a id="language" href="#" uib-dropdown-toggle>
                         <i class="material-icons">language</i>
@@ -75,6 +62,20 @@
                       <li role="menuitem" ng-repeat="lan in vm.listLan"><a href="#" ng-click="vm.changeLang(lan.key)">{{lan.value}}</a></li>
                     </ul>
                 </li>
+                <li uib-dropdown>
+                    <a id="more" href="#" uib-dropdown-toggle>
+                        <i class="material-icons">more_vert</i>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="more">
+							        <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt1' | translate }}</a></li>
+                      <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt2' | translate }}</a></li>
+                      <li role="menuitem"><a ui-sref="login" ng-click="">{{ 'SettingsOpt3' | translate }}</a></li>
+                      <li class="divider"></li>
+                      <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt4' | translate }}</a></li>
+                      <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt5' | translate }}</a></li>
+						      	</ul>
+                </li>
+
 
  <!--------------------------------------------------------------------- !-->
             </ul>
