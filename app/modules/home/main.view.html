@@ -1,27 +1,19 @@
 <!-- <META HTTP-EQUIV="Refresh" CONTENT="1">  -->
-
-
-<link rel="stylesheet" href="../../assets/css/main/FloatTilesSlider.css">
-<link rel="stylesheet" href="../../assets/css/main/TileSites.css">
-<link rel="stylesheet" href="../../assets/css/main/SliderMiniTile.css">
+<!-- ----------------     IMPORT CSS FILES     ------------------------- -->
+<link rel="stylesheet" href="../../assets/css/MainFloatTiles.css">
+<link rel="stylesheet" href="../../assets/css/MainTiles.css">
+<!-- ----------------     END IMPORT FILES     ------------------------- -->
 
 <div class="ContainerAlltoAll">
-
+    <!-- ----------------     IMPORT HTML MENU BAR     ------------------------- -->
+    <div ng-include src="'modules/templates/NavBar.html'"> </div>
+    <!-- ----------------     IMPORT HTML CAROUSEL SLIDER     ------------------------- -->
+    <div ng-include src="'modules/templates/MainSlider.html'"> </div>
     <!-- ------------------------------------------------------------------------------ -->
 
-    <div ng-include src="'modules/templates/menu.html'"> </div>
-    <div ng-include src="'modules/home/sliderPrincipal.html'"> </div>
-
-
+    <!-- ----------------     IMPORT HTML FLOAT TILES     ------------------------- -->
+    <div class="ContainerFloatTiles" ng-include src="'modules/home/Float.Tiles.View.html'"> </div>
+    <!-- ----------------     IMPORT HTML BODY TILES     ------------------------- -->
+    <div class="ContainerTileSites" ng-include src="'modules/home/Main.Tiles.View.html'"> </div>
     <!-- ------------------------------------------------------------------------------ -->
-
-    <!-- LA FUNCION NG INCLUDE PERITE IMORTAR OTROS ELEMENTOS EN EL HTML -->
-
-
-    <div class="ContainerFloatTiles" ng-include src="'modules/home/float.tiles.view.html'"> </div>
-    <div class="ContainerTileSites" ng-include src="'modules/home/main.tiles.view.html'"> </div>
-
-
-    <!-- ------------------------------------------------------------------------------ -->
-
 </div>

@@ -1,0 +1,37 @@
+{
+  "HomeTitle": "Home",
+  "BrandTitle": "Discovr",
+  "WelcomeTitle": "Welcome",
+
+  "SearchTitle": "Search",
+  "SearchPlaceHolder": "Write here...",
+
+  "SettingsOpt1": "Activity Log",
+  "SettingsOpt2": "Settings",
+  "SettingsOpt3": "Log Out",
+  "SettingsOpt4": "Help",
+  "SettingsOpt5": "Report a Problem",
+
+  "ConditionsTitle": "Ailing",
+
+  "WalletTitle": "Wallet",
+  "EmergenciesTitle": "Emergency",
+  "PreferencesTitle": "Preferences",
+  "InstitutionsTitle": "Institutions",
+  "CountriesTitle": "Countries",
+  "TransportTitle": "Transporte",
+  "ClubsTitle": "Clubs & Friends",
+  "AdventureTitle": "Adventures",
+
+  "EventsTitle": "Events",
+  "WhereToGoTitle": "Where to Go?",
+  "GalleryTitle": "Gallery",
+  "HousingTitle": "Housing",
+  "StoreTitle": "Store",
+  "EntertainmentTitle": "Entertaintment",
+  "FadTitle": "Food & Drinks",
+  "PromotionsTitle": "Promotions & Discounts",
+  "PlaceTitle": "Places"
+
+
+}

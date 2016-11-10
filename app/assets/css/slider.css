@@ -1,45 +1,78 @@
+.carousel-indicators, .carousel-indicators .active{
+    display: none;
+}
 .slider {
     width: 100%;
     margin: auto;
     overflow: hidden;
-    height: 300px;
+    height: 280px;
     max-height: 410px;
 }
-
 .PrincipalSlider .slider ul {
     display: flex;
     padding: 0;
     width: 400%;
-    height: 300px;
+    height: 280px;
     overflow: hidden;
     position: relative;
     animation: cambio 15s infinite alternate linear;
 }
-
 .slider li {
+  display: none;
     width: 100%;
     list-style: none;
     margin: 0px;
 }
-
 .slider img {
     width: 100%;
-    height: 300px;
+    height: 280px;
     object-fit: cover;
 }
-
-
+@media only screen and (min-width: 820px) {
+  #Carousel-title {
+    right: 0%;
+    left: -70%;
+    bottom: -25px;
+    z-index: 98;
+  }
+  #Carousel-title h4 {
+    color:#fff;
+    z-index: 98;
+  }
+}
+/* AQUI SE GENERA LA BARRA DIFUMINADA QUE ESTA EN LA PARTE INFERIOR DE LOS TILES */
+.BlurredTileBar {
+  position: relative;
+  margin-top: -50px;
+  height: 50px;
+  width: 100%;
+  z-index: 2;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.65) 83%, rgba(0, 0, 0, 0.65) 84%, rgba(0, 0, 0, 0.65) 85%, rgba(0, 0, 0, 0.65) 87%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.65) 83%, rgba(0, 0, 0, 0.65) 84%, rgba(0, 0, 0, 0.65) 85%, rgba(0, 0, 0, 0.65) 87%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.65) 83%, rgba(0, 0, 0, 0.65) 84%, rgba(0, 0, 0, 0.65) 85%, rgba(0, 0, 0, 0.65) 87%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+}
+.TileSite1 .BlurredTileBar {
+  position: relative;
+  margin-top: -40px;
+  height: 40px;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(33,33,33,0.5);
+}
+.LiContainer .BlurredTileBar {
+  z-index: 3;
+}
 /* _________________________________________________________________________________________________ */
-
-
 /*  Aqui estan las tranciciones para los tile sites, estos son los tiles que estan abajo el slider */
-
 .TileSite1 .slider img {
     width: 100%;
     height: 128px;
     object-fit: cover;
 }
-
 .TileSite1 .slider ul {
     display: flex;
     padding: 0;
@@ -48,13 +81,11 @@
     overflow: hidden;
     position: relative;
 }
-
 .LiContainer .slider img {
     width: 100%;
     height: 128px;
     object-fit: cover;
 }
-
 .LiContainer .slider ul {
     display: flex;
     padding: 0;
@@ -64,7 +95,6 @@
     overflow: hidden;
     position: relative;
 }
-
 #DobleTile .LiContainer .slider ul {
     display: flex;
     padding: 0;
@@ -74,21 +104,17 @@
     overflow: hidden;
     position: relative;
 }
-
 .LiContainer .slider li {
     padding: 0;
     margin: 0;
 }
 
-
 /* _________________________________________________________________________________________________ */
-
 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .slide_buttons {
     width: 100%;
     height: 50px;
@@ -106,20 +132,98 @@ img {
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
 }
-
-@media only screen and (max-width: 767px) {
-    .PrincipalSlider {
-        margin-top: 50px;
-    }
-    .slider {
-        height: 210px;
-        max-height: 210px;
-    }
-    .slider img {
-        height: 210px;
-    }
+/*------------------   INICIO DE LOS FILTROS POR LUGARES O CATEGORIAS   ----------------------------*/
+.Filters {
+    height:45px;
+    width:calc(100% - 200px);
+    overflow:hidden;
+    float: left;
 }
+#filler {
+    height:45px;
+    width:3000px;
+    position:relative;
+    border-radius:10px;
+    -webkit-transition: left 0.3s ease;
+}
+.module {
+    margin-right: 10px;
+    height:45px;
+    float:left;
+    line-height:43px;
+    text-align:center;
+    background-color: #fff;
+    border: 2px solid #426FC5;
+    color: #426FC5;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 30px;
+}
+.module:hover {
+    border-color: #0084ff;
+    background-color: #fafafa;
+}
+.module:active {
+    background-color: #f5f5f5;
+    border-color: #410093;
+}
+.FilterOptions {
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    height: 55px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+.AllFilterOptions {
+    float: left;
+    width: 139px;
+    margin-left: 10px;
+}
+.RightFilterOption {
+    float: right;
+    height: 45px;
+}
+.BtnLeft, .BtnRight {
+    outline: none;
+    background-color: transparent;
+    color: #263238;
+    border-style: none;
+    font-size: 24px;
+}
+.BtnLeft .material-icons {
+    font-size: 45px;
+    vertical-align: bottom;
+}
+.BtnRight .material-icons {
+    font-size: 45px;
+    vertical-align: bottom;
+}
+.BtnLeft .material-icons:hover {
+   color: #426FC5;
+}
+.BtnRight .material-icons:hover {
+   color: #426FC5;
+}
+/*------------------   FIN DE LOS FILTROS POR LUGARES O CATEGORIAS   ----------------------------*/
 
+/* ___________________________________VISTA RESPONSIVE______________________________________________________________ */
+@media only screen and (max-width: 767px) {
+  #Carousel-title {
+    bottom: -20px;
+    z-index: 98;
+  }
+  .PrincipalSlider {
+      margin-top: 50px;
+  }
+  .slider {
+      height: 210px;
+      max-height: 210px;
+  }
+  .slider img {
+      height: 210px;
+  }
+}
 .PrincipalSlider .slider p {
     position: relative;
     z-index: 50001;

@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="../../assets/css/GeneralSlider.css">
+
+<!-- Apartir de acá se inicia el slider principal-->
+<div class="PrincipalSlider">
+  <div class="slider">
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <div class="" style="width:100%;margin:auto;">
+          <div style="display:inline-block;width: 28%;">
+            <img ng-src="{{slide.image}}">
+          </div>
+          <div style="display:inline-block;width:41%;">
+            <img ng-src="{{slides[$index+1].image}}">
+            <div id="Carousel-title" class="carousel-caption">
+              <h4> {{ slides[$index+1].name }} </h4>
+            </div>
+          </div>
+          <div style="display:inline-block;width: 28%;">
+            <img ng-src="{{slides[$index+2].image}}">
+          </div>
+        </div>
+        <div class="BlurredTileBar"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- <div class="slide_buttons"></div> -->

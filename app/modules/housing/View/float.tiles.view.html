@@ -1,133 +1,104 @@
 <!-- TILES POCICIONADOS SOBRE EL SLIDER-->
-  <ul>
-    <li id="DobleTile">
-      <div class="LiContainer">
+<ul class="ModalOpt">
+  <!-- ---------- AQUI INICIAN LOS MODALS  ----------- -->
+  <!-- ---------- MODAL DE MAPA  ----------- -->
+  <script type="text/ng-template" id="MapsModal.html">
+    <div class="modal-body" id="modal-body">
+      <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-86.35768353939058%2C13.093481547864359%2C-86.35357439517976%2C13.09663739897683&amp;layer=mapnik" ></iframe><br/>
+      <div class="ModalContent">
+        <h5>Address:</h5>
+        <p>
+  					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
       </div>
-     <div id="HaveThis">
-       <ul>
-
-        <li><a href="" class="FollowLink"><i class="material-icons">favorite</i></a>
-          <ul class="TopltipInd">
-            <li>FOLLOW</li>
-          </ul>
+    </div>
+    <div class="modal-footer" id="modal-footer">
+      <button style="width:100%;" class="btn btn-primary1" ng-click="vm.cancel()">
+  					GOT IT!
+  		</button>
+    </div>
+  </script>
+  <!-- ---------- MODAL DE RESERVACION  ----------- -->
+  <script type="text/ng-template" id="BookModal.html">
+    <div class="modal-body" id="modal-body">
+      <div class="ModalContent">
+        <br/>
+        <h5>prueba:</h5>
+        <p>
+  					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+    <div class="modal-footer" id="modal-footer">
+      <button style="width:100%;" class="btn btn-primary1" ng-click="vm.cancel()">
+  					GOT IT!
+  		</button>
+    </div>
+  </script>
+  <!-- ---------- FIN DE LOS MODALES  ----------- -->
+  <!-- ---------- TILES FLOTANTES SOBRE EL CAROUSEL  ----------- -->
+  <!-- ---------- TILES FLOTANTES CON LAS CARACTERISTICAS DE UN NEGOCIO  ----------- -->
+  <li id="DobleTile">
+    <div class="LiContainer"></div>
+    <div id="HaveThis">
+      <ul>
+        <li><a href="" class="FollowLink" tooltip-placement="bottom" uib-tooltip="FOLLOW"><i class="material-icons">favorite</i></a>
         </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="WIFI">wifi</i>
+        </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="PUB">local_bar</i>
+        </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="COFFE">local_cafe</i>
+        </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="RESTAURANT">local_dining</i>
+        </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="GARAGE">drive_eta</i>
+        </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="TV">personal_video</i>
+        </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="CASINO">casino</i>
+        </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="GYM">fitness_center</i>
+        </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="POOL">pool</i>
+        </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="JACUZZI">hot_tub</i>
+        </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="ROOM SERVICE">room_service</i>
+        </li>
+        <li><i class="material-icons" tooltip-placement="bottom" uib-tooltip="ACCESIBILITY">accessible</i>
+        </li>
+     </ul>
+   </div>
+  </li>
+  <!-- ---------- TILES FLOTANES DE OPCIONES (RESERVACION, MAPAS, RECORRIDOS VIRTUALES)  ----------- -->
+<!-- --------------- ------------------------------------------ -->
+  <a ng-click="vm.open('book','lg')"><li class="scale">
+    <div class="LiContainer">
+      <i class="material-icons">library_books</i>
+    </div>
+    <div class="TitleDiv"Translate>BookTitle</div>
+  </li></a>
 
-         <li>
-          <i class="material-icons">wifi</i>
-          <ul class="TopltipInd">
-            <li>WIFI</li>
-          </ul>
-         </li>
+  <a ui-sref="working"><li class="scale">
+    <div class="LiContainer">
+      <i class="material-icons">panorama</i>
+    </div>
+    <div class="TitleDiv"Translate>GalleryTitle</div>
+  </li></a>
 
-         <li><i class="material-icons">local_bar</i>
-          <ul class="TopltipInd">
-            <li>PUB</li>
-          </ul>
-         </li>
+  <a ng-click="vm.open()"><li class="scale">
+    <div class="LiContainer">
+      <i class="material-icons">near_me</i>
+    </div>
+    <div class="TitleDiv" translate>HowToGoingTitle</div>
+  </li></a>
 
-         <li><i class="material-icons">local_cafe</i>
-          <ul class="TopltipInd">
-            <li>COFFE</li>
-          </ul>
-         </li>
-
-         <li><i class="material-icons">local_dining</i>
-          <ul class="TopltipInd">
-            <li>RESTAURANT</li>
-          </ul>
-         </li>
-
-         <li><i class="material-icons">drive_eta</i>
-          <ul class="TopltipInd">
-            <li>GARAGE</li>
-          </ul>
-         </li>
-
-         <li><i class="material-icons">personal_video</i>
-          <ul class="TopltipInd">
-            <li>TV</li>
-          </ul>
-         </li>
-
-         <li><i class="material-icons">casino</i>
-          <ul class="TopltipInd">
-            <li>CASINO</li>
-          </ul>
-         </li>
-
-         <li><i class="material-icons">fitness_center</i>
-          <ul class="TopltipInd">
-            <li>FITNES CENTER</li>
-          </ul>
-         </li>
-
-         <li><i class="material-icons">pool</i>
-          <ul class="TopltipInd">
-            <li>POOL</li>
-          </ul>
-         </li>
-
-         <li><i class="material-icons">hot_tub</i>
-          <ul class="TopltipInd">
-            <li>HOT WATER</li>
-          </ul>
-         </li>
-
-         <li><i class="material-icons">room_service</i>
-          <ul class="TopltipInd">
-            <li>ROOM SERVICE</li>
-          </ul>
-         </li>
-
-         <li><i class="material-icons">accessible</i>
-          <ul class="TopltipInd">
-            <li>ACCESIBLE</li>
-          </ul>
-         </li>
-
-         
-
-       </ul>
-     </div>
-    </li>
-
-    <a ui-sref="working"><li class="scale">
-      <div class="LiContainer">
-        <i class="material-icons">library_books</i>
-      </div>
-
-      <div class="TitleDiv"Translate>BookTitle</div>
-    </li></a>
-
-    <a ui-sref="working"><li class="scale">
-
-      <div class="LiContainer">
-        <i class="material-icons">collections</i>
-      </div>
-      <div class="TitleDiv"Translate>GalleryTitle</div>
-    </li></a>
-
-    <a ui-sref="working"><li class="scale">
-      <div class="LiContainer">
-        <i class="material-icons">near_me</i>
-<!--         <input type="radio" id="mostrar-modal" name="modal"/>
-  <label for="mostrar-modal"><i class="material-icons">near_me</i></label>
-  <input type="radio" id="cerrar-modal" name="modal"/>
-  <label for="cerrar-modal">X</label>
-  <div id="modal">
-    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nihil id commodi ipsa vitae dolore molestiae minus enim. Nulla ut recusandae nemo quam autem minus totam impedit, quod accusamus optio?</p>
-  </div> -->
-        
-      </div>
-
-      <div class="TitleDiv"Translate>HowToGoingTitle</div>      
-    </li></a>
-
-    <a ui-sref="VirtualTour"><li class="scale">
-      <div class="LiContainer">
-        <i class="material-icons">camera_front</i>
-      </div>
-
-       <div class="TitleDiv"Translate>VirtualTourTitle</div> 
-    </li></a>
+  <a ui-sref="VirtualTour"><li class="scale">
+    <div class="LiContainer">
+      <i class="material-icons">camera_front</i>
+    </div>
+     <div class="TitleDiv" translate>VirtualTourTitle</div>
+  </li></a>
 </ul>
+<!-- ---------- FIN DE LOS TILE FLOTANTES ----------- -->

@@ -1,0 +1,163 @@
+.TilesSections {
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow-x: auto;
+  /*height: 270px;*/
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+.TilesSections1 { /* <---- check --*/
+  height: 270px;
+  overflow: auto;
+}
+.TileSite1 {
+  width: 22%;
+  height: 128px;
+  color: #fff;
+  margin-bottom: 10px;
+  background-color: #37474f;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  display: inline-block;
+  margin-left: 5px;
+}
+.TileSite1 img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transition: all 0.3s;
+}
+.TileSite1 img:active {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transition: all 0.3s;
+}
+.TileSitesContenido {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+  text-align: center;
+}
+.TileSPx {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+  text-align: center;
+  margin-top: -2px;
+}
+.TileSPx1 {
+  padding-top: 5%;
+  width: 10%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  background-color:#FFD700
+}
+.TileSPx2 {
+  width: 45%;
+  overflow: hidden;
+  margin-top:10%;
+}
+.TileSPx3 {
+  width: 45%;
+  overflow: hidden;
+  text-align: Top;
+  margin-top:-80px;
+}
+.sideText {
+  color:black;
+  margin-left: 10%;
+  margin-top: 5%;
+  background-color: white;
+  font-weight:normal;
+  margin-top: -130px;
+  font-size: 12px
+}
+.SCell {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 3%;
+  width: 15%;
+  text-align: left;
+}
+/* ------------------------------------------------------------------------------------------ */
+.SpanTitleBis {
+  float: left;
+  margin-left: 12px;
+  position: relative;
+  margin-top: -32px;
+  z-index: 2;
+}
+.SpanStar {
+  position: relative;
+  margin-top: -33px;
+  float: right;
+  width: 70px;
+  text-align: center;
+  z-index: 2;
+  margin-right: 12px;
+}
+/* AQUI SE ADAPTAN LAS IMAGENES CONTENIDAS EN LOS TILES */
+.TileSitesContenido .material-icons {
+  font-size: 73px;
+  padding-top: 30px;
+  padding-bottom: 28px;
+  text-align: center;
+}
+.SpanStar .material-icons {
+  font-size: 25px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+  color: #ffeb3b;
+  vertical-align: bottom;
+}
+.buy .material-icons {
+  font-size: 30px;
+  padding-top: 2px;
+  padding-bottom: 10px;
+  text-align: Left;
+  color: #c0c0c0;
+  vertical-align: top;
+  position: relative;
+}
+.SpanFollow .material-icons:active {
+  transform: scale(1.2);
+ -webkit-transform: scale(1.2);
+  transition: all 0.3s;
+}
+.SpanFollow .material-icons {
+  color: #fff;
+}
+.FollowLink:visited .material-icons {
+  color: #f44336;
+}
+.TileSite1 .carousel-indicators {
+  padding-left: 20px;
+  margin-bottom: -12px;
+}
+.PrincipalSlider .carousel-indicators {
+  padding-left: 20px;
+  margin-bottom: -5px;
+}
+.TitleCont1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left: 10px;
+  color: #7f8c8d;
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+}
+/*DISEÑO RESPONSITIVE----------------------------------------------*/
+@media only screen and (max-width: 767px) {
+  .TileSite1 {
+    width: 49%;
+    margin: 0px;
+    margin-right: 1%;
+    margin-bottom: 10px;
+  }
+  .TilesSections {
+    padding-left: 0px;
+  }
+   ::-webkit-scrollbar {
+    height: 0px;
+  }
+}

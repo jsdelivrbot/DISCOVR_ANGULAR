@@ -1,114 +1,114 @@
-<div class="FondoBodyIndex" >
+<div class="FondoBodyIndex" > <!-- CLASE CSS QUE ESTA EN INDEX.CSS -->
+	<!-- ----------------     IMPORT CSS FILES     ------------------------- -->
+	<link rel="stylesheet" href="../../assets/css/Welcome.css">
+	<!-- ----------------     END IMPORT FILES     ------------------------- -->
 
-<!-- ----------------     IMPORT FILES     ------------------------- -->
-<link rel="stylesheet" href="../../assets/css/slider.css">
-<link rel="stylesheet" href="../../assets/css/login.css">
-<!-- ----------------     END IMPORT FILES     ------------------------- -->
+	<!-- ----------------     INICIA BARRA DE MENU     ------------------------- -->
+	<div class="ContenedorMenu">
+		<nav class="navbar navbar-default" role="navigation">
+	        <div class="navbar-header">
+						<!---------------- BOTON HAMBURGUESA-->
+	            <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+	                <span class="sr-only">Toggle navigation</span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+							<!---------------- NOMBRE DE LA PAGINA-->
+	            <a class="navbar-brand" ui-sref="login">{{ 'BrandTitle' | translate }}</a>
+	        </div>
+	        <!---------------- OPCIONES DE LA PAGINA-->
+	        <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+	            <ul id="NavBarMenu" class="nav navbar-nav navbar-right">
+									<li><a href="#formcontent" prevent-default="" scroll-to="formcontent">{{ 'MenuOpt1' | translate }}</a></li>
+									<li><a href="#opt2" prevent-default="" scroll-to="opt2">{{ 'MenuOpt2' | translate }}</a></li>
+									<li><a href="#opt3" prevent-default="" scroll-to="opt3">{{ 'MenuOpt3' | translate }}</a></li>
+									<li><a href="#opt4" prevent-default="" scroll-to="opt4">{{ 'MenuOpt4' | translate }}</a></li>
+									<li><a href="#opt5" prevent-default="" scroll-to="opt5">{{ 'MenuOpt5' | translate }}</a></li>
+									<li><a href="#">{{ 'MenuOpt6' | translate }}</a></li>
+									<!---------------- OPCION DE LENGUAGE-->
+	                <li uib-dropdown>
+	                    <a id="language" href="#" uib-dropdown-toggle>
+	                        <i class="material-icons">language</i>
+	                    </a>
+											<!---------------- CARGAR LOS LENGUAJES DESDE EL CONTROLADOR-->
+											<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="language">
+								        <li role="menuitem" ng-repeat="lan in vm.listLan"><a href="#" ng-click="vm.changeLang(lan.key)">{{lan.value}}</a></li>
+							      	</ul>
+	                </li>
+	            </ul>
+	        </div>
+	    </nav>
+	</div>
+	<!-- ----------------     FINALIZA BARRA DE MENU     ------------------------- -->
+	<!------------------- CARGAR SLIDER-->
+	<div ng-include src="'modules/templates/Slider.html'"> </div>
 
-<!-- ----------------     LANGUAGE SWITCH     ------------------------- -->
-<div class="ContenedorMenu">
-	<nav class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" ui-sref="login">{{ 'BrandTitle' | translate }}</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
-            <ul id="NavBarMenu" class="nav navbar-nav navbar-right">
-								<li><a href="#formcontent" prevent-default="" scroll-to="formcontent">{{ 'MenuOpt1' | translate }}</a></li>
-								<li><a href="#opt2" prevent-default="" scroll-to="opt2">{{ 'MenuOpt2' | translate }}</a></li>
-								<li><a href="#opt3" prevent-default="" scroll-to="opt3">{{ 'MenuOpt3' | translate }}</a></li>
-								<li><a href="#opt4" prevent-default="" scroll-to="opt4">{{ 'MenuOpt4' | translate }}</a></li>
-								<li><a href="#opt5" prevent-default="" scroll-to="opt5">{{ 'MenuOpt5' | translate }}</a></li>
-								<li><a href="#">{{ 'MenuOpt6' | translate }}</a></li>
-                <li uib-dropdown>
-                    <a id="language" href="#" uib-dropdown-toggle>
-                        <i class="material-icons">language</i>
-                    </a>
-										<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="language">
-							        <li role="menuitem" ng-repeat="lan in vm.listLan"><a href="#" ng-click="vm.changeLang(lan.key)">{{lan.value}}</a></li>
-						      	</ul>
-                </li>
-            </ul>
-        </div>
-
-        <!-- /.navbar-collapse -->
-    </nav>
-</div>
-<div ng-include src="'modules/login/sliderPrincipal.html'"> </div>
-
-<!-- ----------------     END LANGUAGE SWITCH     ------------------------- -->
-
-
-<!-- ----------------     LOGIN FORM     ------------------------- -->
-<div id="formcontent">
-	<form name="form" ng-submit="form.$valid && vm.login()" novalidate>
-		<div class="Register1">{{ 'UserInputLabel' | translate }}</div>
-		<input type="text" placeholder="{{ 'UserInputPlaceHolder' | translate }}" class="inputTex" ng-model="vm.username" required>
-		<div class="input-group">
-			<div class="Register1">{{ 'PassInputLabel' | translate }}</div>
-			<input type="password" placeholder="{{ 'PassInputPlaceHolder' | translate }}" class="inputTex" id="txtPassword" ng-model="vm.password" required>
-			<button id="btnToggle" class="toggle">show</button>
-		</div>
-		<p class="Register">{{ 'FormText1' | translate }} <span><a ui-sref="signup" class="SingUp">{{ 'FormText2' | translate }}</a></span></p>
-		<input type="submit" ng-disabled="vm.loading" class="btn btn-primary1" value="{{ 'BtnLogin' | translate }}">
-		<!-- <button ng-disabled="vm.loading" class="btn btn-primary1">{{ 'btnLogin' | translate }}</button> -->
-		<!--<input type="submit" value="{{ 'btnLogin' | translate }}" class="inputSubmit"> -->
-
-		<div ng-if="vm.error" >{{vm.error}}</div>
-	</form>
-</div>
-<!-- ----------------     END LOGIN FORM     ------------------------- -->
-
-<div class="ContainerText">
-	<br />
-	<div class="Txt">
-		<h1>{{ 'BodyTitle1' | translate }}</h1><br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
-		<br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
-		<picture class="ImgTitleLG">
-			<img src="http://www.hotel-r.net/im/hotel/it/welcome-5.png">
-		</picture>
+	<!-- ----------------     FORMULARIO DE INICIO DE SESION    ------------------------- -->
+	<div id="formcontent">
+		<form name="form" ng-submit="form.$valid && vm.login()" novalidate>
+			<!---------------- INPUTS DE USERNAME & PASSWORD-->
+			<div class="Register1">{{ 'UserInputLabel' | translate }}</div>
+			<input type="text" placeholder="{{ 'UserInputPlaceHolder' | translate }}" class="inputTex" ng-model="vm.username" required>
+			<div class="input-group">
+				<div class="Register1">{{ 'PassInputLabel' | translate }}</div>
+				<input type="password" placeholder="{{ 'PassInputPlaceHolder' | translate }}" class="inputTex" id="txtPassword" ng-model="vm.password" required>
+				<button id="btnToggle" class="toggle">show</button>
+			</div>
+			<!---------------- PARA ACCEDER A LA PAGINA DE REGISTRO-->
+			<p class="Register">{{ 'FormText1' | translate }} <span><a ui-sref="signup" class="SingUp">{{ 'FormText2' | translate }}</a></span></p>
+			<!---------------- BOTON PARA LOGEARSE-->
+			<input type="submit" ng-disabled="vm.loading" class="btn btn-primary1" value="{{ 'BtnLogin' | translate }}">
+			<!---------------- PARA MOSTRAR ERRORES -- NO FUNCIONAL-->
+			<div ng-if="vm.error" >{{vm.error}}</div>
+		</form>
+	</div>
+	<!-- ----------------     END LOGIN FORM     ------------------------- -->
+	<!------------------- CUERPO DE LA PAGINA CON TEXTO-->
+	<div class="ContainerText">
 		<br />
-	</div>
-	<hr class="separator" id="opt2">
-	<br>
-	<div class="Txt">
-		<h2 id="">{{ 'BodyTitle2' | translate }}</h2><br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+		<div class="Txt">
+			<h1>{{ 'BodyTitle1' | translate }}</h1><br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+			<br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
+			<picture class="ImgTitleLG">
+				<img src="http://www.hotel-r.net/im/hotel/it/welcome-5.png">
+			</picture>
+			<br />
+		</div>
+		<hr class="separator" id="opt2">
 		<br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
-	</div>
-	<hr class="separator" id="opt3">
-	<br>
-	<div class="Txt">
-		<h2>{{ 'BodyTitle3' | translate }}</h2><br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+		<div class="Txt">
+			<h2 id="">{{ 'BodyTitle2' | translate }}</h2><br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+			<br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
+		</div>
+		<hr class="separator" id="opt3">
 		<br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
-	</div>
-	<hr class="separator" id="opt4">
-	<br>
-	<div class="Txt">
-		<h2>{{ 'BodyTitle4' | translate }}</h2><br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+		<div class="Txt">
+			<h2>{{ 'BodyTitle3' | translate }}</h2><br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+			<br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
+		</div>
+		<hr class="separator" id="opt4">
 		<br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
-	</div>
-	<hr class="separator" id="opt5">
-	<br>
-	<div class="Txt">
-		<h2>{{ 'BodyTitle5' | translate }}</h2><br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+		<div class="Txt">
+			<h2>{{ 'BodyTitle4' | translate }}</h2><br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+			<br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
+		</div>
+		<hr class="separator" id="opt5">
 		<br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
+		<div class="Txt">
+			<h2>{{ 'BodyTitle5' | translate }}</h2><br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+			<br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
+		</div>
 	</div>
-</div>
-
+	<!------------------- FIN DE CUERPO DE LA PAGINA CON TEXTO-->
 </div>
