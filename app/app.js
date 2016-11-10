@@ -80,15 +80,15 @@ var discovrApp = angular.module('DiscovrIndex', [
                 url: '/working',
                 templateUrl: 'modules/templates/working.html',
             })
-            .state('housing', {
+            .state('Housing', {
                 url: '/housing',
                 templateUrl: 'modules/housing/Main.View.html',
                 controller: 'Housing.IndexController',
                 controllerAs: 'vm'
             })
-         .state('housingView', {
-                url: '/housingview',
-                templateUrl: 'modules/housing/view/HousingView.view.html',
+         .state('HousingView', {
+                url: '/housing/view',
+                templateUrl: 'modules/housing/view/Main.View.html',
                 controller: 'HousingView.IndexController',
                 controllerAs: 'vm'
             })

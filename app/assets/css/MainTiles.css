@@ -32,7 +32,7 @@
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   transform: scale(1.1);
-  transition: all 0.3s;
+  transition: all 0.6s;
 }
 .TileSite1 img:active,
 .TileSite2 img:active,
@@ -43,14 +43,14 @@
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   transform: scale(1.2);
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 .TileSite2 {
   width: 49.3%;
 }
 .TileSite4 {
   width: 32%;
-  background-color: #fff;
+  background-color: transparent;;
 }
 .TileSite5 {
   width: 45%;
@@ -247,7 +247,10 @@ input[name="slider-select-element"] {
 .MiniTilesSite {
 	width: 49.35%;
 	float: left;
-	background-color: #263238;
+  background-color: rgba(27, 35, 42,0.8);
+  backdrop-filter: blur(5px);
+  -ms-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 	margin-right: 0px;
 	margin-bottom: 0px;

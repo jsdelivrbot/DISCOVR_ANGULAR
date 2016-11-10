@@ -1,6 +1,7 @@
 <!-- TILES DE OTROS SITIOS, ESTOS SON LOS MOSTRADOS BAJO EL SLIDER-->
 <!-- ---------------------------------------- TILE DE EVENTOS -------------------------------------------- -->
 <div class="TileSite1">
+  <a ui-sref="">
     <div class="TileSitesContenido">
         <i class="material-icons  materialOut">insert_invitation</i>
         <div class="slider">
@@ -16,9 +17,11 @@
             <span class="SpanTitle" translate>EventsTitle</span>
         </div>
     </div>
+  </a>
 </div>
 <!-- ---------------------------------------- TILE DONDE IR -------------------------------------------- -->
 <div class="TileSite2">
+  <a ui-sref="">
     <div class="TileSitesContenido">
         <i class="material-icons materialOut">place</i>
         <div class="slider">
@@ -35,11 +38,13 @@
             <div class="NotificacionTileSite">1</div>
         </div>
     </div>
+  </a>
 </div>
 <!-- ---------------------------------------- TILE GALERIA -------------------------------------------- -->
 <div class="TileSite3">
+  <a ui-sref="">
     <div class="TileSitesContenido">
-        <i class="material-icons materialOut">collections</i>
+        <i class="material-icons materialOut">panorama</i>
         <div class="slider">
             <div uib-carousel active="active3" interval="myInterval3" no-wrap="noWrapSlides3">
                 <div uib-slide ng-repeat="slide3 in slides3 track by slide3.id" index="slide3.id">
@@ -53,17 +58,19 @@
             <span class="SpanTitle" translate>GalleryTitle</span>
         </div>
     </div>
+  </a>
 </div>
 <!-- ----------------------------------- TILE CONTENEDOR DE MINI TILES ----------------------------------------- -->
 <div class="TileSite4">
     <div class="TileSitesContenido">
         <div class="MiniTilesSite">
+          <a ui-sref="Housing">
             <div class="TileSitesContenidoMini">
                 <i class="material-icons materialOut">local_hotel</i>
                 <div class="slider">
                     <div uib-carousel active="active4" interval="myInterval4" no-wrap="noWrapSlides4">
                         <div uib-slide ng-repeat="slide4 in slides4 track by slide4.id" index="slide4.id">
-                            <a ui-sref="housing"><img ng-src="{{slide4.image || '//:0'}}" style="margin:auto;"></a>
+                            <a ui-sref="Housing"><img ng-src="{{slide4.image || '//:0'}}" style="margin:auto;"></a>
                             <div class="carousel-caption">
                                 <h4></h4>
                             </div>
@@ -73,12 +80,14 @@
                     <div class="BlurredTileBar"></div>
                 </div>
             </div>
+          </a>
         </div>
         <!-- ------------------------------------------------------------------------------------------------------------ -->
 
         <div class="MiniTilesSite">
+          <a ui-sref="">
             <div class="TileSitesContenidoMini">
-                <i class="material-icons materialOut">store</i>
+                <i class="material-icons materialOut">store_mall_directory</i>
                 <div class="slider">
                     <div uib-carousel active="active5" interval="myInterval5" no-wrap="noWrapSlides5">
                         <div uib-slide ng-repeat="slide5 in slides5 track by slide5.id" index="slide5.id">
@@ -87,16 +96,16 @@
                             </div>
                         </div>
                     </div>
-
                     <span class="SpanTitle" translate>StoreTitle</span>
                     <div class="BlurredTileBar"></div>
                 </div>
-
             </div>
+          </a>
         </div>
         <!-- ------------------------------------------------------------------------------------------------------------ -->
         <div class="MiniTilesSite">
             <div class="TileSitesContenidoMini">
+              <i class="material-icons materialOut">casino</i>
                 <div class="slider">
                     <div uib-carousel active="active6" interval="myInterval6" no-wrap="noWrapSlides6">
                         <div uib-slide ng-repeat="slide6 in slides6 track by slide6.id" index="slide6.id">
@@ -113,7 +122,9 @@
         </div>
         <!-- ------------------------------------------------------------------------------------------------------------ -->
         <div class="MiniTilesSite">
+          <a ui-sref="">
             <div class="TileSitesContenidoMini">
+              <i class="material-icons materialOut">restaurant</i>
                 <div class="slider">
                     <div uib-carousel active="active7" interval="myInterval7" no-wrap="noWrapSlides7">
                         <div uib-slide ng-repeat="slide7 in slides7 track by slide7.id" index="slide7.id">
@@ -127,6 +138,7 @@
                     <div class="BlurredTileBar"></div>
                 </div>
             </div>
+          </a>
         </div>
         <!-- ------------------------------------------------------------------------------------------------------------ -->
     </div>
@@ -134,6 +146,7 @@
 
 <!-- ---------------------------------------- TILE DE PROMOCIONES -------------------------------------------- -->
 <div class="TileSite5">
+  <a ui-sref="">
     <div class="TileSitesContenido">
         <i class="material-icons  materialOut">card_giftcard</i>
         <div class="slider">
@@ -150,9 +163,11 @@
             <div class="NotificacionTileSite">1</div>
         </div>
     </div>
+  </a>
 </div>
 <!-- ---------------------------------------- TILE DE LUGARES -------------------------------------------- -->
 <div class="TileSite6">
+  <a ui-sref="">
     <div class="TileSitesContenido">
         <i class="material-icons materialOut">explore</i>
         <div class="slider">
@@ -168,5 +183,6 @@
             <span class="SpanTitle" translate>PlaceTitle</span>
         </div>
     </div>
+  </a>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------ -->

@@ -88,9 +88,12 @@ discovrApp.controller('Housing.IndexController', function(
 
     function initController() {
         vm.username = $localStorage.currentUser.username;
+        $translate.use('home/languages/' + browserLan);
+        console.log(browserLan);
+        /*
         var stLan = localStorage.getItem('NG_TRANSLATE_LANG_KEY');
         var szLanLan = stLan.length;
         var lang = stLan.substr((szLanLan - 5), szLanLan);
-        localStorage.setItem('NG_TRANSLATE_LANG_KEY', 'housing/languages/' + lang);
+        localStorage.setItem('NG_TRANSLATE_LANG_KEY', 'housing/languages/' + lang);*/
     };
 });
