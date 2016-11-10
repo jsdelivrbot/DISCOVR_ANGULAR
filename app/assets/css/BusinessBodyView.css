@@ -1,0 +1,417 @@
+/*------------------------  ESTILOS PARA LOS TILES DEL CUERPO   ----------------------------------------*/
+.ContainerTileSites {
+  width: 100%;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.TileSite1,
+.TileSite2,
+.TileSite3,
+.TileSite4,
+.TileSite5,
+.TileSite6,
+.TileSite7 {
+  width: 47.8%;
+  float: left;
+  height: 130px;
+  margin-right: 1.4%;
+  color: #fff;
+  margin-left: 0.8%;
+  margin-bottom: 10px;
+  background-color: rgba(27, 35, 42,0.8);
+  backdrop-filter: blur(5px);
+  -ms-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.TileSitesContenido {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+  text-align: center;
+}
+/* ------------------------------------------------------------------------------------------ */
+.SpanTitle {
+  float: right;
+  margin-right: 12px;
+  position: relative;
+  margin-top: -34px;
+  z-index: 2;
+}
+/* AQUI SE GENERA LA BARRA DIFUMINADA QUE ESTA EN LA PARTE INFERIOR DE LOS TILES */
+.BlurredSideTileBar {
+  position: relative;
+  margin-top: -78px;
+  height: 35px;
+  width: 100%;
+  z-index: 1;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.65) 83%, rgba(0, 0, 0, 0.65) 84%, rgba(0, 0, 0, 0.65) 85%, rgba(0, 0, 0, 0.65) 87%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.65) 83%, rgba(0, 0, 0, 0.65) 84%, rgba(0, 0, 0, 0.65) 85%, rgba(0, 0, 0, 0.65) 87%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.65) 83%, rgba(0, 0, 0, 0.65) 84%, rgba(0, 0, 0, 0.65) 85%, rgba(0, 0, 0, 0.65) 87%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+}
+.LiContainer .BlurredSideTileBar {
+  z-index: 3;
+}
+/* AQUI SE ADAPTAN LAS IMAGENES CONTENIDAD EN LOS TILES */
+.TileSitesContenido .material-icons {
+  font-size: 73px;
+  padding-top: 30px;
+  padding-bottom: 28px;
+  text-align: center;
+}
+/*  Animaciones de hover y active*/
+/*
+.TileSite1:hover, .TileSite2:hover, .TileSite3:hover, .TileSite4:hover, .TileSite5:hover, .TileSite6:hover{
+	-webkit-transform: scale(1.05);
+}
+.TileSite1:active, .TileSite2:active, .TileSite3:active, .TileSite4:active, .TileSite5:active, .TileSite6:active{
+	-webkit-transform: scale(1);
+} */
+.TileSite1 .carousel-indicators {
+  padding-left: 20px;
+  margin-bottom: -12px;
+}
+.PrincipalSlider .carousel-indicators {
+  padding-left: 20px;
+  margin-bottom: -5px;
+}
+
+.TileSite1 img:hover {
+  -webkit-transform: scale(1.1);
+  transition: all 0.3s;
+}
+.TileSite1 img:active {
+  -webkit-transform: scale(1.2);
+  transition: all 0.3s;
+}
+/*DISEÑO RESPONSITIVE----------------------------------------------*/
+@media only screen and (max-width: 767px) {
+  .TileSite1 {
+      width: 49%;
+      margin: 0px;
+      margin-left: 1%;
+      margin-bottom: 10px;
+  }
+  .TileSite1:nth-of-type(2) {
+      width: 48%;
+      margin-right: 1%;
+  }
+  .TileSite1:nth-of-type(4) {
+      width: 48%;
+      margin-right: 1%;
+  }
+
+.TileSite1:nth-of-type(6) {
+      width: 48%;
+      margin-right: 1%;
+  }
+}
+/*------------------------  FIN ESTILOS PARA LOS TILES DEL CUERPO   ----------------------------------------*/
+/*------------------------  ESTILOS PARA LOS TAB DEL CUERPO   ----------------------------------------*/
+.ContainerDual {
+  width: 100%;
+  color: #000;
+  margin-top: 10px;
+}
+.ContanerDual1 {
+  float: left;
+  width: 66.4%
+}
+.ContanerDual2 {
+    float: right;
+    width: 33.6%
+}
+.page-wrap {
+  width: 100%;
+  margin: 0 auto;
+  font-weight: normal;
+}
+input[type="radio"] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.tab-wrap {
+  width: 100%;
+  float: none;
+  list-style: none;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+.tab-wrap li {
+  float: left;
+  display: block;
+}
+.tab-wrap label {
+  position: relative;
+  display: inline-block;
+  padding: 1.3em;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+  cursor: pointer;
+  line-height: 1;
+}
+.label-1 {
+  z-index: 100;
+}
+.label-2 {
+  z-index: 90;
+}
+.label-3 {
+  z-index: 80;
+}
+.label-4 {
+  z-index: 70;
+}
+.label-5 {
+  z-index: 70;
+}
+.label-6 {
+  z-index: 70;
+}
+.label-7 {
+  z-index: 70;
+}
+.label-8 {
+  z-index: 70;
+}
+.tab-wrap label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: -1;
+  background-color: #3D5AFE;
+  cursor: pointer;
+  /* border-right: 1px solid #fefefe; */
+}
+.tab-wrap .tab-content {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  z-index: 200;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  padding: 10px;
+  background: #fff;
+  max-height: 350px;
+  overflow-y:auto;
+}
+.tab-wrap [id^="tab"]:checked+label {
+  z-index: 200;
+  color: #000;
+  border-bottom: 2px solid orange;
+  padding-bottom: 9px;
+  background-color: #fff;
+  transition: all 0.3s;
+  height: 52px;
+}
+.tab-wrap [id^="tab"]:checked+label:before {
+  background: #fff;
+  transition: all 0.3s;
+}
+.tab-wrap [id^="tab"]:checked~.tab-content {
+  display: block;
+  transition: all 0.8s;
+}
+/* rellena con color el espacio que sobra en los tabs al lado derecho */
+#BackColor {
+  width: 95%;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  background-color: #3D5AFE;
+  display: table;
+  margin: 0 auto;
+}
+.CardTab {
+  width: calc(100% - 40px);
+  margin: 20px;
+  display: table;
+  padding: 5px;
+}
+/* --------------------------------------------------- */
+.Usertab {
+  float: left;
+  padding-right: 10px;
+  display: table;
+}
+.Usertab img {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 10px;
+  border-radius: 50%;
+
+}
+.Usertab .material-icons{
+  font-size: 17px;
+  vertical-align: bottom;
+}
+.NameUserTab {
+  font-weight: bold;
+}
+.DatePubl {
+  font-size: 10px;
+  font-style: italic;
+}
+.DatePubl2 {
+  font-size: 14px;
+
+}
+.Usertab .activ {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+/* ----------------------------Informacion del local------------------------- */
+#CardTab {
+  width: calc(100% - 40px);
+  margin: 20px;
+  display: table;
+  padding: 10px;
+}
+#Usertab {
+  float: left;
+  padding-right: 10px;
+  display: table;
+}
+#Usertab img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+#NameUserTab {
+  font-weight: bold;
+  font-size: 22px;
+}
+#starsHo .material-icons {
+  color: #fdd835;
+}
+#ContainerButt {
+  float: left;
+  clear: both;
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+#BtnFollowPerf {
+  background-color: #3D5AFE;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #fff;
+  margin-bottom: 10px;
+  clear: both;
+}
+#BtnFollowPerf:hover {
+  background-color: #536DFE;
+}
+#BtnFollowPerf:active {
+  background-color: #304FFE;
+}
+#CenterCont {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.TitleBold {
+  font-weight: bold;
+}
+#placeCity {
+  color: #9e9e9e;
+}
+/* ----------------------------FORMULARIO DE CONTACTO------------------------- */
+#FormContact {
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+}
+.InputContact {
+  border-style: none;
+  padding: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  outline: none;
+  border-bottom: 2px solid #1e88e5;
+  margin-bottom: 20px;
+}
+.InputContact:focus {
+  border-bottom: 2px solid #48c9b0;
+  transition: all 0.4s;
+}
+.AreaContact {
+  border-style: none;
+  padding: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  outline: none;
+  border-bottom: 2px solid #1e88e5;
+  margin-bottom: 20px;
+  height: 130px;
+}
+.AreaContact:focus {
+  border-bottom: 2px solid #48c9b0;
+  transition: all 0.4s;
+}
+#BtnSendForm {
+  border-style: none;
+  background-color: #3D5AFE;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: #fff;
+}
+/* ---------servicios */
+.CardTab ul li .material-icons {
+  vertical-align: bottom;
+  color: #212121;
+}
+.CardTab li {
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+}
+/* INICIO MODELO RESPONSITIVE */
+@media only screen and (max-width: 767px) {
+  .ContainerDual {
+      -ms-box-orient: horizontal;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+  }
+  .ContanerDual1 {
+      order: 2;
+      /*  ESTA PROPIEDAD PERMITE CAMBIAR EL ORDEN DE LOS DIVS, USANDO FLEX */
+      width: 99.6%;
+      clear: both;
+  }
+  .ContanerDual2 {
+      order: 1;
+      width: 100%;
+      clear: both;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+}

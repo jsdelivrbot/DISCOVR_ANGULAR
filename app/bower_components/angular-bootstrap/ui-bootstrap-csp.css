@@ -3585,7 +3585,7 @@ border-radius: 4px; */
 .btn.active {
     background-image: none;
     outline: 0;
-    
+
     color: #757575;
 }
 
@@ -4729,7 +4729,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus {
-    
+
     cursor: default;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -5282,14 +5282,14 @@ margin-bottom: 15px; */
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
 
-    
+
     background-color: transparent;
 }
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-  
+
     background-color: transparent;
 }
 
@@ -5306,7 +5306,7 @@ margin-bottom: 15px; */
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #ddd;
+    background-color: transparent;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
