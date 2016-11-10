@@ -12,10 +12,6 @@ discovrApp.controller('Login.IndexController', function(
     vm.login = login;
     vm.redirect = redirect;
 
-    function initController(){
-        //reset login status
-        AuthenticationService.Logout();
-    };
     function login(){
         //vm.loading = true;
         AuthenticationService.Login(vm.username, vm.password, function(result){
@@ -65,14 +61,12 @@ discovrApp.controller('Login.IndexController', function(
     }else{
         browserLan = 'es-es';
     }
-    //Get the selected user language and set at the begining the browser default language
-    vm.selected = browserLan;
     //Function that change the language
     vm.changeLang = function changeLangFn(opt) {
          console.log(opt);
         $translate.use('login/languages/' + opt);
     };
-    
+
     function togglePassword(e) {
       e.preventDefault();
       let passwordInput = document.getElementById('txtPassword'),
@@ -97,27 +91,33 @@ discovrApp.controller('Login.IndexController', function(
     $scope.active = 0;
     var slides = $scope.slides = [{
             image: '../../assets/files/img/main/prinsipalSlider/1.jpg',
-            id: 0
+            id: 0,
+            name: "Esto es un Nombre de Ejemplo"
         },
         {
             image: '../../assets/files/img/main/prinsipalSlider/2.jpg',
-            id: 1
+            id: 1,
+            name: "Esto es un Nombre de Ejemplo"
         },
         {
             image: '../../assets/files/img/main/prinsipalSlider/3.jpg',
-            id: 2
+            id: 2,
+            name: "Esto es un Nombre de Ejemplo"
         },
         {
             image: '../../assets/files/img/main/prinsipalSlider/4.jpg',
-            id: 3
+            id: 3,
+            name: "Esto es un Nombre de Ejemplo"
         },
         {
             image: '../../assets/files/img/main/prinsipalSlider/5.jpg',
-            id: 4
+            id: 4,
+            name: "Esto es un Nombre de Ejemplo"
         },
         {
             image: '../../assets/files/img/main/prinsipalSlider/6.jpg',
-            id: 5
+            id: 5,
+            name: "Esto es un Nombre de Ejemplo"
         }
     ];
 
@@ -128,4 +128,9 @@ discovrApp.controller('Login.IndexController', function(
 
 
     initController();
+    function initController(){
+      $translate.use('login/languages/' + browserLan);
+      //reset login status
+      AuthenticationService.Logout();
+    };
 });
