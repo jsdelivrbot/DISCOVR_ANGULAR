@@ -3,10 +3,15 @@ discovrApp.controller('Housing.IndexController', function(
   $location,
   AuthenticationService,
   $scope,
+  $uibModal,
+  $log,
+  $document,
+  $stateParams,
   $translate) {
     var vm = this;
     //local variables
     vm.move = move;
+    vm.id = $stateParams.id;
 
     // -- -- - ---- - - -Funcion para desplazar filtros
     var position = 0;
@@ -29,10 +34,12 @@ discovrApp.controller('Housing.IndexController', function(
         filler.style.left = -( position* moduleOffset) + "px";
     }
     // -- -- - ---- - - - FIN Funcion para desplazar filtros
+    //languages options
     vm.listLan = [
         {'key':'es-es','value':'Español'},
         {'key':'en-us','value':'English'}
     ];
+
     var browserLan = navigator.language; //Get browser language
     if (browserLan === 'es' || browserLan === 'es-es' || browserLan === 'es-NI'){
         browserLan = 'es-es';
@@ -48,6 +55,9 @@ discovrApp.controller('Housing.IndexController', function(
          console.log(opt);
         $translate.use('housing/languages/' + opt);
     };
+    $scope.isNavCollapsed = true;
+    $scope.isCollapsed = false;
+    $scope.isCollapsedHorizontal = false;
 
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;
@@ -88,7 +98,7 @@ discovrApp.controller('Housing.IndexController', function(
 
     function initController() {
         vm.username = $localStorage.currentUser.username;
-        $translate.use('home/languages/' + browserLan);
+        $translate.use('housing/languages/' + browserLan);
         console.log(browserLan);
         /*
         var stLan = localStorage.getItem('NG_TRANSLATE_LANG_KEY');

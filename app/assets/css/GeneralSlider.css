@@ -161,9 +161,13 @@ img {
   border-bottom: 2px solid #e0e0e0;
 }
 .AllFilterOptions {
+  height: 45px;
   float: left;
   width: 139px;
   margin-left: 10px;
+}
+.BtnLef{
+  margin-left:50px;
 }
 .RightFilterOption {
   float: right;

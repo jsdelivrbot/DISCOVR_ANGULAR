@@ -1,29 +1,55 @@
 {
-    "HomeTitle": "Inicio",
-    "WhereToGoTitle": "Dónde Ir?",
-    "SearchTitle": "Buscar",
-    "SearchPlaceHolder": "Escriba aquí...",
+  "HomeTitle": "Inicio",
+  "BrandTitle": "Discovr",
+  "WelcomeTitle": "Bienvenido",
 
-    "SettingsTitle": "Ajustes",
-    "BugsTitle": "Errores & Sugerencias",
-    "LenguageTitle": "Lenguaje",
-    "ProfileTitle": "Perfil de ",
-    "ConditionsTitle": "Padecimientos",
+  "NotificationTitle": "Notificaciones",
+  "NotificationCategoryTitle1": "Mensajes",
+  "NotificationCategoryTitle2": "Etiquetas",
+  "NotificationCategoryTitle3": "Comentarios",
+  "NotificationCategoryTitle4": "Valoraciones",
 
-    "BookTitle": "Reservar",
-    "GalleryTitle": "Galería",
-    "HowToGoingTitle": "Cómo llegar?",
-    "VirtualTourTitle": "Tour Virtual",
+  "SearchTitle": "Buscar",
+  "SearchPlaceHolder": "Escriba aquí...",
 
-     "AboutTitle": "ACERCA",
-     "ContactTitle": "CONTACTO",
-     "ActivitiesTitle": "ACTIVIDADES",
-     "ConditionsTitle": "CONDICIONES",
-     "ReviewTitle": "RESEÑAS",
-     "ExperienceTitle": "EXPERIENCIA",
-     "ServicesTitle": "SERVICIOS"
-     
-    
+  "SettingsOpt1": "Registro de Actividad",
+  "SettingsOpt2": "Configuracion",
+  "SettingsOpt3": "Cerrar Sesion",
+  "SettingsOpt4": "Ayuda",
+  "SettingsOpt5": "Reportar un Error",
+
+  "BookTitle": "Reservar",
+  "GalleryTitle": "Galería",
+  "HowToGoingTitle": "Cómo llegar?",
+  "VirtualTourTitle": "Recorrido Virtual",
+
+  "FilterTitle": "Todo",
+
+  "AboutTitle": "Acerca",
+  "ContactTitle": "Contacto",
+  "ActivitiesTitle": "Actividades",
+  "ConditionsTitle": "Condiciones",
+  "ReviewTitle": "Reseñas",
+  "ExperienceTitle": "Experiencias",
+  "ServicesTitle": "servicios",
+  "AppraisalTitle": "Valorar",
+
+  "AddressTitle": "Direccion",
+  "BookRoomTitle": "Reservar Habitacion",
+  "OkTitle": "Entendido!",
+  "PayTitle": "Reservar",
+
+  "FollowTitle": "Seguir",
+  "AddTitle": "Agregar",
+  "SendTitle": "Enviar",
+
+  "EventTitle": "Eventos",
+  "RoomTitle": "Habitaciones",
+  "HousingTitle": "Hospedaje",
+
+  "SeasonTitle1": "Verano",
+  "SeasonTitle2": "Invierno",
+  "SeasonTitle3": "Otoño",
+  "SeasonTitle4": "Primavera"
 
 }
-

@@ -4,6 +4,7 @@ discovrApp.controller('Login.IndexController', function(
     $anchorScroll,
     AuthenticationService,
     $scope,
+    $state,
     $filter,
     $translate){
 
@@ -28,10 +29,10 @@ discovrApp.controller('Login.IndexController', function(
                 AuthenticationService.GetProfile($localStorage.currentUser.id).then(function(dt){
                   localStorage.setItem('profile', dt);
                   if(dt === 1){
-                      $location.path('/');
+                      $state.go('Home', {}, {reload: true});
                   }else if(dt === 2){
                       console.log("Nestor es un genio!");
-                      $location.path('/');
+                      $state.go('Home', {}, {reload: true});
                   }
                 });
                 //GetProfile = JSON.parse(localStorage.getItem('user'));
@@ -44,7 +45,7 @@ discovrApp.controller('Login.IndexController', function(
     };
     function redirect(){
         console.log("Good luck!");
-        $location.path('/signup');
+        $location.path('welcome/signup');
     };
 
     //languages options
@@ -64,7 +65,7 @@ discovrApp.controller('Login.IndexController', function(
     //Function that change the language
     vm.changeLang = function changeLangFn(opt) {
          console.log(opt);
-        $translate.use('login/languages/' + opt);
+        $translate.use('welcome/languages/' + opt);
     };
 
     function togglePassword(e) {
@@ -129,7 +130,7 @@ discovrApp.controller('Login.IndexController', function(
 
     initController();
     function initController(){
-      $translate.use('login/languages/' + browserLan);
+      $translate.use('welcome/languages/' + browserLan);
       //reset login status
       AuthenticationService.Logout();
     };

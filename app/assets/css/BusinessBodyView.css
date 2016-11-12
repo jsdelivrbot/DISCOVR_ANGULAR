@@ -149,6 +149,7 @@ input[type="radio"] {
   display: block;
 }
 .tab-wrap label {
+  text-transform: uppercase;
   position: relative;
   display: inline-block;
   padding: 1.3em;
@@ -210,6 +211,7 @@ input[type="radio"] {
 }
 .tab-wrap [id^="tab"]:checked+label {
   z-index: 200;
+
   color: #000;
   border-bottom: 2px solid orange;
   padding-bottom: 9px;

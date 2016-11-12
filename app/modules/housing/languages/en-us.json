@@ -1,29 +1,57 @@
 {
-    "HomeTitle": "Home",
-    "WhereToGoTitle": "Where to go?",
-    "SearchTitle": "Search",
-    "SearchPlaceHolder": "Write here...",
 
-    "SettingsTitle": "Settings",
-    "BugsTitle": "Bugs & suggestions",
-    "LenguageTitle": "Language",
-    "ProfileTitle": "Profile of ",
-    "ConditionsTitle": "Conditions",
-    "ExitTitle": "Exit",
+  "HomeTitle": "Home",
+  "BrandTitle": "Discovr",
+  "WelcomeTitle": "Welcome",
 
-    "BookTitle": "Book",
-    "GalleryTitle": "Gallery",
-    "HowToGoingTitle": "How to going?",
-    "VirtualTourTitle": "Virtual tour",
+  "NotificationTitle": "Notifications",
+  "NotificationCategoryTitle1": "Messages",
+  "NotificationCategoryTitle2": "Tags",
+  "NotificationCategoryTitle3": "Comments",
+  "NotificationCategoryTitle4": "Appraisals",
 
-     "AboutTitle": "ABOUT",
-     "ContactTitle": "CONTACT",
-     "ActivitiesTitle": "ACTIVITIES",
-     "ConditionsTitle": "CONDITIONS",
-     "ReviewTitle": "REVIEW",
-     "ExperienceTitle": "EXPERIENCE",
-     "ServicesTitle": "SERVICES"
-        
+  "SearchTitle": "Search",
+  "SearchPlaceHolder": "Write here...",
+
+  "SettingsOpt1": "Activity Log",
+  "SettingsOpt2": "Settings",
+  "SettingsOpt3": "Log Out",
+  "SettingsOpt4": "Help",
+  "SettingsOpt5": "Report a Problem",
+
+  "BookTitle": "Book",
+  "GalleryTitle": "Gallery",
+  "HowToGoingTitle": "How to going?",
+  "VirtualTourTitle": "Virtual tour",
+
+  "FilterTitle": "All",
+
+  "AboutTitle": "About",
+  "ContactTitle": "Contact",
+  "ActivitiesTitle": "Activities",
+  "ConditionsTitle": "Conditions",
+  "ReviewTitle": "Reviews",
+  "ExperienceTitle": "Experiences",
+  "ServicesTitle": "Services",
+  "AppraisalTitle": "Appraisal",
+
+  "AddressTitle": "Address",
+  "BookRoomTitle": "Book Room",
+  "OkTitle": "Got It!",
+  "PayTitle": "Book",
+
+  "FollowTitle": "Follow",
+  "AddTitle": "Add",
+  "SendTitle": "Send",
+
+  "EventTitle": "Events",
+  "RoomTitle": "Rooms",
+  "HousingTitle": "Housing",
+
+  "SeasonTitle1": "Summer",
+  "SeasonTitle2": "Winter",
+  "SeasonTitle3": "Autumn",
+  "SeasonTitle4": "Spring"
+
+
 }
-
-

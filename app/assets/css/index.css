@@ -60,16 +60,23 @@ hr.separator {
     height: 100vh;
 }
 .view-animate {}
+
+.view-animate.ng-leave { z-index:9999; }
+.view-animate.ng-enter{ z-index:8888; }
+
 .view-animate.ng-enter,
 .view-animate.ng-leave {
-    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  /*-webkit-animation:scaleUp 0.5s both ease-in;
+  -moz-animation:scaleUp 0.5s both ease-in;
+  animation:scaleUp 0.5s both ease-in;*/
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .view-animate.ng-enter {
     left: 100%;
@@ -80,3 +87,16 @@ hr.separator {
 .view-animate.ng-leave.ng-leave-active {
     left: -100%;
 }
+
+/* scale up */
+@keyframes scaleUp {
+	from 		{ opacity: 0.3; transform: scale(0.8); }
+}
+@-moz-keyframes scaleUp {
+	from 		{ opacity: 0.3; -moz-transform: scale(0.8); }
+}
+@-webkit-keyframes scaleUp {
+	from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+
+/* slide in from the right */

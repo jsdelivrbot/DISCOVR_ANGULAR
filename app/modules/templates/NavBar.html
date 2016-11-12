@@ -16,7 +16,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" ui-sref="home">{{ 'BrandTitle' | translate }}</a>
+            <a class="navbar-brand" ui-sref="Home">{{ 'BrandTitle' | translate }}</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
@@ -34,11 +34,11 @@
                     <div class="HeaderContainer">
                       <a class="BtnNotification" style="float: left;" href="#"><i class="material-icons">remove_red_eye</i></a>
                       <a class="BtnNotification" style="float: right; margin-right: 5px;" href="#"><i class="material-icons">settings</i></a>
-                      <p>Notificaciones</p>
+                      <p translate>NotificationTitle</p>
                     </div>
                     <div class="NotificationBody">
                       <div class="NotificationContent">
-                        <p class="NotificationTitle">Categoría</p>
+                        <p class="NotificationTitle" translate>NotificationCategoryTitle1</p>
                         <div class="NotificationList">
                             <div class="Notification">
                                 <div class="NotificationImage"><img src="http://www.ew.com/sites/default/files/i/2013/06/26/President-Obama_0.jpg" alt=""></div>
@@ -55,7 +55,7 @@
                         </div>
                       </div>
                       <div class="NotificationContent">
-                        <p class="NotificationTitle">Categoría</p>
+                        <p class="NotificationTitle" translate>NotificationCategoryTitle2</p>
                         <div class="NotificationList">
                             <div class="Notification">
                                 <div class="NotificationImage"><img src="http://www.ew.com/sites/default/files/i/2013/06/26/President-Obama_0.jpg" alt=""></div>
@@ -72,7 +72,24 @@
                         </div>
                     </div>
                     <div class="NotificationContent">
-                      <p class="NotificationTitle">Categoría</p>
+                      <p class="NotificationTitle" translate>NotificationCategoryTitle3</p>
+                      <div class="NotificationList">
+                          <div class="Notification">
+                              <div class="NotificationImage"><img src="http://www.ew.com/sites/default/files/i/2013/06/26/President-Obama_0.jpg" alt=""></div>
+                              <input type='checkbox' class="circle"></input>
+                              <p class="NotificationOwner">Nombre Notificación</p>
+                              <p id="NotificationDate">11/12/2015 07:28 a.m.</p>
+                          </div>
+                          <div class="Notification">
+                              <div class="NotificationImage"><img src="http://www.ew.com/sites/default/files/i/2013/06/26/President-Obama_0.jpg" alt=""></div>
+                              <input type='checkbox' class="circle"></input>
+                              <p class="NotificationOwner">Nombre Notificación</p>
+                              <p id="NotificationDate">11/12/2015 07:28 a.m.</p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="NotificationContent">
+                      <p class="NotificationTitle" translate>NotificationCategoryTitle4</p>
                       <div class="NotificationList">
                           <div class="Notification">
                               <div class="NotificationImage"><img src="http://www.ew.com/sites/default/files/i/2013/06/26/President-Obama_0.jpg" alt=""></div>
@@ -109,7 +126,7 @@
                     <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="more">
 							        <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt1' | translate }}</a></li>
                       <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt2' | translate }}</a></li>
-                      <li role="menuitem"><a ui-sref="login" ng-click="">{{ 'SettingsOpt3' | translate }}</a></li>
+                      <li role="menuitem"><a ui-sref="Welcome" ng-click="">{{ 'SettingsOpt3' | translate }}</a></li>
                       <li class="divider"></li>
                       <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt4' | translate }}</a></li>
                       <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt5' | translate }}</a></li>

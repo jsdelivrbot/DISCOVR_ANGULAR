@@ -11,7 +11,7 @@ var discovrApp = angular.module('DiscovrIndex', [
     .constant('apiURL', 'https://discovr-gekkou95.c9users.io/')
     .config(config)
     .run(run);
-    function config($stateProvider, $urlRouterProvider,$translateProvider) {
+    function config($stateProvider,$urlRouterProvider,$translateProvider) {
         // Configuración de los idiomas
         var browserLan = navigator.language; //Obtiene el idioma del Navegador
         console.log(browserLan);
@@ -28,87 +28,88 @@ var discovrApp = angular.module('DiscovrIndex', [
             suffix: '.json'
         });
         $translateProvider.useLocalStorage();
-        $translateProvider.preferredLanguage('login/languages/' + browserLan);
+        $translateProvider.preferredLanguage('welcome/languages/' + browserLan);
         // here the html tag works
         $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
         // Configuración de las rutas
         // app routes
          $stateProvider
-            .state('home', {
-                url: '/',
-                templateUrl: 'modules/home/main.view.html',
-                controller: 'Home.IndexController',
-                controllerAs: 'vm'
+            .state('Welcome', {
+              url: '/welcome',
+              templateUrl: 'modules/welcome/index.view.html',
+              controller: 'Login.IndexController',
+              controllerAs: 'vm'
             })
-            .state('login', {
-                url: '/login',
-                templateUrl: 'modules/login/index.view.html',
-                controller: 'Login.IndexController',
-                controllerAs: 'vm'
+            .state('Signup', {
+              url: '/welcome/signup',
+              templateUrl: 'modules/welcome/signup/Index.View.html',
+              controller: 'Signup.IndexController',
+              controllerAs: 'vm'
             })
-            .state('signup', {
-                url: '/signup',
-                templateUrl: 'modules/signup/index.view.html',
-                controller: 'Signup.IndexController',
-                controllerAs: 'vm'
-            })
-            .state('placeView', {
-                url: '/placeview',
-                templateUrl: 'modules/places/view/PlaceView.view.html',
-                controller: 'PlaceView.IndexController',
-                controllerAs: 'vm'
-            })
-            .state('Place', {
-                url: '/place',
-                templateUrl: 'modules/places/Place.view.html',
-                controller: 'Place.IndexController',
-                controllerAs: 'vm'
-            })
-            .state('institution', {
-                url: '/institution',
-                templateUrl: 'modules/institutions/Institution.view.html',
-                controller: 'Institution.IndexController',
-                controllerAs: 'vm'
-            })
-            .state('institutionView', {
-                url: '/institutionview',
-                templateUrl: 'modules/institutions/view/InstitutionView.view.html',
-                controller: 'InstitutionView.IndexController',
-                controllerAs: 'vm'
-            })
-            .state('working', {
-                url: '/working',
-                templateUrl: 'modules/templates/working.html',
+            .state('Home', {
+              url: '/',
+              templateUrl: 'modules/home/Main.View.html',
+              controller: 'Home.IndexController',
+              controllerAs: 'vm',
+              cache: false //required
             })
             .state('Housing', {
-                url: '/housing',
-                templateUrl: 'modules/housing/Main.View.html',
-                controller: 'Housing.IndexController',
-                controllerAs: 'vm'
+              url: '/housing',
+              templateUrl: 'modules/housing/Main.View.html',
+              controller: 'Housing.IndexController',
+              controllerAs: 'vm'
             })
-         .state('HousingView', {
-                url: '/housing/view',
-                templateUrl: 'modules/housing/view/Main.View.html',
-                controller: 'HousingView.IndexController',
-                controllerAs: 'vm'
+            .state('HousingView', {
+              url: '/housing/view/:id',
+              templateUrl: 'modules/housing/view/Main.View.html',
+              controller: 'HousingView.IndexController',
+              controllerAs: 'vm'
             })
-            .state('VirtualTour', {
-                url: '/VirtualTour',
-                templateUrl: 'modules/housing/view/tour/Tour.view.html',
-                controller: 'VirtualTour.IndexController',
-                controllerAs: 'vm'
+            .state('HousingVirtualTour', {
+              url: '/housing/view/tour',
+              templateUrl: 'modules/templates/VirtualTour.View.html',
+              controller: 'HousingView.IndexController',
+              controllerAs: 'vm'
+            })
+            .state('placeView', {
+              url: '/placeview',
+              templateUrl: 'modules/places/view/PlaceView.view.html',
+              controller: 'PlaceView.IndexController',
+              controllerAs: 'vm'
+            })
+            .state('Place', {
+              url: '/place',
+              templateUrl: 'modules/places/Place.view.html',
+              controller: 'Place.IndexController',
+              controllerAs: 'vm'
+            })
+            .state('institution', {
+              url: '/institution',
+              templateUrl: 'modules/institutions/Institution.view.html',
+              controller: 'Institution.IndexController',
+              controllerAs: 'vm'
+            })
+            .state('institutionView', {
+              url: '/institutionview',
+              templateUrl: 'modules/institutions/view/InstitutionView.view.html',
+              controller: 'InstitutionView.IndexController',
+              controllerAs: 'vm'
+            })
+            .state('working', {
+              url: '/working',
+              templateUrl: 'modules/templates/working.html',
             })
             .state('Store', {
-                url: '/store',
-                templateUrl: 'modules/store/Store.view.html',
-                controller: 'Store.IndexController',
-                controllerAs: 'vm'
+              url: '/store',
+              templateUrl: 'modules/store/Store.view.html',
+              controller: 'Store.IndexController',
+              controllerAs: 'vm'
             })
             .state('StoreView', {
-                url: '/store/view',
-                templateUrl: 'modules/store/view/View.view.html',
-                controller: 'Sview.IndexController',
-                controllerAs: 'vm'
+              url: '/store/view',
+              templateUrl: 'modules/store/view/View.view.html',
+              controller: 'Sview.IndexController',
+              controllerAs: 'vm'
             });
 
          // default route
@@ -122,10 +123,10 @@ var discovrApp = angular.module('DiscovrIndex', [
         }
     // redirect to login page if not logged in and trying to access a restricted page
     $rootScope.$on('$locationChangeStart', function(event, next, current) {
-        var publicPages = ['/login'];
+        var publicPages = ['/welcome','/welcome/signup'];
         var restrictedPage = publicPages.indexOf($location.path()) === -1;
         if (restrictedPage && !$localStorage.currentUser) {
-            $location.path('/login');
+            $location.path('/welcome');
         }
     });
 }
@@ -136,7 +137,7 @@ discovrApp.config(['$provide', '$httpProvider', function($provide, $httpProvider
         return {
             'responseError': function(rejection) {
                 if (rejection.status === 401) {
-                    window.location.href = '/#/login';
+                    window.location.href = '/#/welcome';
                 }
                 return $q.reject(rejection);
             }

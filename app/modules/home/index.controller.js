@@ -1,8 +1,10 @@
 discovrApp.controller('Home.IndexController', function(
   $localStorage,
   $location,
+  $window,
   AuthenticationService,
   $scope,
+  $state,
   $translate) {
     var vm = this;
     //local variables
@@ -344,7 +346,7 @@ discovrApp.controller('Home.IndexController', function(
 
     initController();
     //Start Function
-    function initController() {
+    function initController() {      
       $translate.use('home/languages/' + browserLan);
       console.log(browserLan);
       vm.username = $localStorage.currentUser.username;
