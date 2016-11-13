@@ -1,88 +1,177 @@
-<div id="form-container">
+<div class="FondoBodyIndex" > <!-- CLASE CSS QUE ESTA EN INDEX.CSS -->
+	<!-- ----------------     IMPORT CSS FILES     ------------------------- -->
+	<link rel="stylesheet" href="../../assets/css/Welcome.css">
+	<!-- ----------------     END IMPORT FILES     ------------------------- -->
+	<div class="ContainerAlltoAll">
+	  <div class="ContentAnimated">
+			<!-- ----------------     INICIA BARRA DE MENU     ------------------------- -->
+			<div class="ContenedorMenu">
+				<nav class="navbar navbar-default" role="navigation">
+			        <div class="navbar-header">
+					<!---------------- BOTON HAMBURGUESA-->
+			            <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+			                <span class="sr-only">Toggle navigation</span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			            </button>
+									<!---------------- NOMBRE DE LA PAGINA-->
+			            <a class="navbar-brand" ui-sref="sigin">{{ 'BrandTitle' | translate }}</a>
+			        </div>
+			        <!---------------- OPCIONES DE LA PAGINA-->
+			        <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+			            <ul id="NavBarMenu" class="nav navbar-nav navbar-right">
+							<li><a href="#formsigin" prevent-default="" scroll-to="formsigin">{{ 'MenuOpt1' | translate }}</a></li>
+							<li><a href="#opt3" prevent-default="" scroll-to="opt3">{{ 'MenuOpt3' | translate }}</a></li>
+							<li><a href="#opt5" prevent-default="" scroll-to="opt5">{{ 'MenuOpt5' | translate }}</a></li											
+						<!-- -------------- OPCION DE LENGUAGE -->
+			                <li uib-dropdown>
+			                    <a id="language" href="#" uib-dropdown-toggle>
+			                        <i class="material-icons">language</i>
+			                    </a>
+								<!---------------- CARGAR LOS LENGUAJES DESDE EL CONTROLADOR-->
+								<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="language">
+									<li role="menuitem" ng-repeat="lan in vm.listLan"><a href="#" ng-click="vm.changeLang(lan.key)">{{lan.value}}</a></li>
+								</ul>
+			                </li>
+			            </ul>
+			        </div>
+			    </nav>
+			</div>
+			<!-- ----------------     FINALIZA BARRA DE MENU     ------------------------- -->
+			<!------------------- CARGAR SLIDER-->
+			<div ng-include src="'modules/templates/Slider.html'"> </div>
 
-	<!-- use ng-submit to catch the form submission and use our Angular function -->
-	<form id="signup-form" ng-submit="vm.signup()">
-		<!-- username input row -->
-		<div class="form-group">
-			<label for="username">Username</label>
-			<input type="text" class="form-control" name="username" ng-model="vm.profileData.username">
-		</div>
-		<!-- Name & surname inputs row -->
-		<div class="form-group">
-			<div>
-				<label for="name">Name</label>
-				<input type="text" class="form-control" name="name" ng-model="vm.profileData.name">
-			</div>
-			<div>
-				<label for="surname">Surname</label>
-				<input type="text" class="form-control" name="surname" ng-model="vm.profileData.surname">
-			</div>
-		</div>
-		<!-- email input row -->
-		<div class="form-group">
-			<label for="email">Email</label>
-			<input type="email" class="form-control" name="email" ng-model="vm.profileData.email">
-		</div>
-		<!-- phone input row -->
-		<div class="form-group">
-			<label for="phone">Phone</label>
-			<input type="text" class="form-control" name="phone" ng-model="vm.profileData.phone">
-		</div>
-		<!-- birthday & genre inputs row -->
-		<div class="form-group">
-			<div>				
-				<label for="name">Birthday</label>
-				<input type="date" class="form-control" name="birthday" ng-model="vm.profileData.birthday">
-			</div>
-			<div>
-				<label for="genre">Genre</label>
-				<select class="form-control" name="genre" ng-model="vm.profileData.genre">
-					<option value="1">Man</option>
-					<option value="2">Women</option>
-					<option value="3">Other?</option>
-				</select>
-			</div>
-		</div>
-		<div>
-			<select name="selectedCountry" class="form-control" ng-model="vm.selectedCountry" ng-change="vm.filterLocation(1,1)" ng-options="country.IdCountry as country.Name for country in vm.country">
-				<option value="">Select Country</option>
-			</select>
-			
-			<select name="selectedDepartment" class="form-control" ng-disabled="!vm.selectedCountry" ng-change="vm.filterLocation(2,1)" ng-model="vm.selectedDepartment" ng-options="department.IdDepartment as department.Name for department in vm.filterDepartment">
-				<option value="">Select Department/State/Province/Region</option>
-			</select>
-			
-			<select name="selectedCity" class="form-control" ng-disabled="!vm.selectedDepartment" ng-model="vm.selectedCity" ng-options="city.IdCity as city.Name for city in vm.filterCity" >
-				<option value="">Select City</option>
-			</select>
-		</div>
+<!-- ----------------     FORMULARIO DE REGISTRO    ------------------------- -->
+		<div id="formsigin">
+
+			<!-- use ng-submit to catch the form submission and use our Angular function -->
+			<form id="signup-form" ng-submit="vm.signup()">
+				<!-- username & name input row -->
+				<div class="form-group">
+					<div>
+						<label for="username">Username:</label>
+						<input type="text" class="form-control" name="username" ng-model="vm.profileData.username">
+					</div>
+					<br>
+					<div>
+						<label for="name">Name:</label>
+						<input type="text" class="form-control" name="name" ng-model="vm.profileData.name">
+					</div>
+					
+				</div>
+				<!-- email & surname inputs row -->
+				<div class="form-group">
+					<div>
+						<label for="email">Email:</label>
+						<input type="email" class="form-control" name="email" ng-model="vm.profileData.email">
+					</div>
+					<br>
+					<div>
+						<label for="surname">Surname:</label>
+						<input type="text" class="form-control" name="surname" ng-model="vm.profileData.surname">
+					</div>
+				</div>
+				<!-- birthday & country input row -->
+				<div class="form-group1">
+					<div>				
+						<label for="name">Birthday:</label>
+						<input type="date" class="form-control" name="birthday" ng-model="vm.profileData.birthday">
+					</div>
+					<br>
+					<div>
+						<label for="country">Country:</label>
+						<select name="selectedCountry" class="form-control" ng-model="vm.selectedCountry" ng-change="vm.filterLocation(1,1)" ng-options="country.IdCountry as country.Name for country in vm.country">
+						<option value="">Select Country</option>
+						</select>
+					</div>
+				</div>
+				<!-- phone & department input row -->
+				<div class="form-group1">
+					<div>
+						<label for="phone">Phone</label>
+						<input type="text" class="form-control" name="phone" ng-model="vm.profileData.phone">
+					</div>
+					<br>
+					<div>
+						<label for="department">Depto, Prov:</label>
+						<select name="selectedDepartment" class="form-control" ng-disabled="!vm.selectedCountry" ng-change="vm.filterLocation(2,1)" ng-model="vm.selectedDepartment" ng-options="department.IdDepartment as department.Name for department in vm.filterDepartment">
+						<option value="">Select Department/State/Province/Region</option>
+						</select>
+					</div>
+				</div>
+				<!-- genre & city inputs row -->
+				<div class="form-group1">
+					<div>
+						<label for="genre">Genre</label>
+						<select class="form-control" name="genre" ng-model="vm.profileData.genre">
+							<option value="1">Man</option>
+							<option value="2">Women</option>
+							<option value="3">Other?</option>
+						</select>
+					</div>
+					<br>
+					<div>
+						<label for="city">City:</label>
+						<select name="selectedCity" class="form-control" ng-disabled="!vm.selectedDepartment" ng-model="vm.selectedCity" ng-options="city.IdCity as city.Name for city in vm.filterCity" >
+						<option value="">Select City</option>
+						</select>
+					</div>
+				</div>
 		<!-- password inputs row -->
-		<div class="form-group">
-			<label for="password1">Password</label>
-			<input type="password" class="form-control" name="password1" ng-model="vm.profileData.password1">
+				<div class="form-group">
+					<label for="password1">Password</label>
+					<input type="password" class="form-control" name="password1" ng-model="vm.profileData.password1">
+				</div>
+				<!-- confirm password inputs row -->
+				<div class="form-group">
+					<label for="password2">Confirm Password</label>
+					<input type="password" class="form-control" name="password2" ng-model="vm.profileData.password2">
+				</div>
+				<!-- Here put a divider -->
+				<!-- terms & condition of the services -->
+				<p id="terms">
+					By clicking Sign Up, you agree to our <a href="#" class="SingUp">Terms</a> and that you have read our <a href="#" class="SingUp">Data Policy</a>.
+				</p>
+				<p id="login">you have an account? <a href="#" class="SingUp">Login</a></p>
+				<!-- submit button -->
+				<input type="submit" ng-disabled="vm.loading" class="btn btn-primary1" value="Registrar">
+			</form>
 		</div>
-		<!-- confirm password inputs row -->
-		<div class="form-group">
-			<label for="password2">Confirm Password</label>
-			<input type="password" class="form-control" name="password2" ng-model="vm.profileData.password2">
-		</div>
-		<!-- Here put a divider -->
-		<!-- terms & condition of the services -->
-		<p>
-			By clicking Sign Up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data Policy</a>.
-		</p>
-		<p>you have an account? <a href="#">Login</a></p>
-		<!-- submit row -->
-		<div class="form-group row">
-			<button type="submit" class="btn btn-block btn-info">Registrarse</button>
-			<a ui-sref="form.interests" class="btn btn-block btn-info">Ingresar Preferencias</a>
-			
-		</div>
-	</form>
 
+
+<!------------------- CUERPO DE LA PAGINA CON TEXTO------------------------------------------------------------>
+			<div class="ContainerText">
+				<br />
+				<div class="Txt" id="Txt1">
+					<h1>{{ 'BodyTitle1' | translate }}</h1><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
+					<picture class="ImgTitleLG">
+						<img src="http://www.hotel-r.net/im/hotel/it/welcome-5.png">
+					</picture>
+					<br />
+				</div>
+				<hr class="separator" id="opt3">
+				<br>
+				<div class="Txt">
+					<h2 id="">{{ 'BodyTitle3' | translate }}</h2><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
+				</div>
+				<hr class="separator" id="opt5">
+				<br>
+				<div class="Txt">
+					<h2>{{ 'BodyTitle5' | translate }}</h2><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam distinctio impedit debitis saepe officiis porro dolorem! Molestias aliquid natus, blanditiis autem impedit nesciunt culpa, in, a nihil explicabo</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eos maiores nam voluptatem quod nostrum voluptatibus suscipit ipsum neque doloremque tenetur, incidunt, consequuntur, voluptates eum aut est cupiditate. A, quisquam!</p>
+				</div>
+			</div>
+		</div>
+	<div class="background"></div>
+	</div>	
+	<!------------------- FIN DE CUERPO DE LA PAGINA CON TEXTO-->
 </div>
-
-<!-- show our vm.profileData as it is being typed -->
-<pre>
-{{ vm.profileData }}
-</pre>

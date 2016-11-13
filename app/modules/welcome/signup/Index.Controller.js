@@ -106,4 +106,38 @@ discovrApp.controller('Signup.IndexController', function(
         $translate.use('login/languages/' + opt);
     };
 
+    $scope.myInterval = 6000;
+    $scope.noWrapSlides = false;
+    $scope.active = 0;
+    var slides = $scope.slides = [{
+            image: '../../assets/files/img/main/prinsipalSlider/1.jpg',
+            id: 0,
+            name: "Esto es un Nombre de Ejemplo"
+        },
+        {
+            image: '../../assets/files/img/main/prinsipalSlider/2.jpg',
+            id: 1,
+            name: "Esto es un Nombre de Ejemplo"
+        },
+        {
+            image: '../../assets/files/img/main/prinsipalSlider/3.jpg',
+            id: 2,
+            name: "Esto es un Nombre de Ejemplo"
+        },
+        {
+            image: '../../assets/files/img/main/prinsipalSlider/4.jpg',
+            id: 3,
+            name: "Esto es un Nombre de Ejemplo"
+        },
+        {
+            image: '../../assets/files/img/main/prinsipalSlider/5.jpg',
+            id: 4,
+            name: "Esto es un Nombre de Ejemplo"
+        },
+        {
+            image: '../../assets/files/img/main/prinsipalSlider/6.jpg',
+            id: 5,
+            name: "Esto es un Nombre de Ejemplo"
+        }
+    ];
 });
