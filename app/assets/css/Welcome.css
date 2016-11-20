@@ -153,7 +153,7 @@
 #formsigin{
   margin-right: 10px;
 	float: right;
-	width: 420px;
+	width: 480px;
 	height: 560px;
 	max-height: 1000px;
 	background-color: rgba(33,33,33,0.7);
@@ -170,7 +170,7 @@
 }
 	.form-group{
     display: inline-block;
-    width: 200px;
+    width: 228px;
     height: 75px;
 		border: 0px ;
 		padding-left: 20px;
@@ -180,11 +180,22 @@
 }
 	.form-group1{
     display: inline-block;
-    width: 130px;
+    width: 150px;
     height: 75px;
 		border: 0px ;
 		padding-left: 20px;
 		padding-top: 30px;
+	}
+ #genre{
+	 width: 90px;	
+	 margin-left: 40px;
+	}
+	#birdth{
+	 width: 175px;
+	}
+	#tel{
+		margin-left: 40px;
+		width: 140px;
 	}
 	#terms{
 		margin-left: 10px;
