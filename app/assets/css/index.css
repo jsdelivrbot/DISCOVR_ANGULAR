@@ -22,7 +22,7 @@
     background-color: #BCBDAC;
 }
 body {
-    background-color: #fafafa;
+    background-color: #e7f4fA;
     overflow-x: hidden;
     font-size: 14px;
 }
@@ -38,7 +38,7 @@ hr.separator {
 /*------------- FIN LINEA PARA SEPARAR TEXTO ----------*/
 /*--------------- BACKGROUND-------------*/
 .FondoBodyIndex {
-    background-color: #ecf0f1;
+    background-color: #e7f4fA;
     background-attachment: fixed;
     width: 100%;
     height: 100%;

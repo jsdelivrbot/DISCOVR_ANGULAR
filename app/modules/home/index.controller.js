@@ -47,7 +47,7 @@ discovrApp.controller('Home.IndexController', function(
     $scope.isCollapsed = false;
     $scope.isCollapsedHorizontal = false;
 
-    $scope.myInterval = 6000;
+    $scope.myInterval = 10000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [{
@@ -83,7 +83,7 @@ discovrApp.controller('Home.IndexController', function(
     ];
     var currIndex = 0;
     /*------------------------------------------------------------------------------------------------*/
-    $scope.myInterval1 = 6800;
+    $scope.myInterval1 = 9800;
     $scope.noWrapSlides1 = false;
     $scope.active1 = 0;
     var slides1 = $scope.slides1 = [{
@@ -104,7 +104,7 @@ discovrApp.controller('Home.IndexController', function(
     ];
     var currIndex = 0;
     /*-------------------------------------------------------------------------------------------------*/
-    $scope.myInterval2 = 3000;
+    $scope.myInterval2 = 6000;
     $scope.noWrapSlides2 = false;
     $scope.active2 = 0;
     var slides2 = $scope.slides2 = [{
@@ -126,7 +126,7 @@ discovrApp.controller('Home.IndexController', function(
     var currIndex = 0;
 
     /*-------------------------------------------------------------------------------------------------*/
-    $scope.myInterval3 = 4500;
+    $scope.myInterval3 = 8500;
     $scope.noWrapSlides3 = false;
     $scope.active3 = 0;
     var slides3 = $scope.slides3 = [{
@@ -153,7 +153,7 @@ discovrApp.controller('Home.IndexController', function(
     var currIndex = 0;
 
     /*-------------------------------------------------------------------------------------------------*/
-    $scope.myInterval4 = 5100;
+    $scope.myInterval4 = 6100;
     $scope.noWrapSlides4 = false;
     $scope.active4 = 0;
     var slides4 = $scope.slides4 = [{
@@ -180,7 +180,7 @@ discovrApp.controller('Home.IndexController', function(
     var currIndex = 0;
 
     /*-------------------------------------------------------------------------------------------------*/
-    $scope.myInterval5 = 5700;
+    $scope.myInterval5 = 11700;
     $scope.noWrapSlides5 = false;
     $scope.active5 = 0;
     var slides5 = $scope.slides5 = [{
@@ -346,7 +346,7 @@ discovrApp.controller('Home.IndexController', function(
 
     initController();
     //Start Function
-    function initController() {      
+    function initController() {
       $translate.use('home/languages/' + browserLan);
       console.log(browserLan);
       vm.username = $localStorage.currentUser.username;

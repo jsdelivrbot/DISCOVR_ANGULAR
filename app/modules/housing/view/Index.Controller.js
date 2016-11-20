@@ -40,7 +40,14 @@ discovrApp.controller('HousingView.IndexController', function(
          console.log(opt);
         $translate.use('housing/languages/' + opt);
     };
-
+    $scope.tabIndex = 0;
+    $scope.tabs = [
+    { title:'Dynamic Title 1', content:'Dynamic content 1' },
+    { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
+  ];
+    $scope.setIndex = function($index){
+      $scope.tabIndex = $index;
+    }
     vm.animationsEnabled = true;
     $scope.isNavCollapsed = true;
     $scope.isCollapsed = false;
@@ -82,15 +89,12 @@ discovrApp.controller('HousingView.IndexController', function(
           }
         });
       }
-
-
       modalInstance.result.then(function (selectedItem) {
         vm.selected = selectedItem;
       }, function () {
         $log.info('Modal dismissed at: ' + new Date());
       });
     };
-
   vm.openComponentModal = function () {
     var modalInstance = $uibModal.open({
       animation: vm.animationsEnabled,
@@ -101,7 +105,6 @@ discovrApp.controller('HousingView.IndexController', function(
         }
       }
     });
-
     modalInstance.result.then(function (selectedItem) {
     vm.selected = selectedItem;
     }, function () {
@@ -133,7 +136,7 @@ discovrApp.controller('HousingView.IndexController', function(
       }
     ];*/
 
-    $scope.myInterval = 9000;
+    $scope.myInterval = 15000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [{
@@ -150,43 +153,4 @@ discovrApp.controller('HousingView.IndexController', function(
     var currIndex = 0;
 
     initController();
-});
-
-discovrApp.controller('ModalInstanceCtrl', function ($uibModalInstance, items) {
-  var vm = this;
-
-  vm.ok = function () {
-    $uibModalInstance.close(vm.selected.item);
-  };
-
-  vm.cancel = function () {
-    $uibModalInstance.dismiss('cancel');
-  };
-});
-
-discovrApp.component('modalComponent', {
-  templateUrl: 'MapsModal.html',
-  bindings: {
-    resolve: '<',
-    close: '&',
-    dismiss: '&'
-  },
-  controller: function () {
-    var vm = this;
-
-    vm.$onInit = function () {
-      vm.items = vm.resolve.items;
-      vm.selected = {
-        item: vm.items[0]
-      };
-    };
-
-    vm.ok = function () {
-      vm.close({$value: vm.selected.item});
-    };
-
-    vm.cancel = function () {
-      vm.dismiss({$value: 'cancel'});
-    };
-  }
 });

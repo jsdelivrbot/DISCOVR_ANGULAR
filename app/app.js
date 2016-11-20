@@ -1,4 +1,4 @@
-var discovrApp = angular.module('DiscovrIndex', [
+const discovrApp = angular.module('DiscovrIndex', [
     'ui.bootstrap',
     'ngAnimate',
     'ui.router',
@@ -66,7 +66,7 @@ var discovrApp = angular.module('DiscovrIndex', [
               controllerAs: 'vm'
             })
             .state('HousingVirtualTour', {
-              url: '/housing/view/tour',
+              url: '/housing/view/:id/tour',
               templateUrl: 'modules/templates/VirtualTour.View.html',
               controller: 'HousingView.IndexController',
               controllerAs: 'vm'

@@ -1,0 +1,18 @@
+  <!-- ---------- AQUI INICIAN LOS MODALS  ----------- -->
+  <!-- ---------- MODAL PREVIEW  ----------- -->
+  <script type="text/ng-template" id="ModalPreview.html">
+    <div class="modal-body" id="modal-body">
+      <div class="ModalContent">
+        <h1>PROBANDO</h1>
+        <h5>{{vm.preview.name}} </h5>
+        <p>
+  					{{vm.preview.about}}
+        </p>
+      </div>
+    </div>
+    <div class="modal-footer" id="modal-footer">
+      <button style="width:100%;" class="btn btn-primary1" ng-click="vm.cancel()">
+	      {{ 'OkTitle' | translate }}
+  		</button>
+    </div>
+  </script>

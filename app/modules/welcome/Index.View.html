@@ -21,21 +21,21 @@
 			        <!---------------- OPCIONES DE LA PAGINA-->
 			        <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
 			            <ul id="NavBarMenu" class="nav navbar-nav navbar-right">
-											<li><a href="#formcontent" prevent-default="" scroll-to="formcontent">{{ 'MenuOpt1' | translate }}</a></li>
-											<li><a href="#opt2" prevent-default="" scroll-to="opt2">{{ 'MenuOpt2' | translate }}</a></li>
-											<li><a href="#opt3" prevent-default="" scroll-to="opt3">{{ 'MenuOpt3' | translate }}</a></li>
-											<li><a href="#opt4" prevent-default="" scroll-to="opt4">{{ 'MenuOpt4' | translate }}</a></li>
-											<li><a href="#opt5" prevent-default="" scroll-to="opt5">{{ 'MenuOpt5' | translate }}</a></li>
-											<li><a href="#">{{ 'MenuOpt6' | translate }}</a></li>
-											<!---------------- OPCION DE LENGUAGE-->
+							<li><a href="#formcontent" prevent-default="" scroll-to="formcontent">{{ 'MenuOpt1' | translate }}</a></li>
+							<li><a href="#opt2" prevent-default="" scroll-to="opt2">{{ 'MenuOpt2' | translate }}</a></li>
+							<li><a href="#opt3" prevent-default="" scroll-to="opt3">{{ 'MenuOpt3' | translate }}</a></li>
+							<li><a href="#opt4" prevent-default="" scroll-to="opt4">{{ 'MenuOpt4' | translate }}</a></li>
+							<li><a href="#opt5" prevent-default="" scroll-to="opt5">{{ 'MenuOpt5' | translate }}</a></li>
+							<li><a href="#">{{ 'MenuOpt6' | translate }}</a></li>
+							<!---------------- OPCION DE LENGUAGE-->
 			                <li uib-dropdown>
-			                    <a id="language" href="#" uib-dropdown-toggle>
-			                        <i class="material-icons">language</i>
-			                    </a>
-													<!---------------- CARGAR LOS LENGUAJES DESDE EL CONTROLADOR-->
-													<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="language">
-										        <li role="menuitem" ng-repeat="lan in vm.listLan"><a href="#" ng-click="vm.changeLang(lan.key)">{{lan.value}}</a></li>
-									      	</ul>
+								<a id="language" href="#" uib-dropdown-toggle>
+									<i class="material-icons">language</i>
+								</a>
+								<!---------------- CARGAR LOS LENGUAJES DESDE EL CONTROLADOR-->
+								<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="language">
+									<li role="menuitem" ng-repeat="lan in vm.listLan"><a href="#" ng-click="vm.changeLang(lan.key)">{{lan.value}}</a></li>
+								</ul>
 			                </li>
 			            </ul>
 			        </div>

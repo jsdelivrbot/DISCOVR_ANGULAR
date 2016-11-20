@@ -12,6 +12,19 @@ discovrApp.controller('Housing.IndexController', function(
     //local variables
     vm.move = move;
     vm.id = $stateParams.id;
+    vm.preview = {
+      name:'Hotel Example Name',
+      about:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      appraisal: 4.5,
+      tags:[
+        {tag:'wifi',name:'Wifi'},
+        {tag:'local_dining',name:'Restaurant'},
+        {tag:'drive_eta',name:'Garage'},
+        {tag:'personal_video',name:'TV'},
+        {tag:'casino',name:'Casino'},
+        {tag:'fitness_center',name:'Gym'}
+      ]
+    };
 
     // -- -- - ---- - - -Funcion para desplazar filtros
     var position = 0;
@@ -59,7 +72,7 @@ discovrApp.controller('Housing.IndexController', function(
     $scope.isCollapsed = false;
     $scope.isCollapsedHorizontal = false;
 
-    $scope.myInterval = 5000;
+    $scope.myInterval = 15000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [{
@@ -106,4 +119,46 @@ discovrApp.controller('Housing.IndexController', function(
         var lang = stLan.substr((szLanLan - 5), szLanLan);
         localStorage.setItem('NG_TRANSLATE_LANG_KEY', 'housing/languages/' + lang);*/
     };
+    vm.open = function (type, size, parentSelector) {
+      var parentElem = parentSelector ?
+        angular.element($document[0].querySelector('.ModalOpt ' + parentSelector)) : undefined;
+      if(type === "preview") {
+        var modalInstance = $uibModal.open({
+          animation: vm.animationsEnabled,
+          ariaLabelledBy: 'modal-title',
+          ariaDescribedBy: 'modal-body',
+          templateUrl: 'ModalPreview.html',
+          controller: 'ModalInstanceCtrl',
+          controllerAs: 'vm',
+          size: size,
+          appendTo: parentElem,
+          resolve: {
+            items: function () {
+              return vm.items;
+            }
+          }
+        });
+      }
+    modalInstance.result.then(function (selectedItem) {
+      vm.selected = selectedItem;
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
+    });
+  };
+  vm.openComponentModal = function () {
+    var modalInstance = $uibModal.open({
+      animation: vm.animationsEnabled,
+      component: 'modalComponent',
+      resolve: {
+        items: function () {
+          return vm.items;
+        }
+      }
+    });
+    modalInstance.result.then(function (selectedItem) {
+      vm.selected = selectedItem;
+    }, function () {
+      $log.info('modal-component dismissed at: ' + new Date());
+    });
+  };
 });
