@@ -258,6 +258,7 @@
   	margin-top: 0px;
   	position: inherit;
   	margin-bottom: 70px;
+		Display:table;
   }
   .inputTex{
   	width: 90%;
@@ -319,5 +320,6 @@
   .ImgTitleLG img{
   	height: 100%;
   }
+
 }
 /* ------- FIN DE LOS ESTILOS QUE SE APLICAN CUANDO LA PAGINA TIENE UN ANCHO DE 765PX (VISTA MOBIL) -----------*/
