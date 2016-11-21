@@ -110,6 +110,13 @@ const discovrApp = angular.module('DiscovrIndex', [
               templateUrl: 'modules/store/view/View.view.html',
               controller: 'Sview.IndexController',
               controllerAs: 'vm'
+            })
+
+            .state('BusinessHome', {
+              url: '/business/home',
+              templateUrl: 'module2/home/home.view.html',
+              controller: 'BusinessHome.IndexController',
+              controllerAs: 'vm'
             });
 
          // default route
