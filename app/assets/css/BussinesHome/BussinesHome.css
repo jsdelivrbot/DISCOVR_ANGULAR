@@ -25,8 +25,32 @@
 .menuHome li div{
 	position: relative;
 	margin-top: -40px;
+	display: table;
+	margin-left: 90px;
+	border: 2px solid  #fff;
+	border-radius: 50%;
+    width: 20px;
+    min-height: 18px;
+    font-size: 11px;
 
 }
+
+.menuHome li:nth-child(1) div{
+	margin-left: 94px;
+}
+
+.menuHome li:nth-child(2) div{
+	margin-left: 92px;
+}
+
+.menuHome li:nth-child(3) div{
+	margin-left: 100px;
+}
+
+.menuHome li:nth-child(6) div{
+	margin-left: 100px;
+}
+
 
 .menuHome li .material-icons{
 	vertical-align: bottom;
