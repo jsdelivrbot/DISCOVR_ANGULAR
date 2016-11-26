@@ -1,4 +1,4 @@
-discovrApp.controller('BusinessHome.IndexController', function(
+discovrApp.controller('BusinessWelcome.IndexController', function(
   $localStorage,
   $location,
   $window,

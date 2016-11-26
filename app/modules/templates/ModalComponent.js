@@ -1,9 +1,18 @@
 discovrApp.component('modal', {
     templateUrl: 'modules/templates/Modal.html',
+    controller: MyComponentController,
+    controllerAs: 'vm',
     bindings: {
-      DataPreview: "@"
-    }
+      preview: "="
+    }    
   });
+
+  function MyComponentController() {
+    var vm = this;
+    
+    vm.title = "I'm the component controller"
+    console.log(vm.preview.name);
+  }
   discovrApp.controller('Modal.Controller', function(
     $uibModal,
     $log,

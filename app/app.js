@@ -112,10 +112,10 @@ const discovrApp = angular.module('DiscovrIndex', [
               controllerAs: 'vm'
             })
 
-            .state('BusinessHome', {
-              url: '/business/home',
-              templateUrl: 'module2/home/home.view.html',
-              controller: 'BusinessHome.IndexController',
+            .state('BusinessWelcome', {
+              url: '/business/welcome',
+              templateUrl: 'module2/welcome/index.view.html',
+              controller: 'BusinessWelcome.IndexController',
               controllerAs: 'vm'
             });
 
@@ -130,7 +130,7 @@ const discovrApp = angular.module('DiscovrIndex', [
         }
     // redirect to login page if not logged in and trying to access a restricted page
     $rootScope.$on('$locationChangeStart', function(event, next, current) {
-        var publicPages = ['/welcome','/welcome/signup'];
+        var publicPages = ['/welcome','/welcome/signup','/business/welcome'];
         var restrictedPage = publicPages.indexOf($location.path()) === -1;
         if (restrictedPage && !$localStorage.currentUser) {
             $location.path('/welcome');
