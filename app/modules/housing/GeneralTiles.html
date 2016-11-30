@@ -1,24 +1,11 @@
+
 <div>
-  <modal id="ModalPreview" preview="vm.preview"></modal>
+  
   <h2 class="TitleCont1">HOTELES</h2> <!-- Categoria o clasificacion -->
   <!-- Contenedor de los Tiles de esas categorias -->
-  <div ng-controller="Modal.Controller" class="TilesSections">
+  <div class="TilesSections">
     <!-- Tiles -->
-    <a ng-click="vm.open('preview','lg')">
-      <div class="TileSite1">
-        <div class="TileSitesContenido">
-          <div class="slider">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-o/09/a3/cb/4f/hotel-don-vito.jpg" alt="" class="header-image">
-            <div class="BlurredTileBar"></div>
-            <span class="SpanTitleBis" translate>Hotel Hex</span>
-            <div class="SpanStar">
-               <span >4 <i class="material-icons">star</i></span>
-               <a href="" class="FollowLink"><span class="SpanFollow"><i class="material-icons">favorite</i></span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
+    <tile-general ng-repeat="store in vm.preview" info="store"></tile-general>
     <!-- Tiles -->
     <a ui-sref="HousingView">
       <div class="TileSite1">

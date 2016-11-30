@@ -51,7 +51,93 @@ hr.separator {
     background-position: center center;
     background-repeat: no-repeat;
 }
+/* ----------------CODIGO DE LA VENTANA MODAL */
+#modal-body {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  transition: all .5s;
+  border-radius: 0px;
+  padding: 0px;
+  padding-bottom: 10px;
+}
+#modal-body div img {
+    height: 296px;
+}
+.modal-body .ModalContent {
+    border-bottom: 0px;
+    padding: 10px;
+}
+.modal-body .ModalContent p {
+  margin-left: 5%;;
+  font-size: 0.9em;
+}
+.modal-body .ModalContent h5 {
+  font-weight: bold;
+}
+#modal-footer {
+    margin-top: -1px;
+    border-radius: 0px;
+    padding:0px;
+    cursor: pointer;
+    margin-bottom: -10px;
 
+}
+.btn-primary1 {
+	outline:0px;
+	padding: 15px;
+	text-align: center;
+	width: 100%;
+	border-style: none;
+	background-color: #1565c0;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 17px;
+	cursor: pointer;
+}
+.btn-primary1:hover {
+	background-color: rgba(25,118,210,1.0);
+	color: #fff;
+}
+.btn-primary1:active {
+	background-color:rgba(30,136,229,1);
+	color: #fff;
+}
+/*---------     MODAL PREVIEW DESIGN */
+.mRate {
+    margin-top: -290px;
+    margin-right: 3px;
+    float: right;
+    border-radius: 50%;    
+    width: 55px;
+    height: 55px;
+    padding: 8px;
+    position:relative;
+    z-index: 99;
+    background: #FFC107;    
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+.mClose {
+    margin-top: -290px;
+    margin-left: 3px;
+    float: left;
+    position:relative;
+    z-index: 99;  
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor:pointer
+}
+
+.ModalContent ul li {
+    display: inline-block;
+    margin-left: 5%;
+}
+/* ESTILOS PARA EL MODELO RESPONSITIVE */
+@media only screen and (max-width: 767px) {
+	
+}
 /*-----------NG ANIMATE---------------------------*/
 .view-animate-container {
     position: relative;

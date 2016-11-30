@@ -12,10 +12,12 @@ discovrApp.controller('Housing.IndexController', function(
     //local variables
     vm.move = move;
     vm.id = $stateParams.id;
-    vm.preview = {
-      name:'Hotel Example Name',
+    vm.preview = [
+      {name:'Hotel Example Name 1',
       about:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       appraisal: 4.5,
+      id: 'HousingView',
+      image: 'http://theweekendertravel.com/wp-content/uploads/2015/11/tribal-hotel-nicaragua-9-1.jpg',
       tags:[
         {tag:'wifi',name:'Wifi'},
         {tag:'local_dining',name:'Restaurant'},
@@ -23,8 +25,35 @@ discovrApp.controller('Housing.IndexController', function(
         {tag:'personal_video',name:'TV'},
         {tag:'casino',name:'Casino'},
         {tag:'fitness_center',name:'Gym'}
-      ]
-    };
+      ]},
+      {name:'Hotel Example Name 2',
+      about:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      appraisal: 4.5,
+      id: 'HousingView',
+      image: 'http://www.thefloridahotelorlando.com/var/floridahotelorlando/storage/images/media/images/photo-gallery/hotel-images/florida-hotel-orlando-night/27177-1-eng-US/Florida-Hotel-Orlando-Night.jpg',
+      tags:[
+        {tag:'wifi',name:'Wifi'},
+        {tag:'local_dining',name:'Restaurant'},
+        {tag:'drive_eta',name:'Garage'},
+        {tag:'personal_video',name:'TV'},
+        {tag:'casino',name:'Casino'},
+        {tag:'fitness_center',name:'Gym'}
+      ]},
+      {name:'Hotel Example Name 3',
+      about:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      appraisal: 4.5,
+      id: 'HousingView',
+      image: 'http://caminoreal.com.ni/wp-content/uploads/2015/09/Hotel_Camino_Real_lobby2-1200x450.jpg',
+      tags:[
+        {tag:'wifi',name:'Wifi'},
+        {tag:'local_dining',name:'Restaurant'},
+        {tag:'drive_eta',name:'Garage'},
+        {tag:'personal_video',name:'TV'},
+        {tag:'casino',name:'Casino'},
+        {tag:'fitness_center',name:'Gym'}
+      ]},
+    ];
+    vm.lorem = 'lorem ipsiano';
 
     // -- -- - ---- - - -Funcion para desplazar filtros
     var position = 0;
@@ -119,46 +148,6 @@ discovrApp.controller('Housing.IndexController', function(
         var lang = stLan.substr((szLanLan - 5), szLanLan);
         localStorage.setItem('NG_TRANSLATE_LANG_KEY', 'housing/languages/' + lang);*/
     };
-    vm.open = function (type, size, parentSelector) {
-      var parentElem = parentSelector ?
-        angular.element($document[0].querySelector('.ModalOpt ' + parentSelector)) : undefined;
-      if(type === "preview") {
-        var modalInstance = $uibModal.open({
-          animation: vm.animationsEnabled,
-          ariaLabelledBy: 'modal-title',
-          ariaDescribedBy: 'modal-body',
-          templateUrl: 'ModalPreview.html',
-          controller: 'ModalInstanceCtrl',
-          controllerAs: 'vm',
-          size: size,
-          appendTo: parentElem,
-          resolve: {
-            items: function () {
-              return vm.items;
-            }
-          }
-        });
-      }
-    modalInstance.result.then(function (selectedItem) {
-      vm.selected = selectedItem;
-    }, function () {
-      $log.info('Modal dismissed at: ' + new Date());
-    });
-  };
-  vm.openComponentModal = function () {
-    var modalInstance = $uibModal.open({
-      animation: vm.animationsEnabled,
-      component: 'modalComponent',
-      resolve: {
-        items: function () {
-          return vm.items;
-        }
-      }
-    });
-    modalInstance.result.then(function (selectedItem) {
-      vm.selected = selectedItem;
-    }, function () {
-      $log.info('modal-component dismissed at: ' + new Date());
-    });
-  };
+
+
 });

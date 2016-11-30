@@ -53,64 +53,6 @@ discovrApp.controller('HousingView.IndexController', function(
     $scope.isCollapsed = false;
     $scope.isCollapsedHorizontal = false;
 
-    vm.open = function (type, size, parentSelector) {
-      var parentElem = parentSelector ?
-        angular.element($document[0].querySelector('.ModalOpt ' + parentSelector)) : undefined;
-      if(type === "book"){
-        var modalInstance = $uibModal.open({
-          animation: vm.animationsEnabled,
-          ariaLabelledBy: 'modal-title',
-          ariaDescribedBy: 'modal-body',
-          templateUrl: 'BookModal.html',
-          controller: 'ModalInstanceCtrl',
-          controllerAs: 'vm',
-          size: size,
-          appendTo: parentElem,
-          resolve: {
-            items: function () {
-              return vm.items;
-            }
-          }
-        });
-      }else{
-        var modalInstance = $uibModal.open({
-          animation: vm.animationsEnabled,
-          ariaLabelledBy: 'modal-title',
-          ariaDescribedBy: 'modal-body',
-          templateUrl: 'MapsModal.html',
-          controller: 'ModalInstanceCtrl',
-          controllerAs: 'vm',
-          size: size,
-          appendTo: parentElem,
-          resolve: {
-            items: function () {
-              return vm.items;
-            }
-          }
-        });
-      }
-      modalInstance.result.then(function (selectedItem) {
-        vm.selected = selectedItem;
-      }, function () {
-        $log.info('Modal dismissed at: ' + new Date());
-      });
-    };
-  vm.openComponentModal = function () {
-    var modalInstance = $uibModal.open({
-      animation: vm.animationsEnabled,
-      component: 'modalComponent',
-      resolve: {
-        items: function () {
-          return vm.items;
-        }
-      }
-    });
-    modalInstance.result.then(function (selectedItem) {
-    vm.selected = selectedItem;
-    }, function () {
-      $log.info('modal-component dismissed at: ' + new Date());
-    });
-  };
 
     /*$scope.dataArray = [
       {

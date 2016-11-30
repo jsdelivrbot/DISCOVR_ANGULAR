@@ -1,0 +1,26 @@
+<div class="modal-body" id="modal-body">
+    <div>        
+        <img ng-src="{{ $ctrl.modalData.image }}" alt="" class="">
+        <span class="mClose">
+            <a ng-click="$ctrl.handleClose()"><i class="material-icons">close</i></a>
+        </span>
+        <span class="mRate">
+            {{ $ctrl.modalData.appraisal }} 
+            <i class="material-icons">star</i>
+        </span>
+        <div class="BlurredTileBar"></div>
+        <span class="SpanTitleBis" translate> {{ $ctrl.modalData.name }} </span>
+    </div>
+    <div class="ModalContent">
+        <h5> About: </h5> <p>{{ $ctrl.modalData.about }}</p>           
+        <h5> Tags: </h5> 
+        <ul>                
+            <li ng-repeat="tag in $ctrl.modalData.tags">
+                <i class="material-icons" tooltip-placement="bottom" uib-tooltip="{{ tag.name }}"> {{ tag.tag }} </i>
+            </li>
+        </ul>
+    </div>
+    <div class="modal-footer" id="modal-footer">
+        <a style="width:100%;" class="btn btn-primary1" ui-sref="{{$ctrl.modalData.id}}" ng-click="$ctrl.handleClose()"> Preview </a>
+    </div>        
+</div>

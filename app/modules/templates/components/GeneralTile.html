@@ -1,0 +1,16 @@
+<!-- Tile HTML-->
+<a ng-click="$ctrl.open($ctrl.info)">
+    <div class="TileSite1">
+        <div class="TileSitesContenido">
+            <div class="slider">
+                <img src="{{ $ctrl.info.image }}" alt="" class="header-image">
+                <div class="BlurredTileBar"></div>
+                <span class="SpanTitleBis" translate> {{ $ctrl.info.name }} </span>
+                <div class="SpanStar">
+                    <span > {{ $ctrl.info.appraisal }} <i class="material-icons">star</i></span>
+                    <a href="" class="FollowLink"><span class="SpanFollow"><i class="material-icons">favorite</i></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
