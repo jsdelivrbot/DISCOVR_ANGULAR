@@ -54,7 +54,6 @@
 
 .menuHome li .material-icons{
 	vertical-align: bottom;
-	font-size: 35px;
 	margin-right: 5px;
 }
 
@@ -146,10 +145,10 @@ margin-top:-110px;
 	margin-top:15px;
 	text-align:center;
 	vertical-align: middle;
+	font-weight: bold;
 	
 }
 .modulebar a  .material-icons{
-	font-size: 35px;
 	margin-top:-5px;
 	margin-right:15px;
 	vertical-align: middle;
