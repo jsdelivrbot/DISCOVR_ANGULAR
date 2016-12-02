@@ -8,7 +8,24 @@ discovrApp.controller('HousingView.IndexController', function(
   $document,
   $translate) {
     var vm = this;
+    //local variables
+    vm.book = {
+      icon: 'library_books',
+      tile: 'BookTitle',
+      modal: 'book'
+    };
+    vm.map = {
+      icon: 'near_me',
+      tile: 'HowToGoingTitle',
+      modal: 'map'
+    };
+    vm.mapInfo = {
+      coordinate: "http://www.openstreetmap.org/export/embed.html?bbox=-86.35768353939058%2C13.093481547864359%2C-86.35357439517976%2C13.09663739897683&amp;layer=mapnik",
+      address: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    };
+    vm.bookInfo = {
 
+    };
     function initController() {
         vm.username = $localStorage.currentUser.username;
         $translate.use('housing/languages/' + browserLan);

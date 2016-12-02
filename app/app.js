@@ -1,6 +1,7 @@
 const discovrApp = angular.module('DiscovrIndex', [
     'ui.bootstrap',
     'ngAnimate',
+    'ngSanitize',
     'ui.router',
     'ngMessages',
     'ngStorage',

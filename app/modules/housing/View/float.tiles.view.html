@@ -1,41 +1,6 @@
 <!-- TILES POCICIONADOS SOBRE EL SLIDER-->
 <ul class="ModalOpt">
-  <!-- ---------- AQUI INICIAN LOS MODALS  ----------- -->
-  <!-- ---------- MODAL DE MAPA  ----------- -->
-  <script type="text/ng-template" id="MapsModal.html">
-    <div class="modal-body" id="modal-body">
-      <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-86.35768353939058%2C13.093481547864359%2C-86.35357439517976%2C13.09663739897683&amp;layer=mapnik" ></iframe><br/>
-      <div class="ModalContent">
-        <h5>{{ 'AddressTitle' | translate }}: </h5>
-        <p>
-  					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </div>
-    </div>
-    <div class="modal-footer" id="modal-footer">
-      <button style="width:100%;" class="btn btn-primary1" ng-click="vm.cancel()">
-	      {{ 'OkTitle' | translate }}
-  		</button>
-    </div>
-  </script>
-  <!-- ---------- MODAL DE RESERVACION  ----------- -->
-  <script type="text/ng-template" id="BookModal.html">
-    <div class="modal-body" id="modal-body">
-      <div class="ModalContent">
-        <br/>
-        <h5>{{ 'BookRoomTitle' | translate }}:</h5>
-        <p>
-  					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </div>
-    </div>
-    <div class="modal-footer" id="modal-footer">
-      <button style="width:100%;" class="btn btn-primary1" ng-click="vm.cancel()">
-				{{ 'PayTitle' | translate }}
-  		</button>
-    </div>
-  </script>
-  <!-- ---------- FIN DE LOS MODALES  ----------- -->
+ 
   <!-- ---------- TILES FLOTANTES SOBRE EL CAROUSEL  ----------- -->
   <!-- ---------- TILES FLOTANTES CON LAS CARACTERISTICAS DE UN NEGOCIO  ----------- -->
   <li id="DobleTile">
@@ -67,25 +32,14 @@
   </li>
   <!-- ---------- TILES FLOTANES DE OPCIONES (RESERVACION, MAPAS, RECORRIDOS VIRTUALES)  ----------- -->
 <!-- --------------- ------------------------------------------ -->
-  <a ng-click="vm.open('book','lg')"><li class="scale">
-    <div class="LiContainer">
-      <i class="material-icons">library_books</i>
-    </div>
-    <div class="TitleDiv"Translate>BookTitle</div>
-  </li></a>
+  <float-tile info="vm.bookInfo" modal="vm.book.modal" tile="vm.book.tile" icon="vm.book.icon"></float-tile>
+  <float-tile info="vm.mapInfo" modal="vm.map.modal" tile="vm.map.tile" icon="vm.map.icon"></float-tile>
 
   <a ui-sref="working"><li class="scale">
     <div class="LiContainer">
       <i class="material-icons">panorama</i>
     </div>
-    <div class="TitleDiv"Translate>GalleryTitle</div>
-  </li></a>
-
-  <a ng-click="vm.open('map')"><li class="scale">
-    <div class="LiContainer">
-      <i class="material-icons">near_me</i>
-    </div>
-    <div class="TitleDiv" translate>HowToGoingTitle</div>
+    <div class="TitleDiv" translate>GalleryTitle</div>
   </li></a>
 
   <a ui-sref="HousingVirtualTour"><li class="scale">
