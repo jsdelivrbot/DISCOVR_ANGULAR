@@ -2,6 +2,9 @@
     
     <div class="ModalContent" >
         <h4 class="mTitle">Booking</h4>
+        <span class="mClose" style="margin-top:-35px;">
+            <a ng-click="$ctrl.handleClose()"><i class="material-icons">close</i></a>
+        </span>
         <hr class="separator" />
         <br/>
         <div class="mBook">
@@ -46,29 +49,75 @@
                     <div class="roomCard">
                         <div class="imgSection">
                            <img src="http://miamihotelsweb.com/wp-content/uploads/2016/02/WOW-690x380-Room-HR-Hotel-Room-Partial-Ocean-View-View-Refreshed.jpg" style="height:120px;">
+                           <span class="card-media-tag card-media-tag-orange">Familiar</span>
                         </div>
                         <div class="bodyCard">
                             <div class="cardContent">
-                                <label> Room Number: 404 </label>
-                                <span sytle="font-size:16px;"><i class="material-icons md-16" style="vertical-align: middle;">people</i>: 02 </span>
-                                <ul>                
+                                <span class="cardHeader"> 
+                                    <label>Room Number: 404</label> 
+                                    <span class="righInfo">
+                                        <i class="material-icons md-16" style="vertical-align: middle;">people</i>: 02 
+                                    </span>
+                                </span>                                                                
+                                <ul class="tagList">                
                                     <li>
                                         <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
                                         <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
                                         <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
                                         <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
                                         <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
-                                        <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
-                                        <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
-                                    </li>
+                                        <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i> 
+                                        <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>                                                                              
+                                    </li>        
                                 </ul>
                             </div>
-                            <div class="optBAr">
-                                <span class="mInfo1">US$ 10,000</span>
-                                <a href="#" class="opt1">remove</a>
+                            <div class="optBAr">                                
+                                <span class="card-button card-button-info">
+                                    Price: US$ 000,000,00
+                                </span>
+                                <a href="#/" class="card-button card-button-link">
+                                   Remove 
+                                </a>
                             </div>
                         </div>
                     </div>
+                    <div class="roomCard">
+                        <div class="imgSection">
+                           <img src="http://miamihotelsweb.com/wp-content/uploads/2016/02/WOW-690x380-Room-HR-Hotel-Room-Partial-Ocean-View-View-Refreshed.jpg" style="height:120px;">
+                           <span class="card-media-tag card-media-tag-orange">Familiar</span>
+                        </div>
+                        <div class="bodyCard">
+                            <div class="cardContent">
+                                <span class="cardHeader"> 
+                                    <label>Room Number: 404</label> 
+                                    <span class="righInfo">
+                                        <i class="material-icons md-16" style="vertical-align: middle;">people</i>: 02 
+                                    </span>
+                                </span>                                                                
+                                <ul class="tagList">                
+                                    <li>
+                                        <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
+                                        <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
+                                        <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
+                                        <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
+                                        <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>
+                                        <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i> 
+                                        <i class="material-icons" tooltip-placement="bottom" uib-tooltip="Text">wifi</i>                                                                              
+                                    </li>        
+                                </ul>
+                            </div>
+                            <div class="optBAr">                                
+                                <span class="card-button card-button-info">
+                                    Price: US$ 000,000,00
+                                </span>
+                                <a href="#/" class="card-button card-button-link">
+                                   Remove 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
             </div>
             <!-- Here put a divider -->
@@ -80,7 +129,7 @@
     </div>
 </div>
 <div class="modal-footer" id="modal-footer">
-    <button style="width:100%;" class="btn btn-primary1" ng-click="vm.cancel()">
+    <button style="width:100%;" class="btn btn-primary1" ng-click="$ctrl.handleClose()">
             {{ 'PayTitle' | translate }}
     </button>
 </div>

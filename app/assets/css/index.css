@@ -160,29 +160,31 @@ hr.separator {
 }
 /*---------     MODAL  DESIGN */
 .optBAr {    
-    margin-top: 22px;
+    margin-top: 3px;
     width: 100%;    
-    position: inherit;
-    background-color:yellow;
+    position: relative;
+}
+.righInfo {
+    float: right;
+    margin-top: -30px;
 }
 .cardContent{
-    padding: 5px;
+    padding: 5px 5px 3px 15px;
 }
-.mInfo1 {
-    background-color:green;
-    padding: 0px 5px 0px 5px;
-    width: 49%;
-}
-.opt1 {
-    background-color: red;
-    padding: 0px 5px 0px 5px;
-    width: 49%;
+.cardHeader {
+    font-size: 0.9em;    
 }
 .roomCard {
-    background-color: white;
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
     color:black;
     height: 120px;
+    width: 375px;
     display: inline-block;
+}
+.tagList{
+    margin-top: 15px;
+    display: table;
 }
 .imgSection {
     float: left;
@@ -287,3 +289,63 @@ hr.separator {
 }
 
 /* slide in from the right */
+.card-button {
+  color: #616161;
+  display: inline-block;
+  font-weight: 500;
+  padding: 3px 10px 3px 10px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 200ms ease-out;
+}
+
+.card-button svg {
+  fill: #9C948A;
+  transition: all 200ms ease-out;
+}
+
+.card-button-cta {
+  background-color: #EF9A9A;
+  border-radius: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+  color: #fff;
+}
+
+.card-button-cta:hover {
+  box-shadow: 1px 5px 8px rgba(0, 0, 0, .18);
+  background-color: #F44336;
+}
+.card-button-info:hover {
+    background-color: rgba(178,223,219, 0.8);
+    color: #009688;
+}
+.card-button-link:hover {
+    background-color: rgba(255,205,210, 0.8);
+    color: #F44336;
+}
+
+.card-button-link:hover svg {
+  fill: #F44336;
+}
+.card-media-tag {
+  border-radius: 2px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .22);
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .4px;
+  padding: 5px 8px;
+  position: relative;
+  left: -55px;
+  text-transform: uppercase;
+  top: -45px;
+}
+
+.card-media-tag-orange {
+  background-color: #FF982C;
+  color: #FFE111;
+}
+/*-----------------------  Card Style    -----------------------*/
+
