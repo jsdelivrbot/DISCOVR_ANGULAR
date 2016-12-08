@@ -119,127 +119,19 @@
 }
 .ContanerDual1 {
   float: left;
-  width: 66.4%
+  width: 66.4%; 
 }
 .ContanerDual2 {
     float: right;
     width: 33.6%
 }
-.page-wrap {
-  width: 100%;
-  margin: 0 auto;
-  font-weight: normal;
-}
-input[type="radio"] {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-.tab-wrap {
-  width: 100%;
-  float: none;
-  list-style: none;
-  position: relative;
-  margin: 0 auto;
-  padding: 0;
-  text-align: left;
-}
-.tab-wrap li {
-  float: left;
-  display: block;
-}
-.tab-wrap label {
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-  padding: 1.3em;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 100;
-  cursor: pointer;
-  line-height: 1;
-}
-.label-1 {
-  z-index: 100;
-}
-.label-2 {
-  z-index: 90;
-}
-.label-3 {
-  z-index: 80;
-}
-.label-4 {
-  z-index: 70;
-}
-.label-5 {
-  z-index: 70;
-}
-.label-6 {
-  z-index: 70;
-}
-.label-7 {
-  z-index: 70;
-}
-.label-8 {
-  z-index: 70;
-}
-.tab-wrap label:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 10px;
-  left: 0;
-  z-index: -1;
-  background-color: #3D5AFE;
-  cursor: pointer;
-  /* border-right: 1px solid #fefefe; */
-}
-.tab-wrap .tab-content {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-  z-index: 200;
-  display: none;
-  overflow: hidden;
-  width: 100%;
-  position: absolute;
-  top: 52px;
-  left: 0;
-  padding: 10px;
-  background: #fff;
-  max-height: 350px;
-  overflow-y:auto;
-}
-.tab-wrap [id^="tab"]:checked+label {
-  z-index: 200;
 
-  color: #000;
-  border-bottom: 2px solid orange;
-  padding-bottom: 9px;
-  background-color: #fff;
-  transition: all 0.3s;
-  height: 52px;
-}
-.tab-wrap [id^="tab"]:checked+label:before {
-  background: #fff;
-  transition: all 0.3s;
-}
-.tab-wrap [id^="tab"]:checked~.tab-content {
-  display: block;
-  transition: all 0.8s;
-}
-/* rellena con color el espacio que sobra en los tabs al lado derecho */
-#BackColor {
-  width: 95%;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-  background-color: #3D5AFE;
-  display: table;
-  margin: 0 auto;
-}
 .CardTab {
-  width: calc(100% - 40px);
-  margin: 20px;
+  width: 100%;
+  height: 90%;
   display: table;
   padding: 5px;
+  font-size: 14px;
 }
 /* --------------------------------------------------- */
 .Usertab {
@@ -256,7 +148,7 @@ input[type="radio"] {
 
 }
 .Usertab .material-icons{
-  font-size: 17px;
+  font-size: 16px;
   vertical-align: bottom;
 }
 .NameUserTab {
@@ -298,7 +190,7 @@ input[type="radio"] {
 }
 #NameUserTab {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 16px;
 }
 #starsHo .material-icons {
   color: #fdd835;
@@ -406,11 +298,13 @@ input[type="radio"] {
       /*  ESTA PROPIEDAD PERMITE CAMBIAR EL ORDEN DE LOS DIVS, USANDO FLEX */
       width: 99.6%;
       clear: both;
+      font-size: 14px;
   }
   .ContanerDual2 {
       order: 1;
       width: 100%;
       clear: both;
+      font-size: 14px;
   }
   ::-webkit-scrollbar {
     width: 0px;

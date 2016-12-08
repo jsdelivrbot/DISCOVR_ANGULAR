@@ -1,10 +1,10 @@
-<tabset id="BackColor">
-  <div class="page-wrap">
-    <ul class="tab-wrap">
-      <li>
-        <input type="radio" id="tab-1" name="tab" checked />
-        <label for="tab-1" class="label-1" translate> AboutTitle </label>
-        <article class="tab-content">
+<ul class="tab-container">
+  <!-- ----------------      TAB-1       --------------------- -->
+    <li>
+      <input class="tab-toggle" id="tab-1" type="radio" name="toggle" checked />
+      <label data-title="Tab 1" class="tab l-b" for="tab-1" translate>AboutTitle </label>
+      <ul class="tab-content-container">
+        <li class="tab-content">
           <div id="CardTab">
             <div id="Usertab">
               <picture >
@@ -26,16 +26,21 @@
               <span><span class="TitleBold">Mision: </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur recusandae impedit, a, quia eligendi quis. Fuga laboriosam quas harum, soluta porro veniam fugiat sint atque possimus debitis! Reprehenderit numquam, ad!</span>
               <hr class="separator" />
               <span><span class="TitleBold">Vision: </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur recusandae impedit, a, quia eligendi quis. Fuga laboriosam quas harum, soluta porro veniam fugiat sint atque possimus debitis! Reprehenderit numquam, ad!</span>
-              <hr class="separator" />
             </span>
           </div>
-        </article>
-      </li>
- <!--  _______________________________________________________________________ -->
-      <li>
-        <input type="radio" id="tab-2" name="tab" />
-        <label for="tab-2" class="label-2" translate> ServicesTitle </label>
-        <article class="tab-content">
+          <div class="arrows">
+            <label class="back" for="tab-4">&#8249;</label>
+            <label class="next" for="tab-2">&#8250; </label>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <!-- ----------------      TAB-2       --------------------- -->
+    <li>
+      <input class="tab-toggle" id="tab-2" type="radio" name="toggle" />
+      <label class="tab" for="tab-2" translate>ServicesTitle</label>
+      <ul class="tab-content-container">
+        <li class="tab-content">
           <div class="CardTab">
             <ul>
               <li><i class="material-icons">restaurant_menu</i>Desayuno incluido</li>
@@ -51,13 +56,19 @@
               <li><i class="material-icons">theaters</i> Sala de medios</li>
             </ul>
           </div>
-        </article>
-      </li>
-    <!--  _______________________________________________________________________ -->
-      <li>
-        <input type="radio" id="tab-3" name="tab" />
-        <label for="tab-3" class="label-3" translate> ReviewTitle </label>
-        <article class="tab-content">
+          <div class="arrows">
+            <label class="back" for="tab-1">&#8249;</label>
+            <label class="next" for="tab-3">&#8250; </label>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <!-- ----------------      TAB-3       --------------------- -->
+    <li>
+      <input class="tab-toggle" id="tab-3" type="radio" name="toggle" />
+      <label class="tab" for="tab-3" translate>ReviewTitle</label>
+      <ul class="tab-content-container">
+        <li class="tab-content">
           <div class="CardTab">
             <div class="Usertab">
               <picture >
@@ -93,15 +104,20 @@
             </div>
             <span class="ContPubl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus aliquid dolor consectetur eveniet hic id, cum minima deserunt reiciendis quis qui nostrum, laboriosam libero, enim distinctio inventore, nobis unde.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus aliquid dolor consectetur eveniet hic id, cum minima deserunt reiciendis quis qui nostrum, laboriosam libero, enim distinctio inventore, nobis unde.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus aliquid dolor consectetur eveniet hic id, cum minima deserunt reiciendis quis qui nostrum, laboriosam libero, enim distinctio inventore, nobis unde.</span>
           </div>
-          <hr class="separator" />
-        </article>
-      </li>
-    <!--  _______________________________________________________________________ -->
-      <li>
-        <input type="radio" id="tab-4" name="tab" />
-        <label for="tab-4" class="label-4" translate> ActivitiesTitle </label>
-          <article class="tab-content">
-            <div class="CardTab">
+          <div class="arrows">
+            <label class="back" for="tab-2">&#8249;</label>
+            <label class="next" for="tab-4">&#8250; </label>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <!-- ----------------      TAB-4       --------------------- -->
+    <li>
+      <input class="tab-toggle" id="tab-4" type="radio" name="toggle" />
+      <label class="tab" for="tab-4" translate>ActivitiesTitle</label>
+      <ul class="tab-content-container">
+        <li class="tab-content">
+          <div class="CardTab">
               <div class="Usertab">
                 <picture >
                     <img class="activ"src="http://autosflyer.weebly.com/uploads/6/0/8/7/60873323/7754977_orig.jpg" >
@@ -148,42 +164,33 @@
               </div>
               <span class="ContPubl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus aliquid dolor consectetur eveniet hic id, cum minima deserunt reiciendis quis qui nostrum, laboriosam libero, enim distinctio inventore, nobis unde.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus aliquid dolor consectetur eveniet hic id, cum minima deserunt reiciendis quis qui nostrum.</span>
             </div>
-            <hr class="separator" />
-          </article>
+          <div class="arrows">
+            <label class="back" for="tab-3">&#8249;</label>
+            <label class="next" for="tab-5">&#8250; </label>
+          </div>
         </li>
-<!--  _______________________________________________________________________ -->
-        <li>
-          <input type="radio" id="tab-5" name="tab" />
-          <label for="tab-5" class="label-5" translate> ContactTitle </label>
-            <article class="tab-content">
-              <div id="FormContact">
-                 <form >
-                   <!-- <h2>Contactanos</h2> -->
-                   <!-- ?<input type="text" placeholder="Ingrese su nombre" class="InputContact" required>
-                   <input type="email" placeholder="Ingrese su email" class="InputContact" required> -->
-                  <textarea  placeholder="Ingrese su consulta aqui" class="AreaContact" required></textarea>
-                  <input type="submit" value="{{ 'SendTitle' | translate }}" id="BtnSendForm">
-                </form>
-              </div>
-            </article>
-          </li>
-      <!--  _______________________________________________________________________ -->
-          <li>
-            <input type="radio" id="tab-6" name="tab" />
-            <label for="tab-6" class="label-6" translate> AppraisalTitle </label>
-              <article class="tab-content">
-                <div id="FormContact">
-                  <form >
-                    <!-- <h2>Contactanos</h2> -->
-                    <!-- ?
-                    <input type="email" placeholder="Ingrese su email" class="InputContact" required> -->
-                    <input type="number" min="1" max="5" placeholder="Ingrese su puntuacion del 1 al 5" class="InputContact" required>
-                    <textarea  placeholder="Ingrese su comentario aquí" class="AreaContact" required></textarea>
-                    <input type="submit" value="{{ 'SendTitle' | translate }}" id="BtnSendForm">
-                  </form>
-                </div>
-              </article>
-            </li>
-          </ul>
-        </div>
-      </tabset>
+      </ul>
+    </li>
+    <!-- ----------------      TAB-5       --------------------- -->
+    <li>
+      <input class="tab-toggle" id="tab-5" type="radio" name="toggle" />
+      <label class="tab" for="tab-5" translate>ContactTitle</label>
+      <ul class="tab-content-container">
+        <li class="tab-content">
+          <div id="FormContact">
+              <form >
+                <!-- <h2>Contactanos</h2> -->
+                <!-- ?<input type="text" placeholder="Ingrese su nombre" class="InputContact" required>
+                <input type="email" placeholder="Ingrese su email" class="InputContact" required> -->
+              <textarea  placeholder="Ingrese su consulta aqui" class="AreaContact" required></textarea>
+              <input type="submit" value="{{ 'SendTitle' | translate }}" id="BtnSendForm">
+            </form>
+          </div>
+          <div class="arrows">
+            <label class="back" for="tab-4">&#8249;</label>
+            <label class="next" for="tab-1">&#8250; </label>
+          </div>
+        </li>
+      </ul>
+    </li>    
+  </ul>

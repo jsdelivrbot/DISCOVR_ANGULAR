@@ -111,6 +111,29 @@
                     <a href="#"><i class="material-icons">account_circle</i></a>
                 </li>
                 <!-------------------------------------------------------------------!-->
+                <li  tooltip-placement="bottom" uib-tooltip="{{ 'WelcomeTitle' | translate }} {{ vm.username }}" >
+                    <a href="#"><i class="material-icons">event_note</i></a>
+                </li>
+                <li uib-dropdown>
+                    <a id="more" href="#" uib-dropdown-toggle>
+                        <i class="material-icons">place</i>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="more" style="color:black">
+                        <li role="menuitem">
+                            <input type="checkbox" name="checkboxG1" id="checkboxG1" class="css-checkbox" />
+					        <label for="checkboxG1" class="css-label">Nicaragua</label>
+                        </li>
+                        <li role="menuitem"><input type="checkbox" name="checkboxG2" id="checkboxG2" class="css-checkbox" />
+					        <label for="checkboxG2" class="css-label">Hondura</label>
+                        </li>
+                        <li role="menuitem"><input type="checkbox" name="checkboxG3" id="checkboxG3" class="css-checkbox" />
+					        <label for="checkboxG3" class="css-label">Costa Rica</label>
+                        </li>
+                        <li class="divider"></li>
+                        <li role="menuitem"><a href="#" ng-click=""><i class="material-icons" style="vertical-align: middle;">add</i> Add Country </a></li>                        
+                    </ul>
+                </li>
+                <!-------------------------------------------------------------------!-->
                 <li uib-dropdown>
                     <a id="language" href="#" uib-dropdown-toggle>
                         <i class="material-icons">language</i>
@@ -124,13 +147,13 @@
                         <i class="material-icons">more_vert</i>
                     </a>
                     <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="more">
-							        <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt1' | translate }}</a></li>
-                      <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt2' | translate }}</a></li>
-                      <li role="menuitem"><a ui-sref="Welcome" ng-click="">{{ 'SettingsOpt3' | translate }}</a></li>
-                      <li class="divider"></li>
-                      <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt4' | translate }}</a></li>
-                      <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt5' | translate }}</a></li>
-						      	</ul>
+                        <li role="menuitem"></li>
+                        <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt2' | translate }}</a></li>
+                        <li role="menuitem"><a ui-sref="Welcome" ng-click="">{{ 'SettingsOpt3' | translate }}</a></li>
+                        <li class="divider"></li>
+                        <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt4' | translate }}</a></li>
+                        <li role="menuitem"><a href="#" ng-click="">{{ 'SettingsOpt5' | translate }}</a></li>
+                    </ul>
                 </li>
 
 
